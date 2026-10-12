@@ -15,14 +15,14 @@ format:
 
 ## Regional Member Cities (Ranked by Population)
 
-| Pop Rank | City | Chinese | Province | Population | 1985 Area | 2015 Area | Net Gain | Multiplier | CAGR |
-|:---:|:---|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|
-| #1 | [Chengdu](../cities/chengdu.html) | 成都市 | Sichuan | **20.94M** | 208.06 km² | 1564.15 km² | +1356.09 km² | **7.52×** | 6.96% |
-| #5 | [Wuhan](../cities/wuhan.html) | 武汉市 | Hubei | **12.33M** | 279.63 km² | 1077.9 km² | +798.27 km² | **3.85×** | 4.6% |
-| #12 | [Nanchang](../cities/nanchang.html) | 南昌市 | Jiangxi | **6.26M** | 178.79 km² | 608.57 km² | +429.78 km² | **3.4×** | 4.17% |
-| #21 | [Luzhou](../cities/luzhou.html) | 泸州市 | Sichuan | **4.25M** | 22.7 km² | 140.03 km² | +117.33 km² | **6.17×** | 6.25% |
-| #24 | [Yichang](../cities/yichang.html) | 宜昌市 | Hubei | **3.92M** | 45.63 km² | 178.59 km² | +132.96 km² | **3.91×** | 4.65% |
-| #38 | [Zhangjiajie](../cities/zhangjiajie.html) | 张家界市 | Hunan | **1.52M** | 18.13 km² | 62.73 km² | +44.6 km² | **3.46×** | 4.22% |
+| Pop Rank | City | Chinese | Province | Population | ArcGIS Rank | 1985 Area | 2015 Area | Net Gain | Multiplier | CAGR |
+|:---:|:---|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| #1 | [Chengdu](../cities/chengdu.html) | 成都市 | Sichuan | **20.94M** | #4 | 208.06 km² | 1564.15 km² | +1356.09 km² | **7.52×** | 6.96% |
+| #5 | [Wuhan](../cities/wuhan.html) | 武汉市 | Hubei | **12.33M** | #8 | 279.63 km² | 1077.9 km² | +798.27 km² | **3.85×** | 4.6% |
+| #12 | [Nanchang](../cities/nanchang.html) | 南昌市 | Jiangxi | **6.26M** | #36 | 178.79 km² | 608.57 km² | +429.78 km² | **3.4×** | 4.17% |
+| #21 | [Luzhou](../cities/luzhou.html) | 泸州市 | Sichuan | **4.25M** | #107 | 22.7 km² | 140.03 km² | +117.33 km² | **6.17×** | 6.25% |
+| #24 | [Yichang](../cities/yichang.html) | 宜昌市 | Hubei | **3.92M** | #69 | 45.63 km² | 178.59 km² | +132.96 km² | **3.91×** | 4.65% |
+| #38 | [Zhangjiajie](../cities/zhangjiajie.html) | 张家界市 | Hunan | **1.52M** | #179 | 18.13 km² | 62.73 km² | +44.6 km² | **3.46×** | 4.22% |
 
 
 ---
@@ -32,7 +32,7 @@ format:
 
 ::: {.region-card}
 ### [Chengdu (成都市)](../cities/chengdu.html)
-**Sichuan Province** · Population: <strong style="color: #38bdf8;">20.94 Million</strong> (Rank #1) · 30-Year Multiplier: <strong style="color: #f59e0b;">7.52×</strong>
+**Sichuan Province** · Population: <strong style="color: #38bdf8;">20.94 Million</strong> (Rank #1) · ArcGIS Hierarchy Rank: <strong>#4</strong> · 30-Year Multiplier: <strong style="color: #f59e0b;">7.52×</strong>
 
 - **1985 Footprint**: 208.06 km²
 - **2015 Footprint**: 1564.15 km² (Net expansion: +1356.09 km²)
@@ -43,7 +43,7 @@ format:
 
 ::: {.region-card}
 ### [Wuhan (武汉市)](../cities/wuhan.html)
-**Hubei Province** · Population: <strong style="color: #38bdf8;">12.33 Million</strong> (Rank #5) · 30-Year Multiplier: <strong style="color: #f59e0b;">3.85×</strong>
+**Hubei Province** · Population: <strong style="color: #38bdf8;">12.33 Million</strong> (Rank #5) · ArcGIS Hierarchy Rank: <strong>#8</strong> · 30-Year Multiplier: <strong style="color: #f59e0b;">3.85×</strong>
 
 - **1985 Footprint**: 279.63 km²
 - **2015 Footprint**: 1077.9 km² (Net expansion: +798.27 km²)
@@ -54,7 +54,7 @@ format:
 
 ::: {.region-card}
 ### [Nanchang (南昌市)](../cities/nanchang.html)
-**Jiangxi Province** · Population: <strong style="color: #38bdf8;">6.26 Million</strong> (Rank #12) · 30-Year Multiplier: <strong style="color: #f59e0b;">3.4×</strong>
+**Jiangxi Province** · Population: <strong style="color: #38bdf8;">6.26 Million</strong> (Rank #12) · ArcGIS Hierarchy Rank: <strong>#36</strong> · 30-Year Multiplier: <strong style="color: #f59e0b;">3.4×</strong>
 
 - **1985 Footprint**: 178.79 km²
 - **2015 Footprint**: 608.57 km² (Net expansion: +429.78 km²)
@@ -65,7 +65,7 @@ format:
 
 ::: {.region-card}
 ### [Luzhou (泸州市)](../cities/luzhou.html)
-**Sichuan Province** · Population: <strong style="color: #38bdf8;">4.25 Million</strong> (Rank #21) · 30-Year Multiplier: <strong style="color: #f59e0b;">6.17×</strong>
+**Sichuan Province** · Population: <strong style="color: #38bdf8;">4.25 Million</strong> (Rank #21) · ArcGIS Hierarchy Rank: <strong>#107</strong> · 30-Year Multiplier: <strong style="color: #f59e0b;">6.17×</strong>
 
 - **1985 Footprint**: 22.7 km²
 - **2015 Footprint**: 140.03 km² (Net expansion: +117.33 km²)
@@ -76,7 +76,7 @@ format:
 
 ::: {.region-card}
 ### [Yichang (宜昌市)](../cities/yichang.html)
-**Hubei Province** · Population: <strong style="color: #38bdf8;">3.92 Million</strong> (Rank #24) · 30-Year Multiplier: <strong style="color: #f59e0b;">3.91×</strong>
+**Hubei Province** · Population: <strong style="color: #38bdf8;">3.92 Million</strong> (Rank #24) · ArcGIS Hierarchy Rank: <strong>#69</strong> · 30-Year Multiplier: <strong style="color: #f59e0b;">3.91×</strong>
 
 - **1985 Footprint**: 45.63 km²
 - **2015 Footprint**: 178.59 km² (Net expansion: +132.96 km²)
@@ -87,7 +87,7 @@ format:
 
 ::: {.region-card}
 ### [Zhangjiajie (张家界市)](../cities/zhangjiajie.html)
-**Hunan Province** · Population: <strong style="color: #38bdf8;">1.52 Million</strong> (Rank #38) · 30-Year Multiplier: <strong style="color: #f59e0b;">3.46×</strong>
+**Hunan Province** · Population: <strong style="color: #38bdf8;">1.52 Million</strong> (Rank #38) · ArcGIS Hierarchy Rank: <strong>#179</strong> · 30-Year Multiplier: <strong style="color: #f59e0b;">3.46×</strong>
 
 - **1985 Footprint**: 18.13 km²
 - **2015 Footprint**: 62.73 km² (Net expansion: +44.6 km²)
@@ -95,3 +95,15 @@ format:
 
 [View Maps & Visual Suite →](../cities/zhangjiajie.html)
 :::
+
+
+---
+
+## Data Sources & Regional Attributions
+
+Data presented in this regional overview is derived from:
+- **DLR WSF Evolution (1985–2015)**: German Aerospace Center (30m settlement detection).
+- **Seventh National Population Census (2020)**: National Bureau of Statistics of China (NBS).
+- **ArcGIS Online Big Cities Points**: Esri / public feature service `big_cities_points`.
+- **HOTOSM Railways of China**: Humanitarian OpenStreetMap Team via Humanitarian Data Exchange (HDX).
+- **GADM Administrative Areas (v4.1)**: UC Davis.

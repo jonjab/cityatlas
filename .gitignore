@@ -1,6 +1,7 @@
 # .gitignore
 data/raw/*.zip
 data/raw/*.geojson
+data/raw/hotosm_railways/
 data/raw/gadm41_CHN_2.json
 data/raw/gadm41_CHN_1.json
 data/raw/gadm41_CHN_0.json

@@ -12,7 +12,11 @@ format:
     <div>
       <h1 style="color: #ffffff; margin-bottom: 0.25rem;">Wuwei <span style="color: #f59e0b; font-weight: normal;">武威市</span></h1>
       <p style="color: #94a3b8; font-size: 1.1rem; margin: 0;">Wǔwēi · Gansu (甘肃省) · Western Frontier & Steppe</p>
-      <p style="color: #cbd5e1; font-size: 0.95rem; margin-top: 0.35rem;">Population: <strong>1.47 Million</strong> (2020 Census) · National Rank: <strong>#39</strong> of 47</p>
+      <p style="color: #cbd5e1; font-size: 0.95rem; margin-top: 0.35rem;">
+        Population: <strong>1.47 Million</strong> (2020 Census) · 
+        Population Rank: <strong>#39</strong> of 47 · 
+        ArcGIS Urban Hierarchy Rank: <strong>#200</strong>
+      </p>
     </div>
     <div style="text-align: right;">
       <span class="metric-badge badge-gold" style="font-size: 1.1rem; padding: 0.5rem 1rem;">2.67× Growth Multiplier</span>
@@ -21,7 +25,7 @@ format:
 </div>
 ```
 
-## Key Urban Expansion Indicators
+## Key Urban Expansion & Hierarchy Indicators
 
 ::: {.metric-grid}
 ::: {.metric-card}
@@ -31,7 +35,17 @@ format:
 ::: {.metric-val}
 1.47 <span style="font-size: 1rem; color: #94a3b8;">M</span>
 :::
-<div style="font-size: 0.8rem; color: #38bdf8;">Rank #39 of 47</div>
+<div style="font-size: 0.8rem; color: #38bdf8;">Pop Rank #39 of 47</div>
+:::
+
+::: {.metric-card}
+::: {.metric-label}
+ArcGIS City Rank
+:::
+::: {.metric-val}
+#200
+:::
+<div style="font-size: 0.8rem; color: #94a3b8;">National Big Cities Tier</div>
 :::
 
 ::: {.metric-card}
@@ -60,7 +74,7 @@ Growth Multiple
 ::: {.metric-val}
 2.67×
 :::
-<div style="font-size: 0.8rem; color: #f59e0b;">Rank #36 of 47</div>
+<div style="font-size: 0.8rem; color: #f59e0b;">Multiplier Rank #36</div>
 :::
 
 ::: {.metric-card}
@@ -137,6 +151,18 @@ Uniform-scale physical footprint progression maps tracking built-up settlement e
 | **2005** | 75.54 km² | 1.85× | 69.6% |
 | **2010** | 93.66 km² | 2.3× | 86.3% |
 | **2015** | 108.55 km² | **2.67×** | 100.0% |
+
+---
+
+## 5. Data Sources & Attributions
+
+The quantitative and spatial indicators for **Wuwei** are synthesized from the following primary sources:
+
+1. **Urban Footprint & Built-Up Surface**: German Aerospace Center (DLR) [World Settlement Footprint Evolution (1985–2015)](https://download.geoservice.dlr.de/WSF_EVO/). 30m resolution multi-decadal satellite detection (*Marconcini et al., 2020, Nature Scientific Data*).
+2. **Permanent Resident Population**: National Bureau of Statistics of China (NBS), [Seventh National Population Census (第七次全国人口普查 / 七普 2020)](http://www.stats.gov.cn/). Resident population: **1.47M** (National Rank: **#39** of 47).
+3. **National Urban Tier Classification**: Esri / [ArcGIS Online Big Cities Points FeatureServer](https://services1.arcgis.com/4TXrdeWh0RyCqPgB/arcgis/rest/services/big_cities_points/FeatureServer), National City Rank: **#200** of 184 major Chinese cities.
+4. **Transit & High-Speed Rail Corridors**: Humanitarian OpenStreetMap Team (HOTOSM) & UN OCHA, [Railways of China Dataset](https://data.humdata.org/dataset/hotosm_chn_railways) on HDX, licensed under Open Database License (ODbL).
+5. **Administrative Boundaries**: [GADM Database of Global Administrative Areas (v4.1)](https://gadm.org/), University of California, Davis.
 
 ---
 

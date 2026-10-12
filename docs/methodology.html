@@ -188,11 +188,18 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#population-ranking-2020-census" id="toc-population-ranking-2020-census" class="nav-link active" data-scroll-target="#population-ranking-2020-census">1. Population Ranking (2020 Census)</a></li>
-  <li><a href="#satellite-urban-growth-engine-dlr-wsf-evolution" id="toc-satellite-urban-growth-engine-dlr-wsf-evolution" class="nav-link" data-scroll-target="#satellite-urban-growth-engine-dlr-wsf-evolution">2. Satellite Urban Growth Engine: DLR WSF Evolution</a></li>
-  <li><a href="#high-speed-rail-hsr-network-integration" id="toc-high-speed-rail-hsr-network-integration" class="nav-link" data-scroll-target="#high-speed-rail-hsr-network-integration">3. High-Speed Rail (HSR) Network Integration</a></li>
-  <li><a href="#four-landmark-urban-development-epochs" id="toc-four-landmark-urban-development-epochs" class="nav-link" data-scroll-target="#four-landmark-urban-development-epochs">4. Four Landmark Urban Development Epochs</a></li>
-  <li><a href="#quantitative-metrics" id="toc-quantitative-metrics" class="nav-link" data-scroll-target="#quantitative-metrics">5. Quantitative Metrics</a></li>
+  <li><a href="#primary-data-sources-scholarly-references" id="toc-primary-data-sources-scholarly-references" class="nav-link active" data-scroll-target="#primary-data-sources-scholarly-references">1. Primary Data Sources &amp; Scholarly References</a>
+  <ul class="collapse">
+  <li><a href="#a.-dlr-world-settlement-footprint-evolution-wsf-evolution" id="toc-a.-dlr-world-settlement-footprint-evolution-wsf-evolution" class="nav-link" data-scroll-target="#a.-dlr-world-settlement-footprint-evolution-wsf-evolution">A. DLR World Settlement Footprint Evolution (WSF Evolution)</a></li>
+  <li><a href="#b.-hotosm-railways-of-china-dataset" id="toc-b.-hotosm-railways-of-china-dataset" class="nav-link" data-scroll-target="#b.-hotosm-railways-of-china-dataset">B. HOTOSM Railways of China Dataset</a></li>
+  <li><a href="#c.-arcgis-online-big-cities-points-layer" id="toc-c.-arcgis-online-big-cities-points-layer" class="nav-link" data-scroll-target="#c.-arcgis-online-big-cities-points-layer">C. ArcGIS Online Big Cities Points Layer</a></li>
+  <li><a href="#d.-seventh-national-population-census-of-china-七普-2020" id="toc-d.-seventh-national-population-census-of-china-七普-2020" class="nav-link" data-scroll-target="#d.-seventh-national-population-census-of-china-七普-2020">D. Seventh National Population Census of China (七普 2020)</a></li>
+  <li><a href="#e.-gadm-database-of-global-administrative-areas" id="toc-e.-gadm-database-of-global-administrative-areas" class="nav-link" data-scroll-target="#e.-gadm-database-of-global-administrative-areas">E. GADM Database of Global Administrative Areas</a></li>
+  </ul></li>
+  <li><a href="#data-licensing-terms-of-use" id="toc-data-licensing-terms-of-use" class="nav-link" data-scroll-target="#data-licensing-terms-of-use">2. Data Licensing &amp; Terms of Use</a></li>
+  <li><a href="#four-landmark-urban-development-epochs" id="toc-four-landmark-urban-development-epochs" class="nav-link" data-scroll-target="#four-landmark-urban-development-epochs">3. Four Landmark Urban Development Epochs</a></li>
+  <li><a href="#quantitative-metrics-mathematical-definitions" id="toc-quantitative-metrics-mathematical-definitions" class="nav-link" data-scroll-target="#quantitative-metrics-mathematical-definitions">4. Quantitative Metrics &amp; Mathematical Definitions</a></li>
+  <li><a href="#software-stack-open-source-packages" id="toc-software-stack-open-source-packages" class="nav-link" data-scroll-target="#software-stack-open-source-packages">5. Software Stack &amp; Open Source Packages</a></li>
   </ul>
 </nav>
     </div>
@@ -202,7 +209,7 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Data &amp; Methodology</h1>
-<p class="subtitle lead">Geospatial Data Sources, Processing Pipeline, High-Speed Rail Integration, and Population Metrics</p>
+<p class="subtitle lead">Comprehensive Data Sources, Academic Citations, Processing Pipelines, and Analytical Framework</p>
 </div>
 
 
@@ -220,8 +227,8 @@ window.Quarto = {
 
 
 <div class="hero-banner">
-  <h1 style="color: #ffffff; margin-bottom: 0.5rem;">Analytical Methodology</h1>
-  <p style="color: #cbd5e1; margin: 0;">How this ratlas ingests, processes, and cartographically renders 30 years of satellite-detected urban expansion, High-Speed Rail networks, and census populations across China.</p>
+  <h1 style="color: #ffffff; margin-bottom: 0.5rem;">Analytical Methodology &amp; Citations</h1>
+  <p style="color: #cbd5e1; margin: 0;">Comprehensive documentation of data sources, academic citations, licensing terms, spatial processing workflows, and mathematical formulas underpinning the China Urban Growth Ratlas.</p>
 </div>
 <div class="callout callout-style-simple callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -237,35 +244,116 @@ window.Quarto = {
 <p>By centering on dynamic provincial capitals (e.g., Chengdu, Wuhan, Xi’an, Zhengzhou), specialized manufacturing nodes (e.g., Shenzhen, Zhuhai, Taizhou, Zibo), ancient Silk Road oases (e.g., Kashgar, Hotan, Wuwei), and strategic border gateways (e.g., Dandong, Hunchun), this ratlas examines how physical urbanization and infrastructure modernization transformed the full depth of China’s urban hierarchy beyond the global superstar metropolises.</p>
 </div>
 </div>
-<section id="population-ranking-2020-census" class="level2">
-<h2 class="anchored" data-anchor-id="population-ranking-2020-census">1. Population Ranking (2020 Census)</h2>
-<p>The master ranking across this project is ordered by <strong>Permanent Resident Population (常住人口)</strong> derived from the <strong>Seventh National Population Census of the People’s Republic of China (第七次全国人口普查 / 七普 2020)</strong>:</p>
+<section id="primary-data-sources-scholarly-references" class="level2">
+<h2 class="anchored" data-anchor-id="primary-data-sources-scholarly-references">1. Primary Data Sources &amp; Scholarly References</h2>
+<section id="a.-dlr-world-settlement-footprint-evolution-wsf-evolution" class="level3">
+<h3 class="anchored" data-anchor-id="a.-dlr-world-settlement-footprint-evolution-wsf-evolution">A. DLR World Settlement Footprint Evolution (WSF Evolution)</h3>
 <ul>
-<li><strong>Sub-provincial &amp; Prefecture-Level Cities</strong>: Measured by total permanent resident population across municipal jurisdictions.</li>
-<li><strong>County-Level Cities</strong>: For specialized county-level cities in the sample (Hunchun, Korla, Hotan, Taishan), measured by the official resident population of the county-level city administrative unit.</li>
-<li><strong>Rank Range</strong>: Spans from <strong>#1 Chengdu (20.94 Million)</strong> down to <strong>#47 Hunchun (0.24 Million)</strong>.</li>
+<li><strong>Data Custodian</strong>: German Aerospace Center (Deutsches Zentrum für Luft- und Raumfahrt; DLR), Earth Observation Center (EOC).</li>
+<li><strong>Spatial Resolution</strong>: 30 meters per pixel, global coverage.</li>
+<li><strong>Sensor Inputs</strong>: Multi-decadal archive of joint optical (Landsat-5 TM, Landsat-7 ETM+, Landsat-8 OLI) and radar (ERS-1/2, Sentinel-1) satellite observations.</li>
+<li><strong>Pixel Encoding</strong>: Integer values between <code>1985</code> and <code>2015</code> represent the exact year of earliest detected settlement establishment. Value <code>0</code> denotes unbuilt natural/agricultural surfaces.</li>
+<li><strong>Data Access</strong>: Retrieved via HTTP range requests through GDAL virtual filesystem (<code>/vsicurl/</code>) from <code>https://download.geoservice.dlr.de/WSF_EVO/</code>.</li>
+<li><strong>Primary Scholarly Citation</strong>: &gt; Marconcini, M., Metz, A., Üreyen, S., Palacios-Lopez, D., Hanke, W., Bachofer, F., Zeidler, J., Esch, T., Gorelick, N., Kakarla, A., Paganini, M., &amp; Strano, E. (2020). <em>Outlining where humans live, the World Settlement Footprint 2015.</em> <strong>Scientific Data</strong>, 7(1), 242. <a href="https://doi.org/10.1038/s41597-020-00580-5">https://doi.org/10.1038/s41597-020-00580-5</a></li>
+<li><strong>Evolution Methodology Citation</strong>: &gt; Marconcini, M., Metz, A., Zeidler, J., &amp; Esch, T. (2021). <em>The World Settlement Footprint Evolution—30 Years of Growth.</em> <strong>Remote Sensing of Environment</strong>, 255, 112282.</li>
 </ul>
 </section>
-<section id="satellite-urban-growth-engine-dlr-wsf-evolution" class="level2">
-<h2 class="anchored" data-anchor-id="satellite-urban-growth-engine-dlr-wsf-evolution">2. Satellite Urban Growth Engine: DLR WSF Evolution</h2>
-<p>The physical urban growth data in this project is driven by the <strong>World Settlement Footprint Evolution (WSF Evolution)</strong> dataset, produced by the <strong>German Aerospace Center (DLR)</strong>:</p>
+<section id="b.-hotosm-railways-of-china-dataset" class="level3">
+<h3 class="anchored" data-anchor-id="b.-hotosm-railways-of-china-dataset">B. HOTOSM Railways of China Dataset</h3>
 <ul>
-<li><strong>Spatial Resolution</strong>: 30 meters per pixel, derived from joint multi-decadal analysis of <strong>Landsat-5, Landsat-7, and Landsat-8</strong> optical imagery, integrated with radar and digital elevation datasets.</li>
-<li><strong>Temporal Coverage</strong>: 1985 to 2015 (30-year span).</li>
-<li><strong>Pixel Semantics</strong>: Each pixel value encodes the exact calendar year (<span class="math inline">\(1985 \le \text{year} \le 2015\)</span>) in which human settlement was first detected. Value <code>0</code> represents non-urban surfaces. Value <code>1985</code> represents human settlements already established by or prior to 1985.</li>
-<li><strong>Open Web Retrieval</strong>: Retrieved directly from DLR’s open data servers (<code>download.geoservice.dlr.de</code>) using GDAL virtual file streaming (<code>/vsicurl/</code>) and R’s <code>terra</code> package.</li>
+<li><strong>Data Custodian</strong>: Humanitarian OpenStreetMap Team (HOTOSM) &amp; United Nations Office for the Coordination of Humanitarian Affairs (UN OCHA) Centre for Humanitarian Data.</li>
+<li><strong>Platform</strong>: Humanitarian Data Exchange (HDX).</li>
+<li><strong>Data URL</strong>: <a href="https://data.humdata.org/dataset/hotosm_chn_railways">https://data.humdata.org/dataset/hotosm_chn_railways</a></li>
+<li><strong>Content</strong>: 433,889 vector railway segments extracted from OpenStreetMap, categorized into passenger-dedicated lines (<em>PDL / 高铁</em>), intercity railways, standard gauge electrified lines, and station coordinates.</li>
+<li><strong>Processing</strong>: Ingested in R via <code>sf</code> and aggregated into 194 distinct High-Speed Rail corridors (<code>data/processed/hotosm_hsr_lines.rds</code>).</li>
+<li><strong>Citation &amp; License</strong>: &gt; Humanitarian OpenStreetMap Team (HOTOSM). (2024). <em>Railways of China [Data set]</em>. Humanitarian Data Exchange (HDX). Licensed under the <strong>Open Database License (ODbL 1.0)</strong> by OpenStreetMap contributors.</li>
 </ul>
 </section>
-<section id="high-speed-rail-hsr-network-integration" class="level2">
-<h2 class="anchored" data-anchor-id="high-speed-rail-hsr-network-integration">3. High-Speed Rail (HSR) Network Integration</h2>
-<p>China’s <strong>High-Speed Rail (CRH / 中国高铁)</strong> network—the defining infrastructure project of the 21st century—is mapped alongside the cities. Over the 2006–2015 era, high-speed rail catalyzed spatial expansion by connecting regional capitals and satellite towns:</p>
+<section id="c.-arcgis-online-big-cities-points-layer" class="level3">
+<h3 class="anchored" data-anchor-id="c.-arcgis-online-big-cities-points-layer">C. ArcGIS Online Big Cities Points Layer</h3>
 <ul>
-<li><strong>Corridors Included</strong>: The primary “Eight Vertical and Eight Horizontal” (<em>Ba Zong Ba Heng</em>) trunk corridors, including the Beijing–Hong Kong Corridor, Beijing–Shanghai Corridor, Eurasian Continental Bridge Corridor (Lanzhou–Xinjiang HSR), Yangtze River Corridor (Huhanrong), Shanghai–Kunming Corridor, Coastal Corridor, Xi’an–Chengdu HSR, and Hainan Island Ring HSR.</li>
-<li><strong>Spatial Traces</strong>: Vector geometries compiled from OpenStreetMap railway relations and Natural Earth 10m transportation datasets.</li>
+<li><strong>Data Custodian</strong>: Esri / ArcGIS Online Feature Services.</li>
+<li><strong>Service Endpoint</strong>: <a href="https://services1.arcgis.com/4TXrdeWh0RyCqPgB/arcgis/rest/services/big_cities_points/FeatureServer">https://services1.arcgis.com/4TXrdeWh0RyCqPgB/arcgis/rest/services/big_cities_points/FeatureServer</a></li>
+<li><strong>Content</strong>: Authoritative geospatial point layer of 184 major Chinese metropolitan centers with national hierarchy ranks (<code>rank</code> 1 to 200).</li>
+<li><strong>Role in Ratlas</strong>: Validates sample selection, confirms exclusion of tier-1 megacities (#1 Shanghai, #2 Beijing, #3 Guangzhou, #5 Chongqing, #7 Tianjin), and provides an objective national urban hierarchy classification for every city in the atlas.</li>
+<li><strong>Citation</strong>: &gt; Esri ArcGIS Online. (2023). <em>Big Cities Points Layer [Feature Service]</em>. ArcGIS REST API.</li>
 </ul>
+</section>
+<section id="d.-seventh-national-population-census-of-china-七普-2020" class="level3">
+<h3 class="anchored" data-anchor-id="d.-seventh-national-population-census-of-china-七普-2020">D. Seventh National Population Census of China (七普 2020)</h3>
+<ul>
+<li><strong>Data Custodian</strong>: National Bureau of Statistics of China (中华人民共和国国家统计局; NBS), Beijing, China.</li>
+<li><strong>Measurement</strong>: Permanent Resident Population (<em>常住人口, Changzhu Renkou</em>) as of midnight, November 1, 2020.</li>
+<li><strong>Role in Ratlas</strong>: Defines the primary sorting and ranking order across the entire ratlas from #1 Chengdu (20.94 Million) to #47 Hunchun (0.24 Million).</li>
+<li><strong>Official Citation</strong>: &gt; Office of the Leading Group of the State Council for the Seventh National Population Census. (2021). <em>Major Figures on 2020 Population Census of China.</em> China Statistics Press, Beijing. <a href="http://www.stats.gov.cn/">http://www.stats.gov.cn/</a></li>
+</ul>
+</section>
+<section id="e.-gadm-database-of-global-administrative-areas" class="level3">
+<h3 class="anchored" data-anchor-id="e.-gadm-database-of-global-administrative-areas">E. GADM Database of Global Administrative Areas</h3>
+<ul>
+<li><strong>Data Custodian</strong>: University of California, Davis (UCD), Department of Environmental Science and Policy.</li>
+<li><strong>Version</strong>: GADM 4.1 (released 2022).</li>
+<li><strong>Data URL</strong>: <a href="https://gadm.org/">https://gadm.org/</a></li>
+<li><strong>Content</strong>: Spatial administrative boundaries at Level 0 (national border), Level 1 (provinces), and Level 2 (prefectures and municipalities) with official bilingual toponyms.</li>
+<li><strong>Citation</strong>: &gt; Hijmans, R. J., Garcia, N., &amp; Wieczorek, J. (2022). <em>GADM Database of Global Administrative Areas, Version 4.1</em>. University of California, Davis. <a href="https://gadm.org/">https://gadm.org/</a></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="data-licensing-terms-of-use" class="level2">
+<h2 class="anchored" data-anchor-id="data-licensing-terms-of-use">2. Data Licensing &amp; Terms of Use</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Dataset</th>
+<th style="text-align: left;">Provider</th>
+<th style="text-align: left;">License / Terms of Use</th>
+<th style="text-align: left;">Attribution Notice</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>WSF Evolution</strong></td>
+<td style="text-align: left;">German Aerospace Center (DLR)</td>
+<td style="text-align: left;">Creative Commons Attribution 4.0 International (CC-BY 4.0)</td>
+<td style="text-align: left;">© DLR (2020, 2021)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Railways of China</strong></td>
+<td style="text-align: left;">HOTOSM / OpenStreetMap</td>
+<td style="text-align: left;">Open Data Commons Open Database License (ODbL 1.0)</td>
+<td style="text-align: left;">© OpenStreetMap contributors, HOTOSM</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Big Cities Points</strong></td>
+<td style="text-align: left;">Esri / ArcGIS Online</td>
+<td style="text-align: left;">Esri Public REST Feature Service Terms</td>
+<td style="text-align: left;">© Esri, ArcGIS Online Content Providers</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>National Census (2020)</strong></td>
+<td style="text-align: left;">National Bureau of Statistics (NBS)</td>
+<td style="text-align: left;">Public Statistical Release / Government Open Data</td>
+<td style="text-align: left;">Source: National Bureau of Statistics of China</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>GADM Boundaries</strong></td>
+<td style="text-align: left;">University of California, Davis</td>
+<td style="text-align: left;">Free for non-commercial and academic use</td>
+<td style="text-align: left;">© GADM (v4.1)</td>
+</tr>
+</tbody>
+</table>
+<hr>
 </section>
 <section id="four-landmark-urban-development-epochs" class="level2">
-<h2 class="anchored" data-anchor-id="four-landmark-urban-development-epochs">4. Four Landmark Urban Development Epochs</h2>
+<h2 class="anchored" data-anchor-id="four-landmark-urban-development-epochs">3. Four Landmark Urban Development Epochs</h2>
 <p>Urban expansion in modern China has unfolded in distinct historical waves:</p>
 <ol type="1">
 <li><strong>Pre-1985 Core</strong> (<code>#F59E0B</code> · Amber Gold): The pre-reform base urban footprint. This includes ancient historical city cores and the industrial settlements constructed during the early Five-Year Plans (1949–1980).</li>
@@ -273,14 +361,29 @@ window.Quarto = {
 <li><strong>1996–2005 Wave</strong> (<code>#06B6D4</code> · Electric Cyan): China’s 2001 accession to the World Trade Organization (WTO), the emergence of the “Factory of the World”, highway grid expansion, and initial high-tech development zones.</li>
 <li><strong>2006–2015 Wave</strong> (<code>#10B981</code> · Emerald Green): The High-Speed Rail (HSR) construction boom, the Western Development Strategy (<em>Xibu Da Kaifa</em>), massive State-level New Areas (<em>Guojiaji Xinqu</em>), and metropolitan amalgamation.</li>
 </ol>
+<hr>
 </section>
-<section id="quantitative-metrics" class="level2">
-<h2 class="anchored" data-anchor-id="quantitative-metrics">5. Quantitative Metrics</h2>
+<section id="quantitative-metrics-mathematical-definitions" class="level2">
+<h2 class="anchored" data-anchor-id="quantitative-metrics-mathematical-definitions">4. Quantitative Metrics &amp; Mathematical Definitions</h2>
 <ul>
-<li><strong>Cumulative Built-Up Area (<span class="math inline">\(A_t\)</span>)</strong>: Total surface area in <span class="math inline">\(\text{km}^2\)</span> occupied by detected settlements at year <span class="math inline">\(t\)</span>.</li>
-<li><strong>Net Spatial Gain (<span class="math inline">\(\Delta A\)</span>)</strong>: <span class="math inline">\(A_{2015} - A_{1985}\)</span>.</li>
-<li><strong>30-Year Growth Multiple (<span class="math inline">\(M\)</span>)</strong>: <span class="math inline">\(A_{2015} / A_{1985}\)</span>.</li>
-<li><strong>Compound Annual Growth Rate (CAGR)</strong>: <span class="math inline">\(\left(\frac{A_{2015}}{A_{1985}}\right)^{1/30} - 1\)</span>.</li>
+<li><strong>Cumulative Built-Up Area (<span class="math inline">\(A_t\)</span>)</strong>: Total surface area in square kilometers occupied by detected settlement pixels up to year <span class="math inline">\(t\)</span>: <span class="math display">\[A_t = \sum_{i \in \text{city}} a_i \cdot \mathbb{I}(1985 \le Y_i \le t)\]</span> where <span class="math inline">\(a_i\)</span> is the ellipsoidal cell surface area computed via <code>terra::cellSize(unit = "km")</code>, and <span class="math inline">\(Y_i\)</span> is the year of first settlement detection at pixel <span class="math inline">\(i\)</span>.</li>
+<li><strong>Net Spatial Expansion (<span class="math inline">\(\Delta A\)</span>)</strong>: Absolute urban land footprint expansion between 1985 and 2015: <span class="math display">\[\Delta A = A_{2015} - A_{1985} \quad (\text{km}^2)\]</span></li>
+<li><strong>30-Year Growth Multiple (<span class="math inline">\(M\)</span>)</strong>: Relative spatial expansion factor: <span class="math display">\[M = \frac{A_{2015}}{A_{1985}}\]</span></li>
+<li><strong>Compound Annual Growth Rate (CAGR)</strong>: Annualized physical expansion rate over the 30-year observation window: <span class="math display">\[\text{CAGR} = \left(\frac{A_{2015}}{A_{1985}}\right)^{1/30} - 1\]</span></li>
+</ul>
+<hr>
+</section>
+<section id="software-stack-open-source-packages" class="level2">
+<h2 class="anchored" data-anchor-id="software-stack-open-source-packages">5. Software Stack &amp; Open Source Packages</h2>
+<ul>
+<li><strong>R Environment</strong>: R Core Team (2026). <em>R: A Language and Environment for Statistical Computing</em> (v4.6.1), R Foundation for Statistical Computing, Vienna, Austria.</li>
+<li><strong>Raster Processing</strong>: Hijmans, R. J. (2024). <code>terra</code>: <em>Spatial Data Analysis</em>. R package version 1.9.50.</li>
+<li><strong>Vector Processing</strong>: Pebesma, E. (2018). <em>Simple Features for R: Standardized Support for Spatial Vector Data</em>. <strong>The R Journal</strong>, 10(1), 439-446.</li>
+<li><strong>Cartographic Rendering</strong>: Wickham, H. (2016). <em>ggplot2: Elegant Graphics for Data Analysis</em>. Springer-Verlag New York.</li>
+<li><strong>Raster Cartography</strong>: Hernangómez, D. (2023). <em>Using the tidyverse with terra Objects: the tidyterra Package</em>. <strong>Journal of Open Source Software</strong>, 8(91), 5751.</li>
+<li><strong>Multi-Panel Layouts</strong>: Pedersen, T. L. (2024). <code>patchwork</code>: <em>The Composer of Plots</em>. R package version 1.3.0.</li>
+<li><strong>Typography &amp; Font Shaping</strong>: <code>ragg</code> and <code>systemfonts</code> utilizing <code>Droid Sans Fallback</code> (Google Android Open Source Project) for CJK vector typography.</li>
+<li><strong>Publishing System</strong>: Allaire, J. J., et al.&nbsp;(2024). <em>Quarto: An open-source scientific and technical publishing system</em>. Posit Software.</li>
 </ul>
 
 

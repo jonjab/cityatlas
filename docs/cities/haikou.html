@@ -159,11 +159,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#key-urban-expansion-indicators" id="toc-key-urban-expansion-indicators" class="nav-link active" data-scroll-target="#key-urban-expansion-indicators">Key Urban Expansion Indicators</a></li>
+  <li><a href="#key-urban-expansion-hierarchy-indicators" id="toc-key-urban-expansion-hierarchy-indicators" class="nav-link active" data-scroll-target="#key-urban-expansion-hierarchy-indicators">Key Urban Expansion &amp; Hierarchy Indicators</a></li>
   <li><a href="#the-urban-growth-rings-19852015" id="toc-the-urban-growth-rings-19852015" class="nav-link" data-scroll-target="#the-urban-growth-rings-19852015">1. The Urban Growth Rings (1985–2015)</a></li>
   <li><a href="#small-multiples-4-epoch-footprint-progression" id="toc-small-multiples-4-epoch-footprint-progression" class="nav-link" data-scroll-target="#small-multiples-4-epoch-footprint-progression">2. Small Multiples: 4-Epoch Footprint Progression</a></li>
   <li><a href="#geographical-location-growth-trajectory" id="toc-geographical-location-growth-trajectory" class="nav-link" data-scroll-target="#geographical-location-growth-trajectory">3. Geographical Location &amp; Growth Trajectory</a></li>
   <li><a href="#year-milestone-chronology" id="toc-year-milestone-chronology" class="nav-link" data-scroll-target="#year-milestone-chronology">4. 5-Year Milestone Chronology</a></li>
+  <li><a href="#data-sources-attributions" id="toc-data-sources-attributions" class="nav-link" data-scroll-target="#data-sources-attributions">5. Data Sources &amp; Attributions</a></li>
   </ul>
 </nav>
     </div>
@@ -195,15 +196,19 @@ ul.task-list li input[type="checkbox"] {
     <div>
       <h1 style="color: #ffffff; margin-bottom: 0.25rem;">Haikou <span style="color: #f59e0b; font-weight: normal;">海口市</span></h1>
       <p style="color: #94a3b8; font-size: 1.1rem; margin: 0;">Hǎikǒu · Hainan (海南省) · Pearl River &amp; South Coast</p>
-      <p style="color: #cbd5e1; font-size: 0.95rem; margin-top: 0.35rem;">Population: <strong>2.87 Million</strong> (2020 Census) · National Rank: <strong>#29</strong> of 47</p>
+      <p style="color: #cbd5e1; font-size: 0.95rem; margin-top: 0.35rem;">
+        Population: <strong>2.87 Million</strong> (2020 Census) · 
+        Population Rank: <strong>#29</strong> of 47 · 
+        ArcGIS Urban Hierarchy Rank: <strong>#56</strong>
+      </p>
     </div>
     <div style="text-align: right;">
       <span class="metric-badge badge-gold" style="font-size: 1.1rem; padding: 0.5rem 1rem;">4.12× Growth Multiplier</span>
     </div>
   </div>
 </div>
-<section id="key-urban-expansion-indicators" class="level2">
-<h2 class="anchored" data-anchor-id="key-urban-expansion-indicators">Key Urban Expansion Indicators</h2>
+<section id="key-urban-expansion-hierarchy-indicators" class="level2">
+<h2 class="anchored" data-anchor-id="key-urban-expansion-hierarchy-indicators">Key Urban Expansion &amp; Hierarchy Indicators</h2>
 <div class="metric-grid">
 <div class="metric-card">
 <div class="metric-label">
@@ -213,7 +218,18 @@ ul.task-list li input[type="checkbox"] {
 <p>2.87 <span style="font-size: 1rem; color: #94a3b8;">M</span></p>
 </div>
 <div style="font-size: 0.8rem; color: #38bdf8;">
-Rank #29 of 47
+Pop Rank #29 of 47
+</div>
+</div>
+<div class="metric-card">
+<div class="metric-label">
+<p>ArcGIS City Rank</p>
+</div>
+<div class="metric-val">
+<p>#56</p>
+</div>
+<div style="font-size: 0.8rem; color: #94a3b8;">
+National Big Cities Tier
 </div>
 </div>
 <div class="metric-card">
@@ -243,7 +259,7 @@ Rank #29 of 47
 <p>4.12×</p>
 </div>
 <div style="font-size: 0.8rem; color: #f59e0b;">
-Rank #13 of 47
+Multiplier Rank #13
 </div>
 </div>
 <div class="metric-card">
@@ -387,6 +403,18 @@ Rank #13 of 47
 </tr>
 </tbody>
 </table>
+<hr>
+</section>
+<section id="data-sources-attributions" class="level2">
+<h2 class="anchored" data-anchor-id="data-sources-attributions">5. Data Sources &amp; Attributions</h2>
+<p>The quantitative and spatial indicators for <strong>Haikou</strong> are synthesized from the following primary sources:</p>
+<ol type="1">
+<li><strong>Urban Footprint &amp; Built-Up Surface</strong>: German Aerospace Center (DLR) <a href="https://download.geoservice.dlr.de/WSF_EVO/">World Settlement Footprint Evolution (1985–2015)</a>. 30m resolution multi-decadal satellite detection (<em>Marconcini et al., 2020, Nature Scientific Data</em>).</li>
+<li><strong>Permanent Resident Population</strong>: National Bureau of Statistics of China (NBS), <a href="http://www.stats.gov.cn/">Seventh National Population Census (第七次全国人口普查 / 七普 2020)</a>. Resident population: <strong>2.87M</strong> (National Rank: <strong>#29</strong> of 47).</li>
+<li><strong>National Urban Tier Classification</strong>: Esri / <a href="https://services1.arcgis.com/4TXrdeWh0RyCqPgB/arcgis/rest/services/big_cities_points/FeatureServer">ArcGIS Online Big Cities Points FeatureServer</a>, National City Rank: <strong>#56</strong> of 184 major Chinese cities.</li>
+<li><strong>Transit &amp; High-Speed Rail Corridors</strong>: Humanitarian OpenStreetMap Team (HOTOSM) &amp; UN OCHA, <a href="https://data.humdata.org/dataset/hotosm_chn_railways">Railways of China Dataset</a> on HDX, licensed under Open Database License (ODbL).</li>
+<li><strong>Administrative Boundaries</strong>: <a href="https://gadm.org/">GADM Database of Global Administrative Areas (v4.1)</a>, University of California, Davis.</li>
+</ol>
 <hr>
 <div style="display: flex; justify-content: space-between; margin-top: 2rem; padding: 1rem; background: #111827; border-radius: 8px;">
   <a href="weihai.html" style="color: #38bdf8; text-decoration: none;">← Prev: Weihai (2.91M)</a>

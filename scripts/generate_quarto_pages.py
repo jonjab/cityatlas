@@ -67,7 +67,7 @@ os.makedirs("cities", exist_ok=True)
 os.makedirs("regions", exist_ok=True)
 
 # ------------------------------------------------------------------------------
-# 1. Generate Individual City Pages (Using raw {=html} blocks)
+# 1. Generate Individual City Pages (Using raw {=html} blocks + Complete Citations)
 # ------------------------------------------------------------------------------
 for idx, c in enumerate(cities):
     c_id = c["id"]
@@ -80,13 +80,19 @@ for idx, c in enumerate(cities):
             reg_file = f"{rk}.qmd"
             break
 
+    arc_rank_text = f"#{c.get('arcgis_rank', 'N/A')}" if c.get('arcgis_rank') else "N/A"
+
     hero_block = f"""```{{=html}}
 <div class="hero-banner">
   <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
     <div>
       <h1 style="color: #ffffff; margin-bottom: 0.25rem;">{c['name_en']} <span style="color: #f59e0b; font-weight: normal;">{c['name_zh']}</span></h1>
       <p style="color: #94a3b8; font-size: 1.1rem; margin: 0;">{c['pinyin']} · {c['province_en']} ({c['province_zh']}) · {c['region']}</p>
-      <p style="color: #cbd5e1; font-size: 0.95rem; margin-top: 0.35rem;">Population: <strong>{c['pop_million']} Million</strong> (2020 Census) · National Rank: <strong>#{c['rank_population']}</strong> of 47</p>
+      <p style="color: #cbd5e1; font-size: 0.95rem; margin-top: 0.35rem;">
+        Population: <strong>{c['pop_million']} Million</strong> (2020 Census) · 
+        Population Rank: <strong>#{c['rank_population']}</strong> of 47 · 
+        ArcGIS Urban Hierarchy Rank: <strong>{arc_rank_text}</strong>
+      </p>
     </div>
     <div style="text-align: right;">
       <span class="metric-badge badge-gold" style="font-size: 1.1rem; padding: 0.5rem 1rem;">{c['growth_multiple']}× Growth Multiplier</span>
@@ -113,7 +119,7 @@ format:
 
 {hero_block}
 
-## Key Urban Expansion Indicators
+## Key Urban Expansion & Hierarchy Indicators
 
 ::: {{.metric-grid}}
 ::: {{.metric-card}}
@@ -123,7 +129,17 @@ format:
 ::: {{.metric-val}}
 {c['pop_million']} <span style="font-size: 1rem; color: #94a3b8;">M</span>
 :::
-<div style="font-size: 0.8rem; color: #38bdf8;">Rank #{c['rank_population']} of 47</div>
+<div style="font-size: 0.8rem; color: #38bdf8;">Pop Rank #{c['rank_population']} of 47</div>
+:::
+
+::: {{.metric-card}}
+::: {{.metric-label}}
+ArcGIS City Rank
+:::
+::: {{.metric-val}}
+{arc_rank_text}
+:::
+<div style="font-size: 0.8rem; color: #94a3b8;">National Big Cities Tier</div>
 :::
 
 ::: {{.metric-card}}
@@ -152,7 +168,7 @@ Growth Multiple
 ::: {{.metric-val}}
 {c['growth_multiple']}×
 :::
-<div style="font-size: 0.8rem; color: #f59e0b;">Rank #{c['rank_multiplier']} of 47</div>
+<div style="font-size: 0.8rem; color: #f59e0b;">Multiplier Rank #{c['rank_multiplier']}</div>
 :::
 
 ::: {{.metric-card}}
@@ -232,15 +248,27 @@ Uniform-scale physical footprint progression maps tracking built-up settlement e
 
 ---
 
+## 5. Data Sources & Attributions
+
+The quantitative and spatial indicators for **{c['name_en']}** are synthesized from the following primary sources:
+
+1. **Urban Footprint & Built-Up Surface**: German Aerospace Center (DLR) [World Settlement Footprint Evolution (1985–2015)](https://download.geoservice.dlr.de/WSF_EVO/). 30m resolution multi-decadal satellite detection (*Marconcini et al., 2020, Nature Scientific Data*).
+2. **Permanent Resident Population**: National Bureau of Statistics of China (NBS), [Seventh National Population Census (第七次全国人口普查 / 七普 2020)](http://www.stats.gov.cn/). Resident population: **{c['pop_million']}M** (National Rank: **#{c['rank_population']}** of 47).
+3. **National Urban Tier Classification**: Esri / [ArcGIS Online Big Cities Points FeatureServer](https://services1.arcgis.com/4TXrdeWh0RyCqPgB/arcgis/rest/services/big_cities_points/FeatureServer), National City Rank: **{arc_rank_text}** of 184 major Chinese cities.
+4. **Transit & High-Speed Rail Corridors**: Humanitarian OpenStreetMap Team (HOTOSM) & UN OCHA, [Railways of China Dataset](https://data.humdata.org/dataset/hotosm_chn_railways) on HDX, licensed under Open Database License (ODbL).
+5. **Administrative Boundaries**: [GADM Database of Global Administrative Areas (v4.1)](https://gadm.org/), University of California, Davis.
+
+---
+
 {footer_nav}
 """
     with open(f"cities/{c_id}.qmd", "w", encoding="utf-8") as f:
         f.write(qmd_content.strip() + "\n")
 
-print(f"Generated 47 individual city QMD documents in cities/ using raw html blocks.")
+print(f"Generated 47 individual city QMD documents in cities/ with structured source citations.")
 
 # ------------------------------------------------------------------------------
-# 2. Generate Regional Pages (Sorted by Population)
+# 2. Generate Regional Pages (Sorted by Population + Regional Citations)
 # ------------------------------------------------------------------------------
 for rk, rv in regions_map.items():
     r_cities = sorted(rv["cities"], key=lambda x: x["rank_population"])
@@ -248,12 +276,13 @@ for rk, rv in regions_map.items():
     rows = ""
     city_links = ""
     for c in r_cities:
-        rows += f"""| #{c['rank_population']} | [{c['name_en']}](../cities/{c['id']}.html) | {c['name_zh']} | {c['province_en']} | **{c['pop_million']}M** | {c['area_1985']} km² | {c['area_2015']} km² | +{c['net_gain_km2']} km² | **{c['growth_multiple']}×** | {c['cagr_pct']}% |\n"""
+        arc_rank_cell = f"#{c.get('arcgis_rank')}" if c.get('arcgis_rank') else "-"
+        rows += f"""| #{c['rank_population']} | [{c['name_en']}](../cities/{c['id']}.html) | {c['name_zh']} | {c['province_en']} | **{c['pop_million']}M** | {arc_rank_cell} | {c['area_1985']} km² | {c['area_2015']} km² | +{c['net_gain_km2']} km² | **{c['growth_multiple']}×** | {c['cagr_pct']}% |\n"""
         
         city_links += f"""
 ::: {{.region-card}}
 ### [{c['name_en']} ({c['name_zh']})](../cities/{c['id']}.html)
-**{c['province_en']} Province** · Population: <strong style="color: #38bdf8;">{c['pop_million']} Million</strong> (Rank #{c['rank_population']}) · 30-Year Multiplier: <strong style="color: #f59e0b;">{c['growth_multiple']}×</strong>
+**{c['province_en']} Province** · Population: <strong style="color: #38bdf8;">{c['pop_million']} Million</strong> (Rank #{c['rank_population']}) · ArcGIS Hierarchy Rank: <strong>{arc_rank_cell}</strong> · 30-Year Multiplier: <strong style="color: #f59e0b;">{c['growth_multiple']}×</strong>
 
 - **1985 Footprint**: {c['area_1985']} km²
 - **2015 Footprint**: {c['area_2015']} km² (Net expansion: +{c['net_gain_km2']} km²)
@@ -282,8 +311,8 @@ format:
 
 ## Regional Member Cities (Ranked by Population)
 
-| Pop Rank | City | Chinese | Province | Population | 1985 Area | 2015 Area | Net Gain | Multiplier | CAGR |
-|:---:|:---|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|
+| Pop Rank | City | Chinese | Province | Population | ArcGIS Rank | 1985 Area | 2015 Area | Net Gain | Multiplier | CAGR |
+|:---:|:---|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 {rows}
 
 ---
@@ -291,6 +320,17 @@ format:
 ## Member City Profiles
 
 {city_links}
+
+---
+
+## Data Sources & Regional Attributions
+
+Data presented in this regional overview is derived from:
+- **DLR WSF Evolution (1985–2015)**: German Aerospace Center (30m settlement detection).
+- **Seventh National Population Census (2020)**: National Bureau of Statistics of China (NBS).
+- **ArcGIS Online Big Cities Points**: Esri / public feature service `big_cities_points`.
+- **HOTOSM Railways of China**: Humanitarian OpenStreetMap Team via Humanitarian Data Exchange (HDX).
+- **GADM Administrative Areas (v4.1)**: UC Davis.
 """
     with open(f"regions/{rk}.qmd", "w", encoding="utf-8") as f:
         f.write(reg_content.strip() + "\n")
@@ -302,7 +342,8 @@ print("Generated 6 regional QMD documents in regions/.")
 # ------------------------------------------------------------------------------
 all_rows = ""
 for c in cities:
-    all_rows += f"""| #{c['rank_population']} | [{c['name_en']}](cities/{c['id']}.html) | {c['name_zh']} | {c['province_en']} | {c['region']} | **{c['pop_million']}M** | {c['area_1985']} km² | {c['area_2015']} km² | +{c['net_gain_km2']} km² | **{c['growth_multiple']}×** | {c['cagr_pct']}% |\n"""
+    arc_rank_cell = f"#{c.get('arcgis_rank')}" if c.get('arcgis_rank') else "-"
+    all_rows += f"""| #{c['rank_population']} | [{c['name_en']}](cities/{c['id']}.html) | {c['name_zh']} | {c['province_en']} | {c['region']} | **{c['pop_million']}M** | {arc_rank_cell} | {c['area_1985']} km² | {c['area_2015']} km² | +{c['net_gain_km2']} km² | **{c['growth_multiple']}×** | {c['cagr_pct']}% |\n"""
 
 cities_qmd = f"""---
 title: "All 47 Cities Directory"
@@ -315,7 +356,7 @@ format:
 ```{{=html}}
 <div class="hero-banner">
   <h1 style="color: #ffffff; margin-bottom: 0.5rem;">The 47 Cities of the Ratlas</h1>
-  <p style="color: #cbd5e1; margin: 0;">Complete inventory of all 47 cities analyzed in this project, ranked from largest to smallest population based on the 7th National Population Census (七普 2020).</p>
+  <p style="color: #cbd5e1; margin: 0;">Complete inventory of all 47 cities analyzed in this project, ranked from largest to smallest population based on the 7th National Population Census (七普 2020) and cross-referenced with ArcGIS Online Big Cities Points.</p>
 </div>
 ```
 
@@ -323,19 +364,25 @@ format:
 **Selection Note**: Cities were selected to exclude China's tier-1 superstar megacities (Beijing, Shanghai, Guangzhou, Chongqing, Tianjin) to examine dynamic provincial capitals, regional economic drivers, and specialized border gateways.
 :::
 
-| Pop Rank | City | Chinese | Province | Region | Population | 1985 Area | 2015 Area | Net Gain | Multiplier | CAGR |
-|:---:|:---|:---|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|
+| Pop Rank | City | Chinese | Province | Region | Population | ArcGIS Rank | 1985 Area | 2015 Area | Net Gain | Multiplier | CAGR |
+|:---:|:---|:---|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 {all_rows}
+
+---
+
+::: {{.caption-box}}
+**Data Sources**: DLR World Settlement Footprint Evolution 30m (Marconcini et al., 2020) · 7th National Population Census of China (2020) · ArcGIS Online Big Cities Points · HOTOSM Railways of China (HDX) · GADM 4.1.
+:::
 """
 with open("cities.qmd", "w", encoding="utf-8") as f:
     f.write(cities_qmd.strip() + "\n")
 
 # ------------------------------------------------------------------------------
-# 4. Generate Methodology Page (methodology.qmd)
+# 4. Generate Comprehensive Academic Methodology Page (methodology.qmd)
 # ------------------------------------------------------------------------------
 methodology_qmd = r"""---
 title: "Data & Methodology"
-subtitle: "Geospatial Data Sources, Processing Pipeline, High-Speed Rail Integration, and Population Metrics"
+subtitle: "Comprehensive Data Sources, Academic Citations, Processing Pipelines, and Analytical Framework"
 format:
   html:
     toc: true
@@ -343,8 +390,8 @@ format:
 
 ```{=html}
 <div class="hero-banner">
-  <h1 style="color: #ffffff; margin-bottom: 0.5rem;">Analytical Methodology</h1>
-  <p style="color: #cbd5e1; margin: 0;">How this ratlas ingests, processes, and cartographically renders 30 years of satellite-detected urban expansion, High-Speed Rail networks, and census populations across China.</p>
+  <h1 style="color: #ffffff; margin-bottom: 0.5rem;">Analytical Methodology & Citations</h1>
+  <p style="color: #cbd5e1; margin: 0;">Comprehensive documentation of data sources, academic citations, licensing terms, spatial processing workflows, and mathematical formulas underpinning the China Urban Growth Ratlas.</p>
 </div>
 ```
 
@@ -355,31 +402,66 @@ The 47 cities in this atlas were deliberately selected to **exclude China's abso
 By centering on dynamic provincial capitals (e.g., Chengdu, Wuhan, Xi'an, Zhengzhou), specialized manufacturing nodes (e.g., Shenzhen, Zhuhai, Taizhou, Zibo), ancient Silk Road oases (e.g., Kashgar, Hotan, Wuwei), and strategic border gateways (e.g., Dandong, Hunchun), this ratlas examines how physical urbanization and infrastructure modernization transformed the full depth of China's urban hierarchy beyond the global superstar metropolises.
 :::
 
-## 1. Population Ranking (2020 Census)
+## 1. Primary Data Sources & Scholarly References
 
-The master ranking across this project is ordered by **Permanent Resident Population (常住人口)** derived from the **Seventh National Population Census of the People's Republic of China (第七次全国人口普查 / 七普 2020)**:
+### A. DLR World Settlement Footprint Evolution (WSF Evolution)
+- **Data Custodian**: German Aerospace Center (Deutsches Zentrum für Luft- und Raumfahrt; DLR), Earth Observation Center (EOC).
+- **Spatial Resolution**: 30 meters per pixel, global coverage.
+- **Sensor Inputs**: Multi-decadal archive of joint optical (Landsat-5 TM, Landsat-7 ETM+, Landsat-8 OLI) and radar (ERS-1/2, Sentinel-1) satellite observations.
+- **Pixel Encoding**: Integer values between `1985` and `2015` represent the exact year of earliest detected settlement establishment. Value `0` denotes unbuilt natural/agricultural surfaces.
+- **Data Access**: Retrieved via HTTP range requests through GDAL virtual filesystem (`/vsicurl/`) from `https://download.geoservice.dlr.de/WSF_EVO/`.
+- **Primary Scholarly Citation**:
+  > Marconcini, M., Metz, A., Üreyen, S., Palacios-Lopez, D., Hanke, W., Bachofer, F., Zeidler, J., Esch, T., Gorelick, N., Kakarla, A., Paganini, M., & Strano, E. (2020). *Outlining where humans live, the World Settlement Footprint 2015.* **Scientific Data**, 7(1), 242. [https://doi.org/10.1038/s41597-020-00580-5](https://doi.org/10.1038/s41597-020-00580-5)
+- **Evolution Methodology Citation**:
+  > Marconcini, M., Metz, A., Zeidler, J., & Esch, T. (2021). *The World Settlement Footprint Evolution—30 Years of Growth.* **Remote Sensing of Environment**, 255, 112282.
 
-- **Sub-provincial & Prefecture-Level Cities**: Measured by total permanent resident population across municipal jurisdictions.
-- **County-Level Cities**: For specialized county-level cities in the sample (Hunchun, Korla, Hotan, Taishan), measured by the official resident population of the county-level city administrative unit.
-- **Rank Range**: Spans from **#1 Chengdu (20.94 Million)** down to **#47 Hunchun (0.24 Million)**.
+### B. HOTOSM Railways of China Dataset
+- **Data Custodian**: Humanitarian OpenStreetMap Team (HOTOSM) & United Nations Office for the Coordination of Humanitarian Affairs (UN OCHA) Centre for Humanitarian Data.
+- **Platform**: Humanitarian Data Exchange (HDX).
+- **Data URL**: [https://data.humdata.org/dataset/hotosm_chn_railways](https://data.humdata.org/dataset/hotosm_chn_railways)
+- **Content**: 433,889 vector railway segments extracted from OpenStreetMap, categorized into passenger-dedicated lines (*PDL / 高铁*), intercity railways, standard gauge electrified lines, and station coordinates.
+- **Processing**: Ingested in R via `sf` and aggregated into 194 distinct High-Speed Rail corridors (`data/processed/hotosm_hsr_lines.rds`).
+- **Citation & License**:
+  > Humanitarian OpenStreetMap Team (HOTOSM). (2024). *Railways of China [Data set]*. Humanitarian Data Exchange (HDX). Licensed under the **Open Database License (ODbL 1.0)** by OpenStreetMap contributors.
 
-## 2. Satellite Urban Growth Engine: DLR WSF Evolution
+### C. ArcGIS Online Big Cities Points Layer
+- **Data Custodian**: Esri / ArcGIS Online Feature Services.
+- **Service Endpoint**: [https://services1.arcgis.com/4TXrdeWh0RyCqPgB/arcgis/rest/services/big_cities_points/FeatureServer](https://services1.arcgis.com/4TXrdeWh0RyCqPgB/arcgis/rest/services/big_cities_points/FeatureServer)
+- **Content**: Authoritative geospatial point layer of 184 major Chinese metropolitan centers with national hierarchy ranks (`rank` 1 to 200).
+- **Role in Ratlas**: Validates sample selection, confirms exclusion of tier-1 megacities (#1 Shanghai, #2 Beijing, #3 Guangzhou, #5 Chongqing, #7 Tianjin), and provides an objective national urban hierarchy classification for every city in the atlas.
+- **Citation**:
+  > Esri ArcGIS Online. (2023). *Big Cities Points Layer [Feature Service]*. ArcGIS REST API.
 
-The physical urban growth data in this project is driven by the **World Settlement Footprint Evolution (WSF Evolution)** dataset, produced by the **German Aerospace Center (DLR)**:
+### D. Seventh National Population Census of China (七普 2020)
+- **Data Custodian**: National Bureau of Statistics of China (中华人民共和国国家统计局; NBS), Beijing, China.
+- **Measurement**: Permanent Resident Population (*常住人口, Changzhu Renkou*) as of midnight, November 1, 2020.
+- **Role in Ratlas**: Defines the primary sorting and ranking order across the entire ratlas from #1 Chengdu (20.94 Million) to #47 Hunchun (0.24 Million).
+- **Official Citation**:
+  > Office of the Leading Group of the State Council for the Seventh National Population Census. (2021). *Major Figures on 2020 Population Census of China.* China Statistics Press, Beijing. [http://www.stats.gov.cn/](http://www.stats.gov.cn/)
 
-- **Spatial Resolution**: 30 meters per pixel, derived from joint multi-decadal analysis of **Landsat-5, Landsat-7, and Landsat-8** optical imagery, integrated with radar and digital elevation datasets.
-- **Temporal Coverage**: 1985 to 2015 (30-year span).
-- **Pixel Semantics**: Each pixel value encodes the exact calendar year ($1985 \le \text{year} \le 2015$) in which human settlement was first detected. Value `0` represents non-urban surfaces. Value `1985` represents human settlements already established by or prior to 1985.
-- **Open Web Retrieval**: Retrieved directly from DLR's open data servers (`download.geoservice.dlr.de`) using GDAL virtual file streaming (`/vsicurl/`) and R's `terra` package.
+### E. GADM Database of Global Administrative Areas
+- **Data Custodian**: University of California, Davis (UCD), Department of Environmental Science and Policy.
+- **Version**: GADM 4.1 (released 2022).
+- **Data URL**: [https://gadm.org/](https://gadm.org/)
+- **Content**: Spatial administrative boundaries at Level 0 (national border), Level 1 (provinces), and Level 2 (prefectures and municipalities) with official bilingual toponyms.
+- **Citation**:
+  > Hijmans, R. J., Garcia, N., & Wieczorek, J. (2022). *GADM Database of Global Administrative Areas, Version 4.1*. University of California, Davis. [https://gadm.org/](https://gadm.org/)
 
-## 3. High-Speed Rail (HSR) Network Integration
+---
 
-China's **High-Speed Rail (CRH / 中国高铁)** network—the defining infrastructure project of the 21st century—is mapped alongside the cities. Over the 2006–2015 era, high-speed rail catalyzed spatial expansion by connecting regional capitals and satellite towns:
+## 2. Data Licensing & Terms of Use
 
-- **Corridors Included**: The primary "Eight Vertical and Eight Horizontal" (*Ba Zong Ba Heng*) trunk corridors, including the Beijing–Hong Kong Corridor, Beijing–Shanghai Corridor, Eurasian Continental Bridge Corridor (Lanzhou–Xinjiang HSR), Yangtze River Corridor (Huhanrong), Shanghai–Kunming Corridor, Coastal Corridor, Xi'an–Chengdu HSR, and Hainan Island Ring HSR.
-- **Spatial Traces**: Vector geometries compiled from OpenStreetMap railway relations and Natural Earth 10m transportation datasets.
+| Dataset | Provider | License / Terms of Use | Attribution Notice |
+|:---|:---|:---|:---|
+| **WSF Evolution** | German Aerospace Center (DLR) | Creative Commons Attribution 4.0 International (CC-BY 4.0) | © DLR (2020, 2021) |
+| **Railways of China** | HOTOSM / OpenStreetMap | Open Data Commons Open Database License (ODbL 1.0) | © OpenStreetMap contributors, HOTOSM |
+| **Big Cities Points** | Esri / ArcGIS Online | Esri Public REST Feature Service Terms | © Esri, ArcGIS Online Content Providers |
+| **National Census (2020)** | National Bureau of Statistics (NBS) | Public Statistical Release / Government Open Data | Source: National Bureau of Statistics of China |
+| **GADM Boundaries** | University of California, Davis | Free for non-commercial and academic use | © GADM (v4.1) |
 
-## 4. Four Landmark Urban Development Epochs
+---
+
+## 3. Four Landmark Urban Development Epochs
 
 Urban expansion in modern China has unfolded in distinct historical waves:
 
@@ -392,18 +474,38 @@ Urban expansion in modern China has unfolded in distinct historical waves:
 4. **2006–2015 Wave** (`#10B981` · Emerald Green):
    The High-Speed Rail (HSR) construction boom, the Western Development Strategy (*Xibu Da Kaifa*), massive State-level New Areas (*Guojiaji Xinqu*), and metropolitan amalgamation.
 
-## 5. Quantitative Metrics
+---
 
-- **Cumulative Built-Up Area ($A_t$)**: Total surface area in $\text{km}^2$ occupied by detected settlements at year $t$.
-- **Net Spatial Gain ($\Delta A$)**: $A_{2015} - A_{1985}$.
-- **30-Year Growth Multiple ($M$)**: $A_{2015} / A_{1985}$.
-- **Compound Annual Growth Rate (CAGR)**: $\left(\frac{A_{2015}}{A_{1985}}\right)^{1/30} - 1$.
+## 4. Quantitative Metrics & Mathematical Definitions
+
+- **Cumulative Built-Up Area ($A_t$)**: Total surface area in square kilometers occupied by detected settlement pixels up to year $t$:
+  $$A_t = \sum_{i \in \text{city}} a_i \cdot \mathbb{I}(1985 \le Y_i \le t)$$
+  where $a_i$ is the ellipsoidal cell surface area computed via `terra::cellSize(unit = "km")`, and $Y_i$ is the year of first settlement detection at pixel $i$.
+- **Net Spatial Expansion ($\Delta A$)**: Absolute urban land footprint expansion between 1985 and 2015:
+  $$\Delta A = A_{2015} - A_{1985} \quad (\text{km}^2)$$
+- **30-Year Growth Multiple ($M$)**: Relative spatial expansion factor:
+  $$M = \frac{A_{2015}}{A_{1985}}$$
+- **Compound Annual Growth Rate (CAGR)**: Annualized physical expansion rate over the 30-year observation window:
+  $$\text{CAGR} = \left(\frac{A_{2015}}{A_{1985}}\right)^{1/30} - 1$$
+
+---
+
+## 5. Software Stack & Open Source Packages
+
+- **R Environment**: R Core Team (2026). *R: A Language and Environment for Statistical Computing* (v4.6.1), R Foundation for Statistical Computing, Vienna, Austria.
+- **Raster Processing**: Hijmans, R. J. (2024). `terra`: *Spatial Data Analysis*. R package version 1.9.50.
+- **Vector Processing**: Pebesma, E. (2018). *Simple Features for R: Standardized Support for Spatial Vector Data*. **The R Journal**, 10(1), 439-446.
+- **Cartographic Rendering**: Wickham, H. (2016). *ggplot2: Elegant Graphics for Data Analysis*. Springer-Verlag New York.
+- **Raster Cartography**: Hernangómez, D. (2023). *Using the tidyverse with terra Objects: the tidyterra Package*. **Journal of Open Source Software**, 8(91), 5751.
+- **Multi-Panel Layouts**: Pedersen, T. L. (2024). `patchwork`: *The Composer of Plots*. R package version 1.3.0.
+- **Typography & Font Shaping**: `ragg` and `systemfonts` utilizing `Droid Sans Fallback` (Google Android Open Source Project) for CJK vector typography.
+- **Publishing System**: Allaire, J. J., et al. (2024). *Quarto: An open-source scientific and technical publishing system*. Posit Software.
 """
 with open("methodology.qmd", "w", encoding="utf-8") as f:
     f.write(methodology_qmd.strip() + "\n")
 
 # ------------------------------------------------------------------------------
-# 5. Generate Home Page (index.qmd)
+# 5. Generate Home Page (index.qmd + Comprehensive Attributions Table)
 # ------------------------------------------------------------------------------
 imagemap_html = """```{=html}
 <div style="position: relative; width: 100%; max-width: 1100px; margin: 1.5rem auto; border-radius: 10px; overflow: hidden; border: 1px solid #1f2937; box-shadow: 0 10px 30px rgba(0,0,0,0.7);">
@@ -475,11 +577,11 @@ index_hero = """```{=html}
     <h2 style="color: #f59e0b; font-size: 1.5rem; margin-top: -0.25rem; margin-bottom: 1rem;">中国城市空间扩展图集 · 1985–2015</h2>
     <p class="hero-subtitle">
       Between 1985 and 2015, the People's Republic of China underwent the largest physical urbanization process in human history. 
-      This ratlas maps the spatial morphology, expansion rings, High-Speed Rail corridors, and quantitative growth trajectories across <strong>47 diverse Chinese cities</strong> ranked by population.
+      This ratlas maps the spatial morphology, expansion rings, HOTOSM railway networks, and quantitative growth trajectories across <strong>47 diverse Chinese cities</strong> ranked by population.
     </p>
     <div style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
       <a href="cities.html" class="btn btn-primary" style="background: #0284c7; border: none; padding: 0.6rem 1.25rem; font-weight: 600;">Browse All 47 Cities →</a>
-      <a href="methodology.html" class="btn btn-secondary" style="background: #1e293b; color: #cbd5e1; border: 1px solid #334155; padding: 0.6rem 1.25rem;">Methodology & Data</a>
+      <a href="methodology.html" class="btn btn-secondary" style="background: #1e293b; color: #cbd5e1; border: 1px solid #334155; padding: 0.6rem 1.25rem;">Methodology & Citations</a>
     </div>
   </div>
 </div>
@@ -552,30 +654,30 @@ Peak Area Expansion
 Transit Integration
 :::
 ::: {{.metric-val}}
-CRH
+HOTOSM
 :::
-<div style="font-size: 0.8rem; color: #38bdf8;">High-Speed Rail Grid</div>
+<div style="font-size: 0.8rem; color: #38bdf8;">194 HSR Corridors</div>
 :::
-:::
-
----
-
-## National Urban Expansion & High-Speed Rail Map
-
-The map below displays all 47 cities in the ratlas across China, sized by **2020 Census Population**, colored by **30-year growth multiplier**, and overlaid with China's **High-Speed Rail network (CRH 高铁)**:
-
-::: {{.map-container}}
-!['China Urban Growth Ratlas National Overview & High-Speed Rail'](output/maps/china_overview_map.png)
 :::
 
 ---
 
-## High-Speed Rail Network & Urban Hierarchy
+## National Urban Expansion & HOTOSM Railways Map
 
-China's High-Speed Rail network physically stitched together regional capitals and secondary nodes, accelerating post-2005 outward expansion:
+The map below displays all 47 cities in the ratlas across China, sized by **2020 Census Population**, colored by **30-year growth multiplier**, overlaid with the **HOTOSM China Railways dataset (HDX)** and contextualized with **ArcGIS Online Big Cities Points**:
 
 ::: {{.map-container}}
-!['China High-Speed Rail Network and Atlas Nodes'](output/maps/china_hsr_overview.png)
+!['China Urban Growth Ratlas National Overview & HOTOSM Railways'](output/maps/china_overview_map.png)
+:::
+
+---
+
+## HOTOSM High-Speed Rail Network & Urban Hierarchy
+
+China's High-Speed Rail grid physically stitched together regional capitals and secondary nodes, accelerating post-2005 outward expansion across the 184 major urban centers identified in the ArcGIS Online Big Cities layer:
+
+::: {{.map-container}}
+!['HOTOSM China High-Speed Rail Network and Urban Hierarchy'](output/maps/china_hsr_overview.png)
 :::
 
 ---
@@ -662,18 +764,32 @@ Silk Road oasis towns, highland capitals, and desert gateways.
 
 ## Complete 47-City Master Index (Ranked by Population)
 
-| Pop Rank | City | Chinese | Province | Region | Population (2020) | 1985 Area | 2015 Area | Net Gain | Multiplier | CAGR |
-|:---:|:---|:---|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|
+| Pop Rank | City | Chinese | Province | Region | Population (2020) | ArcGIS Rank | 1985 Area | 2015 Area | Net Gain | Multiplier | CAGR |
+|:---:|:---|:---|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 {all_rows}
 
 ---
 
+## Primary Data Sources & Citations
+
+This atlas synthesizes five open geospatial and authoritative statistical datasets. Detailed academic citations, licensing terms, and analytical documentation are available in the [Methodology & Citations](methodology.html) chapter.
+
+| Dataset / Source | Custodian / Provider | Resolution / Coverage | Analytical Role in Ratlas | Primary Citation / Access |
+|:---|:---|:---|:---|:---|
+| **World Settlement Footprint Evolution (WSF Evolution)** | German Aerospace Center (DLR) | 30m / 1985–2015 Annual | Primary spatial engine; identifies exact year of settlement detection | [DLR Geoservice](https://download.geoservice.dlr.de/WSF_EVO/) · Marconcini et al. (2020, *Sci. Data*) |
+| **Railways of China Dataset** | Humanitarian OpenStreetMap Team & UN OCHA | Vector / National | 194 High-Speed Rail corridors and transit infrastructure | [HDX HOTOSM Dataset](https://data.humdata.org/dataset/hotosm_chn_railways) · © OpenStreetMap contributors (ODbL) |
+| **Big Cities Points Layer** | Esri / ArcGIS Online | Vector Points / 184 Cities | National city hierarchy ranking (1–200) and tier-1 anchor points | [ArcGIS FeatureServer](https://services1.arcgis.com/4TXrdeWh0RyCqPgB/arcgis/rest/services/big_cities_points/FeatureServer) |
+| **Seventh National Population Census (七普 2020)** | National Bureau of Statistics of China (NBS) | Prefectural / 2020 | Primary ranking order (#1–#47) by permanent resident population | [NBS China Census Bulletin (2021)](http://www.stats.gov.cn/) |
+| **GADM Administrative Areas (v4.1)** | University of California, Davis (UCD) | Levels 0, 1, 2 / National | Administrative boundary clipping and bilingual toponymy | [GADM v4.1](https://gadm.org/) · Hijmans et al. (2022) |
+
+---
+
 ::: {{.caption-box}}
-**China Urban Growth Ratlas** · Built with R (`terra`, `sf`, `ggplot2`, `tidyterra`, `patchwork`) and Quarto. Data: German Aerospace Center (DLR) World Settlement Footprint Evolution (30m), 7th National Population Census (七普 2020), OpenStreetMap CRH High-Speed Rail Grid & GADM 4.1.
+**China Urban Growth Ratlas** · Built with R (`terra`, `sf`, `ggplot2`, `tidyterra`, `patchwork`) and Quarto. Data: German Aerospace Center (DLR) World Settlement Footprint Evolution (30m), 7th National Population Census (七普 2020), HOTOSM Railways of China (HDX), ArcGIS Online Big Cities Points & GADM 4.1.
 :::
 """
 
 with open("index.qmd", "w", encoding="utf-8") as f:
     f.write(index_qmd.strip() + "\n")
 
-print("Generated all Quarto source documents successfully with {=html} blocks!")
+print("Generated all Quarto source documents successfully with comprehensive source citations!")

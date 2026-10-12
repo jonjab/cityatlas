@@ -23,7 +23,13 @@
     "growth_multiple": 7.52,
     "cagr_pct": 6.96,
     "rank_population": 1,
-    "rank_multiplier": 2
+    "rank_multiplier": 2,
+    "arcgis_rank": 4,
+    "ru_topos": "x",
+    "planetscope": "x",
+    "arcgis_id": 143,
+    "arcgis_lon": 104.066670000434,
+    "arcgis_lat": 30.6666699998776
   },
   {
     "id": "shenzhen",
@@ -49,7 +55,13 @@
     "growth_multiple": 6.33,
     "cagr_pct": 6.34,
     "rank_population": 2,
-    "rank_multiplier": 5
+    "rank_multiplier": 5,
+    "arcgis_rank": 6,
+    "ru_topos": "x",
+    "planetscope": "x",
+    "arcgis_id": 63,
+    "arcgis_lon": 114.06830000041,
+    "arcgis_lat": 22.5455399997863
   },
   {
     "id": "xian",
@@ -75,7 +87,13 @@
     "growth_multiple": 3.45,
     "cagr_pct": 4.22,
     "rank_population": 3,
-    "rank_multiplier": 24
+    "rank_multiplier": 24,
+    "arcgis_rank": 9,
+    "ru_topos": "x",
+    "planetscope": "x",
+    "arcgis_id": 93,
+    "arcgis_lon": 108.928609999829,
+    "arcgis_lat": 34.2583299996575
   },
   {
     "id": "zhengzhou",
@@ -101,7 +119,13 @@
     "growth_multiple": 3.44,
     "cagr_pct": 4.2,
     "rank_population": 4,
-    "rank_multiplier": 25
+    "rank_multiplier": 25,
+    "arcgis_rank": 18,
+    "ru_topos": "x",
+    "planetscope": "x",
+    "arcgis_id": 116,
+    "arcgis_lon": 113.648610000329,
+    "arcgis_lat": 34.7577799996394
   },
   {
     "id": "wuhan",
@@ -127,7 +151,13 @@
     "growth_multiple": 3.85,
     "cagr_pct": 4.6,
     "rank_population": 5,
-    "rank_multiplier": 18
+    "rank_multiplier": 18,
+    "arcgis_rank": 8,
+    "ru_topos": "x",
+    "planetscope": "x",
+    "arcgis_id": 88,
+    "arcgis_lon": 114.266669999613,
+    "arcgis_lat": 30.5833299997922
   },
   {
     "id": "shijiazhuang",
@@ -153,7 +183,13 @@
     "growth_multiple": 2.64,
     "cagr_pct": 3.29,
     "rank_population": 6,
-    "rank_multiplier": 37
+    "rank_multiplier": 37,
+    "arcgis_rank": 31,
+    "ru_topos": "x",
+    "planetscope": "x",
+    "arcgis_id": 64,
+    "arcgis_lon": 114.478609999805,
+    "arcgis_lat": 38.041390000325
   },
   {
     "id": "harbin",
@@ -179,7 +215,13 @@
     "growth_multiple": 2.62,
     "cagr_pct": 3.26,
     "rank_population": 7,
-    "rank_multiplier": 38
+    "rank_multiplier": 38,
+    "arcgis_rank": 17,
+    "ru_topos": "x",
+    "planetscope": "x",
+    "arcgis_id": 170,
+    "arcgis_lon": 126.650000000287,
+    "arcgis_lat": 45.7500000002727
   },
   {
     "id": "baoding",
@@ -205,7 +247,13 @@
     "growth_multiple": 3.97,
     "cagr_pct": 4.71,
     "rank_population": 8,
-    "rank_multiplier": 16
+    "rank_multiplier": 16,
+    "arcgis_rank": 62,
+    "ru_topos": "x",
+    "planetscope": "x",
+    "arcgis_id": 129,
+    "arcgis_lon": 115.490280000246,
+    "arcgis_lat": 38.8511100000204
   },
   {
     "id": "jinan",
@@ -231,7 +279,13 @@
     "growth_multiple": 3.23,
     "cagr_pct": 3.99,
     "rank_population": 9,
-    "rank_multiplier": 29
+    "rank_multiplier": 29,
+    "arcgis_rank": 14,
+    "ru_topos": "x",
+    "planetscope": "x",
+    "arcgis_id": 10,
+    "arcgis_lon": 116.997219999743,
+    "arcgis_lat": 36.6683300002323
   },
   {
     "id": "kunming",
@@ -257,7 +311,13 @@
     "growth_multiple": 4.08,
     "cagr_pct": 4.8,
     "rank_population": 10,
-    "rank_multiplier": 14
+    "rank_multiplier": 14,
+    "arcgis_rank": 20,
+    "ru_topos": "p",
+    "planetscope": "x",
+    "arcgis_id": 18,
+    "arcgis_lon": 102.718329999682,
+    "arcgis_lat": 25.0388900003278
   },
   {
     "id": "jining",
@@ -283,7 +343,13 @@
     "growth_multiple": 5.05,
     "cagr_pct": 5.55,
     "rank_population": 11,
-    "rank_multiplier": 10
+    "rank_multiplier": 10,
+    "arcgis_rank": 84,
+    "ru_topos": null,
+    "planetscope": "x",
+    "arcgis_id": 184,
+    "arcgis_lon": 116.551084898459,
+    "arcgis_lat": 35.4034504245234
   },
   {
     "id": "nanchang",
@@ -309,7 +375,13 @@
     "growth_multiple": 3.4,
     "cagr_pct": 4.17,
     "rank_population": 12,
-    "rank_multiplier": 26
+    "rank_multiplier": 26,
+    "arcgis_rank": 36,
+    "ru_topos": "p",
+    "planetscope": "x",
+    "arcgis_id": 37,
+    "arcgis_lon": 115.853059999618,
+    "arcgis_lat": 28.683960000334
   },
   {
     "id": "liaocheng",
@@ -335,7 +407,13 @@
     "growth_multiple": 3.24,
     "cagr_pct": 3.99,
     "rank_population": 13,
-    "rank_multiplier": 28
+    "rank_multiplier": 28,
+    "arcgis_rank": 96,
+    "ru_topos": "x",
+    "planetscope": "x",
+    "arcgis_id": 25,
+    "arcgis_lon": 116.002470000341,
+    "arcgis_lat": 36.4506400002304
   },
   {
     "id": "xiamen",
@@ -361,7 +439,13 @@
     "growth_multiple": 3.67,
     "cagr_pct": 4.43,
     "rank_population": 14,
-    "rank_multiplier": 20
+    "rank_multiplier": 20,
+    "arcgis_rank": 23,
+    "ru_topos": "x",
+    "planetscope": "x",
+    "arcgis_id": 92,
+    "arcgis_lon": 118.081869999843,
+    "arcgis_lat": 24.4797899999882
   },
   {
     "id": "guilin",
@@ -387,7 +471,13 @@
     "growth_multiple": 3.34,
     "cagr_pct": 4.1,
     "rank_population": 15,
-    "rank_multiplier": 27
+    "rank_multiplier": 27,
+    "arcgis_rank": 80,
+    "ru_topos": "p",
+    "planetscope": "x",
+    "arcgis_id": 163,
+    "arcgis_lon": 110.296389999674,
+    "arcgis_lat": 25.2802200000548
   },
   {
     "id": "zibo",
@@ -413,7 +503,13 @@
     "growth_multiple": 3.65,
     "cagr_pct": 4.41,
     "rank_population": 16,
-    "rank_multiplier": 22
+    "rank_multiplier": 22,
+    "arcgis_rank": 45,
+    "ru_topos": "x",
+    "planetscope": "x",
+    "arcgis_id": 121,
+    "arcgis_lon": 118.063330000375,
+    "arcgis_lat": 36.7905599998274
   },
   {
     "id": "lianyungang",
@@ -439,7 +535,13 @@
     "growth_multiple": 2.72,
     "cagr_pct": 3.39,
     "rank_population": 17,
-    "rank_multiplier": 35
+    "rank_multiplier": 35,
+    "arcgis_rank": 61,
+    "ru_topos": "x",
+    "planetscope": "x",
+    "arcgis_id": 24,
+    "arcgis_lon": 119.215559999686,
+    "arcgis_lat": 34.598450000149
   },
   {
     "id": "yangzhou",
@@ -465,7 +567,13 @@
     "growth_multiple": 6.07,
     "cagr_pct": 6.2,
     "rank_population": 18,
-    "rank_multiplier": 7
+    "rank_multiplier": 7,
+    "arcgis_rank": 70,
+    "ru_topos": "x",
+    "planetscope": "x",
+    "arcgis_id": 102,
+    "arcgis_lon": 119.435830000252,
+    "arcgis_lat": 32.3972200002119
   },
   {
     "id": "taizhou",
@@ -491,7 +599,13 @@
     "growth_multiple": 7.21,
     "cagr_pct": 6.81,
     "rank_population": 19,
-    "rank_multiplier": 3
+    "rank_multiplier": 3,
+    "arcgis_rank": 76,
+    "ru_topos": "x",
+    "planetscope": "x",
+    "arcgis_id": 76,
+    "arcgis_lon": 119.900956030123,
+    "arcgis_lat": 32.4923108766378
   },
   {
     "id": "lanzhou",
@@ -517,7 +631,13 @@
     "growth_multiple": 1.95,
     "cagr_pct": 2.25,
     "rank_population": 20,
-    "rank_multiplier": 43
+    "rank_multiplier": 43,
+    "arcgis_rank": 40,
+    "ru_topos": null,
+    "planetscope": "x",
+    "arcgis_id": 21,
+    "arcgis_lon": 103.839869999643,
+    "arcgis_lat": 36.0570100003475
   },
   {
     "id": "luzhou",
@@ -543,7 +663,13 @@
     "growth_multiple": 6.17,
     "cagr_pct": 6.25,
     "rank_population": 21,
-    "rank_multiplier": 6
+    "rank_multiplier": 6,
+    "arcgis_rank": 107,
+    "ru_topos": "x",
+    "planetscope": "x",
+    "arcgis_id": 32,
+    "arcgis_lon": 105.425750000009,
+    "arcgis_lat": 28.8902999997255
   },
   {
     "id": "urumqi",
@@ -569,7 +695,13 @@
     "growth_multiple": 1.71,
     "cagr_pct": 1.81,
     "rank_population": 22,
-    "rank_multiplier": 44
+    "rank_multiplier": 44,
+    "arcgis_rank": 27,
+    "ru_topos": "x",
+    "planetscope": "x",
+    "arcgis_id": 84,
+    "arcgis_lon": 87.6004600003905,
+    "arcgis_lat": 43.8009600001545
   },
   {
     "id": "binzhou",
@@ -595,7 +727,13 @@
     "growth_multiple": 3.66,
     "cagr_pct": 4.42,
     "rank_population": 23,
-    "rank_multiplier": 21
+    "rank_multiplier": 21,
+    "arcgis_rank": 142,
+    "ru_topos": null,
+    "planetscope": "x",
+    "arcgis_id": 134,
+    "arcgis_lon": 118.01666999984,
+    "arcgis_lat": 37.3666699996978
   },
   {
     "id": "yichang",
@@ -621,7 +759,13 @@
     "growth_multiple": 3.91,
     "cagr_pct": 4.65,
     "rank_population": 24,
-    "rank_multiplier": 17
+    "rank_multiplier": 17,
+    "arcgis_rank": 69,
+    "ru_topos": "m",
+    "planetscope": null,
+    "arcgis_id": 104,
+    "arcgis_lon": 111.284720000251,
+    "arcgis_lat": 30.7144400001696
   },
   {
     "id": "wuhu",
@@ -647,7 +791,13 @@
     "growth_multiple": 4.59,
     "cagr_pct": 5.21,
     "rank_population": 25,
-    "rank_multiplier": 11
+    "rank_multiplier": 11,
+    "arcgis_rank": 65,
+    "ru_topos": "x",
+    "planetscope": null,
+    "arcgis_id": 89,
+    "arcgis_lon": 118.373509999888,
+    "arcgis_lat": 31.3372799997596
   },
   {
     "id": "hohhot",
@@ -673,7 +823,13 @@
     "growth_multiple": 5.07,
     "cagr_pct": 5.56,
     "rank_population": 26,
-    "rank_multiplier": 9
+    "rank_multiplier": 9,
+    "arcgis_rank": 42,
+    "ru_topos": "x",
+    "planetscope": "x",
+    "arcgis_id": 177,
+    "arcgis_lon": 111.652219999654,
+    "arcgis_lat": 40.810560000012
   },
   {
     "id": "datong",
@@ -699,7 +855,13 @@
     "growth_multiple": 2.81,
     "cagr_pct": 3.51,
     "rank_population": 27,
-    "rank_multiplier": 34
+    "rank_multiplier": 34,
+    "arcgis_rank": 59,
+    "ru_topos": null,
+    "planetscope": "x",
+    "arcgis_id": 150,
+    "arcgis_lon": 113.29139000034,
+    "arcgis_lat": 40.0936099998574
   },
   {
     "id": "weihai",
@@ -725,7 +887,13 @@
     "growth_multiple": 5.46,
     "cagr_pct": 5.82,
     "rank_population": 28,
-    "rank_multiplier": 8
+    "rank_multiplier": 8,
+    "arcgis_rank": 125,
+    "ru_topos": "x",
+    "planetscope": "x",
+    "arcgis_id": 86,
+    "arcgis_lon": 122.113560000414,
+    "arcgis_lat": 37.5091399998105
   },
   {
     "id": "haikou",
@@ -751,7 +919,13 @@
     "growth_multiple": 4.12,
     "cagr_pct": 4.83,
     "rank_population": 29,
-    "rank_multiplier": 13
+    "rank_multiplier": 13,
+    "arcgis_rank": 56,
+    "ru_topos": "p",
+    "planetscope": "x",
+    "arcgis_id": 165,
+    "arcgis_lon": 110.346509999866,
+    "arcgis_lat": 20.0342100002075
   },
   {
     "id": "heyuan",
@@ -777,7 +951,13 @@
     "growth_multiple": 9.01,
     "cagr_pct": 7.6,
     "rank_population": 30,
-    "rank_multiplier": 1
+    "rank_multiplier": 1,
+    "arcgis_rank": 137,
+    "ru_topos": "x",
+    "planetscope": "x",
+    "arcgis_id": 175,
+    "arcgis_lon": 114.683330000207,
+    "arcgis_lat": 23.733330000334
   },
   {
     "id": "zhuhai",
@@ -803,7 +983,13 @@
     "growth_multiple": 7.13,
     "cagr_pct": 6.77,
     "rank_population": 31,
-    "rank_multiplier": 4
+    "rank_multiplier": 4,
+    "arcgis_rank": 52,
+    "ru_topos": "x",
+    "planetscope": "x",
+    "arcgis_id": 119,
+    "arcgis_lon": 113.567779999798,
+    "arcgis_lat": 22.2769399997052
   },
   {
     "id": "tieling",
@@ -829,7 +1015,13 @@
     "growth_multiple": 3.09,
     "cagr_pct": 3.83,
     "rank_population": 32,
-    "rank_multiplier": 31
+    "rank_multiplier": 31,
+    "arcgis_rank": 164,
+    "ru_topos": "x",
+    "planetscope": "x",
+    "arcgis_id": 80,
+    "arcgis_lon": 123.84138999972,
+    "arcgis_lat": 42.2930599998116
   },
   {
     "id": "dandong",
@@ -855,7 +1047,13 @@
     "growth_multiple": 3.12,
     "cagr_pct": 3.86,
     "rank_population": 33,
-    "rank_multiplier": 30
+    "rank_multiplier": 30,
+    "arcgis_rank": 145,
+    "ru_topos": "x",
+    "planetscope": "x",
+    "arcgis_id": 148,
+    "arcgis_lon": 124.394720000253,
+    "arcgis_lat": 40.1291700003126
   },
   {
     "id": "dongying",
@@ -881,7 +1079,13 @@
     "growth_multiple": 4.06,
     "cagr_pct": 4.79,
     "rank_population": 34,
-    "rank_multiplier": 15
+    "rank_multiplier": 15,
+    "arcgis_rank": 106,
+    "ru_topos": "x",
+    "planetscope": "x",
+    "arcgis_id": 155,
+    "arcgis_lon": 118.491650000406,
+    "arcgis_lat": 37.4627100003303
   },
   {
     "id": "ulanqab",
@@ -907,7 +1111,13 @@
     "growth_multiple": 5.05,
     "cagr_pct": 5.54,
     "rank_population": 35,
-    "rank_multiplier": 10
+    "rank_multiplier": 10,
+    "arcgis_rank": 166,
+    "ru_topos": null,
+    "planetscope": "x",
+    "arcgis_id": 83,
+    "arcgis_lon": 113.132999999862,
+    "arcgis_lat": 40.9930000002272
   },
   {
     "id": "fuxin",
@@ -933,7 +1143,13 @@
     "growth_multiple": 2.94,
     "cagr_pct": 3.66,
     "rank_population": 36,
-    "rank_multiplier": 33
+    "rank_multiplier": 33,
+    "arcgis_rank": 129,
+    "ru_topos": "x",
+    "planetscope": "x",
+    "arcgis_id": 158,
+    "arcgis_lon": 121.658890000226,
+    "arcgis_lat": 42.0155599997692
   },
   {
     "id": "baicheng",
@@ -959,7 +1175,13 @@
     "growth_multiple": 2.27,
     "cagr_pct": 2.77,
     "rank_population": 37,
-    "rank_multiplier": 42
+    "rank_multiplier": 42,
+    "arcgis_rank": 177,
+    "ru_topos": "x",
+    "planetscope": "p",
+    "arcgis_id": 127,
+    "arcgis_lon": 122.83302,
+    "arcgis_lat": 45.6175100001092
   },
   {
     "id": "zhangjiajie",
@@ -985,7 +1207,13 @@
     "growth_multiple": 3.46,
     "cagr_pct": 4.22,
     "rank_population": 38,
-    "rank_multiplier": 23
+    "rank_multiplier": 23,
+    "arcgis_rank": 179,
+    "ru_topos": "p",
+    "planetscope": "x",
+    "arcgis_id": 111,
+    "arcgis_lon": 110.478330000079,
+    "arcgis_lat": 29.1294399998554
   },
   {
     "id": "wuwei",
@@ -1011,7 +1239,13 @@
     "growth_multiple": 2.67,
     "cagr_pct": 3.32,
     "rank_population": 39,
-    "rank_multiplier": 36
+    "rank_multiplier": 36,
+    "arcgis_rank": 200,
+    "ru_topos": null,
+    "planetscope": "x",
+    "arcgis_id": 196,
+    "arcgis_lon": 102.622721337406,
+    "arcgis_lat": 37.9304710929425
   },
   {
     "id": "panjin",
@@ -1037,7 +1271,13 @@
     "growth_multiple": 2.59,
     "cagr_pct": 3.22,
     "rank_population": 40,
-    "rank_multiplier": 39
+    "rank_multiplier": 39,
+    "arcgis_rank": 199,
+    "ru_topos": null,
+    "planetscope": "x",
+    "arcgis_id": 197,
+    "arcgis_lon": 122.042675215156,
+    "arcgis_lat": 41.1575329939818
   },
   {
     "id": "huangshan",
@@ -1063,7 +1303,13 @@
     "growth_multiple": 4.57,
     "cagr_pct": 5.2,
     "rank_population": 41,
-    "rank_multiplier": 12
+    "rank_multiplier": 12,
+    "arcgis_rank": 168,
+    "ru_topos": null,
+    "planetscope": "x",
+    "arcgis_id": 181,
+    "arcgis_lon": 118.312500000187,
+    "arcgis_lat": 29.7113899999957
   },
   {
     "id": "liaoyuan",
@@ -1089,7 +1335,13 @@
     "growth_multiple": 2.52,
     "cagr_pct": 3.13,
     "rank_population": 42,
-    "rank_multiplier": 40
+    "rank_multiplier": 40,
+    "arcgis_rank": 160,
+    "ru_topos": "x",
+    "planetscope": "o",
+    "arcgis_id": 27,
+    "arcgis_lon": 125.135830000057,
+    "arcgis_lat": 42.9036099996784
   },
   {
     "id": "taishan",
@@ -1115,7 +1367,13 @@
     "growth_multiple": 3.71,
     "cagr_pct": 4.47,
     "rank_population": 43,
-    "rank_multiplier": 19
+    "rank_multiplier": 19,
+    "arcgis_rank": 200,
+    "ru_topos": "x",
+    "planetscope": "x",
+    "arcgis_id": 194,
+    "arcgis_lon": 112.7782795891,
+    "arcgis_lat": 22.2452614814271
   },
   {
     "id": "kashgar",
@@ -1141,7 +1399,13 @@
     "growth_multiple": 3.46,
     "cagr_pct": 4.23,
     "rank_population": 44,
-    "rank_multiplier": 23
+    "rank_multiplier": 23,
+    "arcgis_rank": 135,
+    "ru_topos": "p",
+    "planetscope": "x",
+    "arcgis_id": 16,
+    "arcgis_lon": 75.9895099997272,
+    "arcgis_lat": 39.4706600003121
   },
   {
     "id": "korla",
@@ -1167,7 +1431,13 @@
     "growth_multiple": 1.52,
     "cagr_pct": 1.41,
     "rank_population": 45,
-    "rank_multiplier": 45
+    "rank_multiplier": 45,
+    "arcgis_rank": 154,
+    "ru_topos": "x",
+    "planetscope": "x",
+    "arcgis_id": 17,
+    "arcgis_lon": 86.1523100003211,
+    "arcgis_lat": 41.7605500003106
   },
   {
     "id": "hotan",
@@ -1193,7 +1463,13 @@
     "growth_multiple": 2.39,
     "cagr_pct": 2.95,
     "rank_population": 46,
-    "rank_multiplier": 41
+    "rank_multiplier": 41,
+    "arcgis_rank": 169,
+    "ru_topos": "x",
+    "planetscope": "p",
+    "arcgis_id": 178,
+    "arcgis_lon": 79.9354799998572,
+    "arcgis_lat": 37.1075000000915
   },
   {
     "id": "hunchun",
@@ -1219,6 +1495,12 @@
     "growth_multiple": 2.99,
     "cagr_pct": 3.72,
     "rank_population": 47,
-    "rank_multiplier": 32
+    "rank_multiplier": 32,
+    "arcgis_rank": 178,
+    "ru_topos": "x",
+    "planetscope": "o",
+    "arcgis_id": 2,
+    "arcgis_lon": 130.358060000009,
+    "arcgis_lat": 42.8674999999498
   }
 ]

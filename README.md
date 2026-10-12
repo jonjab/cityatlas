@@ -113,10 +113,45 @@ china-ratlas/
 
 ---
 
-## 📜 Data Sources & Citations
+## 📜 Comprehensive Data Sources, Citations & Attributions
 
-1. **DLR World Settlement Footprint Evolution (WSF Evolution)**:
-   - Marconcini, M., Metz, A., Üreyen, S., et al. (2020). *Outlining where humans live, the World Settlement Footprint 2015.* Scientific Data 7, 242.
-   - Data Access: [German Aerospace Center (DLR) Geoservice](https://download.geoservice.dlr.de/WSF_EVO/).
-2. **GADM Database of Global Administrative Areas**:
-   - GADM version 4.1 ([https://gadm.org/](https://gadm.org/)).
+This project integrates five primary geospatial and demographic datasets from authoritative open web repositories:
+
+### 1. DLR World Settlement Footprint Evolution (WSF Evolution)
+- **Custodian**: German Aerospace Center (Deutsches Zentrum für Luft- und Raumfahrt; DLR), Earth Observation Center (EOC).
+- **Resolution & Scope**: 30-meter global annual settlement detection grid (1985–2015) derived from joint multi-decadal optical (Landsat-5/7/8) and radar (ERS-1/2, Sentinel-1) satellite imagery.
+- **Data Access**: [German Aerospace Center (DLR) Geoservice](https://download.geoservice.dlr.de/WSF_EVO/) via GDAL `/vsicurl/` range requests.
+- **License**: Creative Commons Attribution 4.0 International (CC-BY 4.0).
+- **Academic Citations**:
+  - Marconcini, M., Metz, A., Üreyen, S., Palacios-Lopez, D., Hanke, W., Bachofer, F., Zeidler, J., Esch, T., Gorelick, N., Kakarla, A., Paganini, M., & Strano, E. (2020). *Outlining where humans live, the World Settlement Footprint 2015.* **Scientific Data**, 7(1), 242. [https://doi.org/10.1038/s41597-020-00580-5](https://doi.org/10.1038/s41597-020-00580-5)
+  - Marconcini, M., Metz, A., Zeidler, J., & Esch, T. (2021). *The World Settlement Footprint Evolution—30 Years of Growth.* **Remote Sensing of Environment**, 255, 112282.
+
+### 2. HOTOSM Railways of China Dataset
+- **Custodian**: Humanitarian OpenStreetMap Team (HOTOSM) & United Nations Office for the Coordination of Humanitarian Affairs (UN OCHA).
+- **Platform**: Humanitarian Data Exchange (HDX).
+- **Data Access**: [Railways of China Dataset on HDX](https://data.humdata.org/dataset/hotosm_chn_railways).
+- **Scope**: Complete OpenStreetMap railway extract for China (>430,000 vector segments) filtered and aggregated into 194 High-Speed Rail corridors.
+- **License**: Open Data Commons Open Database License (ODbL 1.0) by OpenStreetMap contributors.
+
+### 3. ArcGIS Online Big Cities Points Layer
+- **Custodian**: Esri / ArcGIS Online Feature Services.
+- **Endpoint**: [`big_cities_points` FeatureServer](https://services1.arcgis.com/4TXrdeWh0RyCqPgB/arcgis/rest/services/big_cities_points/FeatureServer).
+- **Scope**: 184 major Chinese urban nodes with national urban hierarchy rankings (`rank` 1 to 200).
+- **Role**: Validates sample selection, confirms exclusion of tier-1 megacities, and assigns national hierarchy tiers.
+
+### 4. Seventh National Population Census of China (第七次全国人口普查 / 七普 2020)
+- **Custodian**: National Bureau of Statistics of China (中华人民共和国国家统计局; NBS), Beijing, China.
+- **Scope**: Permanent resident population (*常住人口*) as of November 1, 2020, defining the primary sorting order of the ratlas (#1 Chengdu 20.94M to #47 Hunchun 0.24M).
+- **Citation**: Office of the Leading Group of the State Council for the Seventh National Population Census. (2021). *Major Figures on 2020 Population Census of China.* China Statistics Press. [http://www.stats.gov.cn/](http://www.stats.gov.cn/)
+
+### 5. GADM Database of Global Administrative Areas
+- **Custodian**: University of California, Davis (Department of Environmental Science and Policy).
+- **Version**: GADM 4.1 ([https://gadm.org/](https://gadm.org/)).
+- **Citation**: Hijmans, R. J., Garcia, N., & Wieczorek, J. (2022). *GADM Database of Global Administrative Areas, Version 4.1*. University of California, Davis.
+
+### 6. Core Software Stack
+- **R Environment**: R Core Team (2026). R v4.6.1.
+- **Spatial Analysis**: `terra` (Hijmans, 2024), `sf` (Pebesma, 2018), `tidyterra` (Hernangómez, 2023).
+- **Graphics**: `ggplot2` (Wickham, 2016), `patchwork` (Pedersen, 2024), `ragg`.
+- **CJK Typography**: `Droid Sans Fallback` (Google Android Open Source Project).
+- **Web Compilation**: Quarto (Posit Software).

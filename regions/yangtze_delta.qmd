@@ -15,13 +15,13 @@ format:
 
 ## Regional Member Cities (Ranked by Population)
 
-| Pop Rank | City | Chinese | Province | Population | 1985 Area | 2015 Area | Net Gain | Multiplier | CAGR |
-|:---:|:---|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|
-| #17 | [Lianyungang](../cities/lianyungang.html) | 连云港市 | Jiangsu | **4.6M** | 135.75 km² | 369.04 km² | +233.29 km² | **2.72×** | 3.39% |
-| #18 | [Yangzhou](../cities/yangzhou.html) | 扬州市 | Jiangsu | **4.56M** | 98.97 km² | 600.99 km² | +502.02 km² | **6.07×** | 6.2% |
-| #19 | [Taizhou](../cities/taizhou.html) | 泰州市 | Jiangsu | **4.51M** | 80.81 km² | 583 km² | +502.19 km² | **7.21×** | 6.81% |
-| #25 | [Wuhu](../cities/wuhu.html) | 芜湖市 | Anhui | **3.64M** | 82.97 km² | 380.45 km² | +297.48 km² | **4.59×** | 5.21% |
-| #41 | [Huangshan](../cities/huangshan.html) | 黄山市 | Anhui | **1.33M** | 26.02 km² | 118.96 km² | +92.94 km² | **4.57×** | 5.2% |
+| Pop Rank | City | Chinese | Province | Population | ArcGIS Rank | 1985 Area | 2015 Area | Net Gain | Multiplier | CAGR |
+|:---:|:---|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| #17 | [Lianyungang](../cities/lianyungang.html) | 连云港市 | Jiangsu | **4.6M** | #61 | 135.75 km² | 369.04 km² | +233.29 km² | **2.72×** | 3.39% |
+| #18 | [Yangzhou](../cities/yangzhou.html) | 扬州市 | Jiangsu | **4.56M** | #70 | 98.97 km² | 600.99 km² | +502.02 km² | **6.07×** | 6.2% |
+| #19 | [Taizhou](../cities/taizhou.html) | 泰州市 | Jiangsu | **4.51M** | #76 | 80.81 km² | 583 km² | +502.19 km² | **7.21×** | 6.81% |
+| #25 | [Wuhu](../cities/wuhu.html) | 芜湖市 | Anhui | **3.64M** | #65 | 82.97 km² | 380.45 km² | +297.48 km² | **4.59×** | 5.21% |
+| #41 | [Huangshan](../cities/huangshan.html) | 黄山市 | Anhui | **1.33M** | #168 | 26.02 km² | 118.96 km² | +92.94 km² | **4.57×** | 5.2% |
 
 
 ---
@@ -31,7 +31,7 @@ format:
 
 ::: {.region-card}
 ### [Lianyungang (连云港市)](../cities/lianyungang.html)
-**Jiangsu Province** · Population: <strong style="color: #38bdf8;">4.6 Million</strong> (Rank #17) · 30-Year Multiplier: <strong style="color: #f59e0b;">2.72×</strong>
+**Jiangsu Province** · Population: <strong style="color: #38bdf8;">4.6 Million</strong> (Rank #17) · ArcGIS Hierarchy Rank: <strong>#61</strong> · 30-Year Multiplier: <strong style="color: #f59e0b;">2.72×</strong>
 
 - **1985 Footprint**: 135.75 km²
 - **2015 Footprint**: 369.04 km² (Net expansion: +233.29 km²)
@@ -42,7 +42,7 @@ format:
 
 ::: {.region-card}
 ### [Yangzhou (扬州市)](../cities/yangzhou.html)
-**Jiangsu Province** · Population: <strong style="color: #38bdf8;">4.56 Million</strong> (Rank #18) · 30-Year Multiplier: <strong style="color: #f59e0b;">6.07×</strong>
+**Jiangsu Province** · Population: <strong style="color: #38bdf8;">4.56 Million</strong> (Rank #18) · ArcGIS Hierarchy Rank: <strong>#70</strong> · 30-Year Multiplier: <strong style="color: #f59e0b;">6.07×</strong>
 
 - **1985 Footprint**: 98.97 km²
 - **2015 Footprint**: 600.99 km² (Net expansion: +502.02 km²)
@@ -53,7 +53,7 @@ format:
 
 ::: {.region-card}
 ### [Taizhou (泰州市)](../cities/taizhou.html)
-**Jiangsu Province** · Population: <strong style="color: #38bdf8;">4.51 Million</strong> (Rank #19) · 30-Year Multiplier: <strong style="color: #f59e0b;">7.21×</strong>
+**Jiangsu Province** · Population: <strong style="color: #38bdf8;">4.51 Million</strong> (Rank #19) · ArcGIS Hierarchy Rank: <strong>#76</strong> · 30-Year Multiplier: <strong style="color: #f59e0b;">7.21×</strong>
 
 - **1985 Footprint**: 80.81 km²
 - **2015 Footprint**: 583 km² (Net expansion: +502.19 km²)
@@ -64,7 +64,7 @@ format:
 
 ::: {.region-card}
 ### [Wuhu (芜湖市)](../cities/wuhu.html)
-**Anhui Province** · Population: <strong style="color: #38bdf8;">3.64 Million</strong> (Rank #25) · 30-Year Multiplier: <strong style="color: #f59e0b;">4.59×</strong>
+**Anhui Province** · Population: <strong style="color: #38bdf8;">3.64 Million</strong> (Rank #25) · ArcGIS Hierarchy Rank: <strong>#65</strong> · 30-Year Multiplier: <strong style="color: #f59e0b;">4.59×</strong>
 
 - **1985 Footprint**: 82.97 km²
 - **2015 Footprint**: 380.45 km² (Net expansion: +297.48 km²)
@@ -75,7 +75,7 @@ format:
 
 ::: {.region-card}
 ### [Huangshan (黄山市)](../cities/huangshan.html)
-**Anhui Province** · Population: <strong style="color: #38bdf8;">1.33 Million</strong> (Rank #41) · 30-Year Multiplier: <strong style="color: #f59e0b;">4.57×</strong>
+**Anhui Province** · Population: <strong style="color: #38bdf8;">1.33 Million</strong> (Rank #41) · ArcGIS Hierarchy Rank: <strong>#168</strong> · 30-Year Multiplier: <strong style="color: #f59e0b;">4.57×</strong>
 
 - **1985 Footprint**: 26.02 km²
 - **2015 Footprint**: 118.96 km² (Net expansion: +92.94 km²)
@@ -83,3 +83,15 @@ format:
 
 [View Maps & Visual Suite →](../cities/huangshan.html)
 :::
+
+
+---
+
+## Data Sources & Regional Attributions
+
+Data presented in this regional overview is derived from:
+- **DLR WSF Evolution (1985–2015)**: German Aerospace Center (30m settlement detection).
+- **Seventh National Population Census (2020)**: National Bureau of Statistics of China (NBS).
+- **ArcGIS Online Big Cities Points**: Esri / public feature service `big_cities_points`.
+- **HOTOSM Railways of China**: Humanitarian OpenStreetMap Team via Humanitarian Data Exchange (HDX).
+- **GADM Administrative Areas (v4.1)**: UC Davis.

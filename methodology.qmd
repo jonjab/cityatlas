@@ -1,6 +1,6 @@
 ---
 title: "Data & Methodology"
-subtitle: "Geospatial Data Sources, Processing Pipeline, High-Speed Rail Integration, and Population Metrics"
+subtitle: "Comprehensive Data Sources, Academic Citations, Processing Pipelines, and Analytical Framework"
 format:
   html:
     toc: true
@@ -8,8 +8,8 @@ format:
 
 ```{=html}
 <div class="hero-banner">
-  <h1 style="color: #ffffff; margin-bottom: 0.5rem;">Analytical Methodology</h1>
-  <p style="color: #cbd5e1; margin: 0;">How this ratlas ingests, processes, and cartographically renders 30 years of satellite-detected urban expansion, High-Speed Rail networks, and census populations across China.</p>
+  <h1 style="color: #ffffff; margin-bottom: 0.5rem;">Analytical Methodology & Citations</h1>
+  <p style="color: #cbd5e1; margin: 0;">Comprehensive documentation of data sources, academic citations, licensing terms, spatial processing workflows, and mathematical formulas underpinning the China Urban Growth Ratlas.</p>
 </div>
 ```
 
@@ -20,31 +20,66 @@ The 47 cities in this atlas were deliberately selected to **exclude China's abso
 By centering on dynamic provincial capitals (e.g., Chengdu, Wuhan, Xi'an, Zhengzhou), specialized manufacturing nodes (e.g., Shenzhen, Zhuhai, Taizhou, Zibo), ancient Silk Road oases (e.g., Kashgar, Hotan, Wuwei), and strategic border gateways (e.g., Dandong, Hunchun), this ratlas examines how physical urbanization and infrastructure modernization transformed the full depth of China's urban hierarchy beyond the global superstar metropolises.
 :::
 
-## 1. Population Ranking (2020 Census)
+## 1. Primary Data Sources & Scholarly References
 
-The master ranking across this project is ordered by **Permanent Resident Population (常住人口)** derived from the **Seventh National Population Census of the People's Republic of China (第七次全国人口普查 / 七普 2020)**:
+### A. DLR World Settlement Footprint Evolution (WSF Evolution)
+- **Data Custodian**: German Aerospace Center (Deutsches Zentrum für Luft- und Raumfahrt; DLR), Earth Observation Center (EOC).
+- **Spatial Resolution**: 30 meters per pixel, global coverage.
+- **Sensor Inputs**: Multi-decadal archive of joint optical (Landsat-5 TM, Landsat-7 ETM+, Landsat-8 OLI) and radar (ERS-1/2, Sentinel-1) satellite observations.
+- **Pixel Encoding**: Integer values between `1985` and `2015` represent the exact year of earliest detected settlement establishment. Value `0` denotes unbuilt natural/agricultural surfaces.
+- **Data Access**: Retrieved via HTTP range requests through GDAL virtual filesystem (`/vsicurl/`) from `https://download.geoservice.dlr.de/WSF_EVO/`.
+- **Primary Scholarly Citation**:
+  > Marconcini, M., Metz, A., Üreyen, S., Palacios-Lopez, D., Hanke, W., Bachofer, F., Zeidler, J., Esch, T., Gorelick, N., Kakarla, A., Paganini, M., & Strano, E. (2020). *Outlining where humans live, the World Settlement Footprint 2015.* **Scientific Data**, 7(1), 242. [https://doi.org/10.1038/s41597-020-00580-5](https://doi.org/10.1038/s41597-020-00580-5)
+- **Evolution Methodology Citation**:
+  > Marconcini, M., Metz, A., Zeidler, J., & Esch, T. (2021). *The World Settlement Footprint Evolution—30 Years of Growth.* **Remote Sensing of Environment**, 255, 112282.
 
-- **Sub-provincial & Prefecture-Level Cities**: Measured by total permanent resident population across municipal jurisdictions.
-- **County-Level Cities**: For specialized county-level cities in the sample (Hunchun, Korla, Hotan, Taishan), measured by the official resident population of the county-level city administrative unit.
-- **Rank Range**: Spans from **#1 Chengdu (20.94 Million)** down to **#47 Hunchun (0.24 Million)**.
+### B. HOTOSM Railways of China Dataset
+- **Data Custodian**: Humanitarian OpenStreetMap Team (HOTOSM) & United Nations Office for the Coordination of Humanitarian Affairs (UN OCHA) Centre for Humanitarian Data.
+- **Platform**: Humanitarian Data Exchange (HDX).
+- **Data URL**: [https://data.humdata.org/dataset/hotosm_chn_railways](https://data.humdata.org/dataset/hotosm_chn_railways)
+- **Content**: 433,889 vector railway segments extracted from OpenStreetMap, categorized into passenger-dedicated lines (*PDL / 高铁*), intercity railways, standard gauge electrified lines, and station coordinates.
+- **Processing**: Ingested in R via `sf` and aggregated into 194 distinct High-Speed Rail corridors (`data/processed/hotosm_hsr_lines.rds`).
+- **Citation & License**:
+  > Humanitarian OpenStreetMap Team (HOTOSM). (2024). *Railways of China [Data set]*. Humanitarian Data Exchange (HDX). Licensed under the **Open Database License (ODbL 1.0)** by OpenStreetMap contributors.
 
-## 2. Satellite Urban Growth Engine: DLR WSF Evolution
+### C. ArcGIS Online Big Cities Points Layer
+- **Data Custodian**: Esri / ArcGIS Online Feature Services.
+- **Service Endpoint**: [https://services1.arcgis.com/4TXrdeWh0RyCqPgB/arcgis/rest/services/big_cities_points/FeatureServer](https://services1.arcgis.com/4TXrdeWh0RyCqPgB/arcgis/rest/services/big_cities_points/FeatureServer)
+- **Content**: Authoritative geospatial point layer of 184 major Chinese metropolitan centers with national hierarchy ranks (`rank` 1 to 200).
+- **Role in Ratlas**: Validates sample selection, confirms exclusion of tier-1 megacities (#1 Shanghai, #2 Beijing, #3 Guangzhou, #5 Chongqing, #7 Tianjin), and provides an objective national urban hierarchy classification for every city in the atlas.
+- **Citation**:
+  > Esri ArcGIS Online. (2023). *Big Cities Points Layer [Feature Service]*. ArcGIS REST API.
 
-The physical urban growth data in this project is driven by the **World Settlement Footprint Evolution (WSF Evolution)** dataset, produced by the **German Aerospace Center (DLR)**:
+### D. Seventh National Population Census of China (七普 2020)
+- **Data Custodian**: National Bureau of Statistics of China (中华人民共和国国家统计局; NBS), Beijing, China.
+- **Measurement**: Permanent Resident Population (*常住人口, Changzhu Renkou*) as of midnight, November 1, 2020.
+- **Role in Ratlas**: Defines the primary sorting and ranking order across the entire ratlas from #1 Chengdu (20.94 Million) to #47 Hunchun (0.24 Million).
+- **Official Citation**:
+  > Office of the Leading Group of the State Council for the Seventh National Population Census. (2021). *Major Figures on 2020 Population Census of China.* China Statistics Press, Beijing. [http://www.stats.gov.cn/](http://www.stats.gov.cn/)
 
-- **Spatial Resolution**: 30 meters per pixel, derived from joint multi-decadal analysis of **Landsat-5, Landsat-7, and Landsat-8** optical imagery, integrated with radar and digital elevation datasets.
-- **Temporal Coverage**: 1985 to 2015 (30-year span).
-- **Pixel Semantics**: Each pixel value encodes the exact calendar year ($1985 \le \text{year} \le 2015$) in which human settlement was first detected. Value `0` represents non-urban surfaces. Value `1985` represents human settlements already established by or prior to 1985.
-- **Open Web Retrieval**: Retrieved directly from DLR's open data servers (`download.geoservice.dlr.de`) using GDAL virtual file streaming (`/vsicurl/`) and R's `terra` package.
+### E. GADM Database of Global Administrative Areas
+- **Data Custodian**: University of California, Davis (UCD), Department of Environmental Science and Policy.
+- **Version**: GADM 4.1 (released 2022).
+- **Data URL**: [https://gadm.org/](https://gadm.org/)
+- **Content**: Spatial administrative boundaries at Level 0 (national border), Level 1 (provinces), and Level 2 (prefectures and municipalities) with official bilingual toponyms.
+- **Citation**:
+  > Hijmans, R. J., Garcia, N., & Wieczorek, J. (2022). *GADM Database of Global Administrative Areas, Version 4.1*. University of California, Davis. [https://gadm.org/](https://gadm.org/)
 
-## 3. High-Speed Rail (HSR) Network Integration
+---
 
-China's **High-Speed Rail (CRH / 中国高铁)** network—the defining infrastructure project of the 21st century—is mapped alongside the cities. Over the 2006–2015 era, high-speed rail catalyzed spatial expansion by connecting regional capitals and satellite towns:
+## 2. Data Licensing & Terms of Use
 
-- **Corridors Included**: The primary "Eight Vertical and Eight Horizontal" (*Ba Zong Ba Heng*) trunk corridors, including the Beijing–Hong Kong Corridor, Beijing–Shanghai Corridor, Eurasian Continental Bridge Corridor (Lanzhou–Xinjiang HSR), Yangtze River Corridor (Huhanrong), Shanghai–Kunming Corridor, Coastal Corridor, Xi'an–Chengdu HSR, and Hainan Island Ring HSR.
-- **Spatial Traces**: Vector geometries compiled from OpenStreetMap railway relations and Natural Earth 10m transportation datasets.
+| Dataset | Provider | License / Terms of Use | Attribution Notice |
+|:---|:---|:---|:---|
+| **WSF Evolution** | German Aerospace Center (DLR) | Creative Commons Attribution 4.0 International (CC-BY 4.0) | © DLR (2020, 2021) |
+| **Railways of China** | HOTOSM / OpenStreetMap | Open Data Commons Open Database License (ODbL 1.0) | © OpenStreetMap contributors, HOTOSM |
+| **Big Cities Points** | Esri / ArcGIS Online | Esri Public REST Feature Service Terms | © Esri, ArcGIS Online Content Providers |
+| **National Census (2020)** | National Bureau of Statistics (NBS) | Public Statistical Release / Government Open Data | Source: National Bureau of Statistics of China |
+| **GADM Boundaries** | University of California, Davis | Free for non-commercial and academic use | © GADM (v4.1) |
 
-## 4. Four Landmark Urban Development Epochs
+---
+
+## 3. Four Landmark Urban Development Epochs
 
 Urban expansion in modern China has unfolded in distinct historical waves:
 
@@ -57,9 +92,29 @@ Urban expansion in modern China has unfolded in distinct historical waves:
 4. **2006–2015 Wave** (`#10B981` · Emerald Green):
    The High-Speed Rail (HSR) construction boom, the Western Development Strategy (*Xibu Da Kaifa*), massive State-level New Areas (*Guojiaji Xinqu*), and metropolitan amalgamation.
 
-## 5. Quantitative Metrics
+---
 
-- **Cumulative Built-Up Area ($A_t$)**: Total surface area in $\text{km}^2$ occupied by detected settlements at year $t$.
-- **Net Spatial Gain ($\Delta A$)**: $A_{2015} - A_{1985}$.
-- **30-Year Growth Multiple ($M$)**: $A_{2015} / A_{1985}$.
-- **Compound Annual Growth Rate (CAGR)**: $\left(\frac{A_{2015}}{A_{1985}}\right)^{1/30} - 1$.
+## 4. Quantitative Metrics & Mathematical Definitions
+
+- **Cumulative Built-Up Area ($A_t$)**: Total surface area in square kilometers occupied by detected settlement pixels up to year $t$:
+  $$A_t = \sum_{i \in \text{city}} a_i \cdot \mathbb{I}(1985 \le Y_i \le t)$$
+  where $a_i$ is the ellipsoidal cell surface area computed via `terra::cellSize(unit = "km")`, and $Y_i$ is the year of first settlement detection at pixel $i$.
+- **Net Spatial Expansion ($\Delta A$)**: Absolute urban land footprint expansion between 1985 and 2015:
+  $$\Delta A = A_{2015} - A_{1985} \quad (\text{km}^2)$$
+- **30-Year Growth Multiple ($M$)**: Relative spatial expansion factor:
+  $$M = \frac{A_{2015}}{A_{1985}}$$
+- **Compound Annual Growth Rate (CAGR)**: Annualized physical expansion rate over the 30-year observation window:
+  $$\text{CAGR} = \left(\frac{A_{2015}}{A_{1985}}\right)^{1/30} - 1$$
+
+---
+
+## 5. Software Stack & Open Source Packages
+
+- **R Environment**: R Core Team (2026). *R: A Language and Environment for Statistical Computing* (v4.6.1), R Foundation for Statistical Computing, Vienna, Austria.
+- **Raster Processing**: Hijmans, R. J. (2024). `terra`: *Spatial Data Analysis*. R package version 1.9.50.
+- **Vector Processing**: Pebesma, E. (2018). *Simple Features for R: Standardized Support for Spatial Vector Data*. **The R Journal**, 10(1), 439-446.
+- **Cartographic Rendering**: Wickham, H. (2016). *ggplot2: Elegant Graphics for Data Analysis*. Springer-Verlag New York.
+- **Raster Cartography**: Hernangómez, D. (2023). *Using the tidyverse with terra Objects: the tidyterra Package*. **Journal of Open Source Software**, 8(91), 5751.
+- **Multi-Panel Layouts**: Pedersen, T. L. (2024). `patchwork`: *The Composer of Plots*. R package version 1.3.0.
+- **Typography & Font Shaping**: `ragg` and `systemfonts` utilizing `Droid Sans Fallback` (Google Android Open Source Project) for CJK vector typography.
+- **Publishing System**: Allaire, J. J., et al. (2024). *Quarto: An open-source scientific and technical publishing system*. Posit Software.
