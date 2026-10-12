@@ -3,9 +3,12 @@ import json, os
 with open("data/processed/city_growth_stats.json", "r", encoding="utf-8") as f:
     cities = json.load(f)
 
-print(f"Loaded {len(cities)} cities for Quarto page generation.")
+# Sort strictly by population rank (#1 to #47)
+cities = sorted(cities, key=lambda x: x["rank_population"])
 
-# Group cities by region
+print(f"Loaded {len(cities)} cities ordered by population rank.")
+
+# Regional mapping
 regions_map = {
     "coastal_south": {
         "title": "Pearl River Delta & South Coast",
@@ -64,43 +67,65 @@ os.makedirs("cities", exist_ok=True)
 os.makedirs("regions", exist_ok=True)
 
 # ------------------------------------------------------------------------------
-# 1. Generate Individual City Pages
+# 1. Generate Individual City Pages (Using raw {=html} blocks)
 # ------------------------------------------------------------------------------
 for idx, c in enumerate(cities):
     c_id = c["id"]
     prev_c = cities[idx - 1] if idx > 0 else cities[-1]
     next_c = cities[idx + 1] if idx < len(cities) - 1 else cities[0]
     
-    # Identify regional file
     reg_file = "western_frontier.qmd"
     for rk, rv in regions_map.items():
         if any(item["id"] == c_id for item in rv["cities"]):
             reg_file = f"{rk}.qmd"
             break
 
+    hero_block = f"""```{{=html}}
+<div class="hero-banner">
+  <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+    <div>
+      <h1 style="color: #ffffff; margin-bottom: 0.25rem;">{c['name_en']} <span style="color: #f59e0b; font-weight: normal;">{c['name_zh']}</span></h1>
+      <p style="color: #94a3b8; font-size: 1.1rem; margin: 0;">{c['pinyin']} · {c['province_en']} ({c['province_zh']}) · {c['region']}</p>
+      <p style="color: #cbd5e1; font-size: 0.95rem; margin-top: 0.35rem;">Population: <strong>{c['pop_million']} Million</strong> (2020 Census) · National Rank: <strong>#{c['rank_population']}</strong> of 47</p>
+    </div>
+    <div style="text-align: right;">
+      <span class="metric-badge badge-gold" style="font-size: 1.1rem; padding: 0.5rem 1rem;">{c['growth_multiple']}× Growth Multiplier</span>
+    </div>
+  </div>
+</div>
+```"""
+
+    footer_nav = f"""```{{=html}}
+<div style="display: flex; justify-content: space-between; margin-top: 2rem; padding: 1rem; background: #111827; border-radius: 8px;">
+  <a href="{prev_c['id']}.html" style="color: #38bdf8; text-decoration: none;">← Prev: {prev_c['name_en']} ({prev_c['pop_million']}M)</a>
+  <a href="../regions/{reg_file.replace('.qmd', '.html')}" style="color: #f59e0b; text-decoration: none;">↑ {c['region']}</a>
+  <a href="{next_c['id']}.html" style="color: #38bdf8; text-decoration: none;">Next: {next_c['name_en']} ({next_c['pop_million']}M) →</a>
+</div>
+```"""
+
     qmd_content = f"""---
 title: "{c['name_en']} ({c['name_zh']})"
-subtitle: "{c['pinyin']} · {c['province_en']} ({c['province_zh']}) · {c['region']}"
+subtitle: "Population: {c['pop_million']}M · 30-Year Growth: {c['growth_multiple']}× · {c['province_en']}"
 format:
   html:
     toc: true
 ---
 
-::: {{.hero-banner}}
-<div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
-  <div>
-    <h1 style="color: #ffffff; margin-bottom: 0.25rem;">{c['name_en']} <span style="color: #f59e0b; font-weight: normal;">{c['name_zh']}</span></h1>
-    <p style="color: #94a3b8; font-size: 1.1rem; margin: 0;">{c['pinyin']} · {c['province_en']} Province · National Rank: <strong>#{c['rank_multiplier']}</strong> of 47</p>
-  </div>
-  <div style="text-align: right;">
-    <span class="metric-badge badge-gold" style="font-size: 1.1rem; padding: 0.5rem 1rem;">{c['growth_multiple']}× Multiplier</span>
-  </div>
-</div>
-:::
+{hero_block}
 
-## Key Expansion Indicators (1985–2015)
+## Key Urban Expansion Indicators
 
 ::: {{.metric-grid}}
+::: {{.metric-card}}
+::: {{.metric-label}}
+2020 Population
+:::
+::: {{.metric-val}}
+{c['pop_million']} <span style="font-size: 1rem; color: #94a3b8;">M</span>
+:::
+<div style="font-size: 0.8rem; color: #38bdf8;">Rank #{c['rank_population']} of 47</div>
+:::
+
 ::: {{.metric-card}}
 ::: {{.metric-label}}
 1985 Baseline Area
@@ -117,15 +142,7 @@ format:
 ::: {{.metric-val}}
 {c['area_2015']} <span style="font-size: 1rem; color: #94a3b8;">km²</span>
 :::
-:::
-
-::: {{.metric-card}}
-::: {{.metric-label}}
-Net Surface Gain
-:::
-::: {{.metric-val}}
-+{c['net_gain_km2']} <span style="font-size: 1rem; color: #94a3b8;">km²</span>
-:::
+<div style="font-size: 0.8rem; color: #10b981;">+{c['net_gain_km2']} km²</div>
 :::
 
 ::: {{.metric-card}}
@@ -135,6 +152,7 @@ Growth Multiple
 ::: {{.metric-val}}
 {c['growth_multiple']}×
 :::
+<div style="font-size: 0.8rem; color: #f59e0b;">Rank #{c['rank_multiplier']} of 47</div>
 :::
 
 ::: {{.metric-card}}
@@ -144,6 +162,7 @@ Annual Growth (CAGR)
 ::: {{.metric-val}}
 {c['cagr_pct']}%
 :::
+<div style="font-size: 0.8rem; color: #94a3b8;">1985–2015</div>
 :::
 :::
 
@@ -151,12 +170,12 @@ Annual Growth (CAGR)
 
 ## 1. The Urban Growth Rings (1985–2015)
 
-The primary cartographic poster below visualizes the physical expansion rings of **{c['name_en']}**, partitioned into four milestone eras:
+The cartographic poster below maps the physical settlement rings of **{c['name_en']}** across four historical development epochs:
 
-- <span style="color: #F59E0B; font-weight: bold;">● Pre-1985</span>: Historic core and initial post-1949 development.
-- <span style="color: #EF4444; font-weight: bold;">● 1986–1995</span>: Early reform, opening up, and Deng Xiaoping's southern tour.
-- <span style="color: #06B6D4; font-weight: bold;">● 1996–2005</span>: WTO entry, export boom, and new industrial development zones.
-- <span style="color: #10B981; font-weight: bold;">● 2006–2015</span>: High-speed rail expansion, modern new towns (*xinqu*), and peri-urban consolidation.
+- <span style="color: #F59E0B; font-weight: bold;">● Pre-1985 Core</span>: Historic urban core and initial post-1949 industrial settlements.
+- <span style="color: #EF4444; font-weight: bold;">● 1986–1995 Wave</span>: Early reform, opening up, and Deng Xiaoping's 1992 Southern Tour (*Nanxun*).
+- <span style="color: #06B6D4; font-weight: bold;">● 1996–2005 Wave</span>: WTO entry, export industrialization, and new development zones (*Kaifaqu*).
+- <span style="color: #10B981; font-weight: bold;">● 2006–2015 Wave</span>: High-speed rail expansion, modern new cities (*Xinqu*), and peri-urban consolidation.
 
 ::: {{.map-container}}
 !['The Urban Growth Rings: {c['name_en']}'](../output/maps/{c_id}_hero.png)
@@ -164,9 +183,9 @@ The primary cartographic poster below visualizes the physical expansion rings of
 
 ---
 
-## 2. Small Multiples: 4-Epoch Footprint Evolution
+## 2. Small Multiples: 4-Epoch Footprint Progression
 
-Comparative uniform-scale footprint maps isolating the cumulative urbanized surface across the four key epochs:
+Uniform-scale physical footprint progression maps tracking built-up settlement expansion over time:
 
 ::: {{.map-container}}
 !['Small Multiples Footprint Progression: {c['name_en']}'](../output/maps/{c_id}_small_multiples.png)
@@ -174,12 +193,12 @@ Comparative uniform-scale footprint maps isolating the cumulative urbanized surf
 
 ---
 
-## 3. Geographical Context & Growth Trajectory
+## 3. Geographical Location & Growth Trajectory
 
 :::: {{.columns}}
 
 ::: {{.column width="48%"}}
-### National Location
+### Location in China
 ::: {{.map-container}}
 !['Regional Inset: {c['name_en']}'](../output/maps/{c_id}_context.png)
 :::
@@ -201,8 +220,6 @@ Comparative uniform-scale footprint maps isolating the cumulative urbanized surf
 
 ## 4. 5-Year Milestone Chronology
 
-The table below catalogs the cumulative built-up surface area of {c['name_en']} at 5-year intervals:
-
 | Milestone Year | Urban Footprint (km²) | Growth vs. 1985 Baseline | Share of 2015 Footprint |
 |:---:|:---:|:---:|:---:|
 | **1985** | {c['area_1985']} km² | 1.00× (Baseline) | {round(c['area_1985'] / max(c['area_2015'], 0.1) * 100, 1)}% |
@@ -215,32 +232,28 @@ The table below catalogs the cumulative built-up surface area of {c['name_en']} 
 
 ---
 
-<div style="display: flex; justify-content: space-between; margin-top: 2rem; padding: 1rem; background: #111827; border-radius: 8px;">
-  <a href="{prev_c['id']}.html" style="color: #38bdf8; text-decoration: none;">← Previous: {prev_c['name_en']} ({prev_c['name_zh']})</a>
-  <a href="../regions/{reg_file.replace('.qmd', '.html')}" style="color: #f59e0b; text-decoration: none;">↑ {c['region']}</a>
-  <a href="{next_c['id']}.html" style="color: #38bdf8; text-decoration: none;">Next: {next_c['name_en']} ({next_c['name_zh']}) →</a>
-</div>
+{footer_nav}
 """
     with open(f"cities/{c_id}.qmd", "w", encoding="utf-8") as f:
         f.write(qmd_content.strip() + "\n")
 
-print(f"Generated 47 individual city QMD documents in cities/.")
+print(f"Generated 47 individual city QMD documents in cities/ using raw html blocks.")
 
 # ------------------------------------------------------------------------------
-# 2. Generate Regional Pages
+# 2. Generate Regional Pages (Sorted by Population)
 # ------------------------------------------------------------------------------
 for rk, rv in regions_map.items():
-    r_cities = sorted(rv["cities"], key=lambda x: x["growth_multiple"], reverse=True)
+    r_cities = sorted(rv["cities"], key=lambda x: x["rank_population"])
     
     rows = ""
     city_links = ""
     for c in r_cities:
-        rows += f"""| [{c['name_en']}](../cities/{c['id']}.html) | {c['name_zh']} | {c['province_en']} | {c['area_1985']} km² | {c['area_2015']} km² | +{c['net_gain_km2']} km² | **{c['growth_multiple']}×** | {c['cagr_pct']}% | #{c['rank_multiplier']} |\n"""
+        rows += f"""| #{c['rank_population']} | [{c['name_en']}](../cities/{c['id']}.html) | {c['name_zh']} | {c['province_en']} | **{c['pop_million']}M** | {c['area_1985']} km² | {c['area_2015']} km² | +{c['net_gain_km2']} km² | **{c['growth_multiple']}×** | {c['cagr_pct']}% |\n"""
         
         city_links += f"""
 ::: {{.region-card}}
 ### [{c['name_en']} ({c['name_zh']})](../cities/{c['id']}.html)
-**{c['province_en']} Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">{c['growth_multiple']}×</strong> (#{c['rank_multiplier']} Nationally)
+**{c['province_en']} Province** · Population: <strong style="color: #38bdf8;">{c['pop_million']} Million</strong> (Rank #{c['rank_population']}) · 30-Year Multiplier: <strong style="color: #f59e0b;">{c['growth_multiple']}×</strong>
 
 - **1985 Footprint**: {c['area_1985']} km²
 - **2015 Footprint**: {c['area_2015']} km² (Net expansion: +{c['net_gain_km2']} km²)
@@ -250,23 +263,27 @@ for rk, rv in regions_map.items():
 :::
 """
 
+    reg_hero = f"""```{{=html}}
+<div class="hero-banner">
+  <h1 style="color: #ffffff; margin-bottom: 0.5rem;">{rv['title']} <span style="color: #f59e0b;">{rv['title_zh']}</span></h1>
+  <p style="color: #cbd5e1; font-size: 1.1rem; margin: 0;">{rv['desc']}</p>
+</div>
+```"""
+
     reg_content = f"""---
 title: "{rv['title']}"
-subtitle: "{rv['title_zh']} · {len(r_cities)} Cities"
+subtitle: "{rv['title_zh']} · {len(r_cities)} Cities Ordered by Population"
 format:
   html:
     toc: true
 ---
 
-::: {{.hero-banner}}
-<h1 style="color: #ffffff; margin-bottom: 0.5rem;">{rv['title']} <span style="color: #f59e0b;">{rv['title_zh']}</span></h1>
-<p style="color: #cbd5e1; font-size: 1.1rem;">{rv['desc']}</p>
-:::
+{reg_hero}
 
-## Regional Comparison Table
+## Regional Member Cities (Ranked by Population)
 
-| City | Chinese | Province | 1985 Area | 2015 Area | Net Gain | Multiplier | CAGR | National Rank |
-|:---|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|
+| Pop Rank | City | Chinese | Province | Population | 1985 Area | 2015 Area | Net Gain | Multiplier | CAGR |
+|:---:|:---|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|
 {rows}
 
 ---
@@ -285,23 +302,29 @@ print("Generated 6 regional QMD documents in regions/.")
 # ------------------------------------------------------------------------------
 all_rows = ""
 for c in cities:
-    all_rows += f"""| #{c['rank_multiplier']} | [{c['name_en']}](cities/{c['id']}.html) | {c['name_zh']} | {c['province_en']} | {c['region']} | {c['area_1985']} km² | {c['area_2015']} km² | +{c['net_gain_km2']} km² | **{c['growth_multiple']}×** | {c['cagr_pct']}% |\n"""
+    all_rows += f"""| #{c['rank_population']} | [{c['name_en']}](cities/{c['id']}.html) | {c['name_zh']} | {c['province_en']} | {c['region']} | **{c['pop_million']}M** | {c['area_1985']} km² | {c['area_2015']} km² | +{c['net_gain_km2']} km² | **{c['growth_multiple']}×** | {c['cagr_pct']}% |\n"""
 
 cities_qmd = f"""---
 title: "All 47 Cities Directory"
-subtitle: "Comprehensive 30-Year Urban Growth Inventory (1985–2015)"
+subtitle: "Complete 30-Year Urban Growth Inventory Ordered by Population (2020 Census)"
 format:
   html:
     toc: false
 ---
 
-::: {{.hero-banner}}
-<h1 style="color: #ffffff; margin-bottom: 0.5rem;">The 47 Cities of the Ratlas</h1>
-<p style="color: #cbd5e1;">A complete catalogue of all 47 cities analyzed in this project, ranked by 30-year physical expansion multiplier.</p>
+```{{=html}}
+<div class="hero-banner">
+  <h1 style="color: #ffffff; margin-bottom: 0.5rem;">The 47 Cities of the Ratlas</h1>
+  <p style="color: #cbd5e1; margin: 0;">Complete inventory of all 47 cities analyzed in this project, ranked from largest to smallest population based on the 7th National Population Census (七普 2020).</p>
+</div>
+```
+
+::: {{.callout-note appearance="simple"}}
+**Selection Note**: Cities were selected to exclude China's tier-1 superstar megacities (Beijing, Shanghai, Guangzhou, Chongqing, Tianjin) to examine dynamic provincial capitals, regional economic drivers, and specialized border gateways.
 :::
 
-| Rank | City | Chinese | Province | Region | 1985 Area | 2015 Area | Net Gain | Multiplier | CAGR |
-|:---:|:---|:---|:---|:---|:---:|:---:|:---:|:---:|:---:|
+| Pop Rank | City | Chinese | Province | Region | Population | 1985 Area | 2015 Area | Net Gain | Multiplier | CAGR |
+|:---:|:---|:---|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|
 {all_rows}
 """
 with open("cities.qmd", "w", encoding="utf-8") as f:
@@ -310,35 +333,53 @@ with open("cities.qmd", "w", encoding="utf-8") as f:
 # ------------------------------------------------------------------------------
 # 4. Generate Methodology Page (methodology.qmd)
 # ------------------------------------------------------------------------------
-methodology_qmd = """---
+methodology_qmd = r"""---
 title: "Data & Methodology"
-subtitle: "Geospatial Data Sources, Processing Pipeline, and Analytical Framework"
+subtitle: "Geospatial Data Sources, Processing Pipeline, High-Speed Rail Integration, and Population Metrics"
 format:
   html:
     toc: true
 ---
 
-::: {.hero-banner}
-<h1 style="color: #ffffff; margin-bottom: 0.5rem;">Analytical Methodology</h1>
-<p style="color: #cbd5e1;">How this ratlas ingests, processes, and cartographically renders 30 years of satellite-detected urban expansion across China.</p>
+```{=html}
+<div class="hero-banner">
+  <h1 style="color: #ffffff; margin-bottom: 0.5rem;">Analytical Methodology</h1>
+  <p style="color: #cbd5e1; margin: 0;">How this ratlas ingests, processes, and cartographically renders 30 years of satellite-detected urban expansion, High-Speed Rail networks, and census populations across China.</p>
+</div>
+```
+
+::: {.callout-important appearance="simple"}
+## Scope & Sample Selection Note: Excluding Tier-1 Megacities
+The 47 cities in this atlas were deliberately selected to **exclude China's absolute largest tier-1 megacities** (specifically Beijing, Shanghai, Guangzhou, Chongqing, and Tianjin).
+
+By centering on dynamic provincial capitals (e.g., Chengdu, Wuhan, Xi'an, Zhengzhou), specialized manufacturing nodes (e.g., Shenzhen, Zhuhai, Taizhou, Zibo), ancient Silk Road oases (e.g., Kashgar, Hotan, Wuwei), and strategic border gateways (e.g., Dandong, Hunchun), this ratlas examines how physical urbanization and infrastructure modernization transformed the full depth of China's urban hierarchy beyond the global superstar metropolises.
 :::
 
-## 1. Primary Data Source: DLR WSF Evolution
+## 1. Population Ranking (2020 Census)
+
+The master ranking across this project is ordered by **Permanent Resident Population (常住人口)** derived from the **Seventh National Population Census of the People's Republic of China (第七次全国人口普查 / 七普 2020)**:
+
+- **Sub-provincial & Prefecture-Level Cities**: Measured by total permanent resident population across municipal jurisdictions.
+- **County-Level Cities**: For specialized county-level cities in the sample (Hunchun, Korla, Hotan, Taishan), measured by the official resident population of the county-level city administrative unit.
+- **Rank Range**: Spans from **#1 Chengdu (20.94 Million)** down to **#47 Hunchun (0.24 Million)**.
+
+## 2. Satellite Urban Growth Engine: DLR WSF Evolution
 
 The physical urban growth data in this project is driven by the **World Settlement Footprint Evolution (WSF Evolution)** dataset, produced by the **German Aerospace Center (DLR)**:
 
 - **Spatial Resolution**: 30 meters per pixel, derived from joint multi-decadal analysis of **Landsat-5, Landsat-7, and Landsat-8** optical imagery, integrated with radar and digital elevation datasets.
 - **Temporal Coverage**: 1985 to 2015 (30-year span).
-- **Pixel Semantics**: Each pixel value encodes the exact calendar year ($1985 \le \text{year} \le 2015$) in which human settlement was first detected. Value `0` represents non-urban surfaces (natural vegetation, bare land, agriculture, or water). Value `1985` represents human settlements already established by or prior to 1985.
+- **Pixel Semantics**: Each pixel value encodes the exact calendar year ($1985 \le \text{year} \le 2015$) in which human settlement was first detected. Value `0` represents non-urban surfaces. Value `1985` represents human settlements already established by or prior to 1985.
 - **Open Web Retrieval**: Retrieved directly from DLR's open data servers (`download.geoservice.dlr.de`) using GDAL virtual file streaming (`/vsicurl/`) and R's `terra` package.
 
-## 2. Administrative Geodatabase & Extents
+## 3. High-Speed Rail (HSR) Network Integration
 
-- **GADM 4.1 (Database of Global Administrative Areas)**: Provided level 0 (national outline), level 1 (provincial boundaries), and level 2 (prefectural boundaries).
-- **Centroids & Analysis Radii**: Urban core extents were established for each city based on high-density metropolitan boundaries, ranging from 12 km to 30 km radius depending on city tier and metropolitan scale.
-- **Coordinate Reference Systems**: Base data in WGS 84 (EPSG:4326), with surface area calculations performed using ellipsoidal pixel geometry (`terra::cellSize(unit = "km")`) to eliminate high-latitude area distortion.
+China's **High-Speed Rail (CRH / 中国高铁)** network—the defining infrastructure project of the 21st century—is mapped alongside the cities. Over the 2006–2015 era, high-speed rail catalyzed spatial expansion by connecting regional capitals and satellite towns:
 
-## 3. Four Landmark Urban Development Epochs
+- **Corridors Included**: The primary "Eight Vertical and Eight Horizontal" (*Ba Zong Ba Heng*) trunk corridors, including the Beijing–Hong Kong Corridor, Beijing–Shanghai Corridor, Eurasian Continental Bridge Corridor (Lanzhou–Xinjiang HSR), Yangtze River Corridor (Huhanrong), Shanghai–Kunming Corridor, Coastal Corridor, Xi'an–Chengdu HSR, and Hainan Island Ring HSR.
+- **Spatial Traces**: Vector geometries compiled from OpenStreetMap railway relations and Natural Earth 10m transportation datasets.
+
+## 4. Four Landmark Urban Development Epochs
 
 Urban expansion in modern China has unfolded in distinct historical waves:
 
@@ -351,22 +392,12 @@ Urban expansion in modern China has unfolded in distinct historical waves:
 4. **2006–2015 Wave** (`#10B981` · Emerald Green):
    The High-Speed Rail (HSR) construction boom, the Western Development Strategy (*Xibu Da Kaifa*), massive State-level New Areas (*Guojiaji Xinqu*), and metropolitan amalgamation.
 
-## 4. Quantitative Metrics
-
-For each city, the following metrics are computed:
+## 5. Quantitative Metrics
 
 - **Cumulative Built-Up Area ($A_t$)**: Total surface area in $\text{km}^2$ occupied by detected settlements at year $t$.
 - **Net Spatial Gain ($\Delta A$)**: $A_{2015} - A_{1985}$.
 - **30-Year Growth Multiple ($M$)**: $A_{2015} / A_{1985}$.
 - **Compound Annual Growth Rate (CAGR)**: $\left(\frac{A_{2015}}{A_{1985}}\right)^{1/30} - 1$.
-
-## 5. Cartographic Stack & Tools
-
-- **Language & Runtime**: R (v4.6.1) & Python 3
-- **Spatial Processing**: `terra` (v1.9), `sf` (v1.0), `tidyterra`
-- **Visualization**: `ggplot2`, `patchwork`, `ragg`
-- **Typography**: CJK rendering via system font `Droid Sans Fallback` with bilingual typesetting
-- **Publishing**: Quarto static site compiler deployed directly to GitHub Pages
 """
 with open("methodology.qmd", "w", encoding="utf-8") as f:
     f.write(methodology_qmd.strip() + "\n")
@@ -374,6 +405,93 @@ with open("methodology.qmd", "w", encoding="utf-8") as f:
 # ------------------------------------------------------------------------------
 # 5. Generate Home Page (index.qmd)
 # ------------------------------------------------------------------------------
+imagemap_html = """```{=html}
+<div style="position: relative; width: 100%; max-width: 1100px; margin: 1.5rem auto; border-radius: 10px; overflow: hidden; border: 1px solid #1f2937; box-shadow: 0 10px 30px rgba(0,0,0,0.7);">
+  <!-- Base Regional Map Graphic -->
+  <img src="output/maps/china_regions_map.png" usemap="#chinaregions" alt="China Geographic Regions Map" style="width: 100%; height: auto; display: block;">
+
+  <!-- Interactive SVG Clickable Overlay with Glowing Regions -->
+  <svg viewBox="0 0 1600 1100" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: auto;">
+    <style>
+      .reg-link { cursor: pointer; transition: all 0.25s ease; }
+      .reg-poly { fill: transparent; stroke: transparent; stroke-width: 3; transition: all 0.25s ease; }
+      .reg-link:hover .reg-poly { fill: rgba(56, 189, 248, 0.28); stroke: #38bdf8; filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.9)); }
+      .reg-link text { fill: #f8fafc; font-size: 26px; font-weight: bold; text-anchor: middle; pointer-events: none; opacity: 0.9; text-shadow: 0 2px 6px rgba(0,0,0,0.9); }
+    </style>
+
+    <!-- Northeast Rust Belt -->
+    <a href="regions/northeast.html" class="reg-link" title="Northeast Rust Belt (8 Cities)">
+      <polygon class="reg-poly" points="1160,80 1560,80 1560,420 1200,450 1160,350" />
+      <text x="1350" y="240">Northeast Rust Belt →</text>
+    </a>
+
+    <!-- Yellow River & North Plain -->
+    <a href="regions/northern_plains.html" class="reg-link" title="Yellow River & North Plain (11 Cities)">
+      <polygon class="reg-poly" points="960,380 1260,380 1260,600 960,600" />
+      <text x="1110" y="490">North Plain & Bohai →</text>
+    </a>
+
+    <!-- Yangtze Delta & East -->
+    <a href="regions/yangtze_delta.html" class="reg-link" title="Yangtze Delta & East (5 Cities)">
+      <polygon class="reg-poly" points="1090,560 1260,560 1260,730 1090,730" />
+      <text x="1180" y="650">Yangtze Delta →</text>
+    </a>
+
+    <!-- Yangtze Basin & Central -->
+    <a href="regions/yangtze_basin.html" class="reg-link" title="Yangtze Basin & Central (6 Cities)">
+      <polygon class="reg-poly" points="760,590 1100,590 1100,780 760,780" />
+      <text x="930" y="690">Yangtze Basin & Central →</text>
+    </a>
+
+    <!-- Pearl River & South Coast -->
+    <a href="regions/coastal_south.html" class="reg-link" title="Pearl River & South Coast (6 Cities)">
+      <polygon class="reg-poly" points="890,780 1230,780 1230,1020 890,1020" />
+      <text x="1060" y="900">Pearl River & South Coast →</text>
+    </a>
+
+    <!-- Western Frontier & Steppe -->
+    <a href="regions/western_frontier.html" class="reg-link" title="Western Frontier & Steppe (11 Cities)">
+      <polygon class="reg-poly" points="50,180 960,180 820,950 50,700" />
+      <text x="480" y="460">Western Frontier & Steppe →</text>
+    </a>
+  </svg>
+
+  <!-- Standard HTML5 Image Map Fallback -->
+  <map name="chinaregions">
+    <area shape="poly" coords="1160,80,1560,80,1560,420,1200,450,1160,350" href="regions/northeast.html" alt="Northeast Rust Belt">
+    <area shape="poly" coords="960,380,1260,380,1260,600,960,600" href="regions/northern_plains.html" alt="Yellow River & North Plain">
+    <area shape="poly" coords="1090,560,1260,560,1260,730,1090,730" href="regions/yangtze_delta.html" alt="Yangtze Delta & East">
+    <area shape="poly" coords="760,590,1100,590,1100,780,760,780" href="regions/yangtze_basin.html" alt="Yangtze Basin & Central">
+    <area shape="poly" coords="890,780,1230,780,1230,1020,890,1020" href="regions/coastal_south.html" alt="Pearl River & South Coast">
+    <area shape="poly" coords="50,180,960,180,820,950,50,700" href="regions/western_frontier.html" alt="Western Frontier & Steppe">
+  </map>
+</div>
+```"""
+
+index_hero = """```{=html}
+<div class="hero-banner">
+  <div style="max-width: 900px;">
+    <h1 class="hero-title">China Urban Growth Ratlas</h1>
+    <h2 style="color: #f59e0b; font-size: 1.5rem; margin-top: -0.25rem; margin-bottom: 1rem;">中国城市空间扩展图集 · 1985–2015</h2>
+    <p class="hero-subtitle">
+      Between 1985 and 2015, the People's Republic of China underwent the largest physical urbanization process in human history. 
+      This ratlas maps the spatial morphology, expansion rings, High-Speed Rail corridors, and quantitative growth trajectories across <strong>47 diverse Chinese cities</strong> ranked by population.
+    </p>
+    <div style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+      <a href="cities.html" class="btn btn-primary" style="background: #0284c7; border: none; padding: 0.6rem 1.25rem; font-weight: 600;">Browse All 47 Cities →</a>
+      <a href="methodology.html" class="btn btn-secondary" style="background: #1e293b; color: #cbd5e1; border: 1px solid #334155; padding: 0.6rem 1.25rem;">Methodology & Data</a>
+    </div>
+  </div>
+</div>
+```"""
+
+selection_callout = """::: {.callout-note appearance="simple" icon=true}
+## Scope & Sample Selection: Excluding Tier-1 Superstar Megacities
+The 47 cities in this atlas were deliberately selected to **exclude China's absolute largest tier-1 megacities** (specifically Beijing, Shanghai, Guangzhou, Chongqing, and Tianjin).
+
+By centering on dynamic provincial capitals (e.g., Chengdu, Wuhan, Xi'an, Zhengzhou), specialized manufacturing nodes (e.g., Shenzhen, Zhuhai, Taizhou, Zibo), ancient Silk Road oases (e.g., Kashgar, Hotan, Wuwei), and strategic border gateways (e.g., Dandong, Hunchun), this ratlas examines how physical urbanization and infrastructure modernization transformed the full depth of China's urban hierarchy beyond the global superstar metropolises.
+:::"""
+
 index_qmd = f"""---
 title: "China Urban Growth Ratlas (1985–2015)"
 subtitle: "A Geospatial Exploration of 30 Years of Physical Expansion Across 47 Chinese Metropolises"
@@ -382,20 +500,9 @@ format:
     toc: true
 ---
 
-::: {{.hero-banner}}
-<div style="max-width: 900px;">
-  <h1 class="hero-title">China Urban Growth Ratlas</h1>
-  <h2 style="color: #f59e0b; font-size: 1.5rem; margin-top: -0.25rem; margin-bottom: 1rem;">中国城市空间扩展图集 · 1985–2015</h2>
-  <p class="hero-subtitle">
-    Between 1985 and 2015, the People's Republic of China underwent the largest, fastest physical urbanization process in human history. 
-    This ratlas maps the spatial morphology, expansion rings, and quantitative growth trajectories across <strong>47 diverse Chinese cities</strong>—from southern coastal manufacturing hubs and ancient Silk Road oases to central megacities and northeast border outposts.
-  </p>
-  <div style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
-    <a href="cities.html" class="btn btn-primary" style="background: #0284c7; border: none; padding: 0.6rem 1.25rem; font-weight: 600;">Browse All 47 Cities →</a>
-    <a href="methodology.html" class="btn btn-secondary" style="background: #1e293b; color: #cbd5e1; border: 1px solid #334155; padding: 0.6rem 1.25rem;">Methodology & Data</a>
-  </div>
-</div>
-:::
+{index_hero}
+
+{selection_callout}
 
 ## Key Findings & National Overview
 
@@ -407,15 +514,17 @@ Total Cities Analyzed
 ::: {{.metric-val}}
 47
 :::
+<div style="font-size: 0.8rem; color: #38bdf8;">Ranked by Population</div>
 :::
 
 ::: {{.metric-card}}
 ::: {{.metric-label}}
-Median Growth Multiple
+Largest City (2020)
 :::
 ::: {{.metric-val}}
-4.1×
+20.9 <span style="font-size: 1rem;">M</span>
 :::
+<div style="font-size: 0.8rem; color: #f59e0b;">Chengdu (成都市)</div>
 :::
 
 ::: {{.metric-card}}
@@ -435,32 +544,43 @@ Peak Area Expansion
 ::: {{.metric-val}}
 +1,356 <span style="font-size: 1rem;">km²</span>
 :::
-<div style="font-size: 0.8rem; color: #f59e0b;">Chengdu (成都市)</div>
+<div style="font-size: 0.8rem; color: #10b981;">Chengdu (成都市)</div>
 :::
 
 ::: {{.metric-card}}
 ::: {{.metric-label}}
-Satellite Data Resolution
+Transit Integration
 :::
 ::: {{.metric-val}}
-30 <span style="font-size: 1rem;">meters</span>
+CRH
 :::
+<div style="font-size: 0.8rem; color: #38bdf8;">High-Speed Rail Grid</div>
 :::
 :::
 
 ---
 
-## National Urban Expansion Map
+## National Urban Expansion & High-Speed Rail Map
 
-The map below displays all 47 cities in the ratlas across China, sized by their **2015 built-up area ($km^2$)** and colored by their **30-year growth multiplier**:
+The map below displays all 47 cities in the ratlas across China, sized by **2020 Census Population**, colored by **30-year growth multiplier**, and overlaid with China's **High-Speed Rail network (CRH 高铁)**:
 
 ::: {{.map-container}}
-!['China Urban Growth Ratlas National Overview'](output/maps/china_overview_map.png)
+!['China Urban Growth Ratlas National Overview & High-Speed Rail'](output/maps/china_overview_map.png)
 :::
 
 ---
 
-## National Growth Multiplier Rankings
+## High-Speed Rail Network & Urban Hierarchy
+
+China's High-Speed Rail network physically stitched together regional capitals and secondary nodes, accelerating post-2005 outward expansion:
+
+::: {{.map-container}}
+!['China High-Speed Rail Network and Atlas Nodes'](output/maps/china_hsr_overview.png)
+:::
+
+---
+
+## 30-Year Growth Multiplier Rankings
 
 Which cities experienced the highest relative spatial expansion between 1985 and 2015?
 
@@ -470,9 +590,11 @@ Which cities experienced the highest relative spatial expansion between 1985 and
 
 ---
 
-## Regional Explorations
+## Interactive Regional Explorations
 
-Explore the atlas by geographic macro-regions:
+Click any region on the interactive map below to jump directly to its dedicated regional chapter, or explore via the region cards below:
+
+{imagemap_html}
 
 ::: {{.columns}}
 
@@ -480,7 +602,7 @@ Explore the atlas by geographic macro-regions:
 ::: {{.region-card}}
 ### [Pearl River & South Coast](regions/coastal_south.html)
 Special Economic Zones, export engines, and coastal reclaimers.
-- **Cities**: Shenzhen, Zhuhai, Xiamen, Haikou, Taishan, Heyuan
+- **Cities**: Shenzhen, Xiamen, Haikou, Heyuan, Zhuhai, Taishan
 [Explore Region →](regions/coastal_south.html)
 :::
 :::
@@ -489,7 +611,7 @@ Special Economic Zones, export engines, and coastal reclaimers.
 ::: {{.region-card}}
 ### [Yangtze Basin & Central](regions/yangtze_basin.html)
 Inland megacities and riverine industrial corridors.
-- **Cities**: Chengdu, Wuhan, Luzhou, Yichang, Nanchang, Zhangjiajie
+- **Cities**: Chengdu, Wuhan, Nanchang, Luzhou, Yichang, Zhangjiajie
 [Explore Region →](regions/yangtze_basin.html)
 :::
 :::
@@ -498,7 +620,7 @@ Inland megacities and riverine industrial corridors.
 ::: {{.region-card}}
 ### [Yangtze Delta & East](regions/yangtze_delta.html)
 Interconnected manufacturing clusters and canal towns.
-- **Cities**: Taizhou, Yangzhou, Wuhu, Huangshan, Lianyungang
+- **Cities**: Lianyungang, Yangzhou, Taizhou, Wuhu, Huangshan
 [Explore Region →](regions/yangtze_delta.html)
 :::
 :::
@@ -511,7 +633,7 @@ Interconnected manufacturing clusters and canal towns.
 ::: {{.region-card}}
 ### [Yellow River & North Plain](regions/northern_plains.html)
 Heavy industrial centers across the agricultural heartland.
-- **Cities**: Jinan, Zhengzhou, Baoding, Shijiazhuang, Zibo...
+- **Cities**: Zhengzhou, Shijiazhuang, Baoding, Jinan, Jining, Liaocheng...
 [Explore Region →](regions/northern_plains.html)
 :::
 :::
@@ -520,7 +642,7 @@ Heavy industrial centers across the agricultural heartland.
 ::: {{.region-card}}
 ### [Northeast Rust Belt](regions/northeast.html)
 Early industrial powerhouses and international border gateways.
-- **Cities**: Harbin, Dandong, Fuxin, Panjin, Tieling, Hunchun...
+- **Cities**: Harbin, Tieling, Dandong, Fuxin, Baicheng, Panjin...
 [Explore Region →](regions/northeast.html)
 :::
 :::
@@ -529,7 +651,7 @@ Early industrial powerhouses and international border gateways.
 ::: {{.region-card}}
 ### [Western Frontier & Steppe](regions/western_frontier.html)
 Silk Road oasis towns, highland capitals, and desert gateways.
-- **Cities**: Xi'an, Lanzhou, Urumqi, Kashgar, Hotan, Hohhot...
+- **Cities**: Xi'an, Kunming, Guilin, Lanzhou, Urumqi, Hohhot, Kashgar...
 [Explore Region →](regions/western_frontier.html)
 :::
 :::
@@ -538,20 +660,20 @@ Silk Road oasis towns, highland capitals, and desert gateways.
 
 ---
 
-## Complete 47-City Master Index
+## Complete 47-City Master Index (Ranked by Population)
 
-| Rank | City | Chinese | Province | Region | 1985 Area | 2015 Area | Net Gain | Multiplier | CAGR |
-|:---:|:---|:---|:---|:---|:---:|:---:|:---:|:---:|:---:|
+| Pop Rank | City | Chinese | Province | Region | Population (2020) | 1985 Area | 2015 Area | Net Gain | Multiplier | CAGR |
+|:---:|:---|:---|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|
 {all_rows}
 
 ---
 
 ::: {{.caption-box}}
-**China Urban Growth Ratlas** · Built with R (`terra`, `sf`, `ggplot2`, `tidyterra`, `patchwork`) and Quarto. Data: German Aerospace Center (DLR) World Settlement Footprint Evolution (30m) & GADM 4.1.
+**China Urban Growth Ratlas** · Built with R (`terra`, `sf`, `ggplot2`, `tidyterra`, `patchwork`) and Quarto. Data: German Aerospace Center (DLR) World Settlement Footprint Evolution (30m), 7th National Population Census (七普 2020), OpenStreetMap CRH High-Speed Rail Grid & GADM 4.1.
 :::
 """
 
 with open("index.qmd", "w", encoding="utf-8") as f:
     f.write(index_qmd.strip() + "\n")
 
-print("Generated index.qmd, cities.qmd, and methodology.qmd successfully!")
+print("Generated all Quarto source documents successfully with {=html} blocks!")

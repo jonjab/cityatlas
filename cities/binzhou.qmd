@@ -1,26 +1,39 @@
 ---
 title: "Binzhou (滨州市)"
-subtitle: "Bīnzhōu · Shandong (山东省) · Yellow River & North Plain"
+subtitle: "Population: 3.93M · 30-Year Growth: 3.66× · Shandong"
 format:
   html:
     toc: true
 ---
 
-::: {.hero-banner}
-<div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
-  <div>
-    <h1 style="color: #ffffff; margin-bottom: 0.25rem;">Binzhou <span style="color: #f59e0b; font-weight: normal;">滨州市</span></h1>
-    <p style="color: #94a3b8; font-size: 1.1rem; margin: 0;">Bīnzhōu · Shandong Province · National Rank: <strong>#22</strong> of 47</p>
-  </div>
-  <div style="text-align: right;">
-    <span class="metric-badge badge-gold" style="font-size: 1.1rem; padding: 0.5rem 1rem;">3.66× Multiplier</span>
+```{=html}
+<div class="hero-banner">
+  <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+    <div>
+      <h1 style="color: #ffffff; margin-bottom: 0.25rem;">Binzhou <span style="color: #f59e0b; font-weight: normal;">滨州市</span></h1>
+      <p style="color: #94a3b8; font-size: 1.1rem; margin: 0;">Bīnzhōu · Shandong (山东省) · Yellow River & North Plain</p>
+      <p style="color: #cbd5e1; font-size: 0.95rem; margin-top: 0.35rem;">Population: <strong>3.93 Million</strong> (2020 Census) · National Rank: <strong>#23</strong> of 47</p>
+    </div>
+    <div style="text-align: right;">
+      <span class="metric-badge badge-gold" style="font-size: 1.1rem; padding: 0.5rem 1rem;">3.66× Growth Multiplier</span>
+    </div>
   </div>
 </div>
-:::
+```
 
-## Key Expansion Indicators (1985–2015)
+## Key Urban Expansion Indicators
 
 ::: {.metric-grid}
+::: {.metric-card}
+::: {.metric-label}
+2020 Population
+:::
+::: {.metric-val}
+3.93 <span style="font-size: 1rem; color: #94a3b8;">M</span>
+:::
+<div style="font-size: 0.8rem; color: #38bdf8;">Rank #23 of 47</div>
+:::
+
 ::: {.metric-card}
 ::: {.metric-label}
 1985 Baseline Area
@@ -37,15 +50,7 @@ format:
 ::: {.metric-val}
 276.66 <span style="font-size: 1rem; color: #94a3b8;">km²</span>
 :::
-:::
-
-::: {.metric-card}
-::: {.metric-label}
-Net Surface Gain
-:::
-::: {.metric-val}
-+201.13 <span style="font-size: 1rem; color: #94a3b8;">km²</span>
-:::
+<div style="font-size: 0.8rem; color: #10b981;">+201.13 km²</div>
 :::
 
 ::: {.metric-card}
@@ -55,6 +60,7 @@ Growth Multiple
 ::: {.metric-val}
 3.66×
 :::
+<div style="font-size: 0.8rem; color: #f59e0b;">Rank #21 of 47</div>
 :::
 
 ::: {.metric-card}
@@ -64,6 +70,7 @@ Annual Growth (CAGR)
 ::: {.metric-val}
 4.42%
 :::
+<div style="font-size: 0.8rem; color: #94a3b8;">1985–2015</div>
 :::
 :::
 
@@ -71,12 +78,12 @@ Annual Growth (CAGR)
 
 ## 1. The Urban Growth Rings (1985–2015)
 
-The primary cartographic poster below visualizes the physical expansion rings of **Binzhou**, partitioned into four milestone eras:
+The cartographic poster below maps the physical settlement rings of **Binzhou** across four historical development epochs:
 
-- <span style="color: #F59E0B; font-weight: bold;">● Pre-1985</span>: Historic core and initial post-1949 development.
-- <span style="color: #EF4444; font-weight: bold;">● 1986–1995</span>: Early reform, opening up, and Deng Xiaoping's southern tour.
-- <span style="color: #06B6D4; font-weight: bold;">● 1996–2005</span>: WTO entry, export boom, and new industrial development zones.
-- <span style="color: #10B981; font-weight: bold;">● 2006–2015</span>: High-speed rail expansion, modern new towns (*xinqu*), and peri-urban consolidation.
+- <span style="color: #F59E0B; font-weight: bold;">● Pre-1985 Core</span>: Historic urban core and initial post-1949 industrial settlements.
+- <span style="color: #EF4444; font-weight: bold;">● 1986–1995 Wave</span>: Early reform, opening up, and Deng Xiaoping's 1992 Southern Tour (*Nanxun*).
+- <span style="color: #06B6D4; font-weight: bold;">● 1996–2005 Wave</span>: WTO entry, export industrialization, and new development zones (*Kaifaqu*).
+- <span style="color: #10B981; font-weight: bold;">● 2006–2015 Wave</span>: High-speed rail expansion, modern new cities (*Xinqu*), and peri-urban consolidation.
 
 ::: {.map-container}
 !['The Urban Growth Rings: Binzhou'](../output/maps/binzhou_hero.png)
@@ -84,9 +91,9 @@ The primary cartographic poster below visualizes the physical expansion rings of
 
 ---
 
-## 2. Small Multiples: 4-Epoch Footprint Evolution
+## 2. Small Multiples: 4-Epoch Footprint Progression
 
-Comparative uniform-scale footprint maps isolating the cumulative urbanized surface across the four key epochs:
+Uniform-scale physical footprint progression maps tracking built-up settlement expansion over time:
 
 ::: {.map-container}
 !['Small Multiples Footprint Progression: Binzhou'](../output/maps/binzhou_small_multiples.png)
@@ -94,12 +101,12 @@ Comparative uniform-scale footprint maps isolating the cumulative urbanized surf
 
 ---
 
-## 3. Geographical Context & Growth Trajectory
+## 3. Geographical Location & Growth Trajectory
 
 :::: {.columns}
 
 ::: {.column width="48%"}
-### National Location
+### Location in China
 ::: {.map-container}
 !['Regional Inset: Binzhou'](../output/maps/binzhou_context.png)
 :::
@@ -121,8 +128,6 @@ Comparative uniform-scale footprint maps isolating the cumulative urbanized surf
 
 ## 4. 5-Year Milestone Chronology
 
-The table below catalogs the cumulative built-up surface area of Binzhou at 5-year intervals:
-
 | Milestone Year | Urban Footprint (km²) | Growth vs. 1985 Baseline | Share of 2015 Footprint |
 |:---:|:---:|:---:|:---:|
 | **1985** | 75.53 km² | 1.00× (Baseline) | 27.3% |
@@ -135,8 +140,10 @@ The table below catalogs the cumulative built-up surface area of Binzhou at 5-ye
 
 ---
 
+```{=html}
 <div style="display: flex; justify-content: space-between; margin-top: 2rem; padding: 1rem; background: #111827; border-radius: 8px;">
-  <a href="xiamen.html" style="color: #38bdf8; text-decoration: none;">← Previous: Xiamen (厦门市)</a>
+  <a href="urumqi.html" style="color: #38bdf8; text-decoration: none;">← Prev: Urumqi (4.05M)</a>
   <a href="../regions/northern_plains.html" style="color: #f59e0b; text-decoration: none;">↑ Yellow River & North Plain</a>
-  <a href="zibo.html" style="color: #38bdf8; text-decoration: none;">Next: Zibo (淄博市) →</a>
+  <a href="yichang.html" style="color: #38bdf8; text-decoration: none;">Next: Yichang (3.92M) →</a>
 </div>
+```

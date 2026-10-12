@@ -72,35 +72,6 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -189,10 +160,11 @@ window.Quarto = {
    
   <ul>
   <li><a href="#key-findings-national-overview" id="toc-key-findings-national-overview" class="nav-link active" data-scroll-target="#key-findings-national-overview">Key Findings &amp; National Overview</a></li>
-  <li><a href="#national-urban-expansion-map" id="toc-national-urban-expansion-map" class="nav-link" data-scroll-target="#national-urban-expansion-map">National Urban Expansion Map</a></li>
-  <li><a href="#national-growth-multiplier-rankings" id="toc-national-growth-multiplier-rankings" class="nav-link" data-scroll-target="#national-growth-multiplier-rankings">National Growth Multiplier Rankings</a></li>
-  <li><a href="#regional-explorations" id="toc-regional-explorations" class="nav-link" data-scroll-target="#regional-explorations">Regional Explorations</a></li>
-  <li><a href="#complete-47-city-master-index" id="toc-complete-47-city-master-index" class="nav-link" data-scroll-target="#complete-47-city-master-index">Complete 47-City Master Index</a></li>
+  <li><a href="#national-urban-expansion-high-speed-rail-map" id="toc-national-urban-expansion-high-speed-rail-map" class="nav-link" data-scroll-target="#national-urban-expansion-high-speed-rail-map">National Urban Expansion &amp; High-Speed Rail Map</a></li>
+  <li><a href="#high-speed-rail-network-urban-hierarchy" id="toc-high-speed-rail-network-urban-hierarchy" class="nav-link" data-scroll-target="#high-speed-rail-network-urban-hierarchy">High-Speed Rail Network &amp; Urban Hierarchy</a></li>
+  <li><a href="#year-growth-multiplier-rankings" id="toc-year-growth-multiplier-rankings" class="nav-link" data-scroll-target="#year-growth-multiplier-rankings">30-Year Growth Multiplier Rankings</a></li>
+  <li><a href="#interactive-regional-explorations" id="toc-interactive-regional-explorations" class="nav-link" data-scroll-target="#interactive-regional-explorations">Interactive Regional Explorations</a></li>
+  <li><a href="#complete-47-city-master-index-ranked-by-population" id="toc-complete-47-city-master-index-ranked-by-population" class="nav-link" data-scroll-target="#complete-47-city-master-index-ranked-by-population">Complete 47-City Master Index (Ranked by Population)</a></li>
   </ul>
 </nav>
     </div>
@@ -220,20 +192,31 @@ window.Quarto = {
 
 
 <div class="hero-banner">
-<div style="max-width: 900px;">
-<h1 class="hero-title">
-China Urban Growth Ratlas
-</h1>
-<h2 style="color: #f59e0b; font-size: 1.5rem; margin-top: -0.25rem; margin-bottom: 1rem;" class="anchored">
-中国城市空间扩展图集 · 1985–2015
-</h2>
-<p class="hero-subtitle">
-Between 1985 and 2015, the People’s Republic of China underwent the largest, fastest physical urbanization process in human history. This ratlas maps the spatial morphology, expansion rings, and quantitative growth trajectories across <strong>47 diverse Chinese cities</strong>—from southern coastal manufacturing hubs and ancient Silk Road oases to central megacities and northeast border outposts.
-</p>
-<div style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
-<pre><code>&lt;a href="cities.html" class="btn btn-primary" style="background: #0284c7; border: none; padding: 0.6rem 1.25rem; font-weight: 600;"&gt;Browse All 47 Cities →&lt;/a&gt;
-&lt;a href="methodology.html" class="btn btn-secondary" style="background: #1e293b; color: #cbd5e1; border: 1px solid #334155; padding: 0.6rem 1.25rem;"&gt;Methodology &amp; Data&lt;/a&gt;</code></pre>
+  <div style="max-width: 900px;">
+    <h1 class="hero-title">China Urban Growth Ratlas</h1>
+    <h2 style="color: #f59e0b; font-size: 1.5rem; margin-top: -0.25rem; margin-bottom: 1rem;" class="anchored">中国城市空间扩展图集 · 1985–2015</h2>
+    <p class="hero-subtitle">
+      Between 1985 and 2015, the People's Republic of China underwent the largest physical urbanization process in human history. 
+      This ratlas maps the spatial morphology, expansion rings, High-Speed Rail corridors, and quantitative growth trajectories across <strong>47 diverse Chinese cities</strong> ranked by population.
+    </p>
+    <div style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+      <a href="cities.html" class="btn btn-primary" style="background: #0284c7; border: none; padding: 0.6rem 1.25rem; font-weight: 600;">Browse All 47 Cities →</a>
+      <a href="methodology.html" class="btn btn-secondary" style="background: #1e293b; color: #cbd5e1; border: 1px solid #334155; padding: 0.6rem 1.25rem;">Methodology &amp; Data</a>
+    </div>
+  </div>
 </div>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Scope &amp; Sample Selection: Excluding Tier-1 Superstar Megacities
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The 47 cities in this atlas were deliberately selected to <strong>exclude China’s absolute largest tier-1 megacities</strong> (specifically Beijing, Shanghai, Guangzhou, Chongqing, and Tianjin).</p>
+<p>By centering on dynamic provincial capitals (e.g., Chengdu, Wuhan, Xi’an, Zhengzhou), specialized manufacturing nodes (e.g., Shenzhen, Zhuhai, Taizhou, Zibo), ancient Silk Road oases (e.g., Kashgar, Hotan, Wuwei), and strategic border gateways (e.g., Dandong, Hunchun), this ratlas examines how physical urbanization and infrastructure modernization transformed the full depth of China’s urban hierarchy beyond the global superstar metropolises.</p>
 </div>
 </div>
 <section id="key-findings-national-overview" class="level2">
@@ -246,13 +229,19 @@ Between 1985 and 2015, the People’s Republic of China underwent the largest, f
 <div class="metric-val">
 <p>47</p>
 </div>
+<div style="font-size: 0.8rem; color: #38bdf8;">
+Ranked by Population
+</div>
 </div>
 <div class="metric-card">
 <div class="metric-label">
-<p>Median Growth Multiple</p>
+<p>Largest City (2020)</p>
 </div>
 <div class="metric-val">
-<p>4.1×</p>
+<p>20.9 <span style="font-size: 1rem;">M</span></p>
+</div>
+<div style="font-size: 0.8rem; color: #f59e0b;">
+Chengdu (成都市)
 </div>
 </div>
 <div class="metric-card">
@@ -273,36 +262,52 @@ Heyuan (河源市)
 <div class="metric-val">
 <p>+1,356 <span style="font-size: 1rem;">km²</span></p>
 </div>
-<div style="font-size: 0.8rem; color: #f59e0b;">
+<div style="font-size: 0.8rem; color: #10b981;">
 Chengdu (成都市)
 </div>
 </div>
 <div class="metric-card">
 <div class="metric-label">
-<p>Satellite Data Resolution</p>
+<p>Transit Integration</p>
 </div>
 <div class="metric-val">
-<p>30 <span style="font-size: 1rem;">meters</span></p>
+<p>CRH</p>
+</div>
+<div style="font-size: 0.8rem; color: #38bdf8;">
+High-Speed Rail Grid
 </div>
 </div>
 </div>
 <hr>
 </section>
-<section id="national-urban-expansion-map" class="level2">
-<h2 class="anchored" data-anchor-id="national-urban-expansion-map">National Urban Expansion Map</h2>
-<p>The map below displays all 47 cities in the ratlas across China, sized by their <strong>2015 built-up area (<span class="math inline">\(km^2\)</span>)</strong> and colored by their <strong>30-year growth multiplier</strong>:</p>
+<section id="national-urban-expansion-high-speed-rail-map" class="level2">
+<h2 class="anchored" data-anchor-id="national-urban-expansion-high-speed-rail-map">National Urban Expansion &amp; High-Speed Rail Map</h2>
+<p>The map below displays all 47 cities in the ratlas across China, sized by <strong>2020 Census Population</strong>, colored by <strong>30-year growth multiplier</strong>, and overlaid with China’s <strong>High-Speed Rail network (CRH 高铁)</strong>:</p>
 <div class="map-container">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="output/maps/china_overview_map.png" class="img-fluid figure-img"></p>
-<figcaption>‘China Urban Growth Ratlas National Overview’</figcaption>
+<figcaption>‘China Urban Growth Ratlas National Overview &amp; High-Speed Rail’</figcaption>
 </figure>
 </div>
 </div>
 <hr>
 </section>
-<section id="national-growth-multiplier-rankings" class="level2">
-<h2 class="anchored" data-anchor-id="national-growth-multiplier-rankings">National Growth Multiplier Rankings</h2>
+<section id="high-speed-rail-network-urban-hierarchy" class="level2">
+<h2 class="anchored" data-anchor-id="high-speed-rail-network-urban-hierarchy">High-Speed Rail Network &amp; Urban Hierarchy</h2>
+<p>China’s High-Speed Rail network physically stitched together regional capitals and secondary nodes, accelerating post-2005 outward expansion:</p>
+<div class="map-container">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="output/maps/china_hsr_overview.png" class="img-fluid figure-img"></p>
+<figcaption>‘China High-Speed Rail Network and Atlas Nodes’</figcaption>
+</figure>
+</div>
+</div>
+<hr>
+</section>
+<section id="year-growth-multiplier-rankings" class="level2">
+<h2 class="anchored" data-anchor-id="year-growth-multiplier-rankings">30-Year Growth Multiplier Rankings</h2>
 <p>Which cities experienced the highest relative spatial expansion between 1985 and 2015?</p>
 <div class="map-container">
 <div class="quarto-figure quarto-figure-center">
@@ -314,24 +319,84 @@ Chengdu (成都市)
 </div>
 <hr>
 </section>
-<section id="regional-explorations" class="level2">
-<h2 class="anchored" data-anchor-id="regional-explorations">Regional Explorations</h2>
-<p>Explore the atlas by geographic macro-regions:</p>
+<section id="interactive-regional-explorations" class="level2">
+<h2 class="anchored" data-anchor-id="interactive-regional-explorations">Interactive Regional Explorations</h2>
+<p>Click any region on the interactive map below to jump directly to its dedicated regional chapter, or explore via the region cards below:</p>
+<div style="position: relative; width: 100%; max-width: 1100px; margin: 1.5rem auto; border-radius: 10px; overflow: hidden; border: 1px solid #1f2937; box-shadow: 0 10px 30px rgba(0,0,0,0.7);">
+  <!-- Base Regional Map Graphic -->
+  <img src="output/maps/china_regions_map.png" usemap="#chinaregions" alt="China Geographic Regions Map" style="width: 100%; height: auto; display: block;">
+
+  <!-- Interactive SVG Clickable Overlay with Glowing Regions -->
+  <svg viewbox="0 0 1600 1100" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: auto;">
+    <style>
+      .reg-link { cursor: pointer; transition: all 0.25s ease; }
+      .reg-poly { fill: transparent; stroke: transparent; stroke-width: 3; transition: all 0.25s ease; }
+      .reg-link:hover .reg-poly { fill: rgba(56, 189, 248, 0.28); stroke: #38bdf8; filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.9)); }
+      .reg-link text { fill: #f8fafc; font-size: 26px; font-weight: bold; text-anchor: middle; pointer-events: none; opacity: 0.9; text-shadow: 0 2px 6px rgba(0,0,0,0.9); }
+    </style>
+
+    <!-- Northeast Rust Belt -->
+    <a href="regions/northeast.html" class="reg-link" title="Northeast Rust Belt (8 Cities)">
+      <polygon class="reg-poly" points="1160,80 1560,80 1560,420 1200,450 1160,350"></polygon>
+      <text x="1350" y="240">Northeast Rust Belt →</text>
+    </a>
+
+    <!-- Yellow River & North Plain -->
+    <a href="regions/northern_plains.html" class="reg-link" title="Yellow River &amp; North Plain (11 Cities)">
+      <polygon class="reg-poly" points="960,380 1260,380 1260,600 960,600"></polygon>
+      <text x="1110" y="490">North Plain &amp; Bohai →</text>
+    </a>
+
+    <!-- Yangtze Delta & East -->
+    <a href="regions/yangtze_delta.html" class="reg-link" title="Yangtze Delta &amp; East (5 Cities)">
+      <polygon class="reg-poly" points="1090,560 1260,560 1260,730 1090,730"></polygon>
+      <text x="1180" y="650">Yangtze Delta →</text>
+    </a>
+
+    <!-- Yangtze Basin & Central -->
+    <a href="regions/yangtze_basin.html" class="reg-link" title="Yangtze Basin &amp; Central (6 Cities)">
+      <polygon class="reg-poly" points="760,590 1100,590 1100,780 760,780"></polygon>
+      <text x="930" y="690">Yangtze Basin &amp; Central →</text>
+    </a>
+
+    <!-- Pearl River & South Coast -->
+    <a href="regions/coastal_south.html" class="reg-link" title="Pearl River &amp; South Coast (6 Cities)">
+      <polygon class="reg-poly" points="890,780 1230,780 1230,1020 890,1020"></polygon>
+      <text x="1060" y="900">Pearl River &amp; South Coast →</text>
+    </a>
+
+    <!-- Western Frontier & Steppe -->
+    <a href="regions/western_frontier.html" class="reg-link" title="Western Frontier &amp; Steppe (11 Cities)">
+      <polygon class="reg-poly" points="50,180 960,180 820,950 50,700"></polygon>
+      <text x="480" y="460">Western Frontier &amp; Steppe →</text>
+    </a>
+  </svg>
+
+  <!-- Standard HTML5 Image Map Fallback -->
+  <map name="chinaregions">
+    <area shape="poly" coords="1160,80,1560,80,1560,420,1200,450,1160,350" href="regions/northeast.html" alt="Northeast Rust Belt">
+    <area shape="poly" coords="960,380,1260,380,1260,600,960,600" href="regions/northern_plains.html" alt="Yellow River &amp; North Plain">
+    <area shape="poly" coords="1090,560,1260,560,1260,730,1090,730" href="regions/yangtze_delta.html" alt="Yangtze Delta &amp; East">
+    <area shape="poly" coords="760,590,1100,590,1100,780,760,780" href="regions/yangtze_basin.html" alt="Yangtze Basin &amp; Central">
+    <area shape="poly" coords="890,780,1230,780,1230,1020,890,1020" href="regions/coastal_south.html" alt="Pearl River &amp; South Coast">
+    <area shape="poly" coords="50,180,960,180,820,950,50,700" href="regions/western_frontier.html" alt="Western Frontier &amp; Steppe">
+  </map>
+</div>
 <div class="columns">
 <div class="column" style="width:32%;">
 <section id="pearl-river-south-coast" class="level3 region-card">
 <h3 class="anchored" data-anchor-id="pearl-river-south-coast"><a href="regions/coastal_south.html">Pearl River &amp; South Coast</a></h3>
-<p>Special Economic Zones, export engines, and coastal reclaimers. - <strong>Cities</strong>: Shenzhen, Zhuhai, Xiamen, Haikou, Taishan, Heyuan <a href="regions/coastal_south.html">Explore Region →</a></p>
+<p>Special Economic Zones, export engines, and coastal reclaimers. - <strong>Cities</strong>: Shenzhen, Xiamen, Haikou, Heyuan, Zhuhai, Taishan <a href="regions/coastal_south.html">Explore Region →</a></p>
 </section>
 </div><div class="column" style="width:32%;">
 <section id="yangtze-basin-central" class="level3 region-card">
 <h3 class="anchored" data-anchor-id="yangtze-basin-central"><a href="regions/yangtze_basin.html">Yangtze Basin &amp; Central</a></h3>
-<p>Inland megacities and riverine industrial corridors. - <strong>Cities</strong>: Chengdu, Wuhan, Luzhou, Yichang, Nanchang, Zhangjiajie <a href="regions/yangtze_basin.html">Explore Region →</a></p>
+<p>Inland megacities and riverine industrial corridors. - <strong>Cities</strong>: Chengdu, Wuhan, Nanchang, Luzhou, Yichang, Zhangjiajie <a href="regions/yangtze_basin.html">Explore Region →</a></p>
 </section>
 </div><div class="column" style="width:32%;">
 <section id="yangtze-delta-east" class="level3 region-card">
 <h3 class="anchored" data-anchor-id="yangtze-delta-east"><a href="regions/yangtze_delta.html">Yangtze Delta &amp; East</a></h3>
-<p>Interconnected manufacturing clusters and canal towns. - <strong>Cities</strong>: Taizhou, Yangzhou, Wuhu, Huangshan, Lianyungang <a href="regions/yangtze_delta.html">Explore Region →</a></p>
+<p>Interconnected manufacturing clusters and canal towns. - <strong>Cities</strong>: Lianyungang, Yangzhou, Taizhou, Wuhu, Huangshan <a href="regions/yangtze_delta.html">Explore Region →</a></p>
 </section>
 </div>
 </div>
@@ -339,32 +404,33 @@ Chengdu (成都市)
 <div class="column" style="width:32%;">
 <section id="yellow-river-north-plain" class="level3 region-card">
 <h3 class="anchored" data-anchor-id="yellow-river-north-plain"><a href="regions/northern_plains.html">Yellow River &amp; North Plain</a></h3>
-<p>Heavy industrial centers across the agricultural heartland. - <strong>Cities</strong>: Jinan, Zhengzhou, Baoding, Shijiazhuang, Zibo… <a href="regions/northern_plains.html">Explore Region →</a></p>
+<p>Heavy industrial centers across the agricultural heartland. - <strong>Cities</strong>: Zhengzhou, Shijiazhuang, Baoding, Jinan, Jining, Liaocheng… <a href="regions/northern_plains.html">Explore Region →</a></p>
 </section>
 </div><div class="column" style="width:32%;">
 <section id="northeast-rust-belt" class="level3 region-card">
 <h3 class="anchored" data-anchor-id="northeast-rust-belt"><a href="regions/northeast.html">Northeast Rust Belt</a></h3>
-<p>Early industrial powerhouses and international border gateways. - <strong>Cities</strong>: Harbin, Dandong, Fuxin, Panjin, Tieling, Hunchun… <a href="regions/northeast.html">Explore Region →</a></p>
+<p>Early industrial powerhouses and international border gateways. - <strong>Cities</strong>: Harbin, Tieling, Dandong, Fuxin, Baicheng, Panjin… <a href="regions/northeast.html">Explore Region →</a></p>
 </section>
 </div><div class="column" style="width:32%;">
 <section id="western-frontier-steppe" class="level3 region-card">
 <h3 class="anchored" data-anchor-id="western-frontier-steppe"><a href="regions/western_frontier.html">Western Frontier &amp; Steppe</a></h3>
-<p>Silk Road oasis towns, highland capitals, and desert gateways. - <strong>Cities</strong>: Xi’an, Lanzhou, Urumqi, Kashgar, Hotan, Hohhot… <a href="regions/western_frontier.html">Explore Region →</a></p>
+<p>Silk Road oasis towns, highland capitals, and desert gateways. - <strong>Cities</strong>: Xi’an, Kunming, Guilin, Lanzhou, Urumqi, Hohhot, Kashgar… <a href="regions/western_frontier.html">Explore Region →</a></p>
 </section>
 </div>
 </div>
 <hr>
 </section>
-<section id="complete-47-city-master-index" class="level2">
-<h2 class="anchored" data-anchor-id="complete-47-city-master-index">Complete 47-City Master Index</h2>
+<section id="complete-47-city-master-index-ranked-by-population" class="level2">
+<h2 class="anchored" data-anchor-id="complete-47-city-master-index-ranked-by-population">Complete 47-City Master Index (Ranked by Population)</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th style="text-align: center;">Rank</th>
+<th style="text-align: center;">Pop Rank</th>
 <th style="text-align: left;">City</th>
 <th style="text-align: left;">Chinese</th>
 <th style="text-align: left;">Province</th>
 <th style="text-align: left;">Region</th>
+<th style="text-align: center;">Population (2020)</th>
 <th style="text-align: center;">1985 Area</th>
 <th style="text-align: center;">2015 Area</th>
 <th style="text-align: center;">Net Gain</th>
@@ -375,226 +441,63 @@ Chengdu (成都市)
 <tbody>
 <tr class="odd">
 <td style="text-align: center;">#1</td>
-<td style="text-align: left;"><a href="cities/heyuan.html">Heyuan</a></td>
-<td style="text-align: left;">河源市</td>
-<td style="text-align: left;">Guangdong</td>
-<td style="text-align: left;">Pearl River &amp; South Coast</td>
-<td style="text-align: center;">15.15 km²</td>
-<td style="text-align: center;">136.49 km²</td>
-<td style="text-align: center;">+121.34 km²</td>
-<td style="text-align: center;"><strong>9.01×</strong></td>
-<td style="text-align: center;">7.6%</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">#2</td>
 <td style="text-align: left;"><a href="cities/chengdu.html">Chengdu</a></td>
 <td style="text-align: left;">成都市</td>
 <td style="text-align: left;">Sichuan</td>
 <td style="text-align: left;">Yangtze Basin &amp; Central</td>
+<td style="text-align: center;"><strong>20.94M</strong></td>
 <td style="text-align: center;">208.06 km²</td>
 <td style="text-align: center;">1564.15 km²</td>
 <td style="text-align: center;">+1356.09 km²</td>
 <td style="text-align: center;"><strong>7.52×</strong></td>
 <td style="text-align: center;">6.96%</td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;">#3</td>
-<td style="text-align: left;"><a href="cities/taizhou.html">Taizhou</a></td>
-<td style="text-align: left;">泰州市</td>
-<td style="text-align: left;">Jiangsu</td>
-<td style="text-align: left;">Yangtze Delta &amp; East</td>
-<td style="text-align: center;">80.81 km²</td>
-<td style="text-align: center;">583 km²</td>
-<td style="text-align: center;">+502.19 km²</td>
-<td style="text-align: center;"><strong>7.21×</strong></td>
-<td style="text-align: center;">6.81%</td>
-</tr>
 <tr class="even">
-<td style="text-align: center;">#4</td>
-<td style="text-align: left;"><a href="cities/zhuhai.html">Zhuhai</a></td>
-<td style="text-align: left;">珠海市</td>
-<td style="text-align: left;">Guangdong</td>
-<td style="text-align: left;">Pearl River &amp; South Coast</td>
-<td style="text-align: center;">33.27 km²</td>
-<td style="text-align: center;">237.12 km²</td>
-<td style="text-align: center;">+203.85 km²</td>
-<td style="text-align: center;"><strong>7.13×</strong></td>
-<td style="text-align: center;">6.77%</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">#5</td>
+<td style="text-align: center;">#2</td>
 <td style="text-align: left;"><a href="cities/shenzhen.html">Shenzhen</a></td>
 <td style="text-align: left;">深圳市</td>
 <td style="text-align: left;">Guangdong</td>
 <td style="text-align: left;">Pearl River &amp; South Coast</td>
+<td style="text-align: center;"><strong>17.56M</strong></td>
 <td style="text-align: center;">168.35 km²</td>
 <td style="text-align: center;">1064.98 km²</td>
 <td style="text-align: center;">+896.63 km²</td>
 <td style="text-align: center;"><strong>6.33×</strong></td>
 <td style="text-align: center;">6.34%</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;">#6</td>
-<td style="text-align: left;"><a href="cities/luzhou.html">Luzhou</a></td>
-<td style="text-align: left;">泸州市</td>
-<td style="text-align: left;">Sichuan</td>
-<td style="text-align: left;">Yangtze Basin &amp; Central</td>
-<td style="text-align: center;">22.7 km²</td>
-<td style="text-align: center;">140.03 km²</td>
-<td style="text-align: center;">+117.33 km²</td>
-<td style="text-align: center;"><strong>6.17×</strong></td>
-<td style="text-align: center;">6.25%</td>
-</tr>
 <tr class="odd">
-<td style="text-align: center;">#7</td>
-<td style="text-align: left;"><a href="cities/yangzhou.html">Yangzhou</a></td>
-<td style="text-align: left;">扬州市</td>
-<td style="text-align: left;">Jiangsu</td>
-<td style="text-align: left;">Yangtze Delta &amp; East</td>
-<td style="text-align: center;">98.97 km²</td>
-<td style="text-align: center;">600.99 km²</td>
-<td style="text-align: center;">+502.02 km²</td>
-<td style="text-align: center;"><strong>6.07×</strong></td>
-<td style="text-align: center;">6.2%</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">#8</td>
-<td style="text-align: left;"><a href="cities/weihai.html">Weihai</a></td>
-<td style="text-align: left;">威海市</td>
-<td style="text-align: left;">Shandong</td>
-<td style="text-align: left;">Yellow River &amp; North Plain</td>
-<td style="text-align: center;">32.87 km²</td>
-<td style="text-align: center;">179.59 km²</td>
-<td style="text-align: center;">+146.72 km²</td>
-<td style="text-align: center;"><strong>5.46×</strong></td>
-<td style="text-align: center;">5.82%</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">#9</td>
-<td style="text-align: left;"><a href="cities/hohhot.html">Hohhot</a></td>
-<td style="text-align: left;">呼和浩特市</td>
-<td style="text-align: left;">Inner Mongolia</td>
+<td style="text-align: center;">#3</td>
+<td style="text-align: left;"><a href="cities/xian.html">Xi’an</a></td>
+<td style="text-align: left;">西安市</td>
+<td style="text-align: left;">Shaanxi</td>
 <td style="text-align: left;">Western Frontier &amp; Steppe</td>
-<td style="text-align: center;">68.88 km²</td>
-<td style="text-align: center;">349.27 km²</td>
-<td style="text-align: center;">+280.39 km²</td>
-<td style="text-align: center;"><strong>5.07×</strong></td>
-<td style="text-align: center;">5.56%</td>
+<td style="text-align: center;"><strong>12.95M</strong></td>
+<td style="text-align: center;">392.14 km²</td>
+<td style="text-align: center;">1354.03 km²</td>
+<td style="text-align: center;">+961.89 km²</td>
+<td style="text-align: center;"><strong>3.45×</strong></td>
+<td style="text-align: center;">4.22%</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">#10</td>
-<td style="text-align: left;"><a href="cities/jining.html">Jining</a></td>
-<td style="text-align: left;">济宁市</td>
-<td style="text-align: left;">Shandong</td>
+<td style="text-align: center;">#4</td>
+<td style="text-align: left;"><a href="cities/zhengzhou.html">Zhengzhou</a></td>
+<td style="text-align: left;">郑州市</td>
+<td style="text-align: left;">Henan</td>
 <td style="text-align: left;">Yellow River &amp; North Plain</td>
-<td style="text-align: center;">77.41 km²</td>
-<td style="text-align: center;">391.12 km²</td>
-<td style="text-align: center;">+313.71 km²</td>
-<td style="text-align: center;"><strong>5.05×</strong></td>
-<td style="text-align: center;">5.55%</td>
+<td style="text-align: center;"><strong>12.6M</strong></td>
+<td style="text-align: center;">315.56 km²</td>
+<td style="text-align: center;">1084.55 km²</td>
+<td style="text-align: center;">+768.99 km²</td>
+<td style="text-align: center;"><strong>3.44×</strong></td>
+<td style="text-align: center;">4.2%</td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">#11</td>
-<td style="text-align: left;"><a href="cities/ulanqab.html">Ulanqab</a></td>
-<td style="text-align: left;">乌兰察布市</td>
-<td style="text-align: left;">Inner Mongolia</td>
-<td style="text-align: left;">Western Frontier &amp; Steppe</td>
-<td style="text-align: center;">20.59 km²</td>
-<td style="text-align: center;">103.9 km²</td>
-<td style="text-align: center;">+83.31 km²</td>
-<td style="text-align: center;"><strong>5.05×</strong></td>
-<td style="text-align: center;">5.54%</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">#12</td>
-<td style="text-align: left;"><a href="cities/wuhu.html">Wuhu</a></td>
-<td style="text-align: left;">芜湖市</td>
-<td style="text-align: left;">Anhui</td>
-<td style="text-align: left;">Yangtze Delta &amp; East</td>
-<td style="text-align: center;">82.97 km²</td>
-<td style="text-align: center;">380.45 km²</td>
-<td style="text-align: center;">+297.48 km²</td>
-<td style="text-align: center;"><strong>4.59×</strong></td>
-<td style="text-align: center;">5.21%</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">#13</td>
-<td style="text-align: left;"><a href="cities/huangshan.html">Huangshan</a></td>
-<td style="text-align: left;">黄山市</td>
-<td style="text-align: left;">Anhui</td>
-<td style="text-align: left;">Yangtze Delta &amp; East</td>
-<td style="text-align: center;">26.02 km²</td>
-<td style="text-align: center;">118.96 km²</td>
-<td style="text-align: center;">+92.94 km²</td>
-<td style="text-align: center;"><strong>4.57×</strong></td>
-<td style="text-align: center;">5.2%</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">#14</td>
-<td style="text-align: left;"><a href="cities/haikou.html">Haikou</a></td>
-<td style="text-align: left;">海口市</td>
-<td style="text-align: left;">Hainan</td>
-<td style="text-align: left;">Pearl River &amp; South Coast</td>
-<td style="text-align: center;">63.84 km²</td>
-<td style="text-align: center;">262.73 km²</td>
-<td style="text-align: center;">+198.89 km²</td>
-<td style="text-align: center;"><strong>4.12×</strong></td>
-<td style="text-align: center;">4.83%</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">#15</td>
-<td style="text-align: left;"><a href="cities/kunming.html">Kunming</a></td>
-<td style="text-align: left;">昆明市</td>
-<td style="text-align: left;">Yunnan</td>
-<td style="text-align: left;">South &amp; Southwest</td>
-<td style="text-align: center;">153.06 km²</td>
-<td style="text-align: center;">624.84 km²</td>
-<td style="text-align: center;">+471.78 km²</td>
-<td style="text-align: center;"><strong>4.08×</strong></td>
-<td style="text-align: center;">4.8%</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">#16</td>
-<td style="text-align: left;"><a href="cities/dongying.html">Dongying</a></td>
-<td style="text-align: left;">东营市</td>
-<td style="text-align: left;">Shandong</td>
-<td style="text-align: left;">Yellow River &amp; North Plain</td>
-<td style="text-align: center;">83.9 km²</td>
-<td style="text-align: center;">341.04 km²</td>
-<td style="text-align: center;">+257.14 km²</td>
-<td style="text-align: center;"><strong>4.06×</strong></td>
-<td style="text-align: center;">4.79%</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">#17</td>
-<td style="text-align: left;"><a href="cities/baoding.html">Baoding</a></td>
-<td style="text-align: left;">保定市</td>
-<td style="text-align: left;">Hebei</td>
-<td style="text-align: left;">Yellow River &amp; North Plain</td>
-<td style="text-align: center;">132.36 km²</td>
-<td style="text-align: center;">526.12 km²</td>
-<td style="text-align: center;">+393.76 km²</td>
-<td style="text-align: center;"><strong>3.97×</strong></td>
-<td style="text-align: center;">4.71%</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">#18</td>
-<td style="text-align: left;"><a href="cities/yichang.html">Yichang</a></td>
-<td style="text-align: left;">宜昌市</td>
-<td style="text-align: left;">Hubei</td>
-<td style="text-align: left;">Yangtze Basin &amp; Central</td>
-<td style="text-align: center;">45.63 km²</td>
-<td style="text-align: center;">178.59 km²</td>
-<td style="text-align: center;">+132.96 km²</td>
-<td style="text-align: center;"><strong>3.91×</strong></td>
-<td style="text-align: center;">4.65%</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">#19</td>
+<td style="text-align: center;">#5</td>
 <td style="text-align: left;"><a href="cities/wuhan.html">Wuhan</a></td>
 <td style="text-align: left;">武汉市</td>
 <td style="text-align: left;">Hubei</td>
 <td style="text-align: left;">Yangtze Basin &amp; Central</td>
+<td style="text-align: center;"><strong>12.33M</strong></td>
 <td style="text-align: center;">279.63 km²</td>
 <td style="text-align: center;">1077.9 km²</td>
 <td style="text-align: center;">+798.27 km²</td>
@@ -602,143 +505,51 @@ Chengdu (成都市)
 <td style="text-align: center;">4.6%</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">#20</td>
-<td style="text-align: left;"><a href="cities/taishan.html">Taishan</a></td>
-<td style="text-align: left;">台山市</td>
-<td style="text-align: left;">Guangdong</td>
-<td style="text-align: left;">Pearl River &amp; South Coast</td>
-<td style="text-align: center;">30.28 km²</td>
-<td style="text-align: center;">112.33 km²</td>
-<td style="text-align: center;">+82.05 km²</td>
-<td style="text-align: center;"><strong>3.71×</strong></td>
-<td style="text-align: center;">4.47%</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">#21</td>
-<td style="text-align: left;"><a href="cities/xiamen.html">Xiamen</a></td>
-<td style="text-align: left;">厦门市</td>
-<td style="text-align: left;">Fujian</td>
-<td style="text-align: left;">Pearl River &amp; South Coast</td>
-<td style="text-align: center;">128.93 km²</td>
-<td style="text-align: center;">473.04 km²</td>
-<td style="text-align: center;">+344.11 km²</td>
-<td style="text-align: center;"><strong>3.67×</strong></td>
-<td style="text-align: center;">4.43%</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">#22</td>
-<td style="text-align: left;"><a href="cities/binzhou.html">Binzhou</a></td>
-<td style="text-align: left;">滨州市</td>
-<td style="text-align: left;">Shandong</td>
+<td style="text-align: center;">#6</td>
+<td style="text-align: left;"><a href="cities/shijiazhuang.html">Shijiazhuang</a></td>
+<td style="text-align: left;">石家庄市</td>
+<td style="text-align: left;">Hebei</td>
 <td style="text-align: left;">Yellow River &amp; North Plain</td>
-<td style="text-align: center;">75.53 km²</td>
-<td style="text-align: center;">276.66 km²</td>
-<td style="text-align: center;">+201.13 km²</td>
-<td style="text-align: center;"><strong>3.66×</strong></td>
-<td style="text-align: center;">4.42%</td>
+<td style="text-align: center;"><strong>10.64M</strong></td>
+<td style="text-align: center;">307.22 km²</td>
+<td style="text-align: center;">811.55 km²</td>
+<td style="text-align: center;">+504.33 km²</td>
+<td style="text-align: center;"><strong>2.64×</strong></td>
+<td style="text-align: center;">3.29%</td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">#23</td>
-<td style="text-align: left;"><a href="cities/zibo.html">Zibo</a></td>
-<td style="text-align: left;">淄博市</td>
-<td style="text-align: left;">Shandong</td>
+<td style="text-align: center;">#7</td>
+<td style="text-align: left;"><a href="cities/harbin.html">Harbin</a></td>
+<td style="text-align: left;">哈尔滨市</td>
+<td style="text-align: left;">Heilongjiang</td>
+<td style="text-align: left;">Northeast Rust Belt</td>
+<td style="text-align: center;"><strong>10.01M</strong></td>
+<td style="text-align: center;">267.74 km²</td>
+<td style="text-align: center;">701.48 km²</td>
+<td style="text-align: center;">+433.74 km²</td>
+<td style="text-align: center;"><strong>2.62×</strong></td>
+<td style="text-align: center;">3.26%</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">#8</td>
+<td style="text-align: left;"><a href="cities/baoding.html">Baoding</a></td>
+<td style="text-align: left;">保定市</td>
+<td style="text-align: left;">Hebei</td>
 <td style="text-align: left;">Yellow River &amp; North Plain</td>
-<td style="text-align: center;">180.8 km²</td>
-<td style="text-align: center;">660.67 km²</td>
-<td style="text-align: center;">+479.87 km²</td>
-<td style="text-align: center;"><strong>3.65×</strong></td>
-<td style="text-align: center;">4.41%</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">#24</td>
-<td style="text-align: left;"><a href="cities/kashgar.html">Kashgar</a></td>
-<td style="text-align: left;">喀什市</td>
-<td style="text-align: left;">Xinjiang</td>
-<td style="text-align: left;">Western Frontier &amp; Steppe</td>
-<td style="text-align: center;">46.39 km²</td>
-<td style="text-align: center;">160.73 km²</td>
-<td style="text-align: center;">+114.34 km²</td>
-<td style="text-align: center;"><strong>3.46×</strong></td>
-<td style="text-align: center;">4.23%</td>
+<td style="text-align: center;"><strong>9.24M</strong></td>
+<td style="text-align: center;">132.36 km²</td>
+<td style="text-align: center;">526.12 km²</td>
+<td style="text-align: center;">+393.76 km²</td>
+<td style="text-align: center;"><strong>3.97×</strong></td>
+<td style="text-align: center;">4.71%</td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">#25</td>
-<td style="text-align: left;"><a href="cities/zhangjiajie.html">Zhangjiajie</a></td>
-<td style="text-align: left;">张家界市</td>
-<td style="text-align: left;">Hunan</td>
-<td style="text-align: left;">Yangtze Basin &amp; Central</td>
-<td style="text-align: center;">18.13 km²</td>
-<td style="text-align: center;">62.73 km²</td>
-<td style="text-align: center;">+44.6 km²</td>
-<td style="text-align: center;"><strong>3.46×</strong></td>
-<td style="text-align: center;">4.22%</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">#26</td>
-<td style="text-align: left;"><a href="cities/xian.html">Xi’an</a></td>
-<td style="text-align: left;">西安市</td>
-<td style="text-align: left;">Shaanxi</td>
-<td style="text-align: left;">Western Frontier &amp; Steppe</td>
-<td style="text-align: center;">392.14 km²</td>
-<td style="text-align: center;">1354.03 km²</td>
-<td style="text-align: center;">+961.89 km²</td>
-<td style="text-align: center;"><strong>3.45×</strong></td>
-<td style="text-align: center;">4.22%</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">#27</td>
-<td style="text-align: left;"><a href="cities/zhengzhou.html">Zhengzhou</a></td>
-<td style="text-align: left;">郑州市</td>
-<td style="text-align: left;">Henan</td>
-<td style="text-align: left;">Yellow River &amp; North Plain</td>
-<td style="text-align: center;">315.56 km²</td>
-<td style="text-align: center;">1084.55 km²</td>
-<td style="text-align: center;">+768.99 km²</td>
-<td style="text-align: center;"><strong>3.44×</strong></td>
-<td style="text-align: center;">4.2%</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">#28</td>
-<td style="text-align: left;"><a href="cities/nanchang.html">Nanchang</a></td>
-<td style="text-align: left;">南昌市</td>
-<td style="text-align: left;">Jiangxi</td>
-<td style="text-align: left;">Yangtze Basin &amp; Central</td>
-<td style="text-align: center;">178.79 km²</td>
-<td style="text-align: center;">608.57 km²</td>
-<td style="text-align: center;">+429.78 km²</td>
-<td style="text-align: center;"><strong>3.4×</strong></td>
-<td style="text-align: center;">4.17%</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">#29</td>
-<td style="text-align: left;"><a href="cities/guilin.html">Guilin</a></td>
-<td style="text-align: left;">桂林市</td>
-<td style="text-align: left;">Guangxi</td>
-<td style="text-align: left;">South &amp; Southwest</td>
-<td style="text-align: center;">76.14 km²</td>
-<td style="text-align: center;">254.1 km²</td>
-<td style="text-align: center;">+177.96 km²</td>
-<td style="text-align: center;"><strong>3.34×</strong></td>
-<td style="text-align: center;">4.1%</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">#30</td>
-<td style="text-align: left;"><a href="cities/liaocheng.html">Liaocheng</a></td>
-<td style="text-align: left;">聊城市</td>
-<td style="text-align: left;">Shandong</td>
-<td style="text-align: left;">Yellow River &amp; North Plain</td>
-<td style="text-align: center;">86.36 km²</td>
-<td style="text-align: center;">279.69 km²</td>
-<td style="text-align: center;">+193.33 km²</td>
-<td style="text-align: center;"><strong>3.24×</strong></td>
-<td style="text-align: center;">3.99%</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">#31</td>
+<td style="text-align: center;">#9</td>
 <td style="text-align: left;"><a href="cities/jinan.html">Jinan</a></td>
 <td style="text-align: left;">济南市</td>
 <td style="text-align: left;">Shandong</td>
 <td style="text-align: left;">Yellow River &amp; North Plain</td>
+<td style="text-align: center;"><strong>9.2M</strong></td>
 <td style="text-align: center;">200.11 km²</td>
 <td style="text-align: center;">647.13 km²</td>
 <td style="text-align: center;">+447.02 km²</td>
@@ -746,71 +557,103 @@ Chengdu (成都市)
 <td style="text-align: center;">3.99%</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">#32</td>
-<td style="text-align: left;"><a href="cities/dandong.html">Dandong</a></td>
-<td style="text-align: left;">丹东市</td>
-<td style="text-align: left;">Liaoning</td>
-<td style="text-align: left;">Northeast Rust Belt</td>
-<td style="text-align: center;">45.2 km²</td>
-<td style="text-align: center;">140.92 km²</td>
-<td style="text-align: center;">+95.72 km²</td>
-<td style="text-align: center;"><strong>3.12×</strong></td>
-<td style="text-align: center;">3.86%</td>
+<td style="text-align: center;">#10</td>
+<td style="text-align: left;"><a href="cities/kunming.html">Kunming</a></td>
+<td style="text-align: left;">昆明市</td>
+<td style="text-align: left;">Yunnan</td>
+<td style="text-align: left;">South &amp; Southwest</td>
+<td style="text-align: center;"><strong>8.46M</strong></td>
+<td style="text-align: center;">153.06 km²</td>
+<td style="text-align: center;">624.84 km²</td>
+<td style="text-align: center;">+471.78 km²</td>
+<td style="text-align: center;"><strong>4.08×</strong></td>
+<td style="text-align: center;">4.8%</td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">#33</td>
-<td style="text-align: left;"><a href="cities/tieling.html">Tieling</a></td>
-<td style="text-align: left;">铁岭市</td>
-<td style="text-align: left;">Liaoning</td>
-<td style="text-align: left;">Northeast Rust Belt</td>
-<td style="text-align: center;">43.68 km²</td>
-<td style="text-align: center;">134.96 km²</td>
-<td style="text-align: center;">+91.28 km²</td>
-<td style="text-align: center;"><strong>3.09×</strong></td>
-<td style="text-align: center;">3.83%</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">#34</td>
-<td style="text-align: left;"><a href="cities/hunchun.html">Hunchun</a></td>
-<td style="text-align: left;">珲春市</td>
-<td style="text-align: left;">Jilin</td>
-<td style="text-align: left;">Northeast Rust Belt</td>
-<td style="text-align: center;">20.56 km²</td>
-<td style="text-align: center;">61.52 km²</td>
-<td style="text-align: center;">+40.96 km²</td>
-<td style="text-align: center;"><strong>2.99×</strong></td>
-<td style="text-align: center;">3.72%</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">#35</td>
-<td style="text-align: left;"><a href="cities/fuxin.html">Fuxin</a></td>
-<td style="text-align: left;">阜新市</td>
-<td style="text-align: left;">Liaoning</td>
-<td style="text-align: left;">Northeast Rust Belt</td>
-<td style="text-align: center;">57.66 km²</td>
-<td style="text-align: center;">169.39 km²</td>
-<td style="text-align: center;">+111.73 km²</td>
-<td style="text-align: center;"><strong>2.94×</strong></td>
-<td style="text-align: center;">3.66%</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">#36</td>
-<td style="text-align: left;"><a href="cities/datong.html">Datong</a></td>
-<td style="text-align: left;">大同市</td>
-<td style="text-align: left;">Shanxi</td>
+<td style="text-align: center;">#11</td>
+<td style="text-align: left;"><a href="cities/jining.html">Jining</a></td>
+<td style="text-align: left;">济宁市</td>
+<td style="text-align: left;">Shandong</td>
 <td style="text-align: left;">Yellow River &amp; North Plain</td>
-<td style="text-align: center;">99.39 km²</td>
-<td style="text-align: center;">279.67 km²</td>
-<td style="text-align: center;">+180.28 km²</td>
-<td style="text-align: center;"><strong>2.81×</strong></td>
-<td style="text-align: center;">3.51%</td>
+<td style="text-align: center;"><strong>8.36M</strong></td>
+<td style="text-align: center;">77.41 km²</td>
+<td style="text-align: center;">391.12 km²</td>
+<td style="text-align: center;">+313.71 km²</td>
+<td style="text-align: center;"><strong>5.05×</strong></td>
+<td style="text-align: center;">5.55%</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">#12</td>
+<td style="text-align: left;"><a href="cities/nanchang.html">Nanchang</a></td>
+<td style="text-align: left;">南昌市</td>
+<td style="text-align: left;">Jiangxi</td>
+<td style="text-align: left;">Yangtze Basin &amp; Central</td>
+<td style="text-align: center;"><strong>6.26M</strong></td>
+<td style="text-align: center;">178.79 km²</td>
+<td style="text-align: center;">608.57 km²</td>
+<td style="text-align: center;">+429.78 km²</td>
+<td style="text-align: center;"><strong>3.4×</strong></td>
+<td style="text-align: center;">4.17%</td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">#37</td>
+<td style="text-align: center;">#13</td>
+<td style="text-align: left;"><a href="cities/liaocheng.html">Liaocheng</a></td>
+<td style="text-align: left;">聊城市</td>
+<td style="text-align: left;">Shandong</td>
+<td style="text-align: left;">Yellow River &amp; North Plain</td>
+<td style="text-align: center;"><strong>5.95M</strong></td>
+<td style="text-align: center;">86.36 km²</td>
+<td style="text-align: center;">279.69 km²</td>
+<td style="text-align: center;">+193.33 km²</td>
+<td style="text-align: center;"><strong>3.24×</strong></td>
+<td style="text-align: center;">3.99%</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">#14</td>
+<td style="text-align: left;"><a href="cities/xiamen.html">Xiamen</a></td>
+<td style="text-align: left;">厦门市</td>
+<td style="text-align: left;">Fujian</td>
+<td style="text-align: left;">Pearl River &amp; South Coast</td>
+<td style="text-align: center;"><strong>5.16M</strong></td>
+<td style="text-align: center;">128.93 km²</td>
+<td style="text-align: center;">473.04 km²</td>
+<td style="text-align: center;">+344.11 km²</td>
+<td style="text-align: center;"><strong>3.67×</strong></td>
+<td style="text-align: center;">4.43%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">#15</td>
+<td style="text-align: left;"><a href="cities/guilin.html">Guilin</a></td>
+<td style="text-align: left;">桂林市</td>
+<td style="text-align: left;">Guangxi</td>
+<td style="text-align: left;">South &amp; Southwest</td>
+<td style="text-align: center;"><strong>4.93M</strong></td>
+<td style="text-align: center;">76.14 km²</td>
+<td style="text-align: center;">254.1 km²</td>
+<td style="text-align: center;">+177.96 km²</td>
+<td style="text-align: center;"><strong>3.34×</strong></td>
+<td style="text-align: center;">4.1%</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">#16</td>
+<td style="text-align: left;"><a href="cities/zibo.html">Zibo</a></td>
+<td style="text-align: left;">淄博市</td>
+<td style="text-align: left;">Shandong</td>
+<td style="text-align: left;">Yellow River &amp; North Plain</td>
+<td style="text-align: center;"><strong>4.7M</strong></td>
+<td style="text-align: center;">180.8 km²</td>
+<td style="text-align: center;">660.67 km²</td>
+<td style="text-align: center;">+479.87 km²</td>
+<td style="text-align: center;"><strong>3.65×</strong></td>
+<td style="text-align: center;">4.41%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">#17</td>
 <td style="text-align: left;"><a href="cities/lianyungang.html">Lianyungang</a></td>
 <td style="text-align: left;">连云港市</td>
 <td style="text-align: left;">Jiangsu</td>
 <td style="text-align: left;">Yangtze Delta &amp; East</td>
+<td style="text-align: center;"><strong>4.6M</strong></td>
 <td style="text-align: center;">135.75 km²</td>
 <td style="text-align: center;">369.04 km²</td>
 <td style="text-align: center;">+233.29 km²</td>
@@ -818,52 +661,316 @@ Chengdu (成都市)
 <td style="text-align: center;">3.39%</td>
 </tr>
 <tr class="even">
+<td style="text-align: center;">#18</td>
+<td style="text-align: left;"><a href="cities/yangzhou.html">Yangzhou</a></td>
+<td style="text-align: left;">扬州市</td>
+<td style="text-align: left;">Jiangsu</td>
+<td style="text-align: left;">Yangtze Delta &amp; East</td>
+<td style="text-align: center;"><strong>4.56M</strong></td>
+<td style="text-align: center;">98.97 km²</td>
+<td style="text-align: center;">600.99 km²</td>
+<td style="text-align: center;">+502.02 km²</td>
+<td style="text-align: center;"><strong>6.07×</strong></td>
+<td style="text-align: center;">6.2%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">#19</td>
+<td style="text-align: left;"><a href="cities/taizhou.html">Taizhou</a></td>
+<td style="text-align: left;">泰州市</td>
+<td style="text-align: left;">Jiangsu</td>
+<td style="text-align: left;">Yangtze Delta &amp; East</td>
+<td style="text-align: center;"><strong>4.51M</strong></td>
+<td style="text-align: center;">80.81 km²</td>
+<td style="text-align: center;">583 km²</td>
+<td style="text-align: center;">+502.19 km²</td>
+<td style="text-align: center;"><strong>7.21×</strong></td>
+<td style="text-align: center;">6.81%</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">#20</td>
+<td style="text-align: left;"><a href="cities/lanzhou.html">Lanzhou</a></td>
+<td style="text-align: left;">兰州市</td>
+<td style="text-align: left;">Gansu</td>
+<td style="text-align: left;">Western Frontier &amp; Steppe</td>
+<td style="text-align: center;"><strong>4.36M</strong></td>
+<td style="text-align: center;">119.22 km²</td>
+<td style="text-align: center;">232.72 km²</td>
+<td style="text-align: center;">+113.5 km²</td>
+<td style="text-align: center;"><strong>1.95×</strong></td>
+<td style="text-align: center;">2.25%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">#21</td>
+<td style="text-align: left;"><a href="cities/luzhou.html">Luzhou</a></td>
+<td style="text-align: left;">泸州市</td>
+<td style="text-align: left;">Sichuan</td>
+<td style="text-align: left;">Yangtze Basin &amp; Central</td>
+<td style="text-align: center;"><strong>4.25M</strong></td>
+<td style="text-align: center;">22.7 km²</td>
+<td style="text-align: center;">140.03 km²</td>
+<td style="text-align: center;">+117.33 km²</td>
+<td style="text-align: center;"><strong>6.17×</strong></td>
+<td style="text-align: center;">6.25%</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">#22</td>
+<td style="text-align: left;"><a href="cities/urumqi.html">Urumqi</a></td>
+<td style="text-align: left;">乌鲁木齐市</td>
+<td style="text-align: left;">Xinjiang</td>
+<td style="text-align: left;">Western Frontier &amp; Steppe</td>
+<td style="text-align: center;"><strong>4.05M</strong></td>
+<td style="text-align: center;">251.96 km²</td>
+<td style="text-align: center;">431.36 km²</td>
+<td style="text-align: center;">+179.4 km²</td>
+<td style="text-align: center;"><strong>1.71×</strong></td>
+<td style="text-align: center;">1.81%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">#23</td>
+<td style="text-align: left;"><a href="cities/binzhou.html">Binzhou</a></td>
+<td style="text-align: left;">滨州市</td>
+<td style="text-align: left;">Shandong</td>
+<td style="text-align: left;">Yellow River &amp; North Plain</td>
+<td style="text-align: center;"><strong>3.93M</strong></td>
+<td style="text-align: center;">75.53 km²</td>
+<td style="text-align: center;">276.66 km²</td>
+<td style="text-align: center;">+201.13 km²</td>
+<td style="text-align: center;"><strong>3.66×</strong></td>
+<td style="text-align: center;">4.42%</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">#24</td>
+<td style="text-align: left;"><a href="cities/yichang.html">Yichang</a></td>
+<td style="text-align: left;">宜昌市</td>
+<td style="text-align: left;">Hubei</td>
+<td style="text-align: left;">Yangtze Basin &amp; Central</td>
+<td style="text-align: center;"><strong>3.92M</strong></td>
+<td style="text-align: center;">45.63 km²</td>
+<td style="text-align: center;">178.59 km²</td>
+<td style="text-align: center;">+132.96 km²</td>
+<td style="text-align: center;"><strong>3.91×</strong></td>
+<td style="text-align: center;">4.65%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">#25</td>
+<td style="text-align: left;"><a href="cities/wuhu.html">Wuhu</a></td>
+<td style="text-align: left;">芜湖市</td>
+<td style="text-align: left;">Anhui</td>
+<td style="text-align: left;">Yangtze Delta &amp; East</td>
+<td style="text-align: center;"><strong>3.64M</strong></td>
+<td style="text-align: center;">82.97 km²</td>
+<td style="text-align: center;">380.45 km²</td>
+<td style="text-align: center;">+297.48 km²</td>
+<td style="text-align: center;"><strong>4.59×</strong></td>
+<td style="text-align: center;">5.21%</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">#26</td>
+<td style="text-align: left;"><a href="cities/hohhot.html">Hohhot</a></td>
+<td style="text-align: left;">呼和浩特市</td>
+<td style="text-align: left;">Inner Mongolia</td>
+<td style="text-align: left;">Western Frontier &amp; Steppe</td>
+<td style="text-align: center;"><strong>3.45M</strong></td>
+<td style="text-align: center;">68.88 km²</td>
+<td style="text-align: center;">349.27 km²</td>
+<td style="text-align: center;">+280.39 km²</td>
+<td style="text-align: center;"><strong>5.07×</strong></td>
+<td style="text-align: center;">5.56%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">#27</td>
+<td style="text-align: left;"><a href="cities/datong.html">Datong</a></td>
+<td style="text-align: left;">大同市</td>
+<td style="text-align: left;">Shanxi</td>
+<td style="text-align: left;">Yellow River &amp; North Plain</td>
+<td style="text-align: center;"><strong>3.11M</strong></td>
+<td style="text-align: center;">99.39 km²</td>
+<td style="text-align: center;">279.67 km²</td>
+<td style="text-align: center;">+180.28 km²</td>
+<td style="text-align: center;"><strong>2.81×</strong></td>
+<td style="text-align: center;">3.51%</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">#28</td>
+<td style="text-align: left;"><a href="cities/weihai.html">Weihai</a></td>
+<td style="text-align: left;">威海市</td>
+<td style="text-align: left;">Shandong</td>
+<td style="text-align: left;">Yellow River &amp; North Plain</td>
+<td style="text-align: center;"><strong>2.91M</strong></td>
+<td style="text-align: center;">32.87 km²</td>
+<td style="text-align: center;">179.59 km²</td>
+<td style="text-align: center;">+146.72 km²</td>
+<td style="text-align: center;"><strong>5.46×</strong></td>
+<td style="text-align: center;">5.82%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">#29</td>
+<td style="text-align: left;"><a href="cities/haikou.html">Haikou</a></td>
+<td style="text-align: left;">海口市</td>
+<td style="text-align: left;">Hainan</td>
+<td style="text-align: left;">Pearl River &amp; South Coast</td>
+<td style="text-align: center;"><strong>2.87M</strong></td>
+<td style="text-align: center;">63.84 km²</td>
+<td style="text-align: center;">262.73 km²</td>
+<td style="text-align: center;">+198.89 km²</td>
+<td style="text-align: center;"><strong>4.12×</strong></td>
+<td style="text-align: center;">4.83%</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">#30</td>
+<td style="text-align: left;"><a href="cities/heyuan.html">Heyuan</a></td>
+<td style="text-align: left;">河源市</td>
+<td style="text-align: left;">Guangdong</td>
+<td style="text-align: left;">Pearl River &amp; South Coast</td>
+<td style="text-align: center;"><strong>2.84M</strong></td>
+<td style="text-align: center;">15.15 km²</td>
+<td style="text-align: center;">136.49 km²</td>
+<td style="text-align: center;">+121.34 km²</td>
+<td style="text-align: center;"><strong>9.01×</strong></td>
+<td style="text-align: center;">7.6%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">#31</td>
+<td style="text-align: left;"><a href="cities/zhuhai.html">Zhuhai</a></td>
+<td style="text-align: left;">珠海市</td>
+<td style="text-align: left;">Guangdong</td>
+<td style="text-align: left;">Pearl River &amp; South Coast</td>
+<td style="text-align: center;"><strong>2.44M</strong></td>
+<td style="text-align: center;">33.27 km²</td>
+<td style="text-align: center;">237.12 km²</td>
+<td style="text-align: center;">+203.85 km²</td>
+<td style="text-align: center;"><strong>7.13×</strong></td>
+<td style="text-align: center;">6.77%</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">#32</td>
+<td style="text-align: left;"><a href="cities/tieling.html">Tieling</a></td>
+<td style="text-align: left;">铁岭市</td>
+<td style="text-align: left;">Liaoning</td>
+<td style="text-align: left;">Northeast Rust Belt</td>
+<td style="text-align: center;"><strong>2.39M</strong></td>
+<td style="text-align: center;">43.68 km²</td>
+<td style="text-align: center;">134.96 km²</td>
+<td style="text-align: center;">+91.28 km²</td>
+<td style="text-align: center;"><strong>3.09×</strong></td>
+<td style="text-align: center;">3.83%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">#33</td>
+<td style="text-align: left;"><a href="cities/dandong.html">Dandong</a></td>
+<td style="text-align: left;">丹东市</td>
+<td style="text-align: left;">Liaoning</td>
+<td style="text-align: left;">Northeast Rust Belt</td>
+<td style="text-align: center;"><strong>2.19M</strong></td>
+<td style="text-align: center;">45.2 km²</td>
+<td style="text-align: center;">140.92 km²</td>
+<td style="text-align: center;">+95.72 km²</td>
+<td style="text-align: center;"><strong>3.12×</strong></td>
+<td style="text-align: center;">3.86%</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">#34</td>
+<td style="text-align: left;"><a href="cities/dongying.html">Dongying</a></td>
+<td style="text-align: left;">东营市</td>
+<td style="text-align: left;">Shandong</td>
+<td style="text-align: left;">Yellow River &amp; North Plain</td>
+<td style="text-align: center;"><strong>2.19M</strong></td>
+<td style="text-align: center;">83.9 km²</td>
+<td style="text-align: center;">341.04 km²</td>
+<td style="text-align: center;">+257.14 km²</td>
+<td style="text-align: center;"><strong>4.06×</strong></td>
+<td style="text-align: center;">4.79%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">#35</td>
+<td style="text-align: left;"><a href="cities/ulanqab.html">Ulanqab</a></td>
+<td style="text-align: left;">乌兰察布市</td>
+<td style="text-align: left;">Inner Mongolia</td>
+<td style="text-align: left;">Western Frontier &amp; Steppe</td>
+<td style="text-align: center;"><strong>1.71M</strong></td>
+<td style="text-align: center;">20.59 km²</td>
+<td style="text-align: center;">103.9 km²</td>
+<td style="text-align: center;">+83.31 km²</td>
+<td style="text-align: center;"><strong>5.05×</strong></td>
+<td style="text-align: center;">5.54%</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">#36</td>
+<td style="text-align: left;"><a href="cities/fuxin.html">Fuxin</a></td>
+<td style="text-align: left;">阜新市</td>
+<td style="text-align: left;">Liaoning</td>
+<td style="text-align: left;">Northeast Rust Belt</td>
+<td style="text-align: center;"><strong>1.65M</strong></td>
+<td style="text-align: center;">57.66 km²</td>
+<td style="text-align: center;">169.39 km²</td>
+<td style="text-align: center;">+111.73 km²</td>
+<td style="text-align: center;"><strong>2.94×</strong></td>
+<td style="text-align: center;">3.66%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">#37</td>
+<td style="text-align: left;"><a href="cities/baicheng.html">Baicheng</a></td>
+<td style="text-align: left;">白城市</td>
+<td style="text-align: left;">Jilin</td>
+<td style="text-align: left;">Northeast Rust Belt</td>
+<td style="text-align: center;"><strong>1.55M</strong></td>
+<td style="text-align: center;">43.41 km²</td>
+<td style="text-align: center;">98.62 km²</td>
+<td style="text-align: center;">+55.21 km²</td>
+<td style="text-align: center;"><strong>2.27×</strong></td>
+<td style="text-align: center;">2.77%</td>
+</tr>
+<tr class="even">
 <td style="text-align: center;">#38</td>
+<td style="text-align: left;"><a href="cities/zhangjiajie.html">Zhangjiajie</a></td>
+<td style="text-align: left;">张家界市</td>
+<td style="text-align: left;">Hunan</td>
+<td style="text-align: left;">Yangtze Basin &amp; Central</td>
+<td style="text-align: center;"><strong>1.52M</strong></td>
+<td style="text-align: center;">18.13 km²</td>
+<td style="text-align: center;">62.73 km²</td>
+<td style="text-align: center;">+44.6 km²</td>
+<td style="text-align: center;"><strong>3.46×</strong></td>
+<td style="text-align: center;">4.22%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">#39</td>
 <td style="text-align: left;"><a href="cities/wuwei.html">Wuwei</a></td>
 <td style="text-align: left;">武威市</td>
 <td style="text-align: left;">Gansu</td>
 <td style="text-align: left;">Western Frontier &amp; Steppe</td>
+<td style="text-align: center;"><strong>1.47M</strong></td>
 <td style="text-align: center;">40.73 km²</td>
 <td style="text-align: center;">108.55 km²</td>
 <td style="text-align: center;">+67.82 km²</td>
 <td style="text-align: center;"><strong>2.67×</strong></td>
 <td style="text-align: center;">3.32%</td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;">#39</td>
-<td style="text-align: left;"><a href="cities/shijiazhuang.html">Shijiazhuang</a></td>
-<td style="text-align: left;">石家庄市</td>
-<td style="text-align: left;">Hebei</td>
-<td style="text-align: left;">Yellow River &amp; North Plain</td>
-<td style="text-align: center;">307.22 km²</td>
-<td style="text-align: center;">811.55 km²</td>
-<td style="text-align: center;">+504.33 km²</td>
-<td style="text-align: center;"><strong>2.64×</strong></td>
-<td style="text-align: center;">3.29%</td>
-</tr>
 <tr class="even">
 <td style="text-align: center;">#40</td>
-<td style="text-align: left;"><a href="cities/harbin.html">Harbin</a></td>
-<td style="text-align: left;">哈尔滨市</td>
-<td style="text-align: left;">Heilongjiang</td>
-<td style="text-align: left;">Northeast Rust Belt</td>
-<td style="text-align: center;">267.74 km²</td>
-<td style="text-align: center;">701.48 km²</td>
-<td style="text-align: center;">+433.74 km²</td>
-<td style="text-align: center;"><strong>2.62×</strong></td>
-<td style="text-align: center;">3.26%</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">#41</td>
 <td style="text-align: left;"><a href="cities/panjin.html">Panjin</a></td>
 <td style="text-align: left;">盘锦市</td>
 <td style="text-align: left;">Liaoning</td>
 <td style="text-align: left;">Northeast Rust Belt</td>
+<td style="text-align: center;"><strong>1.39M</strong></td>
 <td style="text-align: center;">98.33 km²</td>
 <td style="text-align: center;">254.37 km²</td>
 <td style="text-align: center;">+156.04 km²</td>
 <td style="text-align: center;"><strong>2.59×</strong></td>
 <td style="text-align: center;">3.22%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">#41</td>
+<td style="text-align: left;"><a href="cities/huangshan.html">Huangshan</a></td>
+<td style="text-align: left;">黄山市</td>
+<td style="text-align: left;">Anhui</td>
+<td style="text-align: left;">Yangtze Delta &amp; East</td>
+<td style="text-align: center;"><strong>1.33M</strong></td>
+<td style="text-align: center;">26.02 km²</td>
+<td style="text-align: center;">118.96 km²</td>
+<td style="text-align: center;">+92.94 km²</td>
+<td style="text-align: center;"><strong>4.57×</strong></td>
+<td style="text-align: center;">5.2%</td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">#42</td>
@@ -871,6 +978,7 @@ Chengdu (成都市)
 <td style="text-align: left;">辽源市</td>
 <td style="text-align: left;">Jilin</td>
 <td style="text-align: left;">Northeast Rust Belt</td>
+<td style="text-align: center;"><strong>0.99M</strong></td>
 <td style="text-align: center;">44.37 km²</td>
 <td style="text-align: center;">111.94 km²</td>
 <td style="text-align: center;">+67.57 km²</td>
@@ -879,69 +987,74 @@ Chengdu (成都市)
 </tr>
 <tr class="odd">
 <td style="text-align: center;">#43</td>
-<td style="text-align: left;"><a href="cities/hotan.html">Hotan</a></td>
-<td style="text-align: left;">和田市</td>
-<td style="text-align: left;">Xinjiang</td>
-<td style="text-align: left;">Western Frontier &amp; Steppe</td>
-<td style="text-align: center;">19.4 km²</td>
-<td style="text-align: center;">46.43 km²</td>
-<td style="text-align: center;">+27.03 km²</td>
-<td style="text-align: center;"><strong>2.39×</strong></td>
-<td style="text-align: center;">2.95%</td>
+<td style="text-align: left;"><a href="cities/taishan.html">Taishan</a></td>
+<td style="text-align: left;">台山市</td>
+<td style="text-align: left;">Guangdong</td>
+<td style="text-align: left;">Pearl River &amp; South Coast</td>
+<td style="text-align: center;"><strong>0.91M</strong></td>
+<td style="text-align: center;">30.28 km²</td>
+<td style="text-align: center;">112.33 km²</td>
+<td style="text-align: center;">+82.05 km²</td>
+<td style="text-align: center;"><strong>3.71×</strong></td>
+<td style="text-align: center;">4.47%</td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">#44</td>
-<td style="text-align: left;"><a href="cities/baicheng.html">Baicheng</a></td>
-<td style="text-align: left;">白城市</td>
-<td style="text-align: left;">Jilin</td>
-<td style="text-align: left;">Northeast Rust Belt</td>
-<td style="text-align: center;">43.41 km²</td>
-<td style="text-align: center;">98.62 km²</td>
-<td style="text-align: center;">+55.21 km²</td>
-<td style="text-align: center;"><strong>2.27×</strong></td>
-<td style="text-align: center;">2.77%</td>
+<td style="text-align: left;"><a href="cities/kashgar.html">Kashgar</a></td>
+<td style="text-align: left;">喀什市</td>
+<td style="text-align: left;">Xinjiang</td>
+<td style="text-align: left;">Western Frontier &amp; Steppe</td>
+<td style="text-align: center;"><strong>0.71M</strong></td>
+<td style="text-align: center;">46.39 km²</td>
+<td style="text-align: center;">160.73 km²</td>
+<td style="text-align: center;">+114.34 km²</td>
+<td style="text-align: center;"><strong>3.46×</strong></td>
+<td style="text-align: center;">4.23%</td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">#45</td>
-<td style="text-align: left;"><a href="cities/lanzhou.html">Lanzhou</a></td>
-<td style="text-align: left;">兰州市</td>
-<td style="text-align: left;">Gansu</td>
-<td style="text-align: left;">Western Frontier &amp; Steppe</td>
-<td style="text-align: center;">119.22 km²</td>
-<td style="text-align: center;">232.72 km²</td>
-<td style="text-align: center;">+113.5 km²</td>
-<td style="text-align: center;"><strong>1.95×</strong></td>
-<td style="text-align: center;">2.25%</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">#46</td>
-<td style="text-align: left;"><a href="cities/urumqi.html">Urumqi</a></td>
-<td style="text-align: left;">乌鲁木齐市</td>
-<td style="text-align: left;">Xinjiang</td>
-<td style="text-align: left;">Western Frontier &amp; Steppe</td>
-<td style="text-align: center;">251.96 km²</td>
-<td style="text-align: center;">431.36 km²</td>
-<td style="text-align: center;">+179.4 km²</td>
-<td style="text-align: center;"><strong>1.71×</strong></td>
-<td style="text-align: center;">1.81%</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">#47</td>
 <td style="text-align: left;"><a href="cities/korla.html">Korla</a></td>
 <td style="text-align: left;">库尔勒市</td>
 <td style="text-align: left;">Xinjiang</td>
 <td style="text-align: left;">Western Frontier &amp; Steppe</td>
+<td style="text-align: center;"><strong>0.55M</strong></td>
 <td style="text-align: center;">102.96 km²</td>
 <td style="text-align: center;">156.53 km²</td>
 <td style="text-align: center;">+53.57 km²</td>
 <td style="text-align: center;"><strong>1.52×</strong></td>
 <td style="text-align: center;">1.41%</td>
 </tr>
+<tr class="even">
+<td style="text-align: center;">#46</td>
+<td style="text-align: left;"><a href="cities/hotan.html">Hotan</a></td>
+<td style="text-align: left;">和田市</td>
+<td style="text-align: left;">Xinjiang</td>
+<td style="text-align: left;">Western Frontier &amp; Steppe</td>
+<td style="text-align: center;"><strong>0.5M</strong></td>
+<td style="text-align: center;">19.4 km²</td>
+<td style="text-align: center;">46.43 km²</td>
+<td style="text-align: center;">+27.03 km²</td>
+<td style="text-align: center;"><strong>2.39×</strong></td>
+<td style="text-align: center;">2.95%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">#47</td>
+<td style="text-align: left;"><a href="cities/hunchun.html">Hunchun</a></td>
+<td style="text-align: left;">珲春市</td>
+<td style="text-align: left;">Jilin</td>
+<td style="text-align: left;">Northeast Rust Belt</td>
+<td style="text-align: center;"><strong>0.24M</strong></td>
+<td style="text-align: center;">20.56 km²</td>
+<td style="text-align: center;">61.52 km²</td>
+<td style="text-align: center;">+40.96 km²</td>
+<td style="text-align: center;"><strong>2.99×</strong></td>
+<td style="text-align: center;">3.72%</td>
+</tr>
 </tbody>
 </table>
 <hr>
 <div class="caption-box">
-<p><strong>China Urban Growth Ratlas</strong> · Built with R (<code>terra</code>, <code>sf</code>, <code>ggplot2</code>, <code>tidyterra</code>, <code>patchwork</code>) and Quarto. Data: German Aerospace Center (DLR) World Settlement Footprint Evolution (30m) &amp; GADM 4.1.</p>
+<p><strong>China Urban Growth Ratlas</strong> · Built with R (<code>terra</code>, <code>sf</code>, <code>ggplot2</code>, <code>tidyterra</code>, <code>patchwork</code>) and Quarto. Data: German Aerospace Center (DLR) World Settlement Footprint Evolution (30m), 7th National Population Census (七普 2020), OpenStreetMap CRH High-Speed Rail Grid &amp; GADM 4.1.</p>
 </div>
 
 

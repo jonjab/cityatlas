@@ -1,31 +1,33 @@
 ---
 title: "Yellow River & North Plain"
-subtitle: "黄河流域与华北平原 · 11 Cities"
+subtitle: "黄河流域与华北平原 · 11 Cities Ordered by Population"
 format:
   html:
     toc: true
 ---
 
-::: {.hero-banner}
-<h1 style="color: #ffffff; margin-bottom: 0.5rem;">Yellow River & North Plain <span style="color: #f59e0b;">黄河流域与华北平原</span></h1>
-<p style="color: #cbd5e1; font-size: 1.1rem;">Industrial cores, railway nodes, and Bohai Rim industrial cities expanding across the great alluvial plain.</p>
-:::
+```{=html}
+<div class="hero-banner">
+  <h1 style="color: #ffffff; margin-bottom: 0.5rem;">Yellow River & North Plain <span style="color: #f59e0b;">黄河流域与华北平原</span></h1>
+  <p style="color: #cbd5e1; font-size: 1.1rem; margin: 0;">Industrial cores, railway nodes, and Bohai Rim industrial cities expanding across the great alluvial plain.</p>
+</div>
+```
 
-## Regional Comparison Table
+## Regional Member Cities (Ranked by Population)
 
-| City | Chinese | Province | 1985 Area | 2015 Area | Net Gain | Multiplier | CAGR | National Rank |
-|:---|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|
-| [Weihai](../cities/weihai.html) | 威海市 | Shandong | 32.87 km² | 179.59 km² | +146.72 km² | **5.46×** | 5.82% | #8 |
-| [Jining](../cities/jining.html) | 济宁市 | Shandong | 77.41 km² | 391.12 km² | +313.71 km² | **5.05×** | 5.55% | #10 |
-| [Dongying](../cities/dongying.html) | 东营市 | Shandong | 83.9 km² | 341.04 km² | +257.14 km² | **4.06×** | 4.79% | #16 |
-| [Baoding](../cities/baoding.html) | 保定市 | Hebei | 132.36 km² | 526.12 km² | +393.76 km² | **3.97×** | 4.71% | #17 |
-| [Binzhou](../cities/binzhou.html) | 滨州市 | Shandong | 75.53 km² | 276.66 km² | +201.13 km² | **3.66×** | 4.42% | #22 |
-| [Zibo](../cities/zibo.html) | 淄博市 | Shandong | 180.8 km² | 660.67 km² | +479.87 km² | **3.65×** | 4.41% | #23 |
-| [Zhengzhou](../cities/zhengzhou.html) | 郑州市 | Henan | 315.56 km² | 1084.55 km² | +768.99 km² | **3.44×** | 4.2% | #27 |
-| [Liaocheng](../cities/liaocheng.html) | 聊城市 | Shandong | 86.36 km² | 279.69 km² | +193.33 km² | **3.24×** | 3.99% | #30 |
-| [Jinan](../cities/jinan.html) | 济南市 | Shandong | 200.11 km² | 647.13 km² | +447.02 km² | **3.23×** | 3.99% | #31 |
-| [Datong](../cities/datong.html) | 大同市 | Shanxi | 99.39 km² | 279.67 km² | +180.28 km² | **2.81×** | 3.51% | #36 |
-| [Shijiazhuang](../cities/shijiazhuang.html) | 石家庄市 | Hebei | 307.22 km² | 811.55 km² | +504.33 km² | **2.64×** | 3.29% | #39 |
+| Pop Rank | City | Chinese | Province | Population | 1985 Area | 2015 Area | Net Gain | Multiplier | CAGR |
+|:---:|:---|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|
+| #4 | [Zhengzhou](../cities/zhengzhou.html) | 郑州市 | Henan | **12.6M** | 315.56 km² | 1084.55 km² | +768.99 km² | **3.44×** | 4.2% |
+| #6 | [Shijiazhuang](../cities/shijiazhuang.html) | 石家庄市 | Hebei | **10.64M** | 307.22 km² | 811.55 km² | +504.33 km² | **2.64×** | 3.29% |
+| #8 | [Baoding](../cities/baoding.html) | 保定市 | Hebei | **9.24M** | 132.36 km² | 526.12 km² | +393.76 km² | **3.97×** | 4.71% |
+| #9 | [Jinan](../cities/jinan.html) | 济南市 | Shandong | **9.2M** | 200.11 km² | 647.13 km² | +447.02 km² | **3.23×** | 3.99% |
+| #11 | [Jining](../cities/jining.html) | 济宁市 | Shandong | **8.36M** | 77.41 km² | 391.12 km² | +313.71 km² | **5.05×** | 5.55% |
+| #13 | [Liaocheng](../cities/liaocheng.html) | 聊城市 | Shandong | **5.95M** | 86.36 km² | 279.69 km² | +193.33 km² | **3.24×** | 3.99% |
+| #16 | [Zibo](../cities/zibo.html) | 淄博市 | Shandong | **4.7M** | 180.8 km² | 660.67 km² | +479.87 km² | **3.65×** | 4.41% |
+| #23 | [Binzhou](../cities/binzhou.html) | 滨州市 | Shandong | **3.93M** | 75.53 km² | 276.66 km² | +201.13 km² | **3.66×** | 4.42% |
+| #27 | [Datong](../cities/datong.html) | 大同市 | Shanxi | **3.11M** | 99.39 km² | 279.67 km² | +180.28 km² | **2.81×** | 3.51% |
+| #28 | [Weihai](../cities/weihai.html) | 威海市 | Shandong | **2.91M** | 32.87 km² | 179.59 km² | +146.72 km² | **5.46×** | 5.82% |
+| #34 | [Dongying](../cities/dongying.html) | 东营市 | Shandong | **2.19M** | 83.9 km² | 341.04 km² | +257.14 km² | **4.06×** | 4.79% |
 
 
 ---
@@ -34,74 +36,8 @@ format:
 
 
 ::: {.region-card}
-### [Weihai (威海市)](../cities/weihai.html)
-**Shandong Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">5.46×</strong> (#8 Nationally)
-
-- **1985 Footprint**: 32.87 km²
-- **2015 Footprint**: 179.59 km² (Net expansion: +146.72 km²)
-- **Compound Annual Growth Rate**: 5.82%/year
-
-[View Maps & Visual Suite →](../cities/weihai.html)
-:::
-
-::: {.region-card}
-### [Jining (济宁市)](../cities/jining.html)
-**Shandong Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">5.05×</strong> (#10 Nationally)
-
-- **1985 Footprint**: 77.41 km²
-- **2015 Footprint**: 391.12 km² (Net expansion: +313.71 km²)
-- **Compound Annual Growth Rate**: 5.55%/year
-
-[View Maps & Visual Suite →](../cities/jining.html)
-:::
-
-::: {.region-card}
-### [Dongying (东营市)](../cities/dongying.html)
-**Shandong Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">4.06×</strong> (#16 Nationally)
-
-- **1985 Footprint**: 83.9 km²
-- **2015 Footprint**: 341.04 km² (Net expansion: +257.14 km²)
-- **Compound Annual Growth Rate**: 4.79%/year
-
-[View Maps & Visual Suite →](../cities/dongying.html)
-:::
-
-::: {.region-card}
-### [Baoding (保定市)](../cities/baoding.html)
-**Hebei Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">3.97×</strong> (#17 Nationally)
-
-- **1985 Footprint**: 132.36 km²
-- **2015 Footprint**: 526.12 km² (Net expansion: +393.76 km²)
-- **Compound Annual Growth Rate**: 4.71%/year
-
-[View Maps & Visual Suite →](../cities/baoding.html)
-:::
-
-::: {.region-card}
-### [Binzhou (滨州市)](../cities/binzhou.html)
-**Shandong Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">3.66×</strong> (#22 Nationally)
-
-- **1985 Footprint**: 75.53 km²
-- **2015 Footprint**: 276.66 km² (Net expansion: +201.13 km²)
-- **Compound Annual Growth Rate**: 4.42%/year
-
-[View Maps & Visual Suite →](../cities/binzhou.html)
-:::
-
-::: {.region-card}
-### [Zibo (淄博市)](../cities/zibo.html)
-**Shandong Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">3.65×</strong> (#23 Nationally)
-
-- **1985 Footprint**: 180.8 km²
-- **2015 Footprint**: 660.67 km² (Net expansion: +479.87 km²)
-- **Compound Annual Growth Rate**: 4.41%/year
-
-[View Maps & Visual Suite →](../cities/zibo.html)
-:::
-
-::: {.region-card}
 ### [Zhengzhou (郑州市)](../cities/zhengzhou.html)
-**Henan Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">3.44×</strong> (#27 Nationally)
+**Henan Province** · Population: <strong style="color: #38bdf8;">12.6 Million</strong> (Rank #4) · 30-Year Multiplier: <strong style="color: #f59e0b;">3.44×</strong>
 
 - **1985 Footprint**: 315.56 km²
 - **2015 Footprint**: 1084.55 km² (Net expansion: +768.99 km²)
@@ -111,19 +47,30 @@ format:
 :::
 
 ::: {.region-card}
-### [Liaocheng (聊城市)](../cities/liaocheng.html)
-**Shandong Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">3.24×</strong> (#30 Nationally)
+### [Shijiazhuang (石家庄市)](../cities/shijiazhuang.html)
+**Hebei Province** · Population: <strong style="color: #38bdf8;">10.64 Million</strong> (Rank #6) · 30-Year Multiplier: <strong style="color: #f59e0b;">2.64×</strong>
 
-- **1985 Footprint**: 86.36 km²
-- **2015 Footprint**: 279.69 km² (Net expansion: +193.33 km²)
-- **Compound Annual Growth Rate**: 3.99%/year
+- **1985 Footprint**: 307.22 km²
+- **2015 Footprint**: 811.55 km² (Net expansion: +504.33 km²)
+- **Compound Annual Growth Rate**: 3.29%/year
 
-[View Maps & Visual Suite →](../cities/liaocheng.html)
+[View Maps & Visual Suite →](../cities/shijiazhuang.html)
+:::
+
+::: {.region-card}
+### [Baoding (保定市)](../cities/baoding.html)
+**Hebei Province** · Population: <strong style="color: #38bdf8;">9.24 Million</strong> (Rank #8) · 30-Year Multiplier: <strong style="color: #f59e0b;">3.97×</strong>
+
+- **1985 Footprint**: 132.36 km²
+- **2015 Footprint**: 526.12 km² (Net expansion: +393.76 km²)
+- **Compound Annual Growth Rate**: 4.71%/year
+
+[View Maps & Visual Suite →](../cities/baoding.html)
 :::
 
 ::: {.region-card}
 ### [Jinan (济南市)](../cities/jinan.html)
-**Shandong Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">3.23×</strong> (#31 Nationally)
+**Shandong Province** · Population: <strong style="color: #38bdf8;">9.2 Million</strong> (Rank #9) · 30-Year Multiplier: <strong style="color: #f59e0b;">3.23×</strong>
 
 - **1985 Footprint**: 200.11 km²
 - **2015 Footprint**: 647.13 km² (Net expansion: +447.02 km²)
@@ -133,8 +80,52 @@ format:
 :::
 
 ::: {.region-card}
+### [Jining (济宁市)](../cities/jining.html)
+**Shandong Province** · Population: <strong style="color: #38bdf8;">8.36 Million</strong> (Rank #11) · 30-Year Multiplier: <strong style="color: #f59e0b;">5.05×</strong>
+
+- **1985 Footprint**: 77.41 km²
+- **2015 Footprint**: 391.12 km² (Net expansion: +313.71 km²)
+- **Compound Annual Growth Rate**: 5.55%/year
+
+[View Maps & Visual Suite →](../cities/jining.html)
+:::
+
+::: {.region-card}
+### [Liaocheng (聊城市)](../cities/liaocheng.html)
+**Shandong Province** · Population: <strong style="color: #38bdf8;">5.95 Million</strong> (Rank #13) · 30-Year Multiplier: <strong style="color: #f59e0b;">3.24×</strong>
+
+- **1985 Footprint**: 86.36 km²
+- **2015 Footprint**: 279.69 km² (Net expansion: +193.33 km²)
+- **Compound Annual Growth Rate**: 3.99%/year
+
+[View Maps & Visual Suite →](../cities/liaocheng.html)
+:::
+
+::: {.region-card}
+### [Zibo (淄博市)](../cities/zibo.html)
+**Shandong Province** · Population: <strong style="color: #38bdf8;">4.7 Million</strong> (Rank #16) · 30-Year Multiplier: <strong style="color: #f59e0b;">3.65×</strong>
+
+- **1985 Footprint**: 180.8 km²
+- **2015 Footprint**: 660.67 km² (Net expansion: +479.87 km²)
+- **Compound Annual Growth Rate**: 4.41%/year
+
+[View Maps & Visual Suite →](../cities/zibo.html)
+:::
+
+::: {.region-card}
+### [Binzhou (滨州市)](../cities/binzhou.html)
+**Shandong Province** · Population: <strong style="color: #38bdf8;">3.93 Million</strong> (Rank #23) · 30-Year Multiplier: <strong style="color: #f59e0b;">3.66×</strong>
+
+- **1985 Footprint**: 75.53 km²
+- **2015 Footprint**: 276.66 km² (Net expansion: +201.13 km²)
+- **Compound Annual Growth Rate**: 4.42%/year
+
+[View Maps & Visual Suite →](../cities/binzhou.html)
+:::
+
+::: {.region-card}
 ### [Datong (大同市)](../cities/datong.html)
-**Shanxi Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">2.81×</strong> (#36 Nationally)
+**Shanxi Province** · Population: <strong style="color: #38bdf8;">3.11 Million</strong> (Rank #27) · 30-Year Multiplier: <strong style="color: #f59e0b;">2.81×</strong>
 
 - **1985 Footprint**: 99.39 km²
 - **2015 Footprint**: 279.67 km² (Net expansion: +180.28 km²)
@@ -144,12 +135,23 @@ format:
 :::
 
 ::: {.region-card}
-### [Shijiazhuang (石家庄市)](../cities/shijiazhuang.html)
-**Hebei Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">2.64×</strong> (#39 Nationally)
+### [Weihai (威海市)](../cities/weihai.html)
+**Shandong Province** · Population: <strong style="color: #38bdf8;">2.91 Million</strong> (Rank #28) · 30-Year Multiplier: <strong style="color: #f59e0b;">5.46×</strong>
 
-- **1985 Footprint**: 307.22 km²
-- **2015 Footprint**: 811.55 km² (Net expansion: +504.33 km²)
-- **Compound Annual Growth Rate**: 3.29%/year
+- **1985 Footprint**: 32.87 km²
+- **2015 Footprint**: 179.59 km² (Net expansion: +146.72 km²)
+- **Compound Annual Growth Rate**: 5.82%/year
 
-[View Maps & Visual Suite →](../cities/shijiazhuang.html)
+[View Maps & Visual Suite →](../cities/weihai.html)
+:::
+
+::: {.region-card}
+### [Dongying (东营市)](../cities/dongying.html)
+**Shandong Province** · Population: <strong style="color: #38bdf8;">2.19 Million</strong> (Rank #34) · 30-Year Multiplier: <strong style="color: #f59e0b;">4.06×</strong>
+
+- **1985 Footprint**: 83.9 km²
+- **2015 Footprint**: 341.04 km² (Net expansion: +257.14 km²)
+- **Compound Annual Growth Rate**: 4.79%/year
+
+[View Maps & Visual Suite →](../cities/dongying.html)
 :::

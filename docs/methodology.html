@@ -188,11 +188,11 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#primary-data-source-dlr-wsf-evolution" id="toc-primary-data-source-dlr-wsf-evolution" class="nav-link active" data-scroll-target="#primary-data-source-dlr-wsf-evolution">1. Primary Data Source: DLR WSF Evolution</a></li>
-  <li><a href="#administrative-geodatabase-extents" id="toc-administrative-geodatabase-extents" class="nav-link" data-scroll-target="#administrative-geodatabase-extents">2. Administrative Geodatabase &amp; Extents</a></li>
-  <li><a href="#four-landmark-urban-development-epochs" id="toc-four-landmark-urban-development-epochs" class="nav-link" data-scroll-target="#four-landmark-urban-development-epochs">3. Four Landmark Urban Development Epochs</a></li>
-  <li><a href="#quantitative-metrics" id="toc-quantitative-metrics" class="nav-link" data-scroll-target="#quantitative-metrics">4. Quantitative Metrics</a></li>
-  <li><a href="#cartographic-stack-tools" id="toc-cartographic-stack-tools" class="nav-link" data-scroll-target="#cartographic-stack-tools">5. Cartographic Stack &amp; Tools</a></li>
+  <li><a href="#population-ranking-2020-census" id="toc-population-ranking-2020-census" class="nav-link active" data-scroll-target="#population-ranking-2020-census">1. Population Ranking (2020 Census)</a></li>
+  <li><a href="#satellite-urban-growth-engine-dlr-wsf-evolution" id="toc-satellite-urban-growth-engine-dlr-wsf-evolution" class="nav-link" data-scroll-target="#satellite-urban-growth-engine-dlr-wsf-evolution">2. Satellite Urban Growth Engine: DLR WSF Evolution</a></li>
+  <li><a href="#high-speed-rail-hsr-network-integration" id="toc-high-speed-rail-hsr-network-integration" class="nav-link" data-scroll-target="#high-speed-rail-hsr-network-integration">3. High-Speed Rail (HSR) Network Integration</a></li>
+  <li><a href="#four-landmark-urban-development-epochs" id="toc-four-landmark-urban-development-epochs" class="nav-link" data-scroll-target="#four-landmark-urban-development-epochs">4. Four Landmark Urban Development Epochs</a></li>
+  <li><a href="#quantitative-metrics" id="toc-quantitative-metrics" class="nav-link" data-scroll-target="#quantitative-metrics">5. Quantitative Metrics</a></li>
   </ul>
 </nav>
     </div>
@@ -202,7 +202,7 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Data &amp; Methodology</h1>
-<p class="subtitle lead">Geospatial Data Sources, Processing Pipeline, and Analytical Framework</p>
+<p class="subtitle lead">Geospatial Data Sources, Processing Pipeline, High-Speed Rail Integration, and Population Metrics</p>
 </div>
 
 
@@ -220,33 +220,52 @@ window.Quarto = {
 
 
 <div class="hero-banner">
-<h1 style="color: #ffffff; margin-bottom: 0.5rem;">
-Analytical Methodology
-</h1>
-<p style="color: #cbd5e1;">
-How this ratlas ingests, processes, and cartographically renders 30 years of satellite-detected urban expansion across China.
-</p>
+  <h1 style="color: #ffffff; margin-bottom: 0.5rem;">Analytical Methodology</h1>
+  <p style="color: #cbd5e1; margin: 0;">How this ratlas ingests, processes, and cartographically renders 30 years of satellite-detected urban expansion, High-Speed Rail networks, and census populations across China.</p>
 </div>
-<section id="primary-data-source-dlr-wsf-evolution" class="level2">
-<h2 class="anchored" data-anchor-id="primary-data-source-dlr-wsf-evolution">1. Primary Data Source: DLR WSF Evolution</h2>
+<div class="callout callout-style-simple callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Scope &amp; Sample Selection Note: Excluding Tier-1 Megacities
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The 47 cities in this atlas were deliberately selected to <strong>exclude China’s absolute largest tier-1 megacities</strong> (specifically Beijing, Shanghai, Guangzhou, Chongqing, and Tianjin).</p>
+<p>By centering on dynamic provincial capitals (e.g., Chengdu, Wuhan, Xi’an, Zhengzhou), specialized manufacturing nodes (e.g., Shenzhen, Zhuhai, Taizhou, Zibo), ancient Silk Road oases (e.g., Kashgar, Hotan, Wuwei), and strategic border gateways (e.g., Dandong, Hunchun), this ratlas examines how physical urbanization and infrastructure modernization transformed the full depth of China’s urban hierarchy beyond the global superstar metropolises.</p>
+</div>
+</div>
+<section id="population-ranking-2020-census" class="level2">
+<h2 class="anchored" data-anchor-id="population-ranking-2020-census">1. Population Ranking (2020 Census)</h2>
+<p>The master ranking across this project is ordered by <strong>Permanent Resident Population (常住人口)</strong> derived from the <strong>Seventh National Population Census of the People’s Republic of China (第七次全国人口普查 / 七普 2020)</strong>:</p>
+<ul>
+<li><strong>Sub-provincial &amp; Prefecture-Level Cities</strong>: Measured by total permanent resident population across municipal jurisdictions.</li>
+<li><strong>County-Level Cities</strong>: For specialized county-level cities in the sample (Hunchun, Korla, Hotan, Taishan), measured by the official resident population of the county-level city administrative unit.</li>
+<li><strong>Rank Range</strong>: Spans from <strong>#1 Chengdu (20.94 Million)</strong> down to <strong>#47 Hunchun (0.24 Million)</strong>.</li>
+</ul>
+</section>
+<section id="satellite-urban-growth-engine-dlr-wsf-evolution" class="level2">
+<h2 class="anchored" data-anchor-id="satellite-urban-growth-engine-dlr-wsf-evolution">2. Satellite Urban Growth Engine: DLR WSF Evolution</h2>
 <p>The physical urban growth data in this project is driven by the <strong>World Settlement Footprint Evolution (WSF Evolution)</strong> dataset, produced by the <strong>German Aerospace Center (DLR)</strong>:</p>
 <ul>
 <li><strong>Spatial Resolution</strong>: 30 meters per pixel, derived from joint multi-decadal analysis of <strong>Landsat-5, Landsat-7, and Landsat-8</strong> optical imagery, integrated with radar and digital elevation datasets.</li>
 <li><strong>Temporal Coverage</strong>: 1985 to 2015 (30-year span).</li>
-<li><strong>Pixel Semantics</strong>: Each pixel value encodes the exact calendar year (<span class="math inline">\(1985 \le  ext{year} \le 2015\)</span>) in which human settlement was first detected. Value <code>0</code> represents non-urban surfaces (natural vegetation, bare land, agriculture, or water). Value <code>1985</code> represents human settlements already established by or prior to 1985.</li>
+<li><strong>Pixel Semantics</strong>: Each pixel value encodes the exact calendar year (<span class="math inline">\(1985 \le \text{year} \le 2015\)</span>) in which human settlement was first detected. Value <code>0</code> represents non-urban surfaces. Value <code>1985</code> represents human settlements already established by or prior to 1985.</li>
 <li><strong>Open Web Retrieval</strong>: Retrieved directly from DLR’s open data servers (<code>download.geoservice.dlr.de</code>) using GDAL virtual file streaming (<code>/vsicurl/</code>) and R’s <code>terra</code> package.</li>
 </ul>
 </section>
-<section id="administrative-geodatabase-extents" class="level2">
-<h2 class="anchored" data-anchor-id="administrative-geodatabase-extents">2. Administrative Geodatabase &amp; Extents</h2>
+<section id="high-speed-rail-hsr-network-integration" class="level2">
+<h2 class="anchored" data-anchor-id="high-speed-rail-hsr-network-integration">3. High-Speed Rail (HSR) Network Integration</h2>
+<p>China’s <strong>High-Speed Rail (CRH / 中国高铁)</strong> network—the defining infrastructure project of the 21st century—is mapped alongside the cities. Over the 2006–2015 era, high-speed rail catalyzed spatial expansion by connecting regional capitals and satellite towns:</p>
 <ul>
-<li><strong>GADM 4.1 (Database of Global Administrative Areas)</strong>: Provided level 0 (national outline), level 1 (provincial boundaries), and level 2 (prefectural boundaries).</li>
-<li><strong>Centroids &amp; Analysis Radii</strong>: Urban core extents were established for each city based on high-density metropolitan boundaries, ranging from 12 km to 30 km radius depending on city tier and metropolitan scale.</li>
-<li><strong>Coordinate Reference Systems</strong>: Base data in WGS 84 (EPSG:4326), with surface area calculations performed using ellipsoidal pixel geometry (<code>terra::cellSize(unit = "km")</code>) to eliminate high-latitude area distortion.</li>
+<li><strong>Corridors Included</strong>: The primary “Eight Vertical and Eight Horizontal” (<em>Ba Zong Ba Heng</em>) trunk corridors, including the Beijing–Hong Kong Corridor, Beijing–Shanghai Corridor, Eurasian Continental Bridge Corridor (Lanzhou–Xinjiang HSR), Yangtze River Corridor (Huhanrong), Shanghai–Kunming Corridor, Coastal Corridor, Xi’an–Chengdu HSR, and Hainan Island Ring HSR.</li>
+<li><strong>Spatial Traces</strong>: Vector geometries compiled from OpenStreetMap railway relations and Natural Earth 10m transportation datasets.</li>
 </ul>
 </section>
 <section id="four-landmark-urban-development-epochs" class="level2">
-<h2 class="anchored" data-anchor-id="four-landmark-urban-development-epochs">3. Four Landmark Urban Development Epochs</h2>
+<h2 class="anchored" data-anchor-id="four-landmark-urban-development-epochs">4. Four Landmark Urban Development Epochs</h2>
 <p>Urban expansion in modern China has unfolded in distinct historical waves:</p>
 <ol type="1">
 <li><strong>Pre-1985 Core</strong> (<code>#F59E0B</code> · Amber Gold): The pre-reform base urban footprint. This includes ancient historical city cores and the industrial settlements constructed during the early Five-Year Plans (1949–1980).</li>
@@ -256,23 +275,12 @@ How this ratlas ingests, processes, and cartographically renders 30 years of sat
 </ol>
 </section>
 <section id="quantitative-metrics" class="level2">
-<h2 class="anchored" data-anchor-id="quantitative-metrics">4. Quantitative Metrics</h2>
-<p>For each city, the following metrics are computed:</p>
+<h2 class="anchored" data-anchor-id="quantitative-metrics">5. Quantitative Metrics</h2>
 <ul>
-<li><strong>Cumulative Built-Up Area (<span class="math inline">\(A_t\)</span>)</strong>: Total surface area in $ ext{km}^2$ occupied by detected settlements at year <span class="math inline">\(t\)</span>.</li>
+<li><strong>Cumulative Built-Up Area (<span class="math inline">\(A_t\)</span>)</strong>: Total surface area in <span class="math inline">\(\text{km}^2\)</span> occupied by detected settlements at year <span class="math inline">\(t\)</span>.</li>
 <li><strong>Net Spatial Gain (<span class="math inline">\(\Delta A\)</span>)</strong>: <span class="math inline">\(A_{2015} - A_{1985}\)</span>.</li>
 <li><strong>30-Year Growth Multiple (<span class="math inline">\(M\)</span>)</strong>: <span class="math inline">\(A_{2015} / A_{1985}\)</span>.</li>
-<li><strong>Compound Annual Growth Rate (CAGR)</strong>: <span class="math inline">\(\left(rac{A_{2015}}{A_{1985}}
-ight)^{1/30} - 1\)</span>.</li>
-</ul>
-</section>
-<section id="cartographic-stack-tools" class="level2">
-<h2 class="anchored" data-anchor-id="cartographic-stack-tools">5. Cartographic Stack &amp; Tools</h2>
-<ul>
-<li><strong>Language &amp; Runtime</strong>: R (v4.6.1) &amp; Python 3</li>
-<li><strong>Spatial Processing</strong>: <code>terra</code> (v1.9), <code>sf</code> (v1.0), <code>tidyterra</code></li>
-<li><strong>Visualization</strong>: <code>ggplot2</code>, <code>patchwork</code>, <code>ragg</code></li>
-<li><strong>Typography</strong>: CJK rendering via system font <code>Droid Sans Fallback</code> with bilingual typesetting</li>
+<li><strong>Compound Annual Growth Rate (CAGR)</strong>: <span class="math inline">\(\left(\frac{A_{2015}}{A_{1985}}\right)^{1/30} - 1\)</span>.</li>
 </ul>
 
 

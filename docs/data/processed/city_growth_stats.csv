@@ -1,48 +1,48 @@
-id,name_en,name_zh,pinyin,province_en,province_zh,region,lat,lon,area_1985,area_1990,area_1995,area_2000,area_2005,area_2010,area_2015,net_gain_km2,growth_multiple,cagr_pct,rank_multiplier
-heyuan,Heyuan,河源市,Héyuán,Guangdong,广东省,Pearl River & South Coast,23.7438,114.6978,15.15,35.88,50.78,63.3,93.23,120.88,136.49,121.34,9.01,7.6,1
-chengdu,Chengdu,成都市,Chéngdū,Sichuan,四川省,Yangtze Basin & Central,30.6586,104.0648,208.06,307,479.44,736.02,969.14,1269.07,1564.15,1356.09,7.52,6.96,2
-taizhou,Taizhou,泰州市,Tàizhōu,Jiangsu,江苏省,Yangtze Delta & East,32.4555,119.9229,80.81,146.78,217.91,268.48,330.23,438.55,583,502.19,7.21,6.81,3
-zhuhai,Zhuhai,珠海市,Zhūhǎi,Guangdong,广东省,Pearl River & South Coast,22.2707,113.5767,33.27,57.35,115.6,145.16,188.43,217.54,237.12,203.85,7.13,6.77,4
-shenzhen,Shenzhen,深圳市,Shēnzhèn,Guangdong,广东省,Pearl River & South Coast,22.5431,114.0579,168.35,329.57,631.26,789.09,938.38,1020.12,1064.98,896.63,6.33,6.34,5
-luzhou,Luzhou,泸州市,Lúzhōu,Sichuan,四川省,Yangtze Basin & Central,28.8719,105.4423,22.7,26.31,37.18,54,69.23,95.38,140.03,117.33,6.17,6.25,6
-yangzhou,Yangzhou,扬州市,Yángzhōu,Jiangsu,江苏省,Yangtze Delta & East,32.3942,119.4129,98.97,186.04,239.96,281.36,368.69,475.54,600.99,502.02,6.07,6.2,7
-weihai,Weihai,威海市,Wēihǎi,Shandong,山东省,Yellow River & North Plain,37.5131,122.1205,32.87,53.05,74.72,89.02,117.45,150.46,179.59,146.72,5.46,5.82,8
-hohhot,Hohhot,呼和浩特市,Hūhéhàotè,Inner Mongolia,内蒙古自治区,Western Frontier & Steppe,40.8415,111.7519,68.88,92,115.91,151.39,200.28,268.89,349.27,280.39,5.07,5.56,9
-jining,Jining,济宁市,Jǐnìng,Shandong,山东省,Yellow River & North Plain,35.4154,116.5872,77.41,123.65,167.59,199.99,245.14,315.25,391.12,313.71,5.05,5.55,10
-ulanqab,Ulanqab,乌兰察布市,Wūlánchábù,Inner Mongolia,内蒙古自治区,Western Frontier & Steppe,41.018,113.1326,20.59,24.4,28.43,32.8,48.21,75.81,103.9,83.31,5.05,5.54,11
-wuhu,Wuhu,芜湖市,Wúhú,Anhui,安徽省,Yangtze Delta & East,31.3528,118.3765,82.97,111.1,129,154.46,202.25,298.39,380.45,297.48,4.59,5.21,12
-huangshan,Huangshan,黄山市,Huángshān,Anhui,安徽省,Yangtze Delta & East,29.7147,118.3375,26.02,33.08,44.87,57.79,77.73,98.66,118.96,92.94,4.57,5.2,13
-haikou,Haikou,海口市,Hǎikǒu,Hainan,海南省,Pearl River & South Coast,20.044,110.3293,63.84,90.34,123.88,149.27,178.46,220.49,262.73,198.89,4.12,4.83,14
-kunming,Kunming,昆明市,Kūnmíng,Yunnan,云南省,South & Southwest,24.8797,102.8332,153.06,202.94,273.06,386.19,477.82,577.46,624.84,471.78,4.08,4.8,15
-dongying,Dongying,东营市,Dōngyíng,Shandong,山东省,Yellow River & North Plain,37.4338,118.6747,83.9,139.37,170.75,195.13,241.78,288.02,341.04,257.14,4.06,4.79,16
-baoding,Baoding,保定市,Bǎodìng,Hebei,河北省,Yellow River & North Plain,38.8671,115.4845,132.36,232.42,301.16,349.32,397.14,457.45,526.12,393.76,3.97,4.71,17
-yichang,Yichang,宜昌市,Yíchāng,Hubei,湖北省,Yangtze Basin & Central,30.6919,111.2865,45.63,59.28,71.52,86.02,106.24,138.61,178.59,132.96,3.91,4.65,18
-wuhan,Wuhan,武汉市,Wǔhàn,Hubei,湖北省,Yangtze Basin & Central,30.5928,114.3055,279.63,359.75,438.53,528.11,694.39,908.92,1077.9,798.27,3.85,4.6,19
-taishan,Taishan,台山市,Táishān,Guangdong,广东省,Pearl River & South Coast,22.2514,112.7938,30.28,40.64,56.45,67.59,84.86,100.67,112.33,82.05,3.71,4.47,20
-xiamen,Xiamen,厦门市,Xiàmén,Fujian,福建省,Pearl River & South Coast,24.4798,118.0894,128.93,184.53,251.65,309.61,375.75,443.72,473.04,344.11,3.67,4.43,21
-binzhou,Binzhou,滨州市,Bīnzhōu,Shandong,山东省,Yellow River & North Plain,37.3835,118.016,75.53,97.04,115.53,140.89,176.02,223.01,276.66,201.13,3.66,4.42,22
-zibo,Zibo,淄博市,Zībó,Shandong,山东省,Yellow River & North Plain,36.8135,118.0549,180.8,265.75,347.17,410.28,510.73,593.36,660.67,479.87,3.65,4.41,23
-kashgar,Kashgar,喀什市,Kāshí,Xinjiang,新疆维吾尔自治区,Western Frontier & Steppe,39.4704,75.9897,46.39,46.39,57.11,83.19,103.45,133.71,160.73,114.34,3.46,4.23,24
-zhangjiajie,Zhangjiajie,张家界市,Zhāngjiājiè,Hunan,湖南省,Yangtze Basin & Central,29.117,110.4792,18.13,21.62,27.35,31.48,43.25,57.32,62.73,44.6,3.46,4.22,25
-xian,Xi'an,西安市,Xī'ān,Shaanxi,陕西省,Western Frontier & Steppe,34.3416,108.9398,392.14,537.78,671.39,849.73,1026.52,1182.69,1354.03,961.89,3.45,4.22,26
-zhengzhou,Zhengzhou,郑州市,Zhèngzhōu,Henan,河南省,Yellow River & North Plain,34.7466,113.6253,315.56,441.27,537.36,625.37,737.62,931.75,1084.55,768.99,3.44,4.2,27
-nanchang,Nanchang,南昌市,Nánchāng,Jiangxi,江西省,Yangtze Basin & Central,28.6829,115.8582,178.79,214.62,264.39,312.25,431.39,532.02,608.57,429.78,3.4,4.17,28
-guilin,Guilin,桂林市,Guìlín,Guangxi,广西壮族自治区,South & Southwest,25.2736,110.2902,76.14,95.58,121.75,141.99,171.26,208.85,254.1,177.96,3.34,4.1,29
-liaocheng,Liaocheng,聊城市,Liáochéng,Shandong,山东省,Yellow River & North Plain,36.457,115.9854,86.36,124.71,150.02,170.65,203.75,234.53,279.69,193.33,3.24,3.99,30
-jinan,Jinan,济南市,Jǐnán,Shandong,山东省,Yellow River & North Plain,36.6512,117.1201,200.11,301.81,355.69,398.36,484.71,571.19,647.13,447.02,3.23,3.99,31
-dandong,Dandong,丹东市,Dāndōng,Liaoning,辽宁省,Northeast Rust Belt,40.1299,124.3947,45.2,58.69,67.18,79.24,94.13,117.71,140.92,95.72,3.12,3.86,32
-tieling,Tieling,铁岭市,Tiělǐng,Liaoning,辽宁省,Northeast Rust Belt,42.2907,123.8443,43.68,57.4,67.23,74.63,83.76,107.94,134.96,91.28,3.09,3.83,33
-hunchun,Hunchun,珲春市,Húnchūn,Jilin,吉林省,Northeast Rust Belt,42.8628,130.3653,20.56,26.39,36.44,42.18,46.74,52.32,61.52,40.96,2.99,3.72,34
-fuxin,Fuxin,阜新市,Fùxīn,Liaoning,辽宁省,Northeast Rust Belt,42.0216,121.6704,57.66,67.79,81.42,97.77,113.19,136.03,169.39,111.73,2.94,3.66,35
-datong,Datong,大同市,Dàtóng,Shanxi,山西省,Yellow River & North Plain,40.0768,113.3001,99.39,149.15,183.87,204.99,223.99,250.21,279.67,180.28,2.81,3.51,36
-lianyungang,Lianyungang,连云港市,Liányúngǎng,Jiangsu,江苏省,Yangtze Delta & East,34.5967,119.2216,135.75,192.73,223.87,246.2,273.78,335.89,369.04,233.29,2.72,3.39,37
-wuwei,Wuwei,武威市,Wǔwēi,Gansu,甘肃省,Western Frontier & Steppe,37.9283,102.6379,40.73,51.22,55.91,64.88,75.54,93.66,108.55,67.82,2.67,3.32,38
-shijiazhuang,Shijiazhuang,石家庄市,Shíjiāzhuāng,Hebei,河北省,Yellow River & North Plain,38.0428,114.5149,307.22,418.78,505.44,571.32,629.15,716.31,811.55,504.33,2.64,3.29,39
-harbin,Harbin,哈尔滨市,Hā'ěrbīn,Heilongjiang,黑龙江省,Northeast Rust Belt,45.8038,126.5349,267.74,312.9,360.78,414.83,491.28,582.92,701.48,433.74,2.62,3.26,40
-panjin,Panjin,盘锦市,Pánjǐn,Liaoning,辽宁省,Northeast Rust Belt,41.1244,122.0707,98.33,112.33,129.37,145.31,166.33,199.43,254.37,156.04,2.59,3.22,41
-liaoyuan,Liaoyuan,辽源市,Liáoyuán,Jilin,吉林省,Northeast Rust Belt,42.9027,125.1432,44.37,54.88,63.75,72.13,82.32,92.59,111.94,67.57,2.52,3.13,42
-hotan,Hotan,和田市,Hétián,Xinjiang,新疆维吾尔自治区,Western Frontier & Steppe,37.1107,79.9135,19.4,19.4,23.88,28.41,37.03,42.59,46.43,27.03,2.39,2.95,43
-baicheng,Baicheng,白城市,Báichéng,Jilin,吉林省,Northeast Rust Belt,45.619,122.841,43.41,48.47,60.8,69.17,78.27,88.4,98.62,55.21,2.27,2.77,44
-lanzhou,Lanzhou,兰州市,Lánzhōu,Gansu,甘肃省,Western Frontier & Steppe,36.0611,103.8343,119.22,149.42,168.27,187.16,206.15,219.03,232.72,113.5,1.95,2.25,45
-urumqi,Urumqi,乌鲁木齐市,Wūlǔmùqí,Xinjiang,新疆维吾尔自治区,Western Frontier & Steppe,43.8256,87.6168,251.96,277.71,296.14,328.36,362.9,403.7,431.36,179.4,1.71,1.81,46
-korla,Korla,库尔勒市,Kù'ěrlè,Xinjiang,新疆维吾尔自治区,Western Frontier & Steppe,41.7259,86.1746,102.96,102.96,115.5,120.93,134.14,144.75,156.53,53.57,1.52,1.41,47
+id,name_en,name_zh,pinyin,province_en,province_zh,region,lat,lon,pop_million,pop_exact,pop_note,area_1985,area_1990,area_1995,area_2000,area_2005,area_2010,area_2015,net_gain_km2,growth_multiple,cagr_pct,rank_population,rank_multiplier
+chengdu,Chengdu,成都市,Chéngdū,Sichuan,四川省,Yangtze Basin & Central,30.6586,104.0648,20.94,20937757,Prefecture / Sub-provincial,208.06,307,479.44,736.02,969.14,1269.07,1564.15,1356.09,7.52,6.96,1,2
+shenzhen,Shenzhen,深圳市,Shēnzhèn,Guangdong,广东省,Pearl River & South Coast,22.5431,114.0579,17.56,17560061,Sub-provincial / SEZ,168.35,329.57,631.26,789.09,938.38,1020.12,1064.98,896.63,6.33,6.34,2,5
+xian,Xi'an,西安市,Xī'ān,Shaanxi,陕西省,Western Frontier & Steppe,34.3416,108.9398,12.95,12952907,Sub-provincial,392.14,537.78,671.39,849.73,1026.52,1182.69,1354.03,961.89,3.45,4.22,3,24
+zhengzhou,Zhengzhou,郑州市,Zhèngzhōu,Henan,河南省,Yellow River & North Plain,34.7466,113.6253,12.6,12600574,Prefecture / Provincial Capital,315.56,441.27,537.36,625.37,737.62,931.75,1084.55,768.99,3.44,4.2,4,25
+wuhan,Wuhan,武汉市,Wǔhàn,Hubei,湖北省,Yangtze Basin & Central,30.5928,114.3055,12.33,12326500,Sub-provincial,279.63,359.75,438.53,528.11,694.39,908.92,1077.9,798.27,3.85,4.6,5,18
+shijiazhuang,Shijiazhuang,石家庄市,Shíjiāzhuāng,Hebei,河北省,Yellow River & North Plain,38.0428,114.5149,10.64,10640000,Prefecture / Provincial Capital,307.22,418.78,505.44,571.32,629.15,716.31,811.55,504.33,2.64,3.29,6,37
+harbin,Harbin,哈尔滨市,Hā'ěrbīn,Heilongjiang,黑龙江省,Northeast Rust Belt,45.8038,126.5349,10.01,10009854,Sub-provincial,267.74,312.9,360.78,414.83,491.28,582.92,701.48,433.74,2.62,3.26,7,38
+baoding,Baoding,保定市,Bǎodìng,Hebei,河北省,Yellow River & North Plain,38.8671,115.4845,9.24,9242600,Prefecture,132.36,232.42,301.16,349.32,397.14,457.45,526.12,393.76,3.97,4.71,8,16
+jinan,Jinan,济南市,Jǐnán,Shandong,山东省,Yellow River & North Plain,36.6512,117.1201,9.2,9202400,Sub-provincial,200.11,301.81,355.69,398.36,484.71,571.19,647.13,447.02,3.23,3.99,9,29
+kunming,Kunming,昆明市,Kūnmíng,Yunnan,云南省,South & Southwest,24.8797,102.8332,8.46,8460088,Prefecture / Provincial Capital,153.06,202.94,273.06,386.19,477.82,577.46,624.84,471.78,4.08,4.8,10,14
+jining,Jining,济宁市,Jǐnìng,Shandong,山东省,Yellow River & North Plain,35.4154,116.5872,8.36,8357897,Prefecture,77.41,123.65,167.59,199.99,245.14,315.25,391.12,313.71,5.05,5.55,11,10
+nanchang,Nanchang,南昌市,Nánchāng,Jiangxi,江西省,Yangtze Basin & Central,28.6829,115.8582,6.26,6255000,Prefecture / Provincial Capital,178.79,214.62,264.39,312.25,431.39,532.02,608.57,429.78,3.4,4.17,12,26
+liaocheng,Liaocheng,聊城市,Liáochéng,Shandong,山东省,Yellow River & North Plain,36.457,115.9854,5.95,5952128,Prefecture,86.36,124.71,150.02,170.65,203.75,234.53,279.69,193.33,3.24,3.99,13,28
+xiamen,Xiamen,厦门市,Xiàmén,Fujian,福建省,Pearl River & South Coast,24.4798,118.0894,5.16,5163970,Sub-provincial / SEZ,128.93,184.53,251.65,309.61,375.75,443.72,473.04,344.11,3.67,4.43,14,20
+guilin,Guilin,桂林市,Guìlín,Guangxi,广西壮族自治区,South & Southwest,25.2736,110.2902,4.93,4931137,Prefecture,76.14,95.58,121.75,141.99,171.26,208.85,254.1,177.96,3.34,4.1,15,27
+zibo,Zibo,淄博市,Zībó,Shandong,山东省,Yellow River & North Plain,36.8135,118.0549,4.7,4704138,Prefecture,180.8,265.75,347.17,410.28,510.73,593.36,660.67,479.87,3.65,4.41,16,22
+lianyungang,Lianyungang,连云港市,Liányúngǎng,Jiangsu,江苏省,Yangtze Delta & East,34.5967,119.2216,4.6,4599360,Prefecture,135.75,192.73,223.87,246.2,273.78,335.89,369.04,233.29,2.72,3.39,17,35
+yangzhou,Yangzhou,扬州市,Yángzhōu,Jiangsu,江苏省,Yangtze Delta & East,32.3942,119.4129,4.56,4559797,Prefecture,98.97,186.04,239.96,281.36,368.69,475.54,600.99,502.02,6.07,6.2,18,7
+taizhou,Taizhou,泰州市,Tàizhōu,Jiangsu,江苏省,Yangtze Delta & East,32.4555,119.9229,4.51,4512760,Prefecture,80.81,146.78,217.91,268.48,330.23,438.55,583,502.19,7.21,6.81,19,3
+lanzhou,Lanzhou,兰州市,Lánzhōu,Gansu,甘肃省,Western Frontier & Steppe,36.0611,103.8343,4.36,4359446,Prefecture / Provincial Capital,119.22,149.42,168.27,187.16,206.15,219.03,232.72,113.5,1.95,2.25,20,43
+luzhou,Luzhou,泸州市,Lúzhōu,Sichuan,四川省,Yangtze Basin & Central,28.8719,105.4423,4.25,4254149,Prefecture,22.7,26.31,37.18,54,69.23,95.38,140.03,117.33,6.17,6.25,21,6
+urumqi,Urumqi,乌鲁木齐市,Wūlǔmùqí,Xinjiang,新疆维吾尔自治区,Western Frontier & Steppe,43.8256,87.6168,4.05,4054369,Prefecture / Regional Capital,251.96,277.71,296.14,328.36,362.9,403.7,431.36,179.4,1.71,1.81,22,44
+binzhou,Binzhou,滨州市,Bīnzhōu,Shandong,山东省,Yellow River & North Plain,37.3835,118.016,3.93,3928566,Prefecture,75.53,97.04,115.53,140.89,176.02,223.01,276.66,201.13,3.66,4.42,23,21
+yichang,Yichang,宜昌市,Yíchāng,Hubei,湖北省,Yangtze Basin & Central,30.6919,111.2865,3.92,3918000,Prefecture,45.63,59.28,71.52,86.02,106.24,138.61,178.59,132.96,3.91,4.65,24,17
+wuhu,Wuhu,芜湖市,Wúhú,Anhui,安徽省,Yangtze Delta & East,31.3528,118.3765,3.64,3644420,Prefecture,82.97,111.1,129,154.46,202.25,298.39,380.45,297.48,4.59,5.21,25,11
+hohhot,Hohhot,呼和浩特市,Hūhéhàotè,Inner Mongolia,内蒙古自治区,Western Frontier & Steppe,40.8415,111.7519,3.45,3446100,Prefecture / Regional Capital,68.88,92,115.91,151.39,200.28,268.89,349.27,280.39,5.07,5.56,26,9
+datong,Datong,大同市,Dàtóng,Shanxi,山西省,Yellow River & North Plain,40.0768,113.3001,3.11,3105591,Prefecture,99.39,149.15,183.87,204.99,223.99,250.21,279.67,180.28,2.81,3.51,27,34
+weihai,Weihai,威海市,Wēihǎi,Shandong,山东省,Yellow River & North Plain,37.5131,122.1205,2.91,2906548,Prefecture,32.87,53.05,74.72,89.02,117.45,150.46,179.59,146.72,5.46,5.82,28,8
+haikou,Haikou,海口市,Hǎikǒu,Hainan,海南省,Pearl River & South Coast,20.044,110.3293,2.87,2873358,Prefecture / Provincial Capital,63.84,90.34,123.88,149.27,178.46,220.49,262.73,198.89,4.12,4.83,29,13
+heyuan,Heyuan,河源市,Héyuán,Guangdong,广东省,Pearl River & South Coast,23.7438,114.6978,2.84,2837686,Prefecture,15.15,35.88,50.78,63.3,93.23,120.88,136.49,121.34,9.01,7.6,30,1
+zhuhai,Zhuhai,珠海市,Zhūhǎi,Guangdong,广东省,Pearl River & South Coast,22.2707,113.5767,2.44,2439585,Prefecture / SEZ,33.27,57.35,115.6,145.16,188.43,217.54,237.12,203.85,7.13,6.77,31,4
+tieling,Tieling,铁岭市,Tiělǐng,Liaoning,辽宁省,Northeast Rust Belt,42.2907,123.8443,2.39,2388294,Prefecture,43.68,57.4,67.23,74.63,83.76,107.94,134.96,91.28,3.09,3.83,32,31
+dandong,Dandong,丹东市,Dāndōng,Liaoning,辽宁省,Northeast Rust Belt,40.1299,124.3947,2.19,2188436,Prefecture,45.2,58.69,67.18,79.24,94.13,117.71,140.92,95.72,3.12,3.86,33,30
+dongying,Dongying,东营市,Dōngyíng,Shandong,山东省,Yellow River & North Plain,37.4338,118.6747,2.19,2193518,Prefecture,83.9,139.37,170.75,195.13,241.78,288.02,341.04,257.14,4.06,4.79,34,15
+ulanqab,Ulanqab,乌兰察布市,Wūlánchábù,Inner Mongolia,内蒙古自治区,Western Frontier & Steppe,41.018,113.1326,1.71,1706328,Prefecture,20.59,24.4,28.43,32.8,48.21,75.81,103.9,83.31,5.05,5.54,35,10
+fuxin,Fuxin,阜新市,Fùxīn,Liaoning,辽宁省,Northeast Rust Belt,42.0216,121.6704,1.65,1647286,Prefecture,57.66,67.79,81.42,97.77,113.19,136.03,169.39,111.73,2.94,3.66,36,33
+baicheng,Baicheng,白城市,Báichéng,Jilin,吉林省,Northeast Rust Belt,45.619,122.841,1.55,1551378,Prefecture,43.41,48.47,60.8,69.17,78.27,88.4,98.62,55.21,2.27,2.77,37,42
+zhangjiajie,Zhangjiajie,张家界市,Zhāngjiājiè,Hunan,湖南省,Yangtze Basin & Central,29.117,110.4792,1.52,1517027,Prefecture,18.13,21.62,27.35,31.48,43.25,57.32,62.73,44.6,3.46,4.22,38,23
+wuwei,Wuwei,武威市,Wǔwēi,Gansu,甘肃省,Western Frontier & Steppe,37.9283,102.6379,1.47,1465300,Prefecture,40.73,51.22,55.91,64.88,75.54,93.66,108.55,67.82,2.67,3.32,39,36
+panjin,Panjin,盘锦市,Pánjǐn,Liaoning,辽宁省,Northeast Rust Belt,41.1244,122.0707,1.39,1389691,Prefecture,98.33,112.33,129.37,145.31,166.33,199.43,254.37,156.04,2.59,3.22,40,39
+huangshan,Huangshan,黄山市,Huángshān,Anhui,安徽省,Yangtze Delta & East,29.7147,118.3375,1.33,1330565,Prefecture,26.02,33.08,44.87,57.79,77.73,98.66,118.96,92.94,4.57,5.2,41,12
+liaoyuan,Liaoyuan,辽源市,Liáoyuán,Jilin,吉林省,Northeast Rust Belt,42.9027,125.1432,0.99,991633,Prefecture,44.37,54.88,63.75,72.13,82.32,92.59,111.94,67.57,2.52,3.13,42,40
+taishan,Taishan,台山市,Táishān,Guangdong,广东省,Pearl River & South Coast,22.2514,112.7938,0.91,907354,County-level City (Jiangmen),30.28,40.64,56.45,67.59,84.86,100.67,112.33,82.05,3.71,4.47,43,19
+kashgar,Kashgar,喀什市,Kāshí,Xinjiang,新疆维吾尔自治区,Western Frontier & Steppe,39.4704,75.9897,0.71,711300,County-level City (Prefecture Seat),46.39,46.39,57.11,83.19,103.45,133.71,160.73,114.34,3.46,4.23,44,23
+korla,Korla,库尔勒市,Kù'ěrlè,Xinjiang,新疆维吾尔自治区,Western Frontier & Steppe,41.7259,86.1746,0.55,549324,County-level City (Prefecture Seat),102.96,102.96,115.5,120.93,134.14,144.75,156.53,53.57,1.52,1.41,45,45
+hotan,Hotan,和田市,Hétián,Xinjiang,新疆维吾尔自治区,Western Frontier & Steppe,37.1107,79.9135,0.5,501028,County-level City (Prefecture Seat),19.4,19.4,23.88,28.41,37.03,42.59,46.43,27.03,2.39,2.95,46,41
+hunchun,Hunchun,珲春市,Húnchūn,Jilin,吉林省,Northeast Rust Belt,42.8628,130.3653,0.24,239359,County-level City (Yanbian),20.56,26.39,36.44,42.18,46.74,52.32,61.52,40.96,2.99,3.72,47,32

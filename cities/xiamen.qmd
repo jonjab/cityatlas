@@ -1,26 +1,39 @@
 ---
 title: "Xiamen (厦门市)"
-subtitle: "Xiàmén · Fujian (福建省) · Pearl River & South Coast"
+subtitle: "Population: 5.16M · 30-Year Growth: 3.67× · Fujian"
 format:
   html:
     toc: true
 ---
 
-::: {.hero-banner}
-<div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
-  <div>
-    <h1 style="color: #ffffff; margin-bottom: 0.25rem;">Xiamen <span style="color: #f59e0b; font-weight: normal;">厦门市</span></h1>
-    <p style="color: #94a3b8; font-size: 1.1rem; margin: 0;">Xiàmén · Fujian Province · National Rank: <strong>#21</strong> of 47</p>
-  </div>
-  <div style="text-align: right;">
-    <span class="metric-badge badge-gold" style="font-size: 1.1rem; padding: 0.5rem 1rem;">3.67× Multiplier</span>
+```{=html}
+<div class="hero-banner">
+  <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+    <div>
+      <h1 style="color: #ffffff; margin-bottom: 0.25rem;">Xiamen <span style="color: #f59e0b; font-weight: normal;">厦门市</span></h1>
+      <p style="color: #94a3b8; font-size: 1.1rem; margin: 0;">Xiàmén · Fujian (福建省) · Pearl River & South Coast</p>
+      <p style="color: #cbd5e1; font-size: 0.95rem; margin-top: 0.35rem;">Population: <strong>5.16 Million</strong> (2020 Census) · National Rank: <strong>#14</strong> of 47</p>
+    </div>
+    <div style="text-align: right;">
+      <span class="metric-badge badge-gold" style="font-size: 1.1rem; padding: 0.5rem 1rem;">3.67× Growth Multiplier</span>
+    </div>
   </div>
 </div>
-:::
+```
 
-## Key Expansion Indicators (1985–2015)
+## Key Urban Expansion Indicators
 
 ::: {.metric-grid}
+::: {.metric-card}
+::: {.metric-label}
+2020 Population
+:::
+::: {.metric-val}
+5.16 <span style="font-size: 1rem; color: #94a3b8;">M</span>
+:::
+<div style="font-size: 0.8rem; color: #38bdf8;">Rank #14 of 47</div>
+:::
+
 ::: {.metric-card}
 ::: {.metric-label}
 1985 Baseline Area
@@ -37,15 +50,7 @@ format:
 ::: {.metric-val}
 473.04 <span style="font-size: 1rem; color: #94a3b8;">km²</span>
 :::
-:::
-
-::: {.metric-card}
-::: {.metric-label}
-Net Surface Gain
-:::
-::: {.metric-val}
-+344.11 <span style="font-size: 1rem; color: #94a3b8;">km²</span>
-:::
+<div style="font-size: 0.8rem; color: #10b981;">+344.11 km²</div>
 :::
 
 ::: {.metric-card}
@@ -55,6 +60,7 @@ Growth Multiple
 ::: {.metric-val}
 3.67×
 :::
+<div style="font-size: 0.8rem; color: #f59e0b;">Rank #20 of 47</div>
 :::
 
 ::: {.metric-card}
@@ -64,6 +70,7 @@ Annual Growth (CAGR)
 ::: {.metric-val}
 4.43%
 :::
+<div style="font-size: 0.8rem; color: #94a3b8;">1985–2015</div>
 :::
 :::
 
@@ -71,12 +78,12 @@ Annual Growth (CAGR)
 
 ## 1. The Urban Growth Rings (1985–2015)
 
-The primary cartographic poster below visualizes the physical expansion rings of **Xiamen**, partitioned into four milestone eras:
+The cartographic poster below maps the physical settlement rings of **Xiamen** across four historical development epochs:
 
-- <span style="color: #F59E0B; font-weight: bold;">● Pre-1985</span>: Historic core and initial post-1949 development.
-- <span style="color: #EF4444; font-weight: bold;">● 1986–1995</span>: Early reform, opening up, and Deng Xiaoping's southern tour.
-- <span style="color: #06B6D4; font-weight: bold;">● 1996–2005</span>: WTO entry, export boom, and new industrial development zones.
-- <span style="color: #10B981; font-weight: bold;">● 2006–2015</span>: High-speed rail expansion, modern new towns (*xinqu*), and peri-urban consolidation.
+- <span style="color: #F59E0B; font-weight: bold;">● Pre-1985 Core</span>: Historic urban core and initial post-1949 industrial settlements.
+- <span style="color: #EF4444; font-weight: bold;">● 1986–1995 Wave</span>: Early reform, opening up, and Deng Xiaoping's 1992 Southern Tour (*Nanxun*).
+- <span style="color: #06B6D4; font-weight: bold;">● 1996–2005 Wave</span>: WTO entry, export industrialization, and new development zones (*Kaifaqu*).
+- <span style="color: #10B981; font-weight: bold;">● 2006–2015 Wave</span>: High-speed rail expansion, modern new cities (*Xinqu*), and peri-urban consolidation.
 
 ::: {.map-container}
 !['The Urban Growth Rings: Xiamen'](../output/maps/xiamen_hero.png)
@@ -84,9 +91,9 @@ The primary cartographic poster below visualizes the physical expansion rings of
 
 ---
 
-## 2. Small Multiples: 4-Epoch Footprint Evolution
+## 2. Small Multiples: 4-Epoch Footprint Progression
 
-Comparative uniform-scale footprint maps isolating the cumulative urbanized surface across the four key epochs:
+Uniform-scale physical footprint progression maps tracking built-up settlement expansion over time:
 
 ::: {.map-container}
 !['Small Multiples Footprint Progression: Xiamen'](../output/maps/xiamen_small_multiples.png)
@@ -94,12 +101,12 @@ Comparative uniform-scale footprint maps isolating the cumulative urbanized surf
 
 ---
 
-## 3. Geographical Context & Growth Trajectory
+## 3. Geographical Location & Growth Trajectory
 
 :::: {.columns}
 
 ::: {.column width="48%"}
-### National Location
+### Location in China
 ::: {.map-container}
 !['Regional Inset: Xiamen'](../output/maps/xiamen_context.png)
 :::
@@ -121,8 +128,6 @@ Comparative uniform-scale footprint maps isolating the cumulative urbanized surf
 
 ## 4. 5-Year Milestone Chronology
 
-The table below catalogs the cumulative built-up surface area of Xiamen at 5-year intervals:
-
 | Milestone Year | Urban Footprint (km²) | Growth vs. 1985 Baseline | Share of 2015 Footprint |
 |:---:|:---:|:---:|:---:|
 | **1985** | 128.93 km² | 1.00× (Baseline) | 27.3% |
@@ -135,8 +140,10 @@ The table below catalogs the cumulative built-up surface area of Xiamen at 5-yea
 
 ---
 
+```{=html}
 <div style="display: flex; justify-content: space-between; margin-top: 2rem; padding: 1rem; background: #111827; border-radius: 8px;">
-  <a href="taishan.html" style="color: #38bdf8; text-decoration: none;">← Previous: Taishan (台山市)</a>
+  <a href="liaocheng.html" style="color: #38bdf8; text-decoration: none;">← Prev: Liaocheng (5.95M)</a>
   <a href="../regions/coastal_south.html" style="color: #f59e0b; text-decoration: none;">↑ Pearl River & South Coast</a>
-  <a href="binzhou.html" style="color: #38bdf8; text-decoration: none;">Next: Binzhou (滨州市) →</a>
+  <a href="guilin.html" style="color: #38bdf8; text-decoration: none;">Next: Guilin (4.93M) →</a>
 </div>
+```

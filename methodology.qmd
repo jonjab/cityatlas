@@ -1,32 +1,50 @@
 ---
 title: "Data & Methodology"
-subtitle: "Geospatial Data Sources, Processing Pipeline, and Analytical Framework"
+subtitle: "Geospatial Data Sources, Processing Pipeline, High-Speed Rail Integration, and Population Metrics"
 format:
   html:
     toc: true
 ---
 
-::: {.hero-banner}
-<h1 style="color: #ffffff; margin-bottom: 0.5rem;">Analytical Methodology</h1>
-<p style="color: #cbd5e1;">How this ratlas ingests, processes, and cartographically renders 30 years of satellite-detected urban expansion across China.</p>
+```{=html}
+<div class="hero-banner">
+  <h1 style="color: #ffffff; margin-bottom: 0.5rem;">Analytical Methodology</h1>
+  <p style="color: #cbd5e1; margin: 0;">How this ratlas ingests, processes, and cartographically renders 30 years of satellite-detected urban expansion, High-Speed Rail networks, and census populations across China.</p>
+</div>
+```
+
+::: {.callout-important appearance="simple"}
+## Scope & Sample Selection Note: Excluding Tier-1 Megacities
+The 47 cities in this atlas were deliberately selected to **exclude China's absolute largest tier-1 megacities** (specifically Beijing, Shanghai, Guangzhou, Chongqing, and Tianjin).
+
+By centering on dynamic provincial capitals (e.g., Chengdu, Wuhan, Xi'an, Zhengzhou), specialized manufacturing nodes (e.g., Shenzhen, Zhuhai, Taizhou, Zibo), ancient Silk Road oases (e.g., Kashgar, Hotan, Wuwei), and strategic border gateways (e.g., Dandong, Hunchun), this ratlas examines how physical urbanization and infrastructure modernization transformed the full depth of China's urban hierarchy beyond the global superstar metropolises.
 :::
 
-## 1. Primary Data Source: DLR WSF Evolution
+## 1. Population Ranking (2020 Census)
+
+The master ranking across this project is ordered by **Permanent Resident Population (常住人口)** derived from the **Seventh National Population Census of the People's Republic of China (第七次全国人口普查 / 七普 2020)**:
+
+- **Sub-provincial & Prefecture-Level Cities**: Measured by total permanent resident population across municipal jurisdictions.
+- **County-Level Cities**: For specialized county-level cities in the sample (Hunchun, Korla, Hotan, Taishan), measured by the official resident population of the county-level city administrative unit.
+- **Rank Range**: Spans from **#1 Chengdu (20.94 Million)** down to **#47 Hunchun (0.24 Million)**.
+
+## 2. Satellite Urban Growth Engine: DLR WSF Evolution
 
 The physical urban growth data in this project is driven by the **World Settlement Footprint Evolution (WSF Evolution)** dataset, produced by the **German Aerospace Center (DLR)**:
 
 - **Spatial Resolution**: 30 meters per pixel, derived from joint multi-decadal analysis of **Landsat-5, Landsat-7, and Landsat-8** optical imagery, integrated with radar and digital elevation datasets.
 - **Temporal Coverage**: 1985 to 2015 (30-year span).
-- **Pixel Semantics**: Each pixel value encodes the exact calendar year ($1985 \le 	ext{year} \le 2015$) in which human settlement was first detected. Value `0` represents non-urban surfaces (natural vegetation, bare land, agriculture, or water). Value `1985` represents human settlements already established by or prior to 1985.
+- **Pixel Semantics**: Each pixel value encodes the exact calendar year ($1985 \le \text{year} \le 2015$) in which human settlement was first detected. Value `0` represents non-urban surfaces. Value `1985` represents human settlements already established by or prior to 1985.
 - **Open Web Retrieval**: Retrieved directly from DLR's open data servers (`download.geoservice.dlr.de`) using GDAL virtual file streaming (`/vsicurl/`) and R's `terra` package.
 
-## 2. Administrative Geodatabase & Extents
+## 3. High-Speed Rail (HSR) Network Integration
 
-- **GADM 4.1 (Database of Global Administrative Areas)**: Provided level 0 (national outline), level 1 (provincial boundaries), and level 2 (prefectural boundaries).
-- **Centroids & Analysis Radii**: Urban core extents were established for each city based on high-density metropolitan boundaries, ranging from 12 km to 30 km radius depending on city tier and metropolitan scale.
-- **Coordinate Reference Systems**: Base data in WGS 84 (EPSG:4326), with surface area calculations performed using ellipsoidal pixel geometry (`terra::cellSize(unit = "km")`) to eliminate high-latitude area distortion.
+China's **High-Speed Rail (CRH / 中国高铁)** network—the defining infrastructure project of the 21st century—is mapped alongside the cities. Over the 2006–2015 era, high-speed rail catalyzed spatial expansion by connecting regional capitals and satellite towns:
 
-## 3. Four Landmark Urban Development Epochs
+- **Corridors Included**: The primary "Eight Vertical and Eight Horizontal" (*Ba Zong Ba Heng*) trunk corridors, including the Beijing–Hong Kong Corridor, Beijing–Shanghai Corridor, Eurasian Continental Bridge Corridor (Lanzhou–Xinjiang HSR), Yangtze River Corridor (Huhanrong), Shanghai–Kunming Corridor, Coastal Corridor, Xi'an–Chengdu HSR, and Hainan Island Ring HSR.
+- **Spatial Traces**: Vector geometries compiled from OpenStreetMap railway relations and Natural Earth 10m transportation datasets.
+
+## 4. Four Landmark Urban Development Epochs
 
 Urban expansion in modern China has unfolded in distinct historical waves:
 
@@ -39,19 +57,9 @@ Urban expansion in modern China has unfolded in distinct historical waves:
 4. **2006–2015 Wave** (`#10B981` · Emerald Green):
    The High-Speed Rail (HSR) construction boom, the Western Development Strategy (*Xibu Da Kaifa*), massive State-level New Areas (*Guojiaji Xinqu*), and metropolitan amalgamation.
 
-## 4. Quantitative Metrics
+## 5. Quantitative Metrics
 
-For each city, the following metrics are computed:
-
-- **Cumulative Built-Up Area ($A_t$)**: Total surface area in $	ext{km}^2$ occupied by detected settlements at year $t$.
+- **Cumulative Built-Up Area ($A_t$)**: Total surface area in $\text{km}^2$ occupied by detected settlements at year $t$.
 - **Net Spatial Gain ($\Delta A$)**: $A_{2015} - A_{1985}$.
 - **30-Year Growth Multiple ($M$)**: $A_{2015} / A_{1985}$.
-- **Compound Annual Growth Rate (CAGR)**: $\left(rac{A_{2015}}{A_{1985}}ight)^{1/30} - 1$.
-
-## 5. Cartographic Stack & Tools
-
-- **Language & Runtime**: R (v4.6.1) & Python 3
-- **Spatial Processing**: `terra` (v1.9), `sf` (v1.0), `tidyterra`
-- **Visualization**: `ggplot2`, `patchwork`, `ragg`
-- **Typography**: CJK rendering via system font `Droid Sans Fallback` with bilingual typesetting
-- **Publishing**: Quarto static site compiler deployed directly to GitHub Pages
+- **Compound Annual Growth Rate (CAGR)**: $\left(\frac{A_{2015}}{A_{1985}}\right)^{1/30} - 1$.

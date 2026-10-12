@@ -1,26 +1,39 @@
 ---
 title: "Zhengzhou (郑州市)"
-subtitle: "Zhèngzhōu · Henan (河南省) · Yellow River & North Plain"
+subtitle: "Population: 12.6M · 30-Year Growth: 3.44× · Henan"
 format:
   html:
     toc: true
 ---
 
-::: {.hero-banner}
-<div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
-  <div>
-    <h1 style="color: #ffffff; margin-bottom: 0.25rem;">Zhengzhou <span style="color: #f59e0b; font-weight: normal;">郑州市</span></h1>
-    <p style="color: #94a3b8; font-size: 1.1rem; margin: 0;">Zhèngzhōu · Henan Province · National Rank: <strong>#27</strong> of 47</p>
-  </div>
-  <div style="text-align: right;">
-    <span class="metric-badge badge-gold" style="font-size: 1.1rem; padding: 0.5rem 1rem;">3.44× Multiplier</span>
+```{=html}
+<div class="hero-banner">
+  <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+    <div>
+      <h1 style="color: #ffffff; margin-bottom: 0.25rem;">Zhengzhou <span style="color: #f59e0b; font-weight: normal;">郑州市</span></h1>
+      <p style="color: #94a3b8; font-size: 1.1rem; margin: 0;">Zhèngzhōu · Henan (河南省) · Yellow River & North Plain</p>
+      <p style="color: #cbd5e1; font-size: 0.95rem; margin-top: 0.35rem;">Population: <strong>12.6 Million</strong> (2020 Census) · National Rank: <strong>#4</strong> of 47</p>
+    </div>
+    <div style="text-align: right;">
+      <span class="metric-badge badge-gold" style="font-size: 1.1rem; padding: 0.5rem 1rem;">3.44× Growth Multiplier</span>
+    </div>
   </div>
 </div>
-:::
+```
 
-## Key Expansion Indicators (1985–2015)
+## Key Urban Expansion Indicators
 
 ::: {.metric-grid}
+::: {.metric-card}
+::: {.metric-label}
+2020 Population
+:::
+::: {.metric-val}
+12.6 <span style="font-size: 1rem; color: #94a3b8;">M</span>
+:::
+<div style="font-size: 0.8rem; color: #38bdf8;">Rank #4 of 47</div>
+:::
+
 ::: {.metric-card}
 ::: {.metric-label}
 1985 Baseline Area
@@ -37,15 +50,7 @@ format:
 ::: {.metric-val}
 1084.55 <span style="font-size: 1rem; color: #94a3b8;">km²</span>
 :::
-:::
-
-::: {.metric-card}
-::: {.metric-label}
-Net Surface Gain
-:::
-::: {.metric-val}
-+768.99 <span style="font-size: 1rem; color: #94a3b8;">km²</span>
-:::
+<div style="font-size: 0.8rem; color: #10b981;">+768.99 km²</div>
 :::
 
 ::: {.metric-card}
@@ -55,6 +60,7 @@ Growth Multiple
 ::: {.metric-val}
 3.44×
 :::
+<div style="font-size: 0.8rem; color: #f59e0b;">Rank #25 of 47</div>
 :::
 
 ::: {.metric-card}
@@ -64,6 +70,7 @@ Annual Growth (CAGR)
 ::: {.metric-val}
 4.2%
 :::
+<div style="font-size: 0.8rem; color: #94a3b8;">1985–2015</div>
 :::
 :::
 
@@ -71,12 +78,12 @@ Annual Growth (CAGR)
 
 ## 1. The Urban Growth Rings (1985–2015)
 
-The primary cartographic poster below visualizes the physical expansion rings of **Zhengzhou**, partitioned into four milestone eras:
+The cartographic poster below maps the physical settlement rings of **Zhengzhou** across four historical development epochs:
 
-- <span style="color: #F59E0B; font-weight: bold;">● Pre-1985</span>: Historic core and initial post-1949 development.
-- <span style="color: #EF4444; font-weight: bold;">● 1986–1995</span>: Early reform, opening up, and Deng Xiaoping's southern tour.
-- <span style="color: #06B6D4; font-weight: bold;">● 1996–2005</span>: WTO entry, export boom, and new industrial development zones.
-- <span style="color: #10B981; font-weight: bold;">● 2006–2015</span>: High-speed rail expansion, modern new towns (*xinqu*), and peri-urban consolidation.
+- <span style="color: #F59E0B; font-weight: bold;">● Pre-1985 Core</span>: Historic urban core and initial post-1949 industrial settlements.
+- <span style="color: #EF4444; font-weight: bold;">● 1986–1995 Wave</span>: Early reform, opening up, and Deng Xiaoping's 1992 Southern Tour (*Nanxun*).
+- <span style="color: #06B6D4; font-weight: bold;">● 1996–2005 Wave</span>: WTO entry, export industrialization, and new development zones (*Kaifaqu*).
+- <span style="color: #10B981; font-weight: bold;">● 2006–2015 Wave</span>: High-speed rail expansion, modern new cities (*Xinqu*), and peri-urban consolidation.
 
 ::: {.map-container}
 !['The Urban Growth Rings: Zhengzhou'](../output/maps/zhengzhou_hero.png)
@@ -84,9 +91,9 @@ The primary cartographic poster below visualizes the physical expansion rings of
 
 ---
 
-## 2. Small Multiples: 4-Epoch Footprint Evolution
+## 2. Small Multiples: 4-Epoch Footprint Progression
 
-Comparative uniform-scale footprint maps isolating the cumulative urbanized surface across the four key epochs:
+Uniform-scale physical footprint progression maps tracking built-up settlement expansion over time:
 
 ::: {.map-container}
 !['Small Multiples Footprint Progression: Zhengzhou'](../output/maps/zhengzhou_small_multiples.png)
@@ -94,12 +101,12 @@ Comparative uniform-scale footprint maps isolating the cumulative urbanized surf
 
 ---
 
-## 3. Geographical Context & Growth Trajectory
+## 3. Geographical Location & Growth Trajectory
 
 :::: {.columns}
 
 ::: {.column width="48%"}
-### National Location
+### Location in China
 ::: {.map-container}
 !['Regional Inset: Zhengzhou'](../output/maps/zhengzhou_context.png)
 :::
@@ -121,8 +128,6 @@ Comparative uniform-scale footprint maps isolating the cumulative urbanized surf
 
 ## 4. 5-Year Milestone Chronology
 
-The table below catalogs the cumulative built-up surface area of Zhengzhou at 5-year intervals:
-
 | Milestone Year | Urban Footprint (km²) | Growth vs. 1985 Baseline | Share of 2015 Footprint |
 |:---:|:---:|:---:|:---:|
 | **1985** | 315.56 km² | 1.00× (Baseline) | 29.1% |
@@ -135,8 +140,10 @@ The table below catalogs the cumulative built-up surface area of Zhengzhou at 5-
 
 ---
 
+```{=html}
 <div style="display: flex; justify-content: space-between; margin-top: 2rem; padding: 1rem; background: #111827; border-radius: 8px;">
-  <a href="xian.html" style="color: #38bdf8; text-decoration: none;">← Previous: Xi'an (西安市)</a>
+  <a href="xian.html" style="color: #38bdf8; text-decoration: none;">← Prev: Xi'an (12.95M)</a>
   <a href="../regions/northern_plains.html" style="color: #f59e0b; text-decoration: none;">↑ Yellow River & North Plain</a>
-  <a href="nanchang.html" style="color: #38bdf8; text-decoration: none;">Next: Nanchang (南昌市) →</a>
+  <a href="wuhan.html" style="color: #38bdf8; text-decoration: none;">Next: Wuhan (12.33M) →</a>
 </div>
+```

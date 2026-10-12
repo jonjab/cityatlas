@@ -1,26 +1,28 @@
 ---
 title: "Pearl River Delta & South Coast"
-subtitle: "珠江三角洲与华南沿海 · 6 Cities"
+subtitle: "珠江三角洲与华南沿海 · 6 Cities Ordered by Population"
 format:
   html:
     toc: true
 ---
 
-::: {.hero-banner}
-<h1 style="color: #ffffff; margin-bottom: 0.5rem;">Pearl River Delta & South Coast <span style="color: #f59e0b;">珠江三角洲与华南沿海</span></h1>
-<p style="color: #cbd5e1; font-size: 1.1rem;">China's economic vanguard: Special Economic Zones, deep-water ports, and massive industrial expansion across Guangdong, Fujian, and Hainan.</p>
-:::
+```{=html}
+<div class="hero-banner">
+  <h1 style="color: #ffffff; margin-bottom: 0.5rem;">Pearl River Delta & South Coast <span style="color: #f59e0b;">珠江三角洲与华南沿海</span></h1>
+  <p style="color: #cbd5e1; font-size: 1.1rem; margin: 0;">China's economic vanguard: Special Economic Zones, deep-water ports, and massive industrial expansion across Guangdong, Fujian, and Hainan.</p>
+</div>
+```
 
-## Regional Comparison Table
+## Regional Member Cities (Ranked by Population)
 
-| City | Chinese | Province | 1985 Area | 2015 Area | Net Gain | Multiplier | CAGR | National Rank |
-|:---|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|
-| [Heyuan](../cities/heyuan.html) | 河源市 | Guangdong | 15.15 km² | 136.49 km² | +121.34 km² | **9.01×** | 7.6% | #1 |
-| [Zhuhai](../cities/zhuhai.html) | 珠海市 | Guangdong | 33.27 km² | 237.12 km² | +203.85 km² | **7.13×** | 6.77% | #4 |
-| [Shenzhen](../cities/shenzhen.html) | 深圳市 | Guangdong | 168.35 km² | 1064.98 km² | +896.63 km² | **6.33×** | 6.34% | #5 |
-| [Haikou](../cities/haikou.html) | 海口市 | Hainan | 63.84 km² | 262.73 km² | +198.89 km² | **4.12×** | 4.83% | #14 |
-| [Taishan](../cities/taishan.html) | 台山市 | Guangdong | 30.28 km² | 112.33 km² | +82.05 km² | **3.71×** | 4.47% | #20 |
-| [Xiamen](../cities/xiamen.html) | 厦门市 | Fujian | 128.93 km² | 473.04 km² | +344.11 km² | **3.67×** | 4.43% | #21 |
+| Pop Rank | City | Chinese | Province | Population | 1985 Area | 2015 Area | Net Gain | Multiplier | CAGR |
+|:---:|:---|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|
+| #2 | [Shenzhen](../cities/shenzhen.html) | 深圳市 | Guangdong | **17.56M** | 168.35 km² | 1064.98 km² | +896.63 km² | **6.33×** | 6.34% |
+| #14 | [Xiamen](../cities/xiamen.html) | 厦门市 | Fujian | **5.16M** | 128.93 km² | 473.04 km² | +344.11 km² | **3.67×** | 4.43% |
+| #29 | [Haikou](../cities/haikou.html) | 海口市 | Hainan | **2.87M** | 63.84 km² | 262.73 km² | +198.89 km² | **4.12×** | 4.83% |
+| #30 | [Heyuan](../cities/heyuan.html) | 河源市 | Guangdong | **2.84M** | 15.15 km² | 136.49 km² | +121.34 km² | **9.01×** | 7.6% |
+| #31 | [Zhuhai](../cities/zhuhai.html) | 珠海市 | Guangdong | **2.44M** | 33.27 km² | 237.12 km² | +203.85 km² | **7.13×** | 6.77% |
+| #43 | [Taishan](../cities/taishan.html) | 台山市 | Guangdong | **0.91M** | 30.28 km² | 112.33 km² | +82.05 km² | **3.71×** | 4.47% |
 
 
 ---
@@ -29,8 +31,41 @@ format:
 
 
 ::: {.region-card}
+### [Shenzhen (深圳市)](../cities/shenzhen.html)
+**Guangdong Province** · Population: <strong style="color: #38bdf8;">17.56 Million</strong> (Rank #2) · 30-Year Multiplier: <strong style="color: #f59e0b;">6.33×</strong>
+
+- **1985 Footprint**: 168.35 km²
+- **2015 Footprint**: 1064.98 km² (Net expansion: +896.63 km²)
+- **Compound Annual Growth Rate**: 6.34%/year
+
+[View Maps & Visual Suite →](../cities/shenzhen.html)
+:::
+
+::: {.region-card}
+### [Xiamen (厦门市)](../cities/xiamen.html)
+**Fujian Province** · Population: <strong style="color: #38bdf8;">5.16 Million</strong> (Rank #14) · 30-Year Multiplier: <strong style="color: #f59e0b;">3.67×</strong>
+
+- **1985 Footprint**: 128.93 km²
+- **2015 Footprint**: 473.04 km² (Net expansion: +344.11 km²)
+- **Compound Annual Growth Rate**: 4.43%/year
+
+[View Maps & Visual Suite →](../cities/xiamen.html)
+:::
+
+::: {.region-card}
+### [Haikou (海口市)](../cities/haikou.html)
+**Hainan Province** · Population: <strong style="color: #38bdf8;">2.87 Million</strong> (Rank #29) · 30-Year Multiplier: <strong style="color: #f59e0b;">4.12×</strong>
+
+- **1985 Footprint**: 63.84 km²
+- **2015 Footprint**: 262.73 km² (Net expansion: +198.89 km²)
+- **Compound Annual Growth Rate**: 4.83%/year
+
+[View Maps & Visual Suite →](../cities/haikou.html)
+:::
+
+::: {.region-card}
 ### [Heyuan (河源市)](../cities/heyuan.html)
-**Guangdong Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">9.01×</strong> (#1 Nationally)
+**Guangdong Province** · Population: <strong style="color: #38bdf8;">2.84 Million</strong> (Rank #30) · 30-Year Multiplier: <strong style="color: #f59e0b;">9.01×</strong>
 
 - **1985 Footprint**: 15.15 km²
 - **2015 Footprint**: 136.49 km² (Net expansion: +121.34 km²)
@@ -41,7 +76,7 @@ format:
 
 ::: {.region-card}
 ### [Zhuhai (珠海市)](../cities/zhuhai.html)
-**Guangdong Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">7.13×</strong> (#4 Nationally)
+**Guangdong Province** · Population: <strong style="color: #38bdf8;">2.44 Million</strong> (Rank #31) · 30-Year Multiplier: <strong style="color: #f59e0b;">7.13×</strong>
 
 - **1985 Footprint**: 33.27 km²
 - **2015 Footprint**: 237.12 km² (Net expansion: +203.85 km²)
@@ -51,45 +86,12 @@ format:
 :::
 
 ::: {.region-card}
-### [Shenzhen (深圳市)](../cities/shenzhen.html)
-**Guangdong Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">6.33×</strong> (#5 Nationally)
-
-- **1985 Footprint**: 168.35 km²
-- **2015 Footprint**: 1064.98 km² (Net expansion: +896.63 km²)
-- **Compound Annual Growth Rate**: 6.34%/year
-
-[View Maps & Visual Suite →](../cities/shenzhen.html)
-:::
-
-::: {.region-card}
-### [Haikou (海口市)](../cities/haikou.html)
-**Hainan Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">4.12×</strong> (#14 Nationally)
-
-- **1985 Footprint**: 63.84 km²
-- **2015 Footprint**: 262.73 km² (Net expansion: +198.89 km²)
-- **Compound Annual Growth Rate**: 4.83%/year
-
-[View Maps & Visual Suite →](../cities/haikou.html)
-:::
-
-::: {.region-card}
 ### [Taishan (台山市)](../cities/taishan.html)
-**Guangdong Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">3.71×</strong> (#20 Nationally)
+**Guangdong Province** · Population: <strong style="color: #38bdf8;">0.91 Million</strong> (Rank #43) · 30-Year Multiplier: <strong style="color: #f59e0b;">3.71×</strong>
 
 - **1985 Footprint**: 30.28 km²
 - **2015 Footprint**: 112.33 km² (Net expansion: +82.05 km²)
 - **Compound Annual Growth Rate**: 4.47%/year
 
 [View Maps & Visual Suite →](../cities/taishan.html)
-:::
-
-::: {.region-card}
-### [Xiamen (厦门市)](../cities/xiamen.html)
-**Fujian Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">3.67×</strong> (#21 Nationally)
-
-- **1985 Footprint**: 128.93 km²
-- **2015 Footprint**: 473.04 km² (Net expansion: +344.11 km²)
-- **Compound Annual Growth Rate**: 4.43%/year
-
-[View Maps & Visual Suite →](../cities/xiamen.html)
 :::

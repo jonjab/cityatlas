@@ -1,31 +1,33 @@
 ---
 title: "Western Frontier & Steppe"
-subtitle: "西部边疆、丝路绿洲与草原 · 11 Cities"
+subtitle: "西部边疆、丝路绿洲与草原 · 11 Cities Ordered by Population"
 format:
   html:
     toc: true
 ---
 
-::: {.hero-banner}
-<h1 style="color: #ffffff; margin-bottom: 0.5rem;">Western Frontier & Steppe <span style="color: #f59e0b;">西部边疆、丝路绿洲与草原</span></h1>
-<p style="color: #cbd5e1; font-size: 1.1rem;">Ancient Silk Road oases, western capitals, and northern grassland centers bounded by mountains and deserts.</p>
-:::
+```{=html}
+<div class="hero-banner">
+  <h1 style="color: #ffffff; margin-bottom: 0.5rem;">Western Frontier & Steppe <span style="color: #f59e0b;">西部边疆、丝路绿洲与草原</span></h1>
+  <p style="color: #cbd5e1; font-size: 1.1rem; margin: 0;">Ancient Silk Road oases, western capitals, and northern grassland centers bounded by mountains and deserts.</p>
+</div>
+```
 
-## Regional Comparison Table
+## Regional Member Cities (Ranked by Population)
 
-| City | Chinese | Province | 1985 Area | 2015 Area | Net Gain | Multiplier | CAGR | National Rank |
-|:---|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|
-| [Hohhot](../cities/hohhot.html) | 呼和浩特市 | Inner Mongolia | 68.88 km² | 349.27 km² | +280.39 km² | **5.07×** | 5.56% | #9 |
-| [Ulanqab](../cities/ulanqab.html) | 乌兰察布市 | Inner Mongolia | 20.59 km² | 103.9 km² | +83.31 km² | **5.05×** | 5.54% | #11 |
-| [Kunming](../cities/kunming.html) | 昆明市 | Yunnan | 153.06 km² | 624.84 km² | +471.78 km² | **4.08×** | 4.8% | #15 |
-| [Kashgar](../cities/kashgar.html) | 喀什市 | Xinjiang | 46.39 km² | 160.73 km² | +114.34 km² | **3.46×** | 4.23% | #24 |
-| [Xi'an](../cities/xian.html) | 西安市 | Shaanxi | 392.14 km² | 1354.03 km² | +961.89 km² | **3.45×** | 4.22% | #26 |
-| [Guilin](../cities/guilin.html) | 桂林市 | Guangxi | 76.14 km² | 254.1 km² | +177.96 km² | **3.34×** | 4.1% | #29 |
-| [Wuwei](../cities/wuwei.html) | 武威市 | Gansu | 40.73 km² | 108.55 km² | +67.82 km² | **2.67×** | 3.32% | #38 |
-| [Hotan](../cities/hotan.html) | 和田市 | Xinjiang | 19.4 km² | 46.43 km² | +27.03 km² | **2.39×** | 2.95% | #43 |
-| [Lanzhou](../cities/lanzhou.html) | 兰州市 | Gansu | 119.22 km² | 232.72 km² | +113.5 km² | **1.95×** | 2.25% | #45 |
-| [Urumqi](../cities/urumqi.html) | 乌鲁木齐市 | Xinjiang | 251.96 km² | 431.36 km² | +179.4 km² | **1.71×** | 1.81% | #46 |
-| [Korla](../cities/korla.html) | 库尔勒市 | Xinjiang | 102.96 km² | 156.53 km² | +53.57 km² | **1.52×** | 1.41% | #47 |
+| Pop Rank | City | Chinese | Province | Population | 1985 Area | 2015 Area | Net Gain | Multiplier | CAGR |
+|:---:|:---|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|
+| #3 | [Xi'an](../cities/xian.html) | 西安市 | Shaanxi | **12.95M** | 392.14 km² | 1354.03 km² | +961.89 km² | **3.45×** | 4.22% |
+| #10 | [Kunming](../cities/kunming.html) | 昆明市 | Yunnan | **8.46M** | 153.06 km² | 624.84 km² | +471.78 km² | **4.08×** | 4.8% |
+| #15 | [Guilin](../cities/guilin.html) | 桂林市 | Guangxi | **4.93M** | 76.14 km² | 254.1 km² | +177.96 km² | **3.34×** | 4.1% |
+| #20 | [Lanzhou](../cities/lanzhou.html) | 兰州市 | Gansu | **4.36M** | 119.22 km² | 232.72 km² | +113.5 km² | **1.95×** | 2.25% |
+| #22 | [Urumqi](../cities/urumqi.html) | 乌鲁木齐市 | Xinjiang | **4.05M** | 251.96 km² | 431.36 km² | +179.4 km² | **1.71×** | 1.81% |
+| #26 | [Hohhot](../cities/hohhot.html) | 呼和浩特市 | Inner Mongolia | **3.45M** | 68.88 km² | 349.27 km² | +280.39 km² | **5.07×** | 5.56% |
+| #35 | [Ulanqab](../cities/ulanqab.html) | 乌兰察布市 | Inner Mongolia | **1.71M** | 20.59 km² | 103.9 km² | +83.31 km² | **5.05×** | 5.54% |
+| #39 | [Wuwei](../cities/wuwei.html) | 武威市 | Gansu | **1.47M** | 40.73 km² | 108.55 km² | +67.82 km² | **2.67×** | 3.32% |
+| #44 | [Kashgar](../cities/kashgar.html) | 喀什市 | Xinjiang | **0.71M** | 46.39 km² | 160.73 km² | +114.34 km² | **3.46×** | 4.23% |
+| #45 | [Korla](../cities/korla.html) | 库尔勒市 | Xinjiang | **0.55M** | 102.96 km² | 156.53 km² | +53.57 km² | **1.52×** | 1.41% |
+| #46 | [Hotan](../cities/hotan.html) | 和田市 | Xinjiang | **0.5M** | 19.4 km² | 46.43 km² | +27.03 km² | **2.39×** | 2.95% |
 
 
 ---
@@ -34,52 +36,8 @@ format:
 
 
 ::: {.region-card}
-### [Hohhot (呼和浩特市)](../cities/hohhot.html)
-**Inner Mongolia Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">5.07×</strong> (#9 Nationally)
-
-- **1985 Footprint**: 68.88 km²
-- **2015 Footprint**: 349.27 km² (Net expansion: +280.39 km²)
-- **Compound Annual Growth Rate**: 5.56%/year
-
-[View Maps & Visual Suite →](../cities/hohhot.html)
-:::
-
-::: {.region-card}
-### [Ulanqab (乌兰察布市)](../cities/ulanqab.html)
-**Inner Mongolia Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">5.05×</strong> (#11 Nationally)
-
-- **1985 Footprint**: 20.59 km²
-- **2015 Footprint**: 103.9 km² (Net expansion: +83.31 km²)
-- **Compound Annual Growth Rate**: 5.54%/year
-
-[View Maps & Visual Suite →](../cities/ulanqab.html)
-:::
-
-::: {.region-card}
-### [Kunming (昆明市)](../cities/kunming.html)
-**Yunnan Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">4.08×</strong> (#15 Nationally)
-
-- **1985 Footprint**: 153.06 km²
-- **2015 Footprint**: 624.84 km² (Net expansion: +471.78 km²)
-- **Compound Annual Growth Rate**: 4.8%/year
-
-[View Maps & Visual Suite →](../cities/kunming.html)
-:::
-
-::: {.region-card}
-### [Kashgar (喀什市)](../cities/kashgar.html)
-**Xinjiang Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">3.46×</strong> (#24 Nationally)
-
-- **1985 Footprint**: 46.39 km²
-- **2015 Footprint**: 160.73 km² (Net expansion: +114.34 km²)
-- **Compound Annual Growth Rate**: 4.23%/year
-
-[View Maps & Visual Suite →](../cities/kashgar.html)
-:::
-
-::: {.region-card}
 ### [Xi'an (西安市)](../cities/xian.html)
-**Shaanxi Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">3.45×</strong> (#26 Nationally)
+**Shaanxi Province** · Population: <strong style="color: #38bdf8;">12.95 Million</strong> (Rank #3) · 30-Year Multiplier: <strong style="color: #f59e0b;">3.45×</strong>
 
 - **1985 Footprint**: 392.14 km²
 - **2015 Footprint**: 1354.03 km² (Net expansion: +961.89 km²)
@@ -89,8 +47,19 @@ format:
 :::
 
 ::: {.region-card}
+### [Kunming (昆明市)](../cities/kunming.html)
+**Yunnan Province** · Population: <strong style="color: #38bdf8;">8.46 Million</strong> (Rank #10) · 30-Year Multiplier: <strong style="color: #f59e0b;">4.08×</strong>
+
+- **1985 Footprint**: 153.06 km²
+- **2015 Footprint**: 624.84 km² (Net expansion: +471.78 km²)
+- **Compound Annual Growth Rate**: 4.8%/year
+
+[View Maps & Visual Suite →](../cities/kunming.html)
+:::
+
+::: {.region-card}
 ### [Guilin (桂林市)](../cities/guilin.html)
-**Guangxi Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">3.34×</strong> (#29 Nationally)
+**Guangxi Province** · Population: <strong style="color: #38bdf8;">4.93 Million</strong> (Rank #15) · 30-Year Multiplier: <strong style="color: #f59e0b;">3.34×</strong>
 
 - **1985 Footprint**: 76.14 km²
 - **2015 Footprint**: 254.1 km² (Net expansion: +177.96 km²)
@@ -100,30 +69,8 @@ format:
 :::
 
 ::: {.region-card}
-### [Wuwei (武威市)](../cities/wuwei.html)
-**Gansu Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">2.67×</strong> (#38 Nationally)
-
-- **1985 Footprint**: 40.73 km²
-- **2015 Footprint**: 108.55 km² (Net expansion: +67.82 km²)
-- **Compound Annual Growth Rate**: 3.32%/year
-
-[View Maps & Visual Suite →](../cities/wuwei.html)
-:::
-
-::: {.region-card}
-### [Hotan (和田市)](../cities/hotan.html)
-**Xinjiang Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">2.39×</strong> (#43 Nationally)
-
-- **1985 Footprint**: 19.4 km²
-- **2015 Footprint**: 46.43 km² (Net expansion: +27.03 km²)
-- **Compound Annual Growth Rate**: 2.95%/year
-
-[View Maps & Visual Suite →](../cities/hotan.html)
-:::
-
-::: {.region-card}
 ### [Lanzhou (兰州市)](../cities/lanzhou.html)
-**Gansu Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">1.95×</strong> (#45 Nationally)
+**Gansu Province** · Population: <strong style="color: #38bdf8;">4.36 Million</strong> (Rank #20) · 30-Year Multiplier: <strong style="color: #f59e0b;">1.95×</strong>
 
 - **1985 Footprint**: 119.22 km²
 - **2015 Footprint**: 232.72 km² (Net expansion: +113.5 km²)
@@ -134,7 +81,7 @@ format:
 
 ::: {.region-card}
 ### [Urumqi (乌鲁木齐市)](../cities/urumqi.html)
-**Xinjiang Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">1.71×</strong> (#46 Nationally)
+**Xinjiang Province** · Population: <strong style="color: #38bdf8;">4.05 Million</strong> (Rank #22) · 30-Year Multiplier: <strong style="color: #f59e0b;">1.71×</strong>
 
 - **1985 Footprint**: 251.96 km²
 - **2015 Footprint**: 431.36 km² (Net expansion: +179.4 km²)
@@ -144,12 +91,67 @@ format:
 :::
 
 ::: {.region-card}
+### [Hohhot (呼和浩特市)](../cities/hohhot.html)
+**Inner Mongolia Province** · Population: <strong style="color: #38bdf8;">3.45 Million</strong> (Rank #26) · 30-Year Multiplier: <strong style="color: #f59e0b;">5.07×</strong>
+
+- **1985 Footprint**: 68.88 km²
+- **2015 Footprint**: 349.27 km² (Net expansion: +280.39 km²)
+- **Compound Annual Growth Rate**: 5.56%/year
+
+[View Maps & Visual Suite →](../cities/hohhot.html)
+:::
+
+::: {.region-card}
+### [Ulanqab (乌兰察布市)](../cities/ulanqab.html)
+**Inner Mongolia Province** · Population: <strong style="color: #38bdf8;">1.71 Million</strong> (Rank #35) · 30-Year Multiplier: <strong style="color: #f59e0b;">5.05×</strong>
+
+- **1985 Footprint**: 20.59 km²
+- **2015 Footprint**: 103.9 km² (Net expansion: +83.31 km²)
+- **Compound Annual Growth Rate**: 5.54%/year
+
+[View Maps & Visual Suite →](../cities/ulanqab.html)
+:::
+
+::: {.region-card}
+### [Wuwei (武威市)](../cities/wuwei.html)
+**Gansu Province** · Population: <strong style="color: #38bdf8;">1.47 Million</strong> (Rank #39) · 30-Year Multiplier: <strong style="color: #f59e0b;">2.67×</strong>
+
+- **1985 Footprint**: 40.73 km²
+- **2015 Footprint**: 108.55 km² (Net expansion: +67.82 km²)
+- **Compound Annual Growth Rate**: 3.32%/year
+
+[View Maps & Visual Suite →](../cities/wuwei.html)
+:::
+
+::: {.region-card}
+### [Kashgar (喀什市)](../cities/kashgar.html)
+**Xinjiang Province** · Population: <strong style="color: #38bdf8;">0.71 Million</strong> (Rank #44) · 30-Year Multiplier: <strong style="color: #f59e0b;">3.46×</strong>
+
+- **1985 Footprint**: 46.39 km²
+- **2015 Footprint**: 160.73 km² (Net expansion: +114.34 km²)
+- **Compound Annual Growth Rate**: 4.23%/year
+
+[View Maps & Visual Suite →](../cities/kashgar.html)
+:::
+
+::: {.region-card}
 ### [Korla (库尔勒市)](../cities/korla.html)
-**Xinjiang Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">1.52×</strong> (#47 Nationally)
+**Xinjiang Province** · Population: <strong style="color: #38bdf8;">0.55 Million</strong> (Rank #45) · 30-Year Multiplier: <strong style="color: #f59e0b;">1.52×</strong>
 
 - **1985 Footprint**: 102.96 km²
 - **2015 Footprint**: 156.53 km² (Net expansion: +53.57 km²)
 - **Compound Annual Growth Rate**: 1.41%/year
 
 [View Maps & Visual Suite →](../cities/korla.html)
+:::
+
+::: {.region-card}
+### [Hotan (和田市)](../cities/hotan.html)
+**Xinjiang Province** · Population: <strong style="color: #38bdf8;">0.5 Million</strong> (Rank #46) · 30-Year Multiplier: <strong style="color: #f59e0b;">2.39×</strong>
+
+- **1985 Footprint**: 19.4 km²
+- **2015 Footprint**: 46.43 km² (Net expansion: +27.03 km²)
+- **Compound Annual Growth Rate**: 2.95%/year
+
+[View Maps & Visual Suite →](../cities/hotan.html)
 :::
