@@ -1,0 +1,95 @@
+---
+title: "Yangtze Basin & Central Metropolises"
+subtitle: "长江流域与华中特大城市 · 6 Cities"
+format:
+  html:
+    toc: true
+---
+
+::: {.hero-banner}
+<h1 style="color: #ffffff; margin-bottom: 0.5rem;">Yangtze Basin & Central Metropolises <span style="color: #f59e0b;">长江流域与华中特大城市</span></h1>
+<p style="color: #cbd5e1; font-size: 1.1rem;">Mega-hubs along the Yangtze River corridor and Sichuan Basin, experiencing massive inland infrastructure and concentric metropolitan sprawl.</p>
+:::
+
+## Regional Comparison Table
+
+| City | Chinese | Province | 1985 Area | 2015 Area | Net Gain | Multiplier | CAGR | National Rank |
+|:---|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|
+| [Chengdu](../cities/chengdu.html) | 成都市 | Sichuan | 208.06 km² | 1564.15 km² | +1356.09 km² | **7.52×** | 6.96% | #2 |
+| [Luzhou](../cities/luzhou.html) | 泸州市 | Sichuan | 22.7 km² | 140.03 km² | +117.33 km² | **6.17×** | 6.25% | #6 |
+| [Yichang](../cities/yichang.html) | 宜昌市 | Hubei | 45.63 km² | 178.59 km² | +132.96 km² | **3.91×** | 4.65% | #18 |
+| [Wuhan](../cities/wuhan.html) | 武汉市 | Hubei | 279.63 km² | 1077.9 km² | +798.27 km² | **3.85×** | 4.6% | #19 |
+| [Zhangjiajie](../cities/zhangjiajie.html) | 张家界市 | Hunan | 18.13 km² | 62.73 km² | +44.6 km² | **3.46×** | 4.22% | #25 |
+| [Nanchang](../cities/nanchang.html) | 南昌市 | Jiangxi | 178.79 km² | 608.57 km² | +429.78 km² | **3.4×** | 4.17% | #28 |
+
+
+---
+
+## Member City Profiles
+
+
+::: {.region-card}
+### [Chengdu (成都市)](../cities/chengdu.html)
+**Sichuan Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">7.52×</strong> (#2 Nationally)
+
+- **1985 Footprint**: 208.06 km²
+- **2015 Footprint**: 1564.15 km² (Net expansion: +1356.09 km²)
+- **Compound Annual Growth Rate**: 6.96%/year
+
+[View Maps & Visual Suite →](../cities/chengdu.html)
+:::
+
+::: {.region-card}
+### [Luzhou (泸州市)](../cities/luzhou.html)
+**Sichuan Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">6.17×</strong> (#6 Nationally)
+
+- **1985 Footprint**: 22.7 km²
+- **2015 Footprint**: 140.03 km² (Net expansion: +117.33 km²)
+- **Compound Annual Growth Rate**: 6.25%/year
+
+[View Maps & Visual Suite →](../cities/luzhou.html)
+:::
+
+::: {.region-card}
+### [Yichang (宜昌市)](../cities/yichang.html)
+**Hubei Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">3.91×</strong> (#18 Nationally)
+
+- **1985 Footprint**: 45.63 km²
+- **2015 Footprint**: 178.59 km² (Net expansion: +132.96 km²)
+- **Compound Annual Growth Rate**: 4.65%/year
+
+[View Maps & Visual Suite →](../cities/yichang.html)
+:::
+
+::: {.region-card}
+### [Wuhan (武汉市)](../cities/wuhan.html)
+**Hubei Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">3.85×</strong> (#19 Nationally)
+
+- **1985 Footprint**: 279.63 km²
+- **2015 Footprint**: 1077.9 km² (Net expansion: +798.27 km²)
+- **Compound Annual Growth Rate**: 4.6%/year
+
+[View Maps & Visual Suite →](../cities/wuhan.html)
+:::
+
+::: {.region-card}
+### [Zhangjiajie (张家界市)](../cities/zhangjiajie.html)
+**Hunan Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">3.46×</strong> (#25 Nationally)
+
+- **1985 Footprint**: 18.13 km²
+- **2015 Footprint**: 62.73 km² (Net expansion: +44.6 km²)
+- **Compound Annual Growth Rate**: 4.22%/year
+
+[View Maps & Visual Suite →](../cities/zhangjiajie.html)
+:::
+
+::: {.region-card}
+### [Nanchang (南昌市)](../cities/nanchang.html)
+**Jiangxi Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">3.4×</strong> (#28 Nationally)
+
+- **1985 Footprint**: 178.79 km²
+- **2015 Footprint**: 608.57 km² (Net expansion: +429.78 km²)
+- **Compound Annual Growth Rate**: 4.17%/year
+
+[View Maps & Visual Suite →](../cities/nanchang.html)
+:::

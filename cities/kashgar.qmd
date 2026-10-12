@@ -1,0 +1,142 @@
+---
+title: "Kashgar (喀什市)"
+subtitle: "Kāshí · Xinjiang (新疆维吾尔自治区) · Western Frontier & Steppe"
+format:
+  html:
+    toc: true
+---
+
+::: {.hero-banner}
+<div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+  <div>
+    <h1 style="color: #ffffff; margin-bottom: 0.25rem;">Kashgar <span style="color: #f59e0b; font-weight: normal;">喀什市</span></h1>
+    <p style="color: #94a3b8; font-size: 1.1rem; margin: 0;">Kāshí · Xinjiang Province · National Rank: <strong>#24</strong> of 47</p>
+  </div>
+  <div style="text-align: right;">
+    <span class="metric-badge badge-gold" style="font-size: 1.1rem; padding: 0.5rem 1rem;">3.46× Multiplier</span>
+  </div>
+</div>
+:::
+
+## Key Expansion Indicators (1985–2015)
+
+::: {.metric-grid}
+::: {.metric-card}
+::: {.metric-label}
+1985 Baseline Area
+:::
+::: {.metric-val}
+46.39 <span style="font-size: 1rem; color: #94a3b8;">km²</span>
+:::
+:::
+
+::: {.metric-card}
+::: {.metric-label}
+2015 Urban Footprint
+:::
+::: {.metric-val}
+160.73 <span style="font-size: 1rem; color: #94a3b8;">km²</span>
+:::
+:::
+
+::: {.metric-card}
+::: {.metric-label}
+Net Surface Gain
+:::
+::: {.metric-val}
++114.34 <span style="font-size: 1rem; color: #94a3b8;">km²</span>
+:::
+:::
+
+::: {.metric-card}
+::: {.metric-label}
+Growth Multiple
+:::
+::: {.metric-val}
+3.46×
+:::
+:::
+
+::: {.metric-card}
+::: {.metric-label}
+Annual Growth (CAGR)
+:::
+::: {.metric-val}
+4.23%
+:::
+:::
+:::
+
+---
+
+## 1. The Urban Growth Rings (1985–2015)
+
+The primary cartographic poster below visualizes the physical expansion rings of **Kashgar**, partitioned into four milestone eras:
+
+- <span style="color: #F59E0B; font-weight: bold;">● Pre-1985</span>: Historic core and initial post-1949 development.
+- <span style="color: #EF4444; font-weight: bold;">● 1986–1995</span>: Early reform, opening up, and Deng Xiaoping's southern tour.
+- <span style="color: #06B6D4; font-weight: bold;">● 1996–2005</span>: WTO entry, export boom, and new industrial development zones.
+- <span style="color: #10B981; font-weight: bold;">● 2006–2015</span>: High-speed rail expansion, modern new towns (*xinqu*), and peri-urban consolidation.
+
+::: {.map-container}
+!['The Urban Growth Rings: Kashgar'](../output/maps/kashgar_hero.png)
+:::
+
+---
+
+## 2. Small Multiples: 4-Epoch Footprint Evolution
+
+Comparative uniform-scale footprint maps isolating the cumulative urbanized surface across the four key epochs:
+
+::: {.map-container}
+!['Small Multiples Footprint Progression: Kashgar'](../output/maps/kashgar_small_multiples.png)
+:::
+
+---
+
+## 3. Geographical Context & Growth Trajectory
+
+:::: {.columns}
+
+::: {.column width="48%"}
+### National Location
+::: {.map-container}
+!['Regional Inset: Kashgar'](../output/maps/kashgar_context.png)
+:::
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+### 30-Year Expansion Curve
+::: {.map-container}
+!['Expansion Trajectory: Kashgar'](../output/plots/kashgar_trajectory.png)
+:::
+:::
+
+::::
+
+---
+
+## 4. 5-Year Milestone Chronology
+
+The table below catalogs the cumulative built-up surface area of Kashgar at 5-year intervals:
+
+| Milestone Year | Urban Footprint (km²) | Growth vs. 1985 Baseline | Share of 2015 Footprint |
+|:---:|:---:|:---:|:---:|
+| **1985** | 46.39 km² | 1.00× (Baseline) | 28.9% |
+| **1990** | 46.39 km² | 1.0× | 28.9% |
+| **1995** | 57.11 km² | 1.23× | 35.5% |
+| **2000** | 83.19 km² | 1.79× | 51.8% |
+| **2005** | 103.45 km² | 2.23× | 64.4% |
+| **2010** | 133.71 km² | 2.88× | 83.2% |
+| **2015** | 160.73 km² | **3.46×** | 100.0% |
+
+---
+
+<div style="display: flex; justify-content: space-between; margin-top: 2rem; padding: 1rem; background: #111827; border-radius: 8px;">
+  <a href="zibo.html" style="color: #38bdf8; text-decoration: none;">← Previous: Zibo (淄博市)</a>
+  <a href="../regions/western_frontier.html" style="color: #f59e0b; text-decoration: none;">↑ Western Frontier & Steppe</a>
+  <a href="zhangjiajie.html" style="color: #38bdf8; text-decoration: none;">Next: Zhangjiajie (张家界市) →</a>
+</div>

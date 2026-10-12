@@ -1,0 +1,142 @@
+---
+title: "Taishan (台山市)"
+subtitle: "Táishān · Guangdong (广东省) · Pearl River & South Coast"
+format:
+  html:
+    toc: true
+---
+
+::: {.hero-banner}
+<div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+  <div>
+    <h1 style="color: #ffffff; margin-bottom: 0.25rem;">Taishan <span style="color: #f59e0b; font-weight: normal;">台山市</span></h1>
+    <p style="color: #94a3b8; font-size: 1.1rem; margin: 0;">Táishān · Guangdong Province · National Rank: <strong>#20</strong> of 47</p>
+  </div>
+  <div style="text-align: right;">
+    <span class="metric-badge badge-gold" style="font-size: 1.1rem; padding: 0.5rem 1rem;">3.71× Multiplier</span>
+  </div>
+</div>
+:::
+
+## Key Expansion Indicators (1985–2015)
+
+::: {.metric-grid}
+::: {.metric-card}
+::: {.metric-label}
+1985 Baseline Area
+:::
+::: {.metric-val}
+30.28 <span style="font-size: 1rem; color: #94a3b8;">km²</span>
+:::
+:::
+
+::: {.metric-card}
+::: {.metric-label}
+2015 Urban Footprint
+:::
+::: {.metric-val}
+112.33 <span style="font-size: 1rem; color: #94a3b8;">km²</span>
+:::
+:::
+
+::: {.metric-card}
+::: {.metric-label}
+Net Surface Gain
+:::
+::: {.metric-val}
++82.05 <span style="font-size: 1rem; color: #94a3b8;">km²</span>
+:::
+:::
+
+::: {.metric-card}
+::: {.metric-label}
+Growth Multiple
+:::
+::: {.metric-val}
+3.71×
+:::
+:::
+
+::: {.metric-card}
+::: {.metric-label}
+Annual Growth (CAGR)
+:::
+::: {.metric-val}
+4.47%
+:::
+:::
+:::
+
+---
+
+## 1. The Urban Growth Rings (1985–2015)
+
+The primary cartographic poster below visualizes the physical expansion rings of **Taishan**, partitioned into four milestone eras:
+
+- <span style="color: #F59E0B; font-weight: bold;">● Pre-1985</span>: Historic core and initial post-1949 development.
+- <span style="color: #EF4444; font-weight: bold;">● 1986–1995</span>: Early reform, opening up, and Deng Xiaoping's southern tour.
+- <span style="color: #06B6D4; font-weight: bold;">● 1996–2005</span>: WTO entry, export boom, and new industrial development zones.
+- <span style="color: #10B981; font-weight: bold;">● 2006–2015</span>: High-speed rail expansion, modern new towns (*xinqu*), and peri-urban consolidation.
+
+::: {.map-container}
+!['The Urban Growth Rings: Taishan'](../output/maps/taishan_hero.png)
+:::
+
+---
+
+## 2. Small Multiples: 4-Epoch Footprint Evolution
+
+Comparative uniform-scale footprint maps isolating the cumulative urbanized surface across the four key epochs:
+
+::: {.map-container}
+!['Small Multiples Footprint Progression: Taishan'](../output/maps/taishan_small_multiples.png)
+:::
+
+---
+
+## 3. Geographical Context & Growth Trajectory
+
+:::: {.columns}
+
+::: {.column width="48%"}
+### National Location
+::: {.map-container}
+!['Regional Inset: Taishan'](../output/maps/taishan_context.png)
+:::
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+### 30-Year Expansion Curve
+::: {.map-container}
+!['Expansion Trajectory: Taishan'](../output/plots/taishan_trajectory.png)
+:::
+:::
+
+::::
+
+---
+
+## 4. 5-Year Milestone Chronology
+
+The table below catalogs the cumulative built-up surface area of Taishan at 5-year intervals:
+
+| Milestone Year | Urban Footprint (km²) | Growth vs. 1985 Baseline | Share of 2015 Footprint |
+|:---:|:---:|:---:|:---:|
+| **1985** | 30.28 km² | 1.00× (Baseline) | 27.0% |
+| **1990** | 40.64 km² | 1.34× | 36.2% |
+| **1995** | 56.45 km² | 1.86× | 50.3% |
+| **2000** | 67.59 km² | 2.23× | 60.2% |
+| **2005** | 84.86 km² | 2.8× | 75.5% |
+| **2010** | 100.67 km² | 3.32× | 89.6% |
+| **2015** | 112.33 km² | **3.71×** | 100.0% |
+
+---
+
+<div style="display: flex; justify-content: space-between; margin-top: 2rem; padding: 1rem; background: #111827; border-radius: 8px;">
+  <a href="wuhan.html" style="color: #38bdf8; text-decoration: none;">← Previous: Wuhan (武汉市)</a>
+  <a href="../regions/coastal_south.html" style="color: #f59e0b; text-decoration: none;">↑ Pearl River & South Coast</a>
+  <a href="xiamen.html" style="color: #38bdf8; text-decoration: none;">Next: Xiamen (厦门市) →</a>
+</div>

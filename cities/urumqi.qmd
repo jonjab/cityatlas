@@ -1,0 +1,142 @@
+---
+title: "Urumqi (乌鲁木齐市)"
+subtitle: "Wūlǔmùqí · Xinjiang (新疆维吾尔自治区) · Western Frontier & Steppe"
+format:
+  html:
+    toc: true
+---
+
+::: {.hero-banner}
+<div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+  <div>
+    <h1 style="color: #ffffff; margin-bottom: 0.25rem;">Urumqi <span style="color: #f59e0b; font-weight: normal;">乌鲁木齐市</span></h1>
+    <p style="color: #94a3b8; font-size: 1.1rem; margin: 0;">Wūlǔmùqí · Xinjiang Province · National Rank: <strong>#46</strong> of 47</p>
+  </div>
+  <div style="text-align: right;">
+    <span class="metric-badge badge-gold" style="font-size: 1.1rem; padding: 0.5rem 1rem;">1.71× Multiplier</span>
+  </div>
+</div>
+:::
+
+## Key Expansion Indicators (1985–2015)
+
+::: {.metric-grid}
+::: {.metric-card}
+::: {.metric-label}
+1985 Baseline Area
+:::
+::: {.metric-val}
+251.96 <span style="font-size: 1rem; color: #94a3b8;">km²</span>
+:::
+:::
+
+::: {.metric-card}
+::: {.metric-label}
+2015 Urban Footprint
+:::
+::: {.metric-val}
+431.36 <span style="font-size: 1rem; color: #94a3b8;">km²</span>
+:::
+:::
+
+::: {.metric-card}
+::: {.metric-label}
+Net Surface Gain
+:::
+::: {.metric-val}
++179.4 <span style="font-size: 1rem; color: #94a3b8;">km²</span>
+:::
+:::
+
+::: {.metric-card}
+::: {.metric-label}
+Growth Multiple
+:::
+::: {.metric-val}
+1.71×
+:::
+:::
+
+::: {.metric-card}
+::: {.metric-label}
+Annual Growth (CAGR)
+:::
+::: {.metric-val}
+1.81%
+:::
+:::
+:::
+
+---
+
+## 1. The Urban Growth Rings (1985–2015)
+
+The primary cartographic poster below visualizes the physical expansion rings of **Urumqi**, partitioned into four milestone eras:
+
+- <span style="color: #F59E0B; font-weight: bold;">● Pre-1985</span>: Historic core and initial post-1949 development.
+- <span style="color: #EF4444; font-weight: bold;">● 1986–1995</span>: Early reform, opening up, and Deng Xiaoping's southern tour.
+- <span style="color: #06B6D4; font-weight: bold;">● 1996–2005</span>: WTO entry, export boom, and new industrial development zones.
+- <span style="color: #10B981; font-weight: bold;">● 2006–2015</span>: High-speed rail expansion, modern new towns (*xinqu*), and peri-urban consolidation.
+
+::: {.map-container}
+!['The Urban Growth Rings: Urumqi'](../output/maps/urumqi_hero.png)
+:::
+
+---
+
+## 2. Small Multiples: 4-Epoch Footprint Evolution
+
+Comparative uniform-scale footprint maps isolating the cumulative urbanized surface across the four key epochs:
+
+::: {.map-container}
+!['Small Multiples Footprint Progression: Urumqi'](../output/maps/urumqi_small_multiples.png)
+:::
+
+---
+
+## 3. Geographical Context & Growth Trajectory
+
+:::: {.columns}
+
+::: {.column width="48%"}
+### National Location
+::: {.map-container}
+!['Regional Inset: Urumqi'](../output/maps/urumqi_context.png)
+:::
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+### 30-Year Expansion Curve
+::: {.map-container}
+!['Expansion Trajectory: Urumqi'](../output/plots/urumqi_trajectory.png)
+:::
+:::
+
+::::
+
+---
+
+## 4. 5-Year Milestone Chronology
+
+The table below catalogs the cumulative built-up surface area of Urumqi at 5-year intervals:
+
+| Milestone Year | Urban Footprint (km²) | Growth vs. 1985 Baseline | Share of 2015 Footprint |
+|:---:|:---:|:---:|:---:|
+| **1985** | 251.96 km² | 1.00× (Baseline) | 58.4% |
+| **1990** | 277.71 km² | 1.1× | 64.4% |
+| **1995** | 296.14 km² | 1.18× | 68.7% |
+| **2000** | 328.36 km² | 1.3× | 76.1% |
+| **2005** | 362.9 km² | 1.44× | 84.1% |
+| **2010** | 403.7 km² | 1.6× | 93.6% |
+| **2015** | 431.36 km² | **1.71×** | 100.0% |
+
+---
+
+<div style="display: flex; justify-content: space-between; margin-top: 2rem; padding: 1rem; background: #111827; border-radius: 8px;">
+  <a href="lanzhou.html" style="color: #38bdf8; text-decoration: none;">← Previous: Lanzhou (兰州市)</a>
+  <a href="../regions/western_frontier.html" style="color: #f59e0b; text-decoration: none;">↑ Western Frontier & Steppe</a>
+  <a href="korla.html" style="color: #38bdf8; text-decoration: none;">Next: Korla (库尔勒市) →</a>
+</div>

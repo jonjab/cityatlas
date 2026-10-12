@@ -1,0 +1,142 @@
+---
+title: "Dandong (丹东市)"
+subtitle: "Dāndōng · Liaoning (辽宁省) · Northeast Rust Belt"
+format:
+  html:
+    toc: true
+---
+
+::: {.hero-banner}
+<div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+  <div>
+    <h1 style="color: #ffffff; margin-bottom: 0.25rem;">Dandong <span style="color: #f59e0b; font-weight: normal;">丹东市</span></h1>
+    <p style="color: #94a3b8; font-size: 1.1rem; margin: 0;">Dāndōng · Liaoning Province · National Rank: <strong>#32</strong> of 47</p>
+  </div>
+  <div style="text-align: right;">
+    <span class="metric-badge badge-gold" style="font-size: 1.1rem; padding: 0.5rem 1rem;">3.12× Multiplier</span>
+  </div>
+</div>
+:::
+
+## Key Expansion Indicators (1985–2015)
+
+::: {.metric-grid}
+::: {.metric-card}
+::: {.metric-label}
+1985 Baseline Area
+:::
+::: {.metric-val}
+45.2 <span style="font-size: 1rem; color: #94a3b8;">km²</span>
+:::
+:::
+
+::: {.metric-card}
+::: {.metric-label}
+2015 Urban Footprint
+:::
+::: {.metric-val}
+140.92 <span style="font-size: 1rem; color: #94a3b8;">km²</span>
+:::
+:::
+
+::: {.metric-card}
+::: {.metric-label}
+Net Surface Gain
+:::
+::: {.metric-val}
++95.72 <span style="font-size: 1rem; color: #94a3b8;">km²</span>
+:::
+:::
+
+::: {.metric-card}
+::: {.metric-label}
+Growth Multiple
+:::
+::: {.metric-val}
+3.12×
+:::
+:::
+
+::: {.metric-card}
+::: {.metric-label}
+Annual Growth (CAGR)
+:::
+::: {.metric-val}
+3.86%
+:::
+:::
+:::
+
+---
+
+## 1. The Urban Growth Rings (1985–2015)
+
+The primary cartographic poster below visualizes the physical expansion rings of **Dandong**, partitioned into four milestone eras:
+
+- <span style="color: #F59E0B; font-weight: bold;">● Pre-1985</span>: Historic core and initial post-1949 development.
+- <span style="color: #EF4444; font-weight: bold;">● 1986–1995</span>: Early reform, opening up, and Deng Xiaoping's southern tour.
+- <span style="color: #06B6D4; font-weight: bold;">● 1996–2005</span>: WTO entry, export boom, and new industrial development zones.
+- <span style="color: #10B981; font-weight: bold;">● 2006–2015</span>: High-speed rail expansion, modern new towns (*xinqu*), and peri-urban consolidation.
+
+::: {.map-container}
+!['The Urban Growth Rings: Dandong'](../output/maps/dandong_hero.png)
+:::
+
+---
+
+## 2. Small Multiples: 4-Epoch Footprint Evolution
+
+Comparative uniform-scale footprint maps isolating the cumulative urbanized surface across the four key epochs:
+
+::: {.map-container}
+!['Small Multiples Footprint Progression: Dandong'](../output/maps/dandong_small_multiples.png)
+:::
+
+---
+
+## 3. Geographical Context & Growth Trajectory
+
+:::: {.columns}
+
+::: {.column width="48%"}
+### National Location
+::: {.map-container}
+!['Regional Inset: Dandong'](../output/maps/dandong_context.png)
+:::
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+### 30-Year Expansion Curve
+::: {.map-container}
+!['Expansion Trajectory: Dandong'](../output/plots/dandong_trajectory.png)
+:::
+:::
+
+::::
+
+---
+
+## 4. 5-Year Milestone Chronology
+
+The table below catalogs the cumulative built-up surface area of Dandong at 5-year intervals:
+
+| Milestone Year | Urban Footprint (km²) | Growth vs. 1985 Baseline | Share of 2015 Footprint |
+|:---:|:---:|:---:|:---:|
+| **1985** | 45.2 km² | 1.00× (Baseline) | 32.1% |
+| **1990** | 58.69 km² | 1.3× | 41.6% |
+| **1995** | 67.18 km² | 1.49× | 47.7% |
+| **2000** | 79.24 km² | 1.75× | 56.2% |
+| **2005** | 94.13 km² | 2.08× | 66.8% |
+| **2010** | 117.71 km² | 2.6× | 83.5% |
+| **2015** | 140.92 km² | **3.12×** | 100.0% |
+
+---
+
+<div style="display: flex; justify-content: space-between; margin-top: 2rem; padding: 1rem; background: #111827; border-radius: 8px;">
+  <a href="jinan.html" style="color: #38bdf8; text-decoration: none;">← Previous: Jinan (济南市)</a>
+  <a href="../regions/northeast.html" style="color: #f59e0b; text-decoration: none;">↑ Northeast Rust Belt</a>
+  <a href="tieling.html" style="color: #38bdf8; text-decoration: none;">Next: Tieling (铁岭市) →</a>
+</div>

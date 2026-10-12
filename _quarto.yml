@@ -1,0 +1,50 @@
+project:
+  type: website
+  output-dir: docs
+  resources:
+    - "output/**"
+    - "data/processed/*.json"
+    - "data/processed/*.csv"
+
+website:
+  title: "China Urban Growth Ratlas"
+  description: "A Geospatial Exploration of 30 Years of Urban Expansion (1985–2015) across 47 Chinese Cities"
+  site-url: "https://yourusername.github.io/china-ratlas"
+  navbar:
+    background: "#0B0F19"
+    foreground: "#E2E8F0"
+    left:
+      - href: index.qmd
+        text: "National Atlas"
+      - text: "Regions"
+        menu:
+          - href: regions/coastal_south.qmd
+            text: "Pearl River & South Coast"
+          - href: regions/yangtze_basin.qmd
+            text: "Yangtze Basin & Central"
+          - href: regions/yangtze_delta.qmd
+            text: "Yangtze Delta & East"
+          - href: regions/northern_plains.qmd
+            text: "Yellow River & North Plain"
+          - href: regions/northeast.qmd
+            text: "Northeast Rust Belt"
+          - href: regions/western_frontier.qmd
+            text: "Western Frontier & Steppe"
+      - href: cities.qmd
+        text: "All 47 Cities"
+      - href: methodology.qmd
+        text: "Methodology & Data"
+    right:
+      - icon: github
+        href: https://github.com
+        aria-label: GitHub
+
+format:
+  html:
+    theme: darkly
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    smooth-scroll: true
+    code-fold: true
+    mainfont: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Droid Sans Fallback', sans-serif"

@@ -1,0 +1,142 @@
+---
+title: "Shenzhen (深圳市)"
+subtitle: "Shēnzhèn · Guangdong (广东省) · Pearl River & South Coast"
+format:
+  html:
+    toc: true
+---
+
+::: {.hero-banner}
+<div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+  <div>
+    <h1 style="color: #ffffff; margin-bottom: 0.25rem;">Shenzhen <span style="color: #f59e0b; font-weight: normal;">深圳市</span></h1>
+    <p style="color: #94a3b8; font-size: 1.1rem; margin: 0;">Shēnzhèn · Guangdong Province · National Rank: <strong>#5</strong> of 47</p>
+  </div>
+  <div style="text-align: right;">
+    <span class="metric-badge badge-gold" style="font-size: 1.1rem; padding: 0.5rem 1rem;">6.33× Multiplier</span>
+  </div>
+</div>
+:::
+
+## Key Expansion Indicators (1985–2015)
+
+::: {.metric-grid}
+::: {.metric-card}
+::: {.metric-label}
+1985 Baseline Area
+:::
+::: {.metric-val}
+168.35 <span style="font-size: 1rem; color: #94a3b8;">km²</span>
+:::
+:::
+
+::: {.metric-card}
+::: {.metric-label}
+2015 Urban Footprint
+:::
+::: {.metric-val}
+1064.98 <span style="font-size: 1rem; color: #94a3b8;">km²</span>
+:::
+:::
+
+::: {.metric-card}
+::: {.metric-label}
+Net Surface Gain
+:::
+::: {.metric-val}
++896.63 <span style="font-size: 1rem; color: #94a3b8;">km²</span>
+:::
+:::
+
+::: {.metric-card}
+::: {.metric-label}
+Growth Multiple
+:::
+::: {.metric-val}
+6.33×
+:::
+:::
+
+::: {.metric-card}
+::: {.metric-label}
+Annual Growth (CAGR)
+:::
+::: {.metric-val}
+6.34%
+:::
+:::
+:::
+
+---
+
+## 1. The Urban Growth Rings (1985–2015)
+
+The primary cartographic poster below visualizes the physical expansion rings of **Shenzhen**, partitioned into four milestone eras:
+
+- <span style="color: #F59E0B; font-weight: bold;">● Pre-1985</span>: Historic core and initial post-1949 development.
+- <span style="color: #EF4444; font-weight: bold;">● 1986–1995</span>: Early reform, opening up, and Deng Xiaoping's southern tour.
+- <span style="color: #06B6D4; font-weight: bold;">● 1996–2005</span>: WTO entry, export boom, and new industrial development zones.
+- <span style="color: #10B981; font-weight: bold;">● 2006–2015</span>: High-speed rail expansion, modern new towns (*xinqu*), and peri-urban consolidation.
+
+::: {.map-container}
+!['The Urban Growth Rings: Shenzhen'](../output/maps/shenzhen_hero.png)
+:::
+
+---
+
+## 2. Small Multiples: 4-Epoch Footprint Evolution
+
+Comparative uniform-scale footprint maps isolating the cumulative urbanized surface across the four key epochs:
+
+::: {.map-container}
+!['Small Multiples Footprint Progression: Shenzhen'](../output/maps/shenzhen_small_multiples.png)
+:::
+
+---
+
+## 3. Geographical Context & Growth Trajectory
+
+:::: {.columns}
+
+::: {.column width="48%"}
+### National Location
+::: {.map-container}
+!['Regional Inset: Shenzhen'](../output/maps/shenzhen_context.png)
+:::
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+### 30-Year Expansion Curve
+::: {.map-container}
+!['Expansion Trajectory: Shenzhen'](../output/plots/shenzhen_trajectory.png)
+:::
+:::
+
+::::
+
+---
+
+## 4. 5-Year Milestone Chronology
+
+The table below catalogs the cumulative built-up surface area of Shenzhen at 5-year intervals:
+
+| Milestone Year | Urban Footprint (km²) | Growth vs. 1985 Baseline | Share of 2015 Footprint |
+|:---:|:---:|:---:|:---:|
+| **1985** | 168.35 km² | 1.00× (Baseline) | 15.8% |
+| **1990** | 329.57 km² | 1.96× | 30.9% |
+| **1995** | 631.26 km² | 3.75× | 59.3% |
+| **2000** | 789.09 km² | 4.69× | 74.1% |
+| **2005** | 938.38 km² | 5.57× | 88.1% |
+| **2010** | 1020.12 km² | 6.06× | 95.8% |
+| **2015** | 1064.98 km² | **6.33×** | 100.0% |
+
+---
+
+<div style="display: flex; justify-content: space-between; margin-top: 2rem; padding: 1rem; background: #111827; border-radius: 8px;">
+  <a href="zhuhai.html" style="color: #38bdf8; text-decoration: none;">← Previous: Zhuhai (珠海市)</a>
+  <a href="../regions/coastal_south.html" style="color: #f59e0b; text-decoration: none;">↑ Pearl River & South Coast</a>
+  <a href="luzhou.html" style="color: #38bdf8; text-decoration: none;">Next: Luzhou (泸州市) →</a>
+</div>

@@ -1,0 +1,14 @@
+# .gitignore
+data/raw/*.zip
+data/raw/gadm41_CHN_2.json
+data/raw/gadm41_CHN_1.json
+data/raw/gadm41_CHN_0.json
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.quarto/
+*.tar.gz
+
+/.quarto/
+**/*.quarto_ipynb

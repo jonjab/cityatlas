@@ -1,0 +1,48 @@
+id,name_en,name_zh,pinyin,province_en,province_zh,region,lat,lon,radius_km,bbox,wsf_tiles
+baicheng,Baicheng,白城市,Báichéng,Jilin,吉林省,Northeast Rust Belt,45.619,122.841,15,"122.6478,45.4839,123.0342,45.7541",WSFevolution_v1_122_44
+baoding,Baoding,保定市,Bǎodìng,Hebei,河北省,Yellow River & North Plain,38.8671,115.4845,20,"115.2531,38.6869,115.7159,39.0473",WSFevolution_v1_114_38
+binzhou,Binzhou,滨州市,Bīnzhōu,Shandong,山东省,Yellow River & North Plain,37.3835,118.016,18,"117.8119,37.2213,118.2201,37.5457",WSFevolution_v1_116_36;WSFevolution_v1_118_36
+chengdu,Chengdu,成都市,Chéngdū,Sichuan,四川省,Yangtze Basin & Central,30.6586,104.0648,30,"103.7506,30.3883,104.379,30.9289",WSFevolution_v1_102_30;WSFevolution_v1_104_30
+dandong,Dandong,丹东市,Dāndōng,Liaoning,辽宁省,Northeast Rust Belt,40.1299,124.3947,18,"124.1826,39.9677,124.6068,40.2921",WSFevolution_v1_124_38;WSFevolution_v1_124_40
+datong,Datong,大同市,Dàtóng,Shanxi,山西省,Yellow River & North Plain,40.0768,113.3001,18,"113.0882,39.9146,113.512,40.239",WSFevolution_v1_112_38;WSFevolution_v1_112_40
+dongying,Dongying,东营市,Dōngyíng,Shandong,山东省,Yellow River & North Plain,37.4338,118.6747,20,"118.4478,37.2536,118.9016,37.614",WSFevolution_v1_118_36
+fuxin,Fuxin,阜新市,Fùxīn,Liaoning,辽宁省,Northeast Rust Belt,42.0216,121.6704,16,"121.4764,41.8775,121.8644,42.1657",WSFevolution_v1_120_40;WSFevolution_v1_120_42
+guilin,Guilin,桂林市,Guìlín,Guangxi,广西壮族自治区,South & Southwest,25.2736,110.2902,18,"110.1109,25.1114,110.4695,25.4358",WSFevolution_v1_110_24
+haikou,Haikou,海口市,Hǎikǒu,Hainan,海南省,Pearl River & South Coast,20.044,110.3293,20,"110.1375,19.8638,110.5211,20.2242",WSFevolution_v1_110_18;WSFevolution_v1_110_20
+harbin,Harbin,哈尔滨市,Hā'ěrbīn,Heilongjiang,黑龙江省,Northeast Rust Belt,45.8038,126.5349,28,"126.173,45.5515,126.8968,46.0561",WSFevolution_v1_126_44;WSFevolution_v1_126_46
+heyuan,Heyuan,河源市,Héyuán,Guangdong,广东省,Pearl River & South Coast,23.7438,114.6978,16,"114.5403,23.5997,114.8553,23.8879",WSFevolution_v1_114_22
+hohhot,Hohhot,呼和浩特市,Hūhéhàotè,Inner Mongolia,内蒙古自治区,Western Frontier & Steppe,40.8415,111.7519,20,"111.5137,40.6613,111.9901,41.0217",WSFevolution_v1_110_40
+hotan,Hotan,和田市,Hétián,Xinjiang,新疆维吾尔自治区,Western Frontier & Steppe,37.1107,79.9135,14,"79.7553,36.9846,80.0717,37.2368",WSFevolution_v1_78_36;WSFevolution_v1_80_36
+huangshan,Huangshan,黄山市,Huángshān,Anhui,安徽省,Yangtze Delta & East,29.7147,118.3375,15,"118.1819,29.5796,118.4931,29.8498",WSFevolution_v1_118_28
+hunchun,Hunchun,珲春市,Húnchūn,Jilin,吉林省,Northeast Rust Belt,42.8628,130.3653,12,"130.2178,42.7547,130.5128,42.9709",WSFevolution_v1_130_42
+jinan,Jinan,济南市,Jǐnán,Shandong,山东省,Yellow River & North Plain,36.6512,117.1201,25,"116.8394,36.426,117.4008,36.8764",WSFevolution_v1_116_36
+jining,Jining,济宁市,Jǐnìng,Shandong,山东省,Yellow River & North Plain,35.4154,116.5872,20,"116.3661,35.2352,116.8083,35.5956",WSFevolution_v1_116_34
+kashgar,Kashgar,喀什市,Kāshí,Xinjiang,新疆维吾尔自治区,Western Frontier & Steppe,39.4704,75.9897,16,"75.803,39.3263,76.1764,39.6145",WSFevolution_v1_74_38;WSFevolution_v1_76_38
+korla,Korla,库尔勒市,Kù'ěrlè,Xinjiang,新疆维吾尔自治区,Western Frontier & Steppe,41.7259,86.1746,16,"85.9815,41.5818,86.3677,41.87",WSFevolution_v1_84_40;WSFevolution_v1_86_40
+kunming,Kunming,昆明市,Kūnmíng,Yunnan,云南省,South & Southwest,24.8797,102.8332,25,"102.5849,24.6545,103.0815,25.1049",WSFevolution_v1_102_24
+lanzhou,Lanzhou,兰州市,Lánzhōu,Gansu,甘肃省,Western Frontier & Steppe,36.0611,103.8343,22,"103.5891,35.8629,104.0795,36.2593",WSFevolution_v1_102_34;WSFevolution_v1_102_36;WSFevolution_v1_104_34;WSFevolution_v1_104_36
+lianyungang,Lianyungang,连云港市,Liányúngǎng,Jiangsu,江苏省,Yangtze Delta & East,34.5967,119.2216,22,"118.9808,34.3985,119.4624,34.7949",WSFevolution_v1_118_34
+liaocheng,Liaocheng,聊城市,Liáochéng,Shandong,山东省,Yellow River & North Plain,36.457,115.9854,18,"115.7838,36.2948,116.187,36.6192",WSFevolution_v1_114_36;WSFevolution_v1_116_36
+liaoyuan,Liaoyuan,辽源市,Liáoyuán,Jilin,吉林省,Northeast Rust Belt,42.9027,125.1432,15,"124.9587,42.7676,125.3277,43.0378",WSFevolution_v1_124_42
+luzhou,Luzhou,泸州市,Lúzhōu,Sichuan,四川省,Yangtze Basin & Central,28.8719,105.4423,18,"105.2571,28.7097,105.6275,29.0341",WSFevolution_v1_104_28
+nanchang,Nanchang,南昌市,Nánchāng,Jiangxi,江西省,Yangtze Basin & Central,28.6829,115.8582,24,"115.6117,28.4667,116.1047,28.8991",WSFevolution_v1_114_28;WSFevolution_v1_116_28
+panjin,Panjin,盘锦市,Pánjǐn,Liaoning,辽宁省,Northeast Rust Belt,41.1244,122.0707,18,"121.8554,40.9622,122.286,41.2866",WSFevolution_v1_120_40;WSFevolution_v1_122_40
+shenzhen,Shenzhen,深圳市,Shēnzhèn,Guangdong,广东省,Pearl River & South Coast,22.5431,114.0579,28,"113.7848,22.2908,114.331,22.7954",WSFevolution_v1_112_22;WSFevolution_v1_114_22
+shijiazhuang,Shijiazhuang,石家庄市,Shíjiāzhuāng,Hebei,河北省,Yellow River & North Plain,38.0428,114.5149,25,"114.2289,37.8176,114.8009,38.268",WSFevolution_v1_114_36;WSFevolution_v1_114_38
+taishan,Taishan,台山市,Táishān,Guangdong,广东省,Pearl River & South Coast,22.2514,112.7938,15,"112.6478,22.1163,112.9398,22.3865",WSFevolution_v1_112_22
+taizhou,Taizhou,泰州市,Tàizhōu,Jiangsu,江苏省,Yangtze Delta & East,32.4555,119.9229,20,"119.7094,32.2753,120.1364,32.6357",WSFevolution_v1_118_32;WSFevolution_v1_120_32
+tieling,Tieling,铁岭市,Tiělǐng,Liaoning,辽宁省,Northeast Rust Belt,42.2907,123.8443,16,"123.6494,42.1466,124.0392,42.4348",WSFevolution_v1_122_42;WSFevolution_v1_124_42
+ulanqab,Ulanqab,乌兰察布市,Wūlánchábù,Inner Mongolia,内蒙古自治区,Western Frontier & Steppe,41.018,113.1326,16,"112.9416,40.8739,113.3236,41.1621",WSFevolution_v1_112_40
+urumqi,Urumqi,乌鲁木齐市,Wūlǔmùqí,Xinjiang,新疆维吾尔自治区,Western Frontier & Steppe,43.8256,87.6168,26,"87.2921,43.5914,87.9415,44.0598",WSFevolution_v1_86_42;WSFevolution_v1_86_44
+weihai,Weihai,威海市,Wēihǎi,Shandong,山东省,Yellow River & North Plain,37.5131,122.1205,20,"121.8933,37.3329,122.3477,37.6933",WSFevolution_v1_120_36;WSFevolution_v1_122_36
+wuhan,Wuhan,武汉市,Wǔhàn,Hubei,湖北省,Yangtze Basin & Central,30.5928,114.3055,30,"113.9915,30.3225,114.6195,30.8631",WSFevolution_v1_112_30;WSFevolution_v1_114_30
+wuhu,Wuhu,芜湖市,Wúhú,Anhui,安徽省,Yangtze Delta & East,31.3528,118.3765,20,"118.1655,31.1726,118.5875,31.533",WSFevolution_v1_118_30
+wuwei,Wuwei,武威市,Wǔwēi,Gansu,甘肃省,Western Frontier & Steppe,37.9283,102.6379,16,"102.4552,37.7842,102.8206,38.0724",WSFevolution_v1_102_36;WSFevolution_v1_102_38
+xiamen,Xiamen,厦门市,Xiàmén,Fujian,福建省,Pearl River & South Coast,24.4798,118.0894,22,"117.8716,24.2816,118.3072,24.678",WSFevolution_v1_116_24;WSFevolution_v1_118_24
+xian,Xi'an,西安市,Xī'ān,Shaanxi,陕西省,Western Frontier & Steppe,34.3416,108.9398,28,"108.6343,34.0893,109.2453,34.5939",WSFevolution_v1_108_34
+yangzhou,Yangzhou,扬州市,Yángzhōu,Jiangsu,江苏省,Yangtze Delta & East,32.3942,119.4129,20,"119.1995,32.214,119.6263,32.5744",WSFevolution_v1_118_32
+yichang,Yichang,宜昌市,Yíchāng,Hubei,湖北省,Yangtze Basin & Central,30.6919,111.2865,20,"111.077,30.5117,111.496,30.8721",WSFevolution_v1_110_30
+zhangjiajie,Zhangjiajie,张家界市,Zhāngjiājiè,Hunan,湖南省,Yangtze Basin & Central,29.117,110.4792,16,"110.3142,28.9729,110.6442,29.2611",WSFevolution_v1_110_28
+zhengzhou,Zhengzhou,郑州市,Zhèngzhōu,Henan,河南省,Yellow River & North Plain,34.7466,113.6253,28,"113.3183,34.4943,113.9323,34.9989",WSFevolution_v1_112_34
+zhuhai,Zhuhai,珠海市,Zhūhǎi,Guangdong,广东省,Pearl River & South Coast,22.2707,113.5767,22,"113.3625,22.0725,113.7909,22.4689",WSFevolution_v1_112_22
+zibo,Zibo,淄博市,Zībó,Shandong,山东省,Yellow River & North Plain,36.8135,118.0549,22,"117.8073,36.6153,118.3025,37.0117",WSFevolution_v1_116_36;WSFevolution_v1_118_36

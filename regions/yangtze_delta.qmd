@@ -1,0 +1,83 @@
+---
+title: "Yangtze Delta & East"
+subtitle: "长三角与华东城镇群 · 5 Cities"
+format:
+  html:
+    toc: true
+---
+
+::: {.hero-banner}
+<h1 style="color: #ffffff; margin-bottom: 0.5rem;">Yangtze Delta & East <span style="color: #f59e0b;">长三角与华东城镇群</span></h1>
+<p style="color: #cbd5e1; font-size: 1.1rem;">The ancient water towns transformed into interconnected manufacturing clusters, high-tech manufacturing, and logistics hubs.</p>
+:::
+
+## Regional Comparison Table
+
+| City | Chinese | Province | 1985 Area | 2015 Area | Net Gain | Multiplier | CAGR | National Rank |
+|:---|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|
+| [Taizhou](../cities/taizhou.html) | 泰州市 | Jiangsu | 80.81 km² | 583 km² | +502.19 km² | **7.21×** | 6.81% | #3 |
+| [Yangzhou](../cities/yangzhou.html) | 扬州市 | Jiangsu | 98.97 km² | 600.99 km² | +502.02 km² | **6.07×** | 6.2% | #7 |
+| [Wuhu](../cities/wuhu.html) | 芜湖市 | Anhui | 82.97 km² | 380.45 km² | +297.48 km² | **4.59×** | 5.21% | #12 |
+| [Huangshan](../cities/huangshan.html) | 黄山市 | Anhui | 26.02 km² | 118.96 km² | +92.94 km² | **4.57×** | 5.2% | #13 |
+| [Lianyungang](../cities/lianyungang.html) | 连云港市 | Jiangsu | 135.75 km² | 369.04 km² | +233.29 km² | **2.72×** | 3.39% | #37 |
+
+
+---
+
+## Member City Profiles
+
+
+::: {.region-card}
+### [Taizhou (泰州市)](../cities/taizhou.html)
+**Jiangsu Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">7.21×</strong> (#3 Nationally)
+
+- **1985 Footprint**: 80.81 km²
+- **2015 Footprint**: 583 km² (Net expansion: +502.19 km²)
+- **Compound Annual Growth Rate**: 6.81%/year
+
+[View Maps & Visual Suite →](../cities/taizhou.html)
+:::
+
+::: {.region-card}
+### [Yangzhou (扬州市)](../cities/yangzhou.html)
+**Jiangsu Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">6.07×</strong> (#7 Nationally)
+
+- **1985 Footprint**: 98.97 km²
+- **2015 Footprint**: 600.99 km² (Net expansion: +502.02 km²)
+- **Compound Annual Growth Rate**: 6.2%/year
+
+[View Maps & Visual Suite →](../cities/yangzhou.html)
+:::
+
+::: {.region-card}
+### [Wuhu (芜湖市)](../cities/wuhu.html)
+**Anhui Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">4.59×</strong> (#12 Nationally)
+
+- **1985 Footprint**: 82.97 km²
+- **2015 Footprint**: 380.45 km² (Net expansion: +297.48 km²)
+- **Compound Annual Growth Rate**: 5.21%/year
+
+[View Maps & Visual Suite →](../cities/wuhu.html)
+:::
+
+::: {.region-card}
+### [Huangshan (黄山市)](../cities/huangshan.html)
+**Anhui Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">4.57×</strong> (#13 Nationally)
+
+- **1985 Footprint**: 26.02 km²
+- **2015 Footprint**: 118.96 km² (Net expansion: +92.94 km²)
+- **Compound Annual Growth Rate**: 5.2%/year
+
+[View Maps & Visual Suite →](../cities/huangshan.html)
+:::
+
+::: {.region-card}
+### [Lianyungang (连云港市)](../cities/lianyungang.html)
+**Jiangsu Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">2.72×</strong> (#37 Nationally)
+
+- **1985 Footprint**: 135.75 km²
+- **2015 Footprint**: 369.04 km² (Net expansion: +233.29 km²)
+- **Compound Annual Growth Rate**: 3.39%/year
+
+[View Maps & Visual Suite →](../cities/lianyungang.html)
+:::

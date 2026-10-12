@@ -1,0 +1,119 @@
+---
+title: "Northeast Rust Belt"
+subtitle: "东北老工业基地与边境口岸 · 8 Cities"
+format:
+  html:
+    toc: true
+---
+
+::: {.hero-banner}
+<h1 style="color: #ffffff; margin-bottom: 0.5rem;">Northeast Rust Belt <span style="color: #f59e0b;">东北老工业基地与边境口岸</span></h1>
+<p style="color: #cbd5e1; font-size: 1.1rem;">Heavy industry cradles, mining cities, and strategic border gateway outposts in Heilongjiang, Jilin, and Liaoning.</p>
+:::
+
+## Regional Comparison Table
+
+| City | Chinese | Province | 1985 Area | 2015 Area | Net Gain | Multiplier | CAGR | National Rank |
+|:---|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|
+| [Dandong](../cities/dandong.html) | 丹东市 | Liaoning | 45.2 km² | 140.92 km² | +95.72 km² | **3.12×** | 3.86% | #32 |
+| [Tieling](../cities/tieling.html) | 铁岭市 | Liaoning | 43.68 km² | 134.96 km² | +91.28 km² | **3.09×** | 3.83% | #33 |
+| [Hunchun](../cities/hunchun.html) | 珲春市 | Jilin | 20.56 km² | 61.52 km² | +40.96 km² | **2.99×** | 3.72% | #34 |
+| [Fuxin](../cities/fuxin.html) | 阜新市 | Liaoning | 57.66 km² | 169.39 km² | +111.73 km² | **2.94×** | 3.66% | #35 |
+| [Harbin](../cities/harbin.html) | 哈尔滨市 | Heilongjiang | 267.74 km² | 701.48 km² | +433.74 km² | **2.62×** | 3.26% | #40 |
+| [Panjin](../cities/panjin.html) | 盘锦市 | Liaoning | 98.33 km² | 254.37 km² | +156.04 km² | **2.59×** | 3.22% | #41 |
+| [Liaoyuan](../cities/liaoyuan.html) | 辽源市 | Jilin | 44.37 km² | 111.94 km² | +67.57 km² | **2.52×** | 3.13% | #42 |
+| [Baicheng](../cities/baicheng.html) | 白城市 | Jilin | 43.41 km² | 98.62 km² | +55.21 km² | **2.27×** | 2.77% | #44 |
+
+
+---
+
+## Member City Profiles
+
+
+::: {.region-card}
+### [Dandong (丹东市)](../cities/dandong.html)
+**Liaoning Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">3.12×</strong> (#32 Nationally)
+
+- **1985 Footprint**: 45.2 km²
+- **2015 Footprint**: 140.92 km² (Net expansion: +95.72 km²)
+- **Compound Annual Growth Rate**: 3.86%/year
+
+[View Maps & Visual Suite →](../cities/dandong.html)
+:::
+
+::: {.region-card}
+### [Tieling (铁岭市)](../cities/tieling.html)
+**Liaoning Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">3.09×</strong> (#33 Nationally)
+
+- **1985 Footprint**: 43.68 km²
+- **2015 Footprint**: 134.96 km² (Net expansion: +91.28 km²)
+- **Compound Annual Growth Rate**: 3.83%/year
+
+[View Maps & Visual Suite →](../cities/tieling.html)
+:::
+
+::: {.region-card}
+### [Hunchun (珲春市)](../cities/hunchun.html)
+**Jilin Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">2.99×</strong> (#34 Nationally)
+
+- **1985 Footprint**: 20.56 km²
+- **2015 Footprint**: 61.52 km² (Net expansion: +40.96 km²)
+- **Compound Annual Growth Rate**: 3.72%/year
+
+[View Maps & Visual Suite →](../cities/hunchun.html)
+:::
+
+::: {.region-card}
+### [Fuxin (阜新市)](../cities/fuxin.html)
+**Liaoning Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">2.94×</strong> (#35 Nationally)
+
+- **1985 Footprint**: 57.66 km²
+- **2015 Footprint**: 169.39 km² (Net expansion: +111.73 km²)
+- **Compound Annual Growth Rate**: 3.66%/year
+
+[View Maps & Visual Suite →](../cities/fuxin.html)
+:::
+
+::: {.region-card}
+### [Harbin (哈尔滨市)](../cities/harbin.html)
+**Heilongjiang Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">2.62×</strong> (#40 Nationally)
+
+- **1985 Footprint**: 267.74 km²
+- **2015 Footprint**: 701.48 km² (Net expansion: +433.74 km²)
+- **Compound Annual Growth Rate**: 3.26%/year
+
+[View Maps & Visual Suite →](../cities/harbin.html)
+:::
+
+::: {.region-card}
+### [Panjin (盘锦市)](../cities/panjin.html)
+**Liaoning Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">2.59×</strong> (#41 Nationally)
+
+- **1985 Footprint**: 98.33 km²
+- **2015 Footprint**: 254.37 km² (Net expansion: +156.04 km²)
+- **Compound Annual Growth Rate**: 3.22%/year
+
+[View Maps & Visual Suite →](../cities/panjin.html)
+:::
+
+::: {.region-card}
+### [Liaoyuan (辽源市)](../cities/liaoyuan.html)
+**Jilin Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">2.52×</strong> (#42 Nationally)
+
+- **1985 Footprint**: 44.37 km²
+- **2015 Footprint**: 111.94 km² (Net expansion: +67.57 km²)
+- **Compound Annual Growth Rate**: 3.13%/year
+
+[View Maps & Visual Suite →](../cities/liaoyuan.html)
+:::
+
+::: {.region-card}
+### [Baicheng (白城市)](../cities/baicheng.html)
+**Jilin Province** · 30-Year Multiplier: <strong style="color: #f59e0b;">2.27×</strong> (#44 Nationally)
+
+- **1985 Footprint**: 43.41 km²
+- **2015 Footprint**: 98.62 km² (Net expansion: +55.21 km²)
+- **Compound Annual Growth Rate**: 2.77%/year
+
+[View Maps & Visual Suite →](../cities/baicheng.html)
+:::

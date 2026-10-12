@@ -1,0 +1,122 @@
+# China Urban Growth Ratlas (1985–2015)
+### 中国城市空间扩展图集 · 1985–2015
+
+A geospatial **ratlas** (R-driven exploratory spatial atlas) tracking 30 years of physical urbanization across **47 Chinese cities** using open satellite-derived settlement data.
+
+Built with **R**, `terra`, `sf`, `ggplot2`, and published as a modern static website via **Quarto**, configured for direct deployment to **GitHub Pages**.
+
+---
+
+## 🌟 Features
+
+- **47 Diverse Cities**: Covering major provincial capitals, coastal Special Economic Zones (Shenzhen, Zhuhai, Xiamen), ancient Silk Road oases (Kashgar, Hotan, Wuwei, Lanzhou), northern industrial nodes, and northeast border outposts (Dandong, Hunchun).
+- **Open Satellite Data**: Powered by the **DLR World Settlement Footprint Evolution (WSF Evolution)** 30-meter resolution annual settlement detection dataset (1985–2015) streamed via `/vsicurl/`.
+- **Thematic Visual Suite per City**:
+  1. **The Urban Growth Rings (Hero Poster)**: 4-epoch color-coded expansion morphology (Pre-1985, 1986–1995, 1996–2005, 2006–2015) with bilingual CJK typography.
+  2. **Small Multiples Progression**: 4 uniform-scale panels showing cumulative footprint expansion at 1985, 1995, 2005, and 2015.
+  3. **Regional Location Inset**: Administrative context within China and its province.
+  4. **30-Year Trajectory Curve**: Milestone surface area chart tracking physical expansion in $\text{km}^2$.
+- **Macro-Regional Analysis**: 6 regional chapters grouping cities by geographic and economic archetype.
+- **GitHub Pages Ready**: Static website rendered into `docs/` with `.nojekyll`.
+
+---
+
+## 🚀 Deploying to GitHub Pages
+
+1. **Initialize Git & Push to GitHub**:
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit: China Urban Growth Ratlas"
+   git branch -M main
+   git remote add origin https://github.com/<YOUR-USERNAME>/<YOUR-REPO-NAME>.git
+   git push -u origin main
+   ```
+
+2. **Enable GitHub Pages**:
+   - Go to your repository on GitHub: **Settings → Pages**.
+   - Under **Build and deployment → Source**, select **Deploy from a branch**.
+   - Under **Branch**, select `main` and folder `/docs`.
+   - Click **Save**. Within 1–2 minutes, your website will be live at:
+     `https://<YOUR-USERNAME>.github.io/<YOUR-REPO-NAME>/`
+
+---
+
+## 💻 Local Preview & Development
+
+To preview the website locally in your browser:
+```bash
+quarto preview
+```
+
+To re-run the entire data ingestion, spatial cropping, map generation, and website build pipeline:
+```bash
+Rscript run_atlas.R
+```
+
+---
+
+## 📂 Project Structure
+
+```text
+china-ratlas/
+├── _quarto.yml              # Quarto website configuration (output-dir: docs)
+├── styles.css               # Editorial dark theme stylesheet
+├── index.qmd                # Master home page (national map, rankings, full table)
+├── cities.qmd               # Searchable directory of all 47 cities
+├── methodology.qmd          # Data sources, spatial processing & formulas
+├── regions/                 # 6 macro-regional overview chapters
+│   ├── coastal_south.qmd
+│   ├── yangtze_basin.qmd
+│   ├── yangtze_delta.qmd
+│   ├── northern_plains.qmd
+│   ├── northeast.qmd
+│   └── western_frontier.qmd
+├── cities/                  # 47 individual city spotlight documents
+├── data/
+│   ├── cities.json          # Master metadata (coordinates, bboxes, Chinese names)
+│   ├── cities.csv           # Flat tabular metadata
+│   ├── processed/
+│   │   ├── wsf/             # Cached 30m GeoTIFFs (47 cropped city rasters)
+│   │   ├── china_admin_layers.rds # Simplified GADM China boundaries
+│   │   └── city_growth_stats.json # Calculated metrics (areas, multipliers, CAGR)
+├── output/
+│   ├── maps/                # 142 high-res maps (hero rings, small multiples, insets)
+│   └── plots/               # 48 analytical charts (growth curves, rankings)
+├── R/
+│   ├── 02_fetch_and_crop_wsf.R     # Streaming & cropping WSF Evolution tiles
+│   ├── 03_compute_growth_metrics.R # Spatial metric calculations
+│   └── 04_generate_atlas_maps.R    # Batch map rendering (parallelized)
+├── scripts/
+│   ├── create_city_registry.py     # Metadata builder
+│   └── generate_quarto_pages.py    # Automated Quarto page generator
+├── docs/                    # Compiled static website (ready for GitHub Pages)
+└── run_atlas.R              # One-command full pipeline runner
+```
+
+---
+
+## 📊 Summary of Top Growth Cities (1985–2015)
+
+| Rank | City | Chinese | Province | Region | 1985 Area | 2015 Area | Net Gain | Multiplier | CAGR |
+|:---:|:---|:---|:---|:---|:---:|:---:|:---:|:---:|:---:|
+| #1 | **Heyuan** | 河源市 | Guangdong | Pearl River & South Coast | 15.2 km² | 136.5 km² | +121.3 km² | **9.01×** | 7.6% |
+| #2 | **Chengdu** | 成都市 | Sichuan | Yangtze Basin & Central | 208.1 km² | 1,564.2 km² | +1,356.1 km² | **7.52×** | 7.0% |
+| #3 | **Taizhou** | 泰州市 | Jiangsu | Yangtze Delta & East | 80.8 km² | 583.0 km² | +502.2 km² | **7.21×** | 6.8% |
+| #4 | **Zhuhai** | 珠海市 | Guangdong | Pearl River & South Coast | 33.3 km² | 237.2 km² | +203.9 km² | **7.13×** | 6.8% |
+| #5 | **Shenzhen** | 深圳市 | Guangdong | Pearl River & South Coast | 168.4 km² | 1,065.0 km² | +896.6 km² | **6.33×** | 6.3% |
+| #6 | **Luzhou** | 泸州市 | Sichuan | Yangtze Basin & Central | 22.7 km² | 140.2 km² | +117.5 km² | **6.17×** | 6.2% |
+| #7 | **Yangzhou** | 扬州市 | Jiangsu | Yangtze Delta & East | 99.0 km² | 601.0 km² | +502.0 km² | **6.07×** | 6.2% |
+| #8 | **Weihai** | 威海市 | Shandong | Yellow River & North Plain | 32.9 km² | 179.9 km² | +147.0 km² | **5.46×** | 5.8% |
+| #9 | **Hohhot** | 呼和浩特市 | Inner Mongolia | Western Frontier & Steppe | 68.9 km² | 349.4 km² | +280.5 km² | **5.07×** | 5.6% |
+| #10 | **Jining** | 济宁市 | Shandong | Yellow River & North Plain | 77.4 km² | 391.1 km² | +313.7 km² | **5.05×** | 5.5% |
+
+---
+
+## 📜 Data Sources & Citations
+
+1. **DLR World Settlement Footprint Evolution (WSF Evolution)**:
+   - Marconcini, M., Metz, A., Üreyen, S., et al. (2020). *Outlining where humans live, the World Settlement Footprint 2015.* Scientific Data 7, 242.
+   - Data Access: [German Aerospace Center (DLR) Geoservice](https://download.geoservice.dlr.de/WSF_EVO/).
+2. **GADM Database of Global Administrative Areas**:
+   - GADM version 4.1 ([https://gadm.org/](https://gadm.org/)).
