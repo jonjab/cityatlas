@@ -1,0 +1,1268 @@
+{
+  "baicheng": {
+    "city_id": "baicheng",
+    "total_rail_segments": 217,
+    "hsr_segments": 0,
+    "conventional_segments": 217,
+    "station_count": 4,
+    "major_corridors": [
+      "平齐线",
+      "白阿线",
+      "长白线",
+      "穆白联络线",
+      "致白联络线",
+      "白城市新生砂石有限责任公司专用线"
+    ],
+    "key_stations": [
+      "平台",
+      "白城",
+      "白城北",
+      "穆家店"
+    ]
+  },
+  "baoding": {
+    "city_id": "baoding",
+    "total_rail_segments": 718,
+    "hsr_segments": 26,
+    "conventional_segments": 692,
+    "station_count": 13,
+    "major_corridors": [
+      "京广高速线",
+      "京广线",
+      "保满线",
+      "满神线",
+      "霸徐线",
+      "大唐清苑热电专用线"
+    ],
+    "key_stations": [
+      "于家庄",
+      "保定",
+      "保定东",
+      "保定南",
+      "保定工业",
+      "南奇",
+      "完县",
+      "小车乡",
+      "徐水",
+      "满城"
+    ]
+  },
+  "binzhou": {
+    "city_id": "binzhou",
+    "total_rail_segments": 726,
+    "hsr_segments": 12,
+    "conventional_segments": 714,
+    "station_count": 12,
+    "major_corridors": [
+      "津潍高速线",
+      "济滨高速线",
+      "东营港疏港铁路",
+      "博小线",
+      "小沾线",
+      "张东线",
+      "德大线",
+      "黄大线",
+      "东齐家疏解线",
+      "利港联络线",
+      "德大联络线",
+      "滨小联络线"
+    ],
+    "key_stations": [
+      "利津",
+      "利津南",
+      "利津西",
+      "北宋",
+      "堡集",
+      "小营",
+      "滨城",
+      "滨州",
+      "滨州东",
+      "滨州北"
+    ]
+  },
+  "chengdu": {
+    "city_id": "chengdu",
+    "total_rail_segments": 2853,
+    "hsr_segments": 350,
+    "conventional_segments": 2503,
+    "station_count": 398,
+    "major_corridors": [
+      "成渝高速线",
+      "成自宜高速线",
+      "成贵客专线",
+      "成都东城际动走上行线",
+      "成都东城际动走下行线",
+      "沪渝蓉高速线",
+      "西成客专线",
+      "天蒲线",
+      "宝成线",
+      "川藏铁路",
+      "川青线",
+      "广岳铁路"
+    ],
+    "key_stations": [
+      "双流机场",
+      "双流机场1航站楼",
+      "双流机场2航站楼",
+      "双流机场2航站楼东",
+      "火车北站",
+      "火车南站",
+      "茶店子客运站",
+      "龙泉驿火车站",
+      "龙泉驿火车站南",
+      "双流西站"
+    ]
+  },
+  "dandong": {
+    "city_id": "dandong",
+    "total_rail_segments": 527,
+    "hsr_segments": 84,
+    "conventional_segments": 443,
+    "station_count": 14,
+    "major_corridors": [
+      "沈丹客专线",
+      "丹前线",
+      "丹大线",
+      "前阳南出港线",
+      "前阳南进港线",
+      "沈丹线",
+      "金沙支线",
+      "中朝友谊桥",
+      "덕현선",
+      "평의선",
+      "前港联络线",
+      "前阳联络线"
+    ],
+    "key_stations": [
+      "三道沟",
+      "丹东",
+      "丹东西",
+      "五龙背",
+      "五龙背东",
+      "前阳",
+      "前阳南",
+      "南丹东",
+      "同兴",
+      "沙河镇"
+    ]
+  },
+  "datong": {
+    "city_id": "datong",
+    "total_rail_segments": 1430,
+    "hsr_segments": 80,
+    "conventional_segments": 1350,
+    "station_count": 29,
+    "major_corridors": [
+      "乌大高速线",
+      "张大客专线",
+      "云岗线",
+      "京包线",
+      "北同蒲线",
+      "口泉线",
+      "大准铁路",
+      "大包上引线",
+      "大包下发线",
+      "大同北环线",
+      "大秦线",
+      "湖大线"
+    ],
+    "key_stations": [
+      "上深涧",
+      "云岗",
+      "云岗西",
+      "口泉",
+      "古店",
+      "同家梁",
+      "周士庄",
+      "四老沟",
+      "塔山",
+      "大同"
+    ]
+  },
+  "dongying": {
+    "city_id": "dongying",
+    "total_rail_segments": 442,
+    "hsr_segments": 0,
+    "conventional_segments": 442,
+    "station_count": 8,
+    "major_corridors": [
+      "宅羊线",
+      "张东线",
+      "德大线",
+      "黄大线"
+    ],
+    "key_stations": [
+      "丁庄",
+      "东营",
+      "东营南",
+      "东营西",
+      "刘庄",
+      "史口东",
+      "小清河西",
+      "羊角沟"
+    ]
+  },
+  "fuxin": {
+    "city_id": "fuxin",
+    "total_rail_segments": 411,
+    "hsr_segments": 52,
+    "conventional_segments": 359,
+    "station_count": 7,
+    "major_corridors": [
+      "京哈高速线",
+      "巴新线",
+      "新义线",
+      "阜金线"
+    ],
+    "key_stations": [
+      "东梁",
+      "伊吗图",
+      "新邱",
+      "白玉都",
+      "阜新",
+      "阜新南",
+      "阿金"
+    ]
+  },
+  "guilin": {
+    "city_id": "guilin",
+    "total_rail_segments": 912,
+    "hsr_segments": 266,
+    "conventional_segments": 646,
+    "station_count": 10,
+    "major_corridors": [
+      "贵广客专线",
+      "安全线",
+      "桂储支线",
+      "桂海铁路",
+      "湘桂线",
+      "衡柳线",
+      "桂北定江联络线",
+      "桂西桂北联络线",
+      "日化厂支线",
+      "红岭专用线"
+    ],
+    "key_stations": [
+      "三街",
+      "二塘",
+      "五通",
+      "会展中心",
+      "桂林",
+      "桂林北",
+      "桂林南",
+      "桂林西",
+      "横山",
+      "灵川"
+    ]
+  },
+  "haikou": {
+    "city_id": "haikou",
+    "total_rail_segments": 121,
+    "hsr_segments": 56,
+    "conventional_segments": 65,
+    "station_count": 2,
+    "major_corridors": [
+      "海南东环高速线",
+      "海南环岛高铁线东段",
+      "湛海线",
+      "西环货线"
+    ],
+    "key_stations": [
+      "海安南",
+      "美兰"
+    ]
+  },
+  "harbin": {
+    "city_id": "harbin",
+    "total_rail_segments": 2619,
+    "hsr_segments": 150,
+    "conventional_segments": 2469,
+    "station_count": 105,
+    "major_corridors": [
+      "京哈高速线",
+      "哈伊高速线",
+      "哈牡客专线",
+      "哈齐客专线",
+      "九〇一线",
+      "京哈线",
+      "保税线",
+      "军专线",
+      "南机待线",
+      "南牵出线",
+      "君龙线",
+      "哈佳线"
+    ],
+    "key_stations": [
+      "哈尔滨东站",
+      "哈尔滨北站",
+      "哈尔滨南站",
+      "哈尔滨西站",
+      "哈尔滨站",
+      "丁香公园",
+      "万乐",
+      "上海街",
+      "世茂大道",
+      "东北农业大学"
+    ]
+  },
+  "heyuan": {
+    "city_id": "heyuan",
+    "total_rail_segments": 266,
+    "hsr_segments": 48,
+    "conventional_segments": 218,
+    "station_count": 5,
+    "major_corridors": [
+      "京港高速线",
+      "京九线",
+      "河源站3道",
+      "河源站4道",
+      "河源站5道",
+      "河源站6道"
+    ],
+    "key_stations": [
+      "义合",
+      "仙塘",
+      "埔前",
+      "河源",
+      "河源东"
+    ]
+  },
+  "hohhot": {
+    "city_id": "hohhot",
+    "total_rail_segments": 1224,
+    "hsr_segments": 89,
+    "conventional_segments": 1135,
+    "station_count": 53,
+    "major_corridors": [
+      "京包客专线",
+      "京包线",
+      "呼准线",
+      "呼鄂线",
+      "唐包线",
+      "呼前联络线",
+      "呼王联络线",
+      "呼甲联络线",
+      "瓜房子联络线"
+    ],
+    "key_stations": [
+      "坝堰（机场）",
+      "呼和浩特东站",
+      "乌兰夫纪念馆站",
+      "呼和浩特站",
+      "Station",
+      "一家村",
+      "东影路",
+      "丝绸之路大道",
+      "中山路",
+      "五里营"
+    ]
+  },
+  "hotan": {
+    "city_id": "hotan",
+    "total_rail_segments": 84,
+    "hsr_segments": 0,
+    "conventional_segments": 84,
+    "station_count": 3,
+    "major_corridors": [
+      "南疆线",
+      "喀什至和田铁路 Kashgar–Hotan Railway",
+      "喀什至和田铁路 خوتەن قەشقەر تۆمۈريولى",
+      "若和线"
+    ],
+    "key_stations": [
+      "和田 خوتەن",
+      "和田东 شەرقىي خوتەن",
+      "墨玉 قاراقاش"
+    ]
+  },
+  "huangshan": {
+    "city_id": "huangshan",
+    "total_rail_segments": 364,
+    "hsr_segments": 216,
+    "conventional_segments": 148,
+    "station_count": 7,
+    "major_corridors": [
+      "合福高速线",
+      "杭昌高速线",
+      "皖赣线"
+    ],
+    "key_stations": [
+      "休宁",
+      "岩寺",
+      "歙县",
+      "篁墩",
+      "金村",
+      "黄山",
+      "黄山北"
+    ]
+  },
+  "hunchun": {
+    "city_id": "hunchun",
+    "total_rail_segments": 28,
+    "hsr_segments": 18,
+    "conventional_segments": 10,
+    "station_count": 1,
+    "major_corridors": [
+      "长珲城际线",
+      "图珲线",
+      "함북선"
+    ],
+    "key_stations": [
+      "훈융"
+    ]
+  },
+  "jinan": {
+    "city_id": "jinan",
+    "total_rail_segments": 4051,
+    "hsr_segments": 342,
+    "conventional_segments": 3709,
+    "station_count": 93,
+    "major_corridors": [
+      "京沪高铁",
+      "济枣高速线",
+      "济滨高速线",
+      "济莱高速线",
+      "济郑高速线",
+      "济青高速线",
+      "石济客专线",
+      "胶济客专线",
+      "B1线",
+      "B2线",
+      "京沪线",
+      "梓权线"
+    ],
+    "key_stations": [
+      "机场北（在建）",
+      "机场南",
+      "遥墙机场",
+      "济南东站",
+      "丁家庄",
+      "世纪大道春喧路",
+      "东仓（在建）",
+      "东沙王庄",
+      "临港北路",
+      "临空"
+    ]
+  },
+  "jining": {
+    "city_id": "jining",
+    "total_rail_segments": 1753,
+    "hsr_segments": 39,
+    "conventional_segments": 1714,
+    "station_count": 19,
+    "major_corridors": [
+      "日兰高速线",
+      "京沪线",
+      "南常线",
+      "大兴线",
+      "新兖线",
+      "兖南联络线",
+      "新日联络线",
+      "白兖联络线",
+      "济三专用线",
+      "济二专用线",
+      "济北矿区铁路专用线"
+    ],
+    "key_stations": [
+      "东庄",
+      "兖州",
+      "兖州北",
+      "兖州西",
+      "兴隆",
+      "唐口",
+      "嘉祥",
+      "嘉祥北",
+      "岱庄",
+      "常营"
+    ]
+  },
+  "kashgar": {
+    "city_id": "kashgar",
+    "total_rail_segments": 124,
+    "hsr_segments": 0,
+    "conventional_segments": 124,
+    "station_count": 3,
+    "major_corridors": [
+      "南疆线"
+    ],
+    "key_stations": [
+      "喀什 قەشقەر‎",
+      "喀什北 شىمالىي قەشقەر",
+      "疏勒"
+    ]
+  },
+  "korla": {
+    "city_id": "korla",
+    "total_rail_segments": 698,
+    "hsr_segments": 0,
+    "conventional_segments": 698,
+    "station_count": 8,
+    "major_corridors": [
+      "南疆线",
+      "库塔联络线",
+      "格库线"
+    ],
+    "key_stations": [
+      "云崖",
+      "塔什店",
+      "库北",
+      "库尔勒 كورلا",
+      "库尔勒东",
+      "库西",
+      "紫泥泉",
+      "西尼尔北"
+    ]
+  },
+  "kunming": {
+    "city_id": "kunming",
+    "total_rail_segments": 2337,
+    "hsr_segments": 262,
+    "conventional_segments": 2075,
+    "station_count": 131,
+    "major_corridors": [
+      "南昆客专线",
+      "沪昆高速线",
+      "渝昆高速线",
+      "东王线",
+      "中宝线",
+      "中老昆万线",
+      "南昆上行客线",
+      "南昆下行客线",
+      "南昆线",
+      "安宁支线",
+      "广昆线",
+      "成昆线"
+    ],
+    "key_stations": [
+      "昆明南火车站",
+      "昆明火车站",
+      "机场中心",
+      "机场前",
+      "火车北站",
+      "长水机场",
+      "东部汽车站",
+      "北部汽车站",
+      "南部汽车站",
+      "西部汽车站"
+    ]
+  },
+  "lanzhou": {
+    "city_id": "lanzhou",
+    "total_rail_segments": 1842,
+    "hsr_segments": 106,
+    "conventional_segments": 1736,
+    "station_count": 55,
+    "major_corridors": [
+      "兰新客专线",
+      "徐兰高速线",
+      "中川线",
+      "兰中联络2线",
+      "兰州北环到线",
+      "兰州北环线",
+      "兰州西动车走行1线",
+      "兰州西动车走行2线",
+      "兰州西普高联络2线",
+      "兰新线",
+      "兰枢环行线",
+      "兰渝线"
+    ],
+    "key_stations": [
+      "兰州火车站",
+      "七里河",
+      "上西园",
+      "下河湾",
+      "东岗",
+      "东方红广场",
+      "五里铺",
+      "元台子",
+      "兰州",
+      "兰州东"
+    ]
+  },
+  "lianyungang": {
+    "city_id": "lianyungang",
+    "total_rail_segments": 387,
+    "hsr_segments": 10,
+    "conventional_segments": 377,
+    "station_count": 7,
+    "major_corridors": [
+      "徐连高速线",
+      "上合组织（连云港）国际物流园专用铁路",
+      "徐圩支线",
+      "盐东线",
+      "连镇线",
+      "陇海线",
+      "青盐线",
+      "包庄联络线",
+      "连云港疏解线",
+      "连云港联络线",
+      "江苏新海发电有限公司专用铁路",
+      "连云港市明达工贸发展有限公司专用铁路"
+    ],
+    "key_stations": [
+      "东辛",
+      "包庄",
+      "新浦东",
+      "海州",
+      "白塔埠",
+      "董集",
+      "连云港"
+    ]
+  },
+  "liaocheng": {
+    "city_id": "liaocheng",
+    "total_rail_segments": 785,
+    "hsr_segments": 33,
+    "conventional_segments": 752,
+    "station_count": 9,
+    "major_corridors": [
+      "京港高速线",
+      "济郑高速线",
+      "京九线",
+      "聊城西动走A线",
+      "聊城西动走B线",
+      "邯济线",
+      "安庄疏解线",
+      "客车联络线"
+    ],
+    "key_stations": [
+      "付楼",
+      "博平",
+      "堂邑",
+      "聊城",
+      "聊城东",
+      "聊城北",
+      "聊城西",
+      "茌平南",
+      "解庄"
+    ]
+  },
+  "liaoyuan": {
+    "city_id": "liaoyuan",
+    "total_rail_segments": 98,
+    "hsr_segments": 0,
+    "conventional_segments": 98,
+    "station_count": 12,
+    "major_corridors": [
+      "双白线",
+      "四梅线",
+      "辽开线",
+      "辽源矿业（集团）有限责任公司专用铁路"
+    ],
+    "key_stations": [
+      "体育中心",
+      "动植物园",
+      "安恕",
+      "山语城",
+      "泰信",
+      "渭津",
+      "白泉",
+      "辽源",
+      "辽源东",
+      "辽矿"
+    ]
+  },
+  "luzhou": {
+    "city_id": "luzhou",
+    "total_rail_segments": 739,
+    "hsr_segments": 338,
+    "conventional_segments": 401,
+    "station_count": 11,
+    "major_corridors": [
+      "渝昆高速线",
+      "绵泸高速线",
+      "绵泸/渝昆连接线",
+      "隆叙线",
+      "隆泸叙线",
+      "川南发电专用线",
+      "泸州港中心港区专用线"
+    ],
+    "key_stations": [
+      "光辉村",
+      "半边山",
+      "双加",
+      "天仙",
+      "方山",
+      "泸州",
+      "泸州东",
+      "泸州港",
+      "泸州港区",
+      "泸州西"
+    ]
+  },
+  "nanchang": {
+    "city_id": "nanchang",
+    "total_rail_segments": 498,
+    "hsr_segments": 92,
+    "conventional_segments": 406,
+    "station_count": 73,
+    "major_corridors": [
+      "昌九城际线",
+      "杭昌高速线",
+      "沪昆高速线",
+      "京九线",
+      "南昌枢纽西环线",
+      "复建南浔铁路废弃段",
+      "昌北联络线",
+      "昌北货场联络线",
+      "中国航空油料有限责任公司江西分公司专用线",
+      "中国铁路南昌局集团有限公司南昌机务段专用线",
+      "中国铁路南昌局集团有限公司南昌车辆段专用线",
+      "中央储备粮南昌直属库有限公司专用线"
+    ],
+    "key_stations": [
+      "南昌火车站",
+      "昌北机场",
+      "丁公路北",
+      "丁公路南",
+      "七里",
+      "万寿宫",
+      "上沙沟",
+      "乐化",
+      "京东大道",
+      "人民公园"
+    ]
+  },
+  "panjin": {
+    "city_id": "panjin",
+    "total_rail_segments": 341,
+    "hsr_segments": 12,
+    "conventional_segments": 329,
+    "station_count": 7,
+    "major_corridors": [
+      "盘营高速线",
+      "盘营高铁",
+      "京哈线",
+      "沈金线",
+      "沟海线",
+      "牵出线"
+    ],
+    "key_stations": [
+      "交接站",
+      "友谊",
+      "大洼",
+      "新开",
+      "渤海",
+      "盘山",
+      "盘锦"
+    ]
+  },
+  "shenzhen": {
+    "city_id": "shenzhen",
+    "total_rail_segments": 1754,
+    "hsr_segments": 260,
+    "conventional_segments": 1494,
+    "station_count": 274,
+    "major_corridors": [
+      "京港高速线",
+      "广深港高速线",
+      "廣深港高速鐵路 Guangzhou–Shenzhen–Hong Kong High Speed Rail",
+      "穗深城际线",
+      "A线 A線 ALine",
+      "B线 B線 BLine",
+      "平南线",
+      "平盐铁路",
+      "广深线",
+      "杭深平南货联线",
+      "杭深线",
+      "平南下行出发"
+    ],
+    "key_stations": [
+      "坪山高铁站",
+      "深圳北站",
+      "1#食堂",
+      "Station",
+      "上塘",
+      "上屋",
+      "上李朗",
+      "上村",
+      "上梅林",
+      "上水 Sheung Shui"
+    ]
+  },
+  "shijiazhuang": {
+    "city_id": "shijiazhuang",
+    "total_rail_segments": 945,
+    "hsr_segments": 65,
+    "conventional_segments": 880,
+    "station_count": 17,
+    "major_corridors": [
+      "京广高速线",
+      "石太客专线",
+      "石济客专线",
+      "京广线",
+      "大宋线",
+      "朔黄线",
+      "石南线",
+      "石太引入线",
+      "石家庄动车所A线",
+      "石家庄动车所B线",
+      "石家庄西环线",
+      "西柏坡线"
+    ],
+    "key_stations": [
+      "正定机场",
+      "仓丰路留村",
+      "会展中心",
+      "南位",
+      "南胡庄",
+      "商务中心",
+      "嘉华路",
+      "园博园",
+      "宋家峪",
+      "宜安"
+    ]
+  },
+  "taishan": {
+    "city_id": "taishan",
+    "total_rail_segments": 98,
+    "hsr_segments": 0,
+    "conventional_segments": 98,
+    "station_count": 3,
+    "major_corridors": [
+      "深湛线"
+    ],
+    "key_stations": [
+      "双水镇",
+      "台山",
+      "开平南"
+    ]
+  },
+  "taizhou": {
+    "city_id": "taizhou",
+    "total_rail_segments": 251,
+    "hsr_segments": 0,
+    "conventional_segments": 251,
+    "station_count": 4,
+    "major_corridors": [
+      "宁启线",
+      "连镇线"
+    ],
+    "key_stations": [
+      "姜堰",
+      "泰州",
+      "泰州南",
+      "泰州西"
+    ]
+  },
+  "tieling": {
+    "city_id": "tieling",
+    "total_rail_segments": 211,
+    "hsr_segments": 38,
+    "conventional_segments": 173,
+    "station_count": 12,
+    "major_corridors": [
+      "京哈高速线",
+      "京哈线",
+      "铁法线"
+    ],
+    "key_stations": [
+      "中固",
+      "乱石山",
+      "会让",
+      "大青",
+      "小青",
+      "平顶堡",
+      "得胜台",
+      "新台子",
+      "晓南",
+      "铁岭"
+    ]
+  },
+  "ulanqab": {
+    "city_id": "ulanqab",
+    "total_rail_segments": 682,
+    "hsr_segments": 41,
+    "conventional_segments": 641,
+    "station_count": 9,
+    "major_corridors": [
+      "乌大高速线",
+      "京包客专线",
+      "京包线",
+      "京宁热电线",
+      "唐包线",
+      "集二线",
+      "集葫联络线"
+    ],
+    "key_stations": [
+      "七苏木",
+      "乌兰察布",
+      "京宁热电电厂",
+      "古营盘",
+      "大陆号",
+      "苏集",
+      "葫芦",
+      "集宁",
+      "集宁南"
+    ]
+  },
+  "urumqi": {
+    "city_id": "urumqi",
+    "total_rail_segments": 1696,
+    "hsr_segments": 123,
+    "conventional_segments": 1573,
+    "station_count": 70,
+    "major_corridors": [
+      "兰新客专线",
+      "乌将线",
+      "乌西乌北上联线",
+      "乌西乌北下联线",
+      "兰新线",
+      "芦草沟线",
+      "神信专用线"
+    ],
+    "key_stations": [
+      "国际机场 خەلقئارا ئايروپورت",
+      "国际机场东 خەلقئارا ئايرودروم شەرق",
+      "国际机场北",
+      "乌鲁木齐站",
+      "三坪",
+      "三屯碑 سەندۈڭبىي",
+      "三工 سەنگۇڭ",
+      "三工北",
+      "三工南",
+      "三葛庄"
+    ]
+  },
+  "weihai": {
+    "city_id": "weihai",
+    "total_rail_segments": 259,
+    "hsr_segments": 152,
+    "conventional_segments": 107,
+    "station_count": 5,
+    "major_corridors": [
+      "青荣城际线",
+      "桃威线"
+    ],
+    "key_stations": [
+      "威海",
+      "威海北",
+      "威海南",
+      "港前",
+      "草庙子"
+    ]
+  },
+  "wuhan": {
+    "city_id": "wuhan",
+    "total_rail_segments": 3867,
+    "hsr_segments": 263,
+    "conventional_segments": 3604,
+    "station_count": 318,
+    "major_corridors": [
+      "京广高速线",
+      "京广高铁",
+      "武九客专线",
+      "武冈城际线",
+      "武咸城际线",
+      "武孝城际线",
+      "武西高速线",
+      "京广线",
+      "京广附属线",
+      "化工专线",
+      "合武铁路",
+      "新港线"
+    ],
+    "key_stations": [
+      "天河机场",
+      "武昌火车站",
+      "武汉火车站",
+      "汉口火车站",
+      "汉阳客运站",
+      "汉阳火车站",
+      "武汉东站",
+      "葛店南站",
+      "Station",
+      "丁字桥"
+    ]
+  },
+  "wuhu": {
+    "city_id": "wuhu",
+    "total_rail_segments": 683,
+    "hsr_segments": 93,
+    "conventional_segments": 590,
+    "station_count": 54,
+    "major_corridors": [
+      "合杭高速线",
+      "宁安客专线",
+      "大机停机线",
+      "宁芜线",
+      "接触网作业车停留线",
+      "朱家桥外贸码头支线",
+      "淮南线",
+      "皖赣线",
+      "确认车停留线",
+      "芜湖东联络A线",
+      "芜湖东联络B线",
+      "芜铜线"
+    ],
+    "key_stations": [
+      "芜湖火车站",
+      "芜湖南站",
+      "万春湖路",
+      "中山北路",
+      "二坝",
+      "云从路",
+      "保顺路",
+      "八里湾",
+      "华山路",
+      "博览中心"
+    ]
+  },
+  "wuwei": {
+    "city_id": "wuwei",
+    "total_rail_segments": 560,
+    "hsr_segments": 22,
+    "conventional_segments": 538,
+    "station_count": 8,
+    "major_corridors": [
+      "兰张高速线",
+      "兰新线",
+      "兰武1线",
+      "干武1线",
+      "干武3线",
+      "干武线",
+      "武威南西联络线"
+    ],
+    "key_stations": [
+      "上腰墩",
+      "北河",
+      "头坝河",
+      "截河坝",
+      "槐安",
+      "武威",
+      "武威东",
+      "武威南"
+    ]
+  },
+  "xiamen": {
+    "city_id": "xiamen",
+    "total_rail_segments": 968,
+    "hsr_segments": 80,
+    "conventional_segments": 888,
+    "station_count": 82,
+    "major_corridors": [
+      "甬广高速线",
+      "东渡港线",
+      "杭深线",
+      "海沧支线",
+      "鹰厦线",
+      "厦禾联络线",
+      "厦门北联络线"
+    ],
+    "key_stations": [
+      "厦门火车站",
+      "厦门北站",
+      "上李新村站",
+      "厦大南门站",
+      "厦大白城站",
+      "曾厝垵站",
+      "沙坡尾站",
+      "一农",
+      "丙洲",
+      "东孚"
+    ]
+  },
+  "xian": {
+    "city_id": "xian",
+    "total_rail_segments": 2631,
+    "hsr_segments": 203,
+    "conventional_segments": 2428,
+    "station_count": 306,
+    "major_corridors": [
+      "包西高速线",
+      "大西高速线",
+      "徐兰高速线",
+      "武西高速线",
+      "西成客专线",
+      "西渝高速线",
+      "银西高速线",
+      "阎机城际铁路",
+      "三桥西安北动走线",
+      "动走1线",
+      "动走2线",
+      "动走3线"
+    ],
+    "key_stations": [
+      "机场西（T1、T2、T3）",
+      "机场（T5）",
+      "咸阳西站",
+      "西安东站",
+      "西安北站",
+      "西安南站",
+      "西安站",
+      "万寿南路",
+      "万寿路",
+      "丈八一路"
+    ]
+  },
+  "yangzhou": {
+    "city_id": "yangzhou",
+    "total_rail_segments": 597,
+    "hsr_segments": 114,
+    "conventional_segments": 483,
+    "station_count": 12,
+    "major_corridors": [
+      "京沪高铁",
+      "沪宁城际线",
+      "京沪线",
+      "宁启线",
+      "连镇线",
+      "镇瑞线",
+      "江都联络线",
+      "泰安镇联络线",
+      "镇江联络线",
+      "江苏国信仪征热电有限责任公司专用线"
+    ],
+    "key_stations": [
+      "上隍",
+      "下蜀",
+      "六摆渡",
+      "扬州",
+      "扬州东",
+      "扬州北",
+      "江都",
+      "泰安镇",
+      "瑞山",
+      "镇江"
+    ]
+  },
+  "yichang": {
+    "city_id": "yichang",
+    "total_rail_segments": 815,
+    "hsr_segments": 186,
+    "conventional_segments": 629,
+    "station_count": 9,
+    "major_corridors": [
+      "宜兴高速线",
+      "沪渝蓉高速线",
+      "枝云线",
+      "沪蓉线",
+      "鸦宜线",
+      "机务折返段",
+      "宜东疏解线",
+      "宜昌北动车走行线",
+      "杨闵联络线",
+      "金巴岭联络线"
+    ],
+    "key_stations": [
+      "T2航站楼（预留）",
+      "云池",
+      "十里坪（预留）",
+      "宜昌",
+      "宜昌东",
+      "宜昌北",
+      "宜昌南",
+      "小溪塔",
+      "新昌"
+    ]
+  },
+  "zhangjiajie": {
+    "city_id": "zhangjiajie",
+    "total_rail_segments": 497,
+    "hsr_segments": 183,
+    "conventional_segments": 314,
+    "station_count": 9,
+    "major_corridors": [
+      "张吉怀高速线",
+      "渝厦高速线",
+      "焦柳线",
+      "张家界西联络线"
+    ],
+    "key_stations": [
+      "二家河",
+      "张家界",
+      "张家界北",
+      "张家界西",
+      "教字垭",
+      "永茂",
+      "渡坦坪",
+      "禾家村",
+      "禾家村(旧址)"
+    ]
+  },
+  "zhengzhou": {
+    "city_id": "zhengzhou",
+    "total_rail_segments": 2704,
+    "hsr_segments": 483,
+    "conventional_segments": 2221,
+    "station_count": 247,
+    "major_corridors": [
+      "京广高速线",
+      "徐兰高速线",
+      "济郑高速线",
+      "郑万高速铁路",
+      "郑太客专线",
+      "郑开城际",
+      "郑开城际线",
+      "郑机城际线",
+      "郑渝高速线",
+      "郑阜高速线",
+      "7015线",
+      "B5线"
+    ],
+    "key_stations": [
+      "新郑机场",
+      "机场东",
+      "郑州火车站",
+      "郑州东站",
+      "郑州西站",
+      "郑州航空港站站",
+      "3号航站楼",
+      "七里河",
+      "上街",
+      "东十里铺"
+    ]
+  },
+  "zhuhai": {
+    "city_id": "zhuhai",
+    "total_rail_segments": 59,
+    "hsr_segments": 52,
+    "conventional_segments": 7,
+    "station_count": 6,
+    "major_corridors": [
+      "广珠城际线",
+      "珠机城际线"
+    ],
+    "key_stations": [
+      "南朗",
+      "唐家湾",
+      "珠海北",
+      "珠海鹤洲",
+      "翠亨",
+      "鹤洲南"
+    ]
+  },
+  "zibo": {
+    "city_id": "zibo",
+    "total_rail_segments": 2019,
+    "hsr_segments": 177,
+    "conventional_segments": 1842,
+    "station_count": 26,
+    "major_corridors": [
+      "济青高速线",
+      "胶济客专线",
+      "东铁线",
+      "南罗线",
+      "周丁线",
+      "张东线",
+      "张博线",
+      "曹寿线",
+      "胶济线",
+      "辛泰线",
+      "铁南线",
+      "观光小火车"
+    ],
+    "key_stations": [
+      "丁公",
+      "东风",
+      "临淄",
+      "临淄北",
+      "兴福镇",
+      "农中",
+      "刘征",
+      "南仇",
+      "南定",
+      "南定北"
+    ]
+  }
+}

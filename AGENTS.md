@@ -22,7 +22,7 @@ Guidance for automated agents working on `china-ratlas`.
 
 When updating data, calculations, or page layouts, execute in this order:
 
-1. `python3 scripts/create_city_registry.py` & `python3 scripts/build_china_hsr.py` (updates master metadata & HSR vectors)
+1. `python3 scripts/create_city_registry.py`, `python3 scripts/build_china_hsr.py`, `python3 scripts/extract_city_railways.py`, & `python3 scripts/fetch_city_wiki_resources.py` (updates master metadata, HSR vectors, city rail layers, and Wikipedia/Wikimedia resources)
 2. `Rscript R/02_fetch_and_crop_wsf.R` (fetches/crops DLR WSF 30m rasters; skips cached `.tif`)
 3. `Rscript R/03_compute_growth_metrics.R` (recalculates area km², 2020 census population ranks, and multipliers)
 4. `Rscript R/04_generate_atlas_maps.R` (batch renders PNG maps and charts; parallelized on 4 cores)

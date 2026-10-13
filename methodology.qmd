@@ -37,8 +37,8 @@ By centering on dynamic provincial capitals (e.g., Chengdu, Wuhan, Xi'an, Zhengz
 - **Data Custodian**: Humanitarian OpenStreetMap Team (HOTOSM) & United Nations Office for the Coordination of Humanitarian Affairs (UN OCHA) Centre for Humanitarian Data.
 - **Platform**: Humanitarian Data Exchange (HDX).
 - **Data URL**: [https://data.humdata.org/dataset/hotosm_chn_railways](https://data.humdata.org/dataset/hotosm_chn_railways)
-- **Content**: 433,889 vector railway segments extracted from OpenStreetMap, categorized into passenger-dedicated lines (*PDL / 高铁*), intercity railways, standard gauge electrified lines, and station coordinates.
-- **Processing**: Ingested in R via `sf` and aggregated into 194 distinct High-Speed Rail corridors (`data/processed/hotosm_hsr_lines.rds`).
+- **Content**: 433,889 vector railway features (415,414 track segments and 18,475 passenger stations) extracted from OpenStreetMap, categorized into passenger-dedicated lines (*PDL / 高铁*), intercity railways, standard gauge electrified lines, and station coordinates.
+- **Processing**: Ingested in Python and R via `sf`; aggregated at the national level into 194 primary High-Speed Rail corridors (`data/processed/hotosm_hsr_lines.rds`), and spatially indexed into per-city railway vectors (`data/processed/city_rails.rds` and `data/processed/city_rail_summary.json`) driving both the hero growth rings overlay and dedicated transit maps (`{c_id}_rail.png`).
 - **Citation & License**:
   > Humanitarian OpenStreetMap Team (HOTOSM). (2024). *Railways of China [Data set]*. Humanitarian Data Exchange (HDX). Licensed under the **Open Database License (ODbL 1.0)** by OpenStreetMap contributors.
 
@@ -65,6 +65,16 @@ By centering on dynamic provincial capitals (e.g., Chengdu, Wuhan, Xi'an, Zhengz
 - **Citation**:
   > Hijmans, R. J., Garcia, N., & Wieczorek, J. (2022). *GADM Database of Global Administrative Areas, Version 4.1*. University of California, Davis. [https://gadm.org/](https://gadm.org/)
 
+### F. Wikimedia Foundation Open Knowledge & Cartographic Archives
+- **Data Custodians**: Wikimedia Foundation, OpenStreetMap community, and participating international map libraries (including the Perry-Castañeda Library Map Collection, University of Texas at Austin).
+- **Platforms**: [English Wikipedia](https://en.wikipedia.org/), [Chinese Wikipedia (中文维基百科)](https://zh.wikipedia.org/), [Wikidata](https://www.wikidata.org/), and [Wikimedia Commons](https://commons.wikimedia.org/).
+- **Content & Integration**:
+  - Direct encyclopedic references for every city linking demographic, historical, and urban policy context.
+  - Persistent semantic Wikidata entities (`QID`) providing machine-readable administrative linkages.
+  - Community-curated map categories (`Category:Maps of <City>` and `Category:Old maps of <City>`).
+  - Scanned historical cartography, imperial treaty port surveys, early Republican plans, and US Army Map Service (AMS) 1:250,000 / 1:50,000 topographic map series.
+- **Licenses**: Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0), Creative Commons CC0 1.0 Public Domain Dedication, and Public Domain worldwide.
+
 ---
 
 ## 2. Data Licensing & Terms of Use
@@ -76,6 +86,7 @@ By centering on dynamic provincial capitals (e.g., Chengdu, Wuhan, Xi'an, Zhengz
 | **Big Cities Points** | Esri / ArcGIS Online | Esri Public REST Feature Service Terms | © Esri, ArcGIS Online Content Providers |
 | **National Census (2020)** | National Bureau of Statistics (NBS) | Public Statistical Release / Government Open Data | Source: National Bureau of Statistics of China |
 | **GADM Boundaries** | University of California, Davis | Free for non-commercial and academic use | © GADM (v4.1) |
+| **Wiki Resources & Scanned Maps** | Wikimedia Foundation / Contributors | CC BY-SA 4.0 / CC0 / Public Domain | © Wikimedia contributors |
 
 ---
 

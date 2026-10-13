@@ -12,10 +12,12 @@ Built with **R**, `terra`, `sf`, `ggplot2`, and published as a modern static web
 - **47 Diverse Cities**: Covering major provincial capitals, coastal Special Economic Zones (Shenzhen, Zhuhai, Xiamen), ancient Silk Road oases (Kashgar, Hotan, Wuwei, Lanzhou), northern industrial nodes, and northeast border outposts (Dandong, Hunchun).
 - **Open Satellite Data**: Powered by the **DLR World Settlement Footprint Evolution (WSF Evolution)** 30-meter resolution annual settlement detection dataset (1985–2015) streamed via `/vsicurl/`.
 - **Thematic Visual Suite per City**:
-  1. **The Urban Growth Rings (Hero Poster)**: 4-epoch color-coded expansion morphology (Pre-1985, 1986–1995, 1996–2005, 2006–2015) with bilingual CJK typography.
+  1. **The Urban Growth Rings (Hero Poster)**: 4-epoch color-coded expansion morphology (Pre-1985, 1986–1995, 1996–2005, 2006–2015) with overlaid vector railway networks and bilingual CJK typography.
   2. **Small Multiples Progression**: 4 uniform-scale panels showing cumulative footprint expansion at 1985, 1995, 2005, and 2015.
-  3. **Regional Location Inset**: Administrative context within China and its province.
-  4. **30-Year Trajectory Curve**: Milestone surface area chart tracking physical expansion in $\text{km}^2$.
+  3. **Detailed Rail Network & Transit Corridors**: High-precision HOTOSM / OpenStreetMap railway layer displaying high-speed corridors (PDL), conventional rail trunk lines, and passenger station hubs over the 2015 built-up footprint.
+  4. **Regional Location Inset**: Administrative context within China and its province.
+  5. **30-Year Trajectory Curve**: Milestone surface area chart tracking physical expansion in $\text{km}^2$.
+  6. **Archival Cartography & Wiki Resources**: One-click links to English Wikipedia, Chinese Wikipedia, Wikidata persistent QID entities, Wikimedia Commons map categories, and direct links to scanned historical maps.
 - **Macro-Regional Analysis**: 6 regional chapters grouping cities by geographic and economic archetype.
 - **GitHub Pages Ready**: Static website rendered into `docs/` with `.nojekyll`.
 

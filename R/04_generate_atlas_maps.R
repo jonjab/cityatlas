@@ -27,8 +27,9 @@ stats      <- fromJSON("data/processed/city_growth_stats.json")
 admin      <- readRDS("data/processed/china_admin_layers.rds")
 hot_hsr    <- readRDS("data/processed/hotosm_hsr_lines.rds")
 arc_cities <- readRDS("data/processed/arcgis_big_cities_points.rds")
-cat(sprintf("Loaded stats for %d cities, admin layers, %d HOTOSM HSR corridors, and %d ArcGIS reference cities.\n", 
-            nrow(stats), nrow(hot_hsr), nrow(arc_cities)))
+city_rails <- if (file.exists("data/processed/city_rails.rds")) readRDS("data/processed/city_rails.rds") else list()
+cat(sprintf("Loaded stats for %d cities, admin layers, %d HOTOSM HSR corridors, %d ArcGIS reference cities, and detailed rails for %d cities.\n", 
+            nrow(stats), nrow(hot_hsr), nrow(arc_cities), length(city_rails)))
 
 rcl_hero <- matrix(c(
   -Inf, 1984, NA,
@@ -246,18 +247,27 @@ render_city_visuals <- function(i) {
   if (!file.exists(tif_path)) return(FALSE)
   
   hero_out <- sprintf("output/maps/%s_hero.png", c_id)
+  rail_out <- sprintf("output/maps/%s_rail.png", c_id)
   sm_out   <- sprintf("output/maps/%s_small_multiples.png", c_id)
   ctx_out  <- sprintf("output/maps/%s_context.png", c_id)
   traj_out <- sprintf("output/plots/%s_trajectory.png", c_id)
   
-  if (file.exists(hero_out) && file.exists(sm_out) && 
+  if (file.exists(hero_out) && file.exists(rail_out) && file.exists(sm_out) && 
       file.exists(ctx_out) && file.exists(traj_out)) {
     return(TRUE)
   }
   
   r <- rast(tif_path)
   
-  # 1. Hero Map (Urban Growth Rings)
+  # Fetch city rail layers if available
+  c_rail_data <- city_rails[[c_id]]
+  rails_layer <- if (!is.null(c_rail_data)) c_rail_data$rails else NULL
+  stations_layer <- if (!is.null(c_rail_data)) c_rail_data$stations else NULL
+  
+  hsr_layer <- if (!is.null(rails_layer) && any(rails_layer$is_hsr == TRUE)) rails_layer[rails_layer$is_hsr == TRUE, ] else NULL
+  conv_layer <- if (!is.null(rails_layer) && any(rails_layer$is_hsr == FALSE)) rails_layer[rails_layer$is_hsr == FALSE, ] else NULL
+
+  # 1. Hero Map (Urban Growth Rings with Detailed Rail Layer Overlay)
   r_epoch <- classify(r, rcl_hero)
   r_epoch <- as.factor(r_epoch)
   levels(r_epoch) <- data.frame(ID = 1:4, epoch = c("Pre-1985", "1986–1995", "1996–2005", "2006–2015"))
@@ -266,13 +276,33 @@ render_city_visuals <- function(i) {
   
   p_hero <- ggplot() +
     geom_spatraster(data = r_epoch, maxcell = 6e5) +
-    scale_fill_manual(values = epoch_cols, na.translate = FALSE, name = "Expansion Epoch") +
-    coord_sf(expand = FALSE) +
+    scale_fill_manual(values = epoch_cols, na.translate = FALSE, name = "Expansion Epoch")
+    
+  # Overlay conventional rail network
+  if (!is.null(conv_layer) && nrow(conv_layer) > 0) {
+    p_hero <- p_hero +
+      geom_sf(data = conv_layer, color = "#0369A1", linewidth = 0.65, alpha = 0.35) +
+      geom_sf(data = conv_layer, color = "#CBD5E1", linewidth = 0.3, alpha = 0.75)
+  }
+  # Overlay high-speed rail corridors
+  if (!is.null(hsr_layer) && nrow(hsr_layer) > 0) {
+    p_hero <- p_hero +
+      geom_sf(data = hsr_layer, color = "#0284C7", linewidth = 1.1, alpha = 0.5) +
+      geom_sf(data = hsr_layer, color = "#38BDF8", linewidth = 0.55, alpha = 0.95)
+  }
+  # Overlay stations
+  if (!is.null(stations_layer) && nrow(stations_layer) > 0) {
+    p_hero <- p_hero +
+      geom_sf(data = stations_layer, color = "#F59E0B", size = 1.1, alpha = 0.85)
+  }
+  
+  p_hero <- p_hero +
+    coord_sf(xlim = c(xmin(r), xmax(r)), ylim = c(ymin(r), ymax(r)), expand = FALSE) +
     labs(
       title = sprintf("%s  %s", toupper(c_info$name_en), c_info$name_zh),
       subtitle = sprintf("%s Province · Population: %0.1fM (Rank #%d)%s · 30-Year Growth: %0.1f×",
                          c_info$province_en, c_info$pop_million, c_info$rank_population, arc_rank_str, c_info$growth_multiple),
-      caption = "Sources: DLR World Settlement Footprint Evolution 30m (Marconcini et al., 2020) · GADM 4.1 · 7th National Census"
+      caption = "Sources: DLR World Settlement Footprint Evolution 30m (Marconcini et al., 2020) · HOTOSM China Railways (HDX/OSM, ODbL 1.0) · GADM 4.1 · 7th National Census"
     ) +
     theme_void(base_family = "Droid Sans Fallback") +
     theme(
@@ -290,6 +320,59 @@ render_city_visuals <- function(i) {
   
   agg_png(hero_out, width = 1400, height = 1100, res = 150)
   print(p_hero)
+  dev.off()
+  
+  # 1B. Dedicated High-Resolution Transit & Railway Network Map
+  r_built <- classify(r, matrix(c(-Inf, 1984, NA, 1984.5, 2015.5, 1, 2015.5, Inf, NA), ncol = 3, byrow = TRUE))
+  
+  p_rail <- ggplot() +
+    geom_spatraster(data = r_built, maxcell = 3e5) +
+    scale_fill_gradient(low = "#1E293B", high = "#1E293B", na.value = "transparent", guide = "none")
+    
+  if (!is.null(conv_layer) && nrow(conv_layer) > 0) {
+    p_rail <- p_rail +
+      geom_sf(data = conv_layer, aes(color = "Conventional Rail"), linewidth = 0.45, alpha = 0.75)
+  }
+  if (!is.null(hsr_layer) && nrow(hsr_layer) > 0) {
+    p_rail <- p_rail +
+      geom_sf(data = hsr_layer, color = "#0284C7", linewidth = 1.1, alpha = 0.5) +
+      geom_sf(data = hsr_layer, aes(color = "High-Speed Rail (PDL)"), linewidth = 0.7, alpha = 0.95)
+  }
+  if (!is.null(stations_layer) && nrow(stations_layer) > 0) {
+    p_rail <- p_rail +
+      geom_sf(data = stations_layer, aes(shape = "Railway Station / Hub"), color = "#F59E0B", size = 1.4, alpha = 0.9)
+  }
+  
+  corridor_colors <- c()
+  if (!is.null(hsr_layer) && nrow(hsr_layer) > 0) corridor_colors["High-Speed Rail (PDL)"] <- "#38BDF8"
+  if (!is.null(conv_layer) && nrow(conv_layer) > 0) corridor_colors["Conventional Rail"] <- "#94A3B8"
+  
+  p_rail <- p_rail +
+    scale_color_manual(values = corridor_colors, name = "Corridor Network") +
+    scale_shape_manual(values = c("Railway Station / Hub" = 16), name = "Transit Facilities") +
+    coord_sf(xlim = c(xmin(r), xmax(r)), ylim = c(ymin(r), ymax(r)), expand = FALSE) +
+    labs(
+      title = sprintf("%s  %s — TRANSIT & RAIL CORRIDORS", toupper(c_info$name_en), c_info$name_zh),
+      subtitle = "HOTOSM High-Precision Railway Corridors & Stations overlaid on 2015 Urban Built-Up Footprint",
+      caption = "Sources: HOTOSM China Railways (HDX / OpenStreetMap contributors, ODbL 1.0) · DLR WSF Evolution 30m"
+    ) +
+    theme_void(base_family = "Droid Sans Fallback") +
+    theme(
+      plot.background = element_rect(fill = "#0B0F19", color = NA),
+      panel.background = element_rect(fill = "#090D16", color = "#1E293B", linewidth = 1),
+      plot.margin = margin(16, 16, 16, 16),
+      plot.title = element_text(color = "white", size = 16, face = "bold", margin = margin(b = 4)),
+      plot.subtitle = element_text(color = "#94A3B8", size = 10, margin = margin(b = 10)),
+      plot.caption = element_text(color = "#64748B", size = 7.5, margin = margin(t = 8)),
+      legend.position = "bottom",
+      legend.box = "horizontal",
+      legend.background = element_rect(fill = "#0B0F19", color = NA),
+      legend.text = element_text(color = "#E2E8F0", size = 9),
+      legend.title = element_text(color = "white", size = 9.5, face = "bold")
+    )
+  
+  agg_png(rail_out, width = 1400, height = 1100, res = 150)
+  print(p_rail)
   dev.off()
   
   # 2. Small Multiples (4-Panel Progression)

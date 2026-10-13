@@ -3,6 +3,12 @@ import json, os
 with open("data/processed/city_growth_stats.json", "r", encoding="utf-8") as f:
     cities = json.load(f)
 
+with open("data/processed/city_rail_summary.json", "r", encoding="utf-8") as f:
+    rail_summaries = json.load(f)
+
+with open("data/processed/city_wiki_resources.json", "r", encoding="utf-8") as f:
+    wiki_resources = json.load(f)
+
 # Sort strictly by population rank (#1 to #47)
 cities = sorted(cities, key=lambda x: x["rank_population"])
 
@@ -81,6 +87,22 @@ for idx, c in enumerate(cities):
             break
 
     arc_rank_text = f"#{c.get('arcgis_rank', 'N/A')}" if c.get('arcgis_rank') else "N/A"
+    rail_info = rail_summaries.get(c_id, {
+        "total_rail_segments": 0,
+        "hsr_segments": 0,
+        "conventional_segments": 0,
+        "station_count": 0,
+        "major_corridors": [],
+        "key_stations": []
+    })
+    wiki_res = wiki_resources.get(c_id, {})
+
+    wiki_en_url = wiki_res.get("wikipedia_en_url", f"https://en.wikipedia.org/wiki/{c['name_en']}")
+    wiki_zh_url = wiki_res.get("wikipedia_zh_url", f"https://zh.wikipedia.org/wiki/{c['name_zh']}")
+    wikidata_id = wiki_res.get("wikidata_id", "Q")
+    wikidata_url = wiki_res.get("wikidata_url", "https://www.wikidata.org")
+    commons_cat_url = wiki_res.get("commons_map_category_url", f"https://commons.wikimedia.org/wiki/Category:Maps_of_{c['name_en']}")
+    commons_search_url = wiki_res.get("commons_search_maps_url", f"https://commons.wikimedia.org/w/index.php?search={c['name_en']}+map")
 
     hero_block = f"""```{{=html}}
 <div class="hero-banner">
@@ -93,6 +115,13 @@ for idx, c in enumerate(cities):
         Population Rank: <strong>#{c['rank_population']}</strong> of 47 · 
         ArcGIS Urban Hierarchy Rank: <strong>{arc_rank_text}</strong>
       </p>
+      <div style="margin-top: 0.75rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+        <a href="{wiki_en_url}" target="_blank" rel="noopener" class="resource-btn">📖 Wikipedia (EN)</a>
+        <a href="{wiki_zh_url}" target="_blank" rel="noopener" class="resource-btn">🌐 维基百科 (ZH)</a>
+        <a href="{wikidata_url}" target="_blank" rel="noopener" class="resource-btn">🏷️ Wikidata ({wikidata_id})</a>
+        <a href="{commons_cat_url}" target="_blank" rel="noopener" class="resource-btn">🗺️ Commons Maps</a>
+        <a href="{commons_search_url}" target="_blank" rel="noopener" class="resource-btn">🔍 Scanned Maps</a>
+      </div>
     </div>
     <div style="text-align: right;">
       <span class="metric-badge badge-gold" style="font-size: 1.1rem; padding: 0.5rem 1rem;">{c['growth_multiple']}× Growth Multiplier</span>
@@ -108,6 +137,40 @@ for idx, c in enumerate(cities):
   <a href="{next_c['id']}.html" style="color: #38bdf8; text-decoration: none;">Next: {next_c['name_en']} ({next_c['pop_million']}M) →</a>
 </div>
 ```"""
+
+    # Format railway details
+    corridors_md = ""
+    if rail_info.get("major_corridors"):
+        corridor_pills = ", ".join(f"`{x}`" for x in rail_info["major_corridors"][:10])
+        corridors_md = f"- **Major Railway Lines & Corridors**: {corridor_pills}\n"
+
+    stations_md = ""
+    if rail_info.get("key_stations"):
+        station_pills = ", ".join(f"`{x}`" for x in rail_info["key_stations"][:10])
+        stations_md = f"- **Major Passenger Terminals & Stations**: {station_pills}\n"
+
+    # Format scanned maps callout
+    old_map_line = ""
+    if wiki_res.get("commons_old_map_category_url"):
+        old_map_line = f"- 📜 **Historical Maps Collection**: [{wiki_res['commons_old_map_category']}]({wiki_res['commons_old_map_category_url']}) — Scanned historical maps, municipal plans, and early surveys.\n"
+
+    scanned_maps_list = ""
+    if wiki_res.get("scanned_maps"):
+        scanned_items = []
+        for sm in wiki_res["scanned_maps"]:
+            scanned_items.append(f"- [{sm['title']}]({sm['url']}) (Wikimedia Commons scanned asset)")
+        scanned_maps_list = "\n".join(scanned_items)
+        scanned_maps_box = f"""::: {{.callout-note title="Selected Scanned Historical Maps on Wikimedia Commons"}}
+The following scanned historical maps and cartographic surveys covering **{c['name_en']}** are accessible on Wikimedia Commons:
+
+{scanned_maps_list}
+
+Additional scanned historical maps and topographic sheets can be found via the [Wikimedia Commons Scanned Maps Search]({commons_search_url}).
+:::"""
+    else:
+        scanned_maps_box = f"""::: {{.callout-note title="Scanned Historical Maps Archive"}}
+Explore scanned historical maps, AMS sheets, and municipal surveys for **{c['name_en']}** directly on the [Wikimedia Commons Scanned Maps Search]({commons_search_url}).
+:::"""
 
     qmd_content = f"""---
 title: "{c['name_en']} ({c['name_zh']})"
@@ -186,12 +249,13 @@ Annual Growth (CAGR)
 
 ## 1. The Urban Growth Rings (1985–2015)
 
-The cartographic poster below maps the physical settlement rings of **{c['name_en']}** across four historical development epochs:
+The cartographic poster below maps the physical settlement rings of **{c['name_en']}** across four historical development epochs, overlaid with the high-precision HOTOSM / OpenStreetMap railway transit network:
 
 - <span style="color: #F59E0B; font-weight: bold;">● Pre-1985 Core</span>: Historic urban core and initial post-1949 industrial settlements.
 - <span style="color: #EF4444; font-weight: bold;">● 1986–1995 Wave</span>: Early reform, opening up, and Deng Xiaoping's 1992 Southern Tour (*Nanxun*).
 - <span style="color: #06B6D4; font-weight: bold;">● 1996–2005 Wave</span>: WTO entry, export industrialization, and new development zones (*Kaifaqu*).
 - <span style="color: #10B981; font-weight: bold;">● 2006–2015 Wave</span>: High-speed rail expansion, modern new cities (*Xinqu*), and peri-urban consolidation.
+- <span style="color: #38BDF8; font-weight: bold;">━ Railway Corridors</span>: High-precision vector railway network overlaid directly from HOTOSM / OpenStreetMap (high-speed passenger corridors in vibrant cyan, conventional rail lines in silver).
 
 ::: {{.map-container}}
 !['The Urban Growth Rings: {c['name_en']}'](../output/maps/{c_id}_hero.png)
@@ -209,7 +273,66 @@ Uniform-scale physical footprint progression maps tracking built-up settlement e
 
 ---
 
-## 3. Geographical Location & Growth Trajectory
+## 3. Detailed Rail Network & Transit Corridors
+
+The high-resolution vector map below provides a detailed visualization of the railway network across **{c['name_en']}**, extracted from OpenStreetMap and the Humanitarian OpenStreetMap Team (HOTOSM). The transit network is superimposed directly over the 2015 built settlement footprint (dark slate silhouette):
+
+::: {{.map-container}}
+!['Transit & Rail Network: {c['name_en']}'](../output/maps/{c_id}_rail.png)
+:::
+
+### Transit Infrastructure Indicators
+
+::: {{.metric-grid}}
+::: {{.metric-card}}
+::: {{.metric-label}}
+Total Track Segments
+:::
+::: {{.metric-val}}
+{rail_info['total_rail_segments']:,}
+:::
+<div style="font-size: 0.8rem; color: #38bdf8;">HOTOSM Vector Lines</div>
+:::
+
+::: {{.metric-card}}
+::: {{.metric-label}}
+High-Speed Rail Segments
+:::
+::: {{.metric-val}}
+{rail_info['hsr_segments']:,}
+:::
+<div style="font-size: 0.8rem; color: #38bdf8;">PDL / 250–350 km/h</div>
+:::
+
+::: {{.metric-card}}
+::: {{.metric-label}}
+Conventional Rail
+:::
+::: {{.metric-val}}
+{rail_info['conventional_segments']:,}
+:::
+<div style="font-size: 0.8rem; color: #94a3b8;">Trunk & Connector Lines</div>
+:::
+
+::: {{.metric-card}}
+::: {{.metric-label}}
+Stations & Terminals
+:::
+::: {{.metric-val}}
+{rail_info['station_count']:,}
+:::
+<div style="font-size: 0.8rem; color: #f59e0b;">Passenger Hubs</div>
+:::
+:::
+
+{corridors_md}
+{stations_md}
+
+> **Transit Layer Citation**: Humanitarian OpenStreetMap Team (HOTOSM) & United Nations Office for the Coordination of Humanitarian Affairs (UN OCHA) Centre for Humanitarian Data, *Railways of China Dataset* on HDX ([https://data.humdata.org/dataset/hotosm_chn_railways](https://data.humdata.org/dataset/hotosm_chn_railways)). Feature geometries extracted from OpenStreetMap under the [Open Database License (ODbL 1.0)](https://opendatacommons.org/licenses/odbl/1-0/) by OpenStreetMap contributors. Includes passenger-dedicated high-speed lines, electrified conventional trunk corridors, industrial spurs, and passenger stations.
+
+---
+
+## 4. Geographical Location & Growth Trajectory
 
 :::: {{.columns}}
 
@@ -234,7 +357,7 @@ Uniform-scale physical footprint progression maps tracking built-up settlement e
 
 ---
 
-## 4. 5-Year Milestone Chronology
+## 5. 5-Year Milestone Chronology
 
 | Milestone Year | Urban Footprint (km²) | Growth vs. 1985 Baseline | Share of 2015 Footprint |
 |:---:|:---:|:---:|:---:|
@@ -248,15 +371,30 @@ Uniform-scale physical footprint progression maps tracking built-up settlement e
 
 ---
 
-## 5. Data Sources & Attributions
+## 6. Archival Cartography & Wiki Resources
+
+Direct links to open knowledge, semantic geodata, and scanned map collections for **{c['name_en']}**:
+
+- 📖 **English Wikipedia**: [{wiki_res.get('wikipedia_en_title', c['name_en'])}]({wiki_en_url}) — In-depth overview of history, urban development, demographic shifts, and regional governance.
+- 🌐 **Chinese Wikipedia (中文维基百科)**: [{wiki_res.get('wikipedia_zh_title', c['name_zh'])}]({wiki_zh_url}) — Authoritative municipal boundaries, administrative subdivisions, and local transport infrastructure.
+- 🏷️ **Wikidata Knowledge Base**: [{wikidata_id} ({c['name_en']})]({wikidata_url}) — Semantic knowledge graph entity with geocoordinates, OpenStreetMap tags, and linked administrative entities.
+- 🗺️ **Wikimedia Commons Map Repository**: [{wiki_res.get('commons_map_category', 'Maps of ' + c['name_en'])}]({commons_cat_url}) — Community-curated media repository containing thematic, administrative, and transport maps.
+{old_map_line}- 🔍 **Scanned Maps & Historical Sheets Search**: [Explore scanned bitmap and topographic maps of {c['name_en']} on Wikimedia Commons]({commons_search_url})
+
+{scanned_maps_box}
+
+---
+
+## 7. Data Sources & Attributions
 
 The quantitative and spatial indicators for **{c['name_en']}** are synthesized from the following primary sources:
 
 1. **Urban Footprint & Built-Up Surface**: German Aerospace Center (DLR) [World Settlement Footprint Evolution (1985–2015)](https://download.geoservice.dlr.de/WSF_EVO/). 30m resolution multi-decadal satellite detection (*Marconcini et al., 2020, Nature Scientific Data*).
 2. **Permanent Resident Population**: National Bureau of Statistics of China (NBS), [Seventh National Population Census (第七次全国人口普查 / 七普 2020)](http://www.stats.gov.cn/). Resident population: **{c['pop_million']}M** (National Rank: **#{c['rank_population']}** of 47).
 3. **National Urban Tier Classification**: Esri / [ArcGIS Online Big Cities Points FeatureServer](https://services1.arcgis.com/4TXrdeWh0RyCqPgB/arcgis/rest/services/big_cities_points/FeatureServer), National City Rank: **{arc_rank_text}** of 184 major Chinese cities.
-4. **Transit & High-Speed Rail Corridors**: Humanitarian OpenStreetMap Team (HOTOSM) & UN OCHA, [Railways of China Dataset](https://data.humdata.org/dataset/hotosm_chn_railways) on HDX, licensed under Open Database License (ODbL).
+4. **Detailed Transit & Railway Corridors**: Humanitarian OpenStreetMap Team (HOTOSM) & UN OCHA, [Railways of China Dataset](https://data.humdata.org/dataset/hotosm_chn_railways) on HDX. Licensed under the [Open Database License (ODbL 1.0)](https://opendatacommons.org/licenses/odbl/1-0/) by OpenStreetMap contributors. Includes full-precision railway alignments, high-speed rail lines, electrified conventional routes, and station points.
 5. **Administrative Boundaries**: [GADM Database of Global Administrative Areas (v4.1)](https://gadm.org/), University of California, Davis.
+6. **Archival Cartography & Encyclopedia Resources**: [Wikimedia Foundation](https://www.wikimedia.org/) ([Wikipedia](https://en.wikipedia.org/), [Wikidata](https://www.wikidata.org/), and [Wikimedia Commons](https://commons.wikimedia.org/)).
 
 ---
 
@@ -419,8 +557,8 @@ By centering on dynamic provincial capitals (e.g., Chengdu, Wuhan, Xi'an, Zhengz
 - **Data Custodian**: Humanitarian OpenStreetMap Team (HOTOSM) & United Nations Office for the Coordination of Humanitarian Affairs (UN OCHA) Centre for Humanitarian Data.
 - **Platform**: Humanitarian Data Exchange (HDX).
 - **Data URL**: [https://data.humdata.org/dataset/hotosm_chn_railways](https://data.humdata.org/dataset/hotosm_chn_railways)
-- **Content**: 433,889 vector railway segments extracted from OpenStreetMap, categorized into passenger-dedicated lines (*PDL / 高铁*), intercity railways, standard gauge electrified lines, and station coordinates.
-- **Processing**: Ingested in R via `sf` and aggregated into 194 distinct High-Speed Rail corridors (`data/processed/hotosm_hsr_lines.rds`).
+- **Content**: 433,889 vector railway features (415,414 track segments and 18,475 passenger stations) extracted from OpenStreetMap, categorized into passenger-dedicated lines (*PDL / 高铁*), intercity railways, standard gauge electrified lines, and station coordinates.
+- **Processing**: Ingested in Python and R via `sf`; aggregated at the national level into 194 primary High-Speed Rail corridors (`data/processed/hotosm_hsr_lines.rds`), and spatially indexed into per-city railway vectors (`data/processed/city_rails.rds` and `data/processed/city_rail_summary.json`) driving both the hero growth rings overlay and dedicated transit maps (`{c_id}_rail.png`).
 - **Citation & License**:
   > Humanitarian OpenStreetMap Team (HOTOSM). (2024). *Railways of China [Data set]*. Humanitarian Data Exchange (HDX). Licensed under the **Open Database License (ODbL 1.0)** by OpenStreetMap contributors.
 
@@ -447,6 +585,16 @@ By centering on dynamic provincial capitals (e.g., Chengdu, Wuhan, Xi'an, Zhengz
 - **Citation**:
   > Hijmans, R. J., Garcia, N., & Wieczorek, J. (2022). *GADM Database of Global Administrative Areas, Version 4.1*. University of California, Davis. [https://gadm.org/](https://gadm.org/)
 
+### F. Wikimedia Foundation Open Knowledge & Cartographic Archives
+- **Data Custodians**: Wikimedia Foundation, OpenStreetMap community, and participating international map libraries (including the Perry-Castañeda Library Map Collection, University of Texas at Austin).
+- **Platforms**: [English Wikipedia](https://en.wikipedia.org/), [Chinese Wikipedia (中文维基百科)](https://zh.wikipedia.org/), [Wikidata](https://www.wikidata.org/), and [Wikimedia Commons](https://commons.wikimedia.org/).
+- **Content & Integration**:
+  - Direct encyclopedic references for every city linking demographic, historical, and urban policy context.
+  - Persistent semantic Wikidata entities (`QID`) providing machine-readable administrative linkages.
+  - Community-curated map categories (`Category:Maps of <City>` and `Category:Old maps of <City>`).
+  - Scanned historical cartography, imperial treaty port surveys, early Republican plans, and US Army Map Service (AMS) 1:250,000 / 1:50,000 topographic map series.
+- **Licenses**: Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0), Creative Commons CC0 1.0 Public Domain Dedication, and Public Domain worldwide.
+
 ---
 
 ## 2. Data Licensing & Terms of Use
@@ -458,6 +606,7 @@ By centering on dynamic provincial capitals (e.g., Chengdu, Wuhan, Xi'an, Zhengz
 | **Big Cities Points** | Esri / ArcGIS Online | Esri Public REST Feature Service Terms | © Esri, ArcGIS Online Content Providers |
 | **National Census (2020)** | National Bureau of Statistics (NBS) | Public Statistical Release / Government Open Data | Source: National Bureau of Statistics of China |
 | **GADM Boundaries** | University of California, Davis | Free for non-commercial and academic use | © GADM (v4.1) |
+| **Wiki Resources & Scanned Maps** | Wikimedia Foundation / Contributors | CC BY-SA 4.0 / CC0 / Public Domain | © Wikimedia contributors |
 
 ---
 

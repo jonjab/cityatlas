@@ -5,10 +5,12 @@ cat("=================================================================\n")
 cat("          CHINA URBAN GROWTH RATLAS PIPELINE (1985–2015)          \n")
 cat("=================================================================\n\n")
 
-# Step 1: Create City Geodatabase & HSR Network
-cat("[1/6] Building city geodatabase & High-Speed Rail network...\n")
+# Step 1: Create City Geodatabase, HSR & Detailed Rail Network, and Wiki Resources
+cat("[1/5] Building city geodatabase, rail networks & Wiki resources...\n")
 system("python3 scripts/create_city_registry.py")
 system("python3 scripts/build_china_hsr.py")
+system("python3 scripts/extract_city_railways.py")
+system("python3 scripts/fetch_city_wiki_resources.py")
 
 # Step 2: Fetch and crop WSF Evolution raster tiles
 cat("\n[2/5] Fetching & caching DLR WSF Evolution 30m rasters (47 cities)...\n")

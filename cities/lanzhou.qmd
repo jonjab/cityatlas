@@ -17,6 +17,13 @@ format:
         Population Rank: <strong>#20</strong> of 47 · 
         ArcGIS Urban Hierarchy Rank: <strong>#40</strong>
       </p>
+      <div style="margin-top: 0.75rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+        <a href="https://en.wikipedia.org/wiki/Lanzhou" target="_blank" rel="noopener" class="resource-btn">📖 Wikipedia (EN)</a>
+        <a href="https://zh.wikipedia.org/wiki/%E5%85%B0%E5%B7%9E%E5%B8%82" target="_blank" rel="noopener" class="resource-btn">🌐 维基百科 (ZH)</a>
+        <a href="https://www.wikidata.org/wiki/Q183584" target="_blank" rel="noopener" class="resource-btn">🏷️ Wikidata (Q183584)</a>
+        <a href="https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Lanzhou" target="_blank" rel="noopener" class="resource-btn">🗺️ Commons Maps</a>
+        <a href="https://commons.wikimedia.org/w/index.php?search=Lanzhou+map&title=Special:MediaSearch&type=image" target="_blank" rel="noopener" class="resource-btn">🔍 Scanned Maps</a>
+      </div>
     </div>
     <div style="text-align: right;">
       <span class="metric-badge badge-gold" style="font-size: 1.1rem; padding: 0.5rem 1rem;">1.95× Growth Multiplier</span>
@@ -92,12 +99,13 @@ Annual Growth (CAGR)
 
 ## 1. The Urban Growth Rings (1985–2015)
 
-The cartographic poster below maps the physical settlement rings of **Lanzhou** across four historical development epochs:
+The cartographic poster below maps the physical settlement rings of **Lanzhou** across four historical development epochs, overlaid with the high-precision HOTOSM / OpenStreetMap railway transit network:
 
 - <span style="color: #F59E0B; font-weight: bold;">● Pre-1985 Core</span>: Historic urban core and initial post-1949 industrial settlements.
 - <span style="color: #EF4444; font-weight: bold;">● 1986–1995 Wave</span>: Early reform, opening up, and Deng Xiaoping's 1992 Southern Tour (*Nanxun*).
 - <span style="color: #06B6D4; font-weight: bold;">● 1996–2005 Wave</span>: WTO entry, export industrialization, and new development zones (*Kaifaqu*).
 - <span style="color: #10B981; font-weight: bold;">● 2006–2015 Wave</span>: High-speed rail expansion, modern new cities (*Xinqu*), and peri-urban consolidation.
+- <span style="color: #38BDF8; font-weight: bold;">━ Railway Corridors</span>: High-precision vector railway network overlaid directly from HOTOSM / OpenStreetMap (high-speed passenger corridors in vibrant cyan, conventional rail lines in silver).
 
 ::: {.map-container}
 !['The Urban Growth Rings: Lanzhou'](../output/maps/lanzhou_hero.png)
@@ -115,7 +123,68 @@ Uniform-scale physical footprint progression maps tracking built-up settlement e
 
 ---
 
-## 3. Geographical Location & Growth Trajectory
+## 3. Detailed Rail Network & Transit Corridors
+
+The high-resolution vector map below provides a detailed visualization of the railway network across **Lanzhou**, extracted from OpenStreetMap and the Humanitarian OpenStreetMap Team (HOTOSM). The transit network is superimposed directly over the 2015 built settlement footprint (dark slate silhouette):
+
+::: {.map-container}
+!['Transit & Rail Network: Lanzhou'](../output/maps/lanzhou_rail.png)
+:::
+
+### Transit Infrastructure Indicators
+
+::: {.metric-grid}
+::: {.metric-card}
+::: {.metric-label}
+Total Track Segments
+:::
+::: {.metric-val}
+1,842
+:::
+<div style="font-size: 0.8rem; color: #38bdf8;">HOTOSM Vector Lines</div>
+:::
+
+::: {.metric-card}
+::: {.metric-label}
+High-Speed Rail Segments
+:::
+::: {.metric-val}
+106
+:::
+<div style="font-size: 0.8rem; color: #38bdf8;">PDL / 250–350 km/h</div>
+:::
+
+::: {.metric-card}
+::: {.metric-label}
+Conventional Rail
+:::
+::: {.metric-val}
+1,736
+:::
+<div style="font-size: 0.8rem; color: #94a3b8;">Trunk & Connector Lines</div>
+:::
+
+::: {.metric-card}
+::: {.metric-label}
+Stations & Terminals
+:::
+::: {.metric-val}
+55
+:::
+<div style="font-size: 0.8rem; color: #f59e0b;">Passenger Hubs</div>
+:::
+:::
+
+- **Major Railway Lines & Corridors**: `兰新客专线`, `徐兰高速线`, `中川线`, `兰中联络2线`, `兰州北环到线`, `兰州北环线`, `兰州西动车走行1线`, `兰州西动车走行2线`, `兰州西普高联络2线`, `兰新线`
+
+- **Major Passenger Terminals & Stations**: `兰州火车站`, `七里河`, `上西园`, `下河湾`, `东岗`, `东方红广场`, `五里铺`, `元台子`, `兰州`, `兰州东`
+
+
+> **Transit Layer Citation**: Humanitarian OpenStreetMap Team (HOTOSM) & United Nations Office for the Coordination of Humanitarian Affairs (UN OCHA) Centre for Humanitarian Data, *Railways of China Dataset* on HDX ([https://data.humdata.org/dataset/hotosm_chn_railways](https://data.humdata.org/dataset/hotosm_chn_railways)). Feature geometries extracted from OpenStreetMap under the [Open Database License (ODbL 1.0)](https://opendatacommons.org/licenses/odbl/1-0/) by OpenStreetMap contributors. Includes passenger-dedicated high-speed lines, electrified conventional trunk corridors, industrial spurs, and passenger stations.
+
+---
+
+## 4. Geographical Location & Growth Trajectory
 
 :::: {.columns}
 
@@ -140,7 +209,7 @@ Uniform-scale physical footprint progression maps tracking built-up settlement e
 
 ---
 
-## 4. 5-Year Milestone Chronology
+## 5. 5-Year Milestone Chronology
 
 | Milestone Year | Urban Footprint (km²) | Growth vs. 1985 Baseline | Share of 2015 Footprint |
 |:---:|:---:|:---:|:---:|
@@ -154,15 +223,37 @@ Uniform-scale physical footprint progression maps tracking built-up settlement e
 
 ---
 
-## 5. Data Sources & Attributions
+## 6. Archival Cartography & Wiki Resources
+
+Direct links to open knowledge, semantic geodata, and scanned map collections for **Lanzhou**:
+
+- 📖 **English Wikipedia**: [Lanzhou](https://en.wikipedia.org/wiki/Lanzhou) — In-depth overview of history, urban development, demographic shifts, and regional governance.
+- 🌐 **Chinese Wikipedia (中文维基百科)**: [兰州市](https://zh.wikipedia.org/wiki/%E5%85%B0%E5%B7%9E%E5%B8%82) — Authoritative municipal boundaries, administrative subdivisions, and local transport infrastructure.
+- 🏷️ **Wikidata Knowledge Base**: [Q183584 (Lanzhou)](https://www.wikidata.org/wiki/Q183584) — Semantic knowledge graph entity with geocoordinates, OpenStreetMap tags, and linked administrative entities.
+- 🗺️ **Wikimedia Commons Map Repository**: [Category:Maps of Lanzhou](https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Lanzhou) — Community-curated media repository containing thematic, administrative, and transport maps.
+- 🔍 **Scanned Maps & Historical Sheets Search**: [Explore scanned bitmap and topographic maps of Lanzhou on Wikimedia Commons](https://commons.wikimedia.org/w/index.php?search=Lanzhou+map&title=Special:MediaSearch&type=image)
+
+::: {.callout-note title="Selected Scanned Historical Maps on Wikimedia Commons"}
+The following scanned historical maps and cartographic surveys covering **Lanzhou** are accessible on Wikimedia Commons:
+
+- [Lanzhou-location-MAP-in-Gansu-Province-China](https://commons.wikimedia.org/wiki/File%3ALanzhou-location-MAP-in-Gansu-Province-China.jpg) (Wikimedia Commons scanned asset)
+- [Map of Tibet Ü-Tsang Amdo and Kham](https://commons.wikimedia.org/wiki/File%3AMap%20of%20Tibet%20%C3%9C-Tsang%20Amdo%20and%20Kham.jpg) (Wikimedia Commons scanned asset)
+
+Additional scanned historical maps and topographic sheets can be found via the [Wikimedia Commons Scanned Maps Search](https://commons.wikimedia.org/w/index.php?search=Lanzhou+map&title=Special:MediaSearch&type=image).
+:::
+
+---
+
+## 7. Data Sources & Attributions
 
 The quantitative and spatial indicators for **Lanzhou** are synthesized from the following primary sources:
 
 1. **Urban Footprint & Built-Up Surface**: German Aerospace Center (DLR) [World Settlement Footprint Evolution (1985–2015)](https://download.geoservice.dlr.de/WSF_EVO/). 30m resolution multi-decadal satellite detection (*Marconcini et al., 2020, Nature Scientific Data*).
 2. **Permanent Resident Population**: National Bureau of Statistics of China (NBS), [Seventh National Population Census (第七次全国人口普查 / 七普 2020)](http://www.stats.gov.cn/). Resident population: **4.36M** (National Rank: **#20** of 47).
 3. **National Urban Tier Classification**: Esri / [ArcGIS Online Big Cities Points FeatureServer](https://services1.arcgis.com/4TXrdeWh0RyCqPgB/arcgis/rest/services/big_cities_points/FeatureServer), National City Rank: **#40** of 184 major Chinese cities.
-4. **Transit & High-Speed Rail Corridors**: Humanitarian OpenStreetMap Team (HOTOSM) & UN OCHA, [Railways of China Dataset](https://data.humdata.org/dataset/hotosm_chn_railways) on HDX, licensed under Open Database License (ODbL).
+4. **Detailed Transit & Railway Corridors**: Humanitarian OpenStreetMap Team (HOTOSM) & UN OCHA, [Railways of China Dataset](https://data.humdata.org/dataset/hotosm_chn_railways) on HDX. Licensed under the [Open Database License (ODbL 1.0)](https://opendatacommons.org/licenses/odbl/1-0/) by OpenStreetMap contributors. Includes full-precision railway alignments, high-speed rail lines, electrified conventional routes, and station points.
 5. **Administrative Boundaries**: [GADM Database of Global Administrative Areas (v4.1)](https://gadm.org/), University of California, Davis.
+6. **Archival Cartography & Encyclopedia Resources**: [Wikimedia Foundation](https://www.wikimedia.org/) ([Wikipedia](https://en.wikipedia.org/), [Wikidata](https://www.wikidata.org/), and [Wikimedia Commons](https://commons.wikimedia.org/)).
 
 ---
 

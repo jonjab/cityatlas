@@ -195,6 +195,7 @@ window.Quarto = {
   <li><a href="#c.-arcgis-online-big-cities-points-layer" id="toc-c.-arcgis-online-big-cities-points-layer" class="nav-link" data-scroll-target="#c.-arcgis-online-big-cities-points-layer">C. ArcGIS Online Big Cities Points Layer</a></li>
   <li><a href="#d.-seventh-national-population-census-of-china-七普-2020" id="toc-d.-seventh-national-population-census-of-china-七普-2020" class="nav-link" data-scroll-target="#d.-seventh-national-population-census-of-china-七普-2020">D. Seventh National Population Census of China (七普 2020)</a></li>
   <li><a href="#e.-gadm-database-of-global-administrative-areas" id="toc-e.-gadm-database-of-global-administrative-areas" class="nav-link" data-scroll-target="#e.-gadm-database-of-global-administrative-areas">E. GADM Database of Global Administrative Areas</a></li>
+  <li><a href="#f.-wikimedia-foundation-open-knowledge-cartographic-archives" id="toc-f.-wikimedia-foundation-open-knowledge-cartographic-archives" class="nav-link" data-scroll-target="#f.-wikimedia-foundation-open-knowledge-cartographic-archives">F. Wikimedia Foundation Open Knowledge &amp; Cartographic Archives</a></li>
   </ul></li>
   <li><a href="#data-licensing-terms-of-use" id="toc-data-licensing-terms-of-use" class="nav-link" data-scroll-target="#data-licensing-terms-of-use">2. Data Licensing &amp; Terms of Use</a></li>
   <li><a href="#four-landmark-urban-development-epochs" id="toc-four-landmark-urban-development-epochs" class="nav-link" data-scroll-target="#four-landmark-urban-development-epochs">3. Four Landmark Urban Development Epochs</a></li>
@@ -264,8 +265,8 @@ window.Quarto = {
 <li><strong>Data Custodian</strong>: Humanitarian OpenStreetMap Team (HOTOSM) &amp; United Nations Office for the Coordination of Humanitarian Affairs (UN OCHA) Centre for Humanitarian Data.</li>
 <li><strong>Platform</strong>: Humanitarian Data Exchange (HDX).</li>
 <li><strong>Data URL</strong>: <a href="https://data.humdata.org/dataset/hotosm_chn_railways">https://data.humdata.org/dataset/hotosm_chn_railways</a></li>
-<li><strong>Content</strong>: 433,889 vector railway segments extracted from OpenStreetMap, categorized into passenger-dedicated lines (<em>PDL / 高铁</em>), intercity railways, standard gauge electrified lines, and station coordinates.</li>
-<li><strong>Processing</strong>: Ingested in R via <code>sf</code> and aggregated into 194 distinct High-Speed Rail corridors (<code>data/processed/hotosm_hsr_lines.rds</code>).</li>
+<li><strong>Content</strong>: 433,889 vector railway features (415,414 track segments and 18,475 passenger stations) extracted from OpenStreetMap, categorized into passenger-dedicated lines (<em>PDL / 高铁</em>), intercity railways, standard gauge electrified lines, and station coordinates.</li>
+<li><strong>Processing</strong>: Ingested in Python and R via <code>sf</code>; aggregated at the national level into 194 primary High-Speed Rail corridors (<code>data/processed/hotosm_hsr_lines.rds</code>), and spatially indexed into per-city railway vectors (<code>data/processed/city_rails.rds</code> and <code>data/processed/city_rail_summary.json</code>) driving both the hero growth rings overlay and dedicated transit maps (<code>{c_id}_rail.png</code>).</li>
 <li><strong>Citation &amp; License</strong>: &gt; Humanitarian OpenStreetMap Team (HOTOSM). (2024). <em>Railways of China [Data set]</em>. Humanitarian Data Exchange (HDX). Licensed under the <strong>Open Database License (ODbL 1.0)</strong> by OpenStreetMap contributors.</li>
 </ul>
 </section>
@@ -296,6 +297,21 @@ window.Quarto = {
 <li><strong>Data URL</strong>: <a href="https://gadm.org/">https://gadm.org/</a></li>
 <li><strong>Content</strong>: Spatial administrative boundaries at Level 0 (national border), Level 1 (provinces), and Level 2 (prefectures and municipalities) with official bilingual toponyms.</li>
 <li><strong>Citation</strong>: &gt; Hijmans, R. J., Garcia, N., &amp; Wieczorek, J. (2022). <em>GADM Database of Global Administrative Areas, Version 4.1</em>. University of California, Davis. <a href="https://gadm.org/">https://gadm.org/</a></li>
+</ul>
+</section>
+<section id="f.-wikimedia-foundation-open-knowledge-cartographic-archives" class="level3">
+<h3 class="anchored" data-anchor-id="f.-wikimedia-foundation-open-knowledge-cartographic-archives">F. Wikimedia Foundation Open Knowledge &amp; Cartographic Archives</h3>
+<ul>
+<li><strong>Data Custodians</strong>: Wikimedia Foundation, OpenStreetMap community, and participating international map libraries (including the Perry-Castañeda Library Map Collection, University of Texas at Austin).</li>
+<li><strong>Platforms</strong>: <a href="https://en.wikipedia.org/">English Wikipedia</a>, <a href="https://zh.wikipedia.org/">Chinese Wikipedia (中文维基百科)</a>, <a href="https://www.wikidata.org/">Wikidata</a>, and <a href="https://commons.wikimedia.org/">Wikimedia Commons</a>.</li>
+<li><strong>Content &amp; Integration</strong>:
+<ul>
+<li>Direct encyclopedic references for every city linking demographic, historical, and urban policy context.</li>
+<li>Persistent semantic Wikidata entities (<code>QID</code>) providing machine-readable administrative linkages.</li>
+<li>Community-curated map categories (<code>Category:Maps of &lt;City&gt;</code> and <code>Category:Old maps of &lt;City&gt;</code>).</li>
+<li>Scanned historical cartography, imperial treaty port surveys, early Republican plans, and US Army Map Service (AMS) 1:250,000 / 1:50,000 topographic map series.</li>
+</ul></li>
+<li><strong>Licenses</strong>: Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0), Creative Commons CC0 1.0 Public Domain Dedication, and Public Domain worldwide.</li>
 </ul>
 <hr>
 </section>
@@ -347,6 +363,12 @@ window.Quarto = {
 <td style="text-align: left;">University of California, Davis</td>
 <td style="text-align: left;">Free for non-commercial and academic use</td>
 <td style="text-align: left;">© GADM (v4.1)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Wiki Resources &amp; Scanned Maps</strong></td>
+<td style="text-align: left;">Wikimedia Foundation / Contributors</td>
+<td style="text-align: left;">CC BY-SA 4.0 / CC0 / Public Domain</td>
+<td style="text-align: left;">© Wikimedia contributors</td>
 </tr>
 </tbody>
 </table>

@@ -1,0 +1,1439 @@
+{
+  "baicheng": {
+    "id": "baicheng",
+    "name_en": "Baicheng",
+    "name_zh": "白城市",
+    "province_en": "Jilin",
+    "wikipedia_en_title": "Baicheng",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Baicheng",
+    "wikipedia_zh_title": "白城市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E7%99%BD%E5%9F%8E%E5%B8%82",
+    "wikidata_id": "Q92381",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q92381",
+    "commons_map_category": "Category:Maps of Baicheng",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Baicheng",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Baicheng+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Baicheng-map fa",
+        "file_title": "File:Baicheng-map fa.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3ABaicheng-map%20fa.png"
+      },
+      {
+        "title": "Baicheng locator map (blank).svg",
+        "file_title": "File:Baicheng locator map (blank).svg",
+        "url": "https://commons.wikimedia.org/wiki/File%3ABaicheng%20locator%20map%20%28blank%29.svg"
+      },
+      {
+        "title": "Baicheng-map",
+        "file_title": "File:Baicheng-map.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3ABaicheng-map.png"
+      }
+    ]
+  },
+  "baoding": {
+    "id": "baoding",
+    "name_en": "Baoding",
+    "name_zh": "保定市",
+    "province_en": "Hebei",
+    "wikipedia_en_title": "Baoding",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Baoding",
+    "wikipedia_zh_title": "保定市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E4%BF%9D%E5%AE%9A%E5%B8%82",
+    "wikidata_id": "Q58584",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q58584",
+    "commons_map_category": "Category:Maps of Baoding",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Baoding",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Baoding+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Baoding-map",
+        "file_title": "File:Baoding-map.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3ABaoding-map.png"
+      },
+      {
+        "title": "219 of 'The Earth and its Inhabitants. The European section of the Universal Geography by E. Reclus. Edited by E. G. Ravenstein. Illustrated by ... engravings and maps' (11126853515)",
+        "file_title": "File:219 of 'The Earth and its Inhabitants. The European section of the Universal Geography by E. Reclus. Edited by E. G. Ravenstein. Illustrated by ... engravings and maps' (11126853515).jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3A219%20of%20%27The%20Earth%20and%20its%20Inhabitants.%20The%20European%20section%20of%20the%20Universal%20Geography%20by%20E.%20Reclus.%20Edited%20by%20E.%20G.%20Ravenstein.%20Illustrated%20by%20...%20engravings%20and%20maps%27%20%2811126853515%29.jpg"
+      }
+    ]
+  },
+  "binzhou": {
+    "id": "binzhou",
+    "name_en": "Binzhou",
+    "name_zh": "滨州市",
+    "province_en": "Shandong",
+    "wikipedia_en_title": "Binzhou",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Binzhou",
+    "wikipedia_zh_title": "滨州市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E6%BB%A8%E5%B7%9E%E5%B8%82",
+    "wikidata_id": "Q373687",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q373687",
+    "commons_map_category": "Category:Maps of Binzhou",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Binzhou",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Binzhou+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Binzhou-map",
+        "file_title": "File:Binzhou-map.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3ABinzhou-map.png"
+      },
+      {
+        "title": "Txu-oclc-10552568-ni49-1",
+        "file_title": "File:Txu-oclc-10552568-ni49-1.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3ATxu-oclc-10552568-ni49-1.jpg"
+      }
+    ]
+  },
+  "chengdu": {
+    "id": "chengdu",
+    "name_en": "Chengdu",
+    "name_zh": "成都市",
+    "province_en": "Sichuan",
+    "wikipedia_en_title": "Chengdu",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Chengdu",
+    "wikipedia_zh_title": "成都市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E6%88%90%E9%83%BD%E5%B8%82",
+    "wikidata_id": "Q30002",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q30002",
+    "commons_map_category": "Category:Maps of Chengdu",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Chengdu",
+    "commons_old_map_category": "Category:Old maps of Chengdu",
+    "commons_old_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AOld%20maps%20of%20Chengdu",
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Chengdu+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Xikang province in 1950 CIA map of Tibet",
+        "file_title": "File:Xikang province in 1950 CIA map of Tibet.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AXikang%20province%20in%201950%20CIA%20map%20of%20Tibet.jpg"
+      },
+      {
+        "title": "Chengdu-location-MAP-in-Sichuan-Province-China",
+        "file_title": "File:Chengdu-location-MAP-in-Sichuan-Province-China.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AChengdu-location-MAP-in-Sichuan-Province-China.jpg"
+      }
+    ]
+  },
+  "dandong": {
+    "id": "dandong",
+    "name_en": "Dandong",
+    "name_zh": "丹东市",
+    "province_en": "Liaoning",
+    "wikipedia_en_title": "Dandong",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Dandong",
+    "wikipedia_zh_title": "丹东市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E4%B8%B9%E4%B8%9C%E5%B8%82",
+    "wikidata_id": "Q75110",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q75110",
+    "commons_map_category": "Category:Maps of Dandong",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Dandong",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Dandong+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Txu-oclc-6614368-nk51-12",
+        "file_title": "File:Txu-oclc-6614368-nk51-12.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3ATxu-oclc-6614368-nk51-12.jpg"
+      },
+      {
+        "title": "Andong and Shingishu map circa 1930.PNG",
+        "file_title": "File:Andong and Shingishu map circa 1930.PNG",
+        "url": "https://commons.wikimedia.org/wiki/File%3AAndong%20and%20Shingishu%20map%20circa%201930.PNG"
+      },
+      {
+        "title": "Dandong locator map (blank).svg",
+        "file_title": "File:Dandong locator map (blank).svg",
+        "url": "https://commons.wikimedia.org/wiki/File%3ADandong%20locator%20map%20%28blank%29.svg"
+      }
+    ]
+  },
+  "datong": {
+    "id": "datong",
+    "name_en": "Datong",
+    "name_zh": "大同市",
+    "province_en": "Shanxi",
+    "wikipedia_en_title": "Datong",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Datong",
+    "wikipedia_zh_title": "大同市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E5%A4%A7%E5%90%8C%E5%B8%82",
+    "wikidata_id": "Q72877",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q72877",
+    "commons_map_category": "Category:Maps of Datong",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Datong",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Datong+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "North Shanxi Autonomous Government Map, 1937",
+        "file_title": "File:North Shanxi Autonomous Government Map, 1937.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3ANorth%20Shanxi%20Autonomous%20Government%20Map%2C%201937.png"
+      }
+    ]
+  },
+  "dongying": {
+    "id": "dongying",
+    "name_en": "Dongying",
+    "name_zh": "东营市",
+    "province_en": "Shandong",
+    "wikipedia_en_title": "Dongying",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Dongying",
+    "wikipedia_zh_title": "东营市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E4%B8%9C%E8%90%A5%E5%B8%82",
+    "wikidata_id": "Q372414",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q372414",
+    "commons_map_category": "Category:Maps of Dongying",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Dongying",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Dongying+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Dongying-map",
+        "file_title": "File:Dongying-map.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3ADongying-map.png"
+      }
+    ]
+  },
+  "fuxin": {
+    "id": "fuxin",
+    "name_en": "Fuxin",
+    "name_zh": "阜新市",
+    "province_en": "Liaoning",
+    "wikipedia_en_title": "Fuxin",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Fuxin",
+    "wikipedia_zh_title": "阜新市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E9%98%9C%E6%96%B0%E5%B8%82",
+    "wikidata_id": "Q34750",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q34750",
+    "commons_map_category": "Category:Maps of Fuxin",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Fuxin",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Fuxin+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Fuxin locator map (blank).svg",
+        "file_title": "File:Fuxin locator map (blank).svg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AFuxin%20locator%20map%20%28blank%29.svg"
+      }
+    ]
+  },
+  "guilin": {
+    "id": "guilin",
+    "name_en": "Guilin",
+    "name_zh": "桂林市",
+    "province_en": "Guangxi",
+    "wikipedia_en_title": "Guilin",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Guilin",
+    "wikipedia_zh_title": "桂林市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E6%A1%82%E6%9E%97%E5%B8%82",
+    "wikidata_id": "Q189633",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q189633",
+    "commons_map_category": "Category:Maps of Guilin",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Guilin",
+    "commons_old_map_category": "Category:Old maps of Guilin",
+    "commons_old_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AOld%20maps%20of%20Guilin",
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Guilin+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Gui lin-map ko",
+        "file_title": "File:Gui lin-map ko.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3AGui%20lin-map%20ko.png"
+      },
+      {
+        "title": "Lingqu Canal map",
+        "file_title": "File:Lingqu Canal map.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3ALingqu%20Canal%20map.jpg"
+      }
+    ]
+  },
+  "haikou": {
+    "id": "haikou",
+    "name_en": "Haikou",
+    "name_zh": "海口市",
+    "province_en": "Hainan",
+    "wikipedia_en_title": "Haikou",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Haikou",
+    "wikipedia_zh_title": "海口市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E6%B5%B7%E5%8F%A3%E5%B8%82",
+    "wikidata_id": "Q189823",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q189823",
+    "commons_map_category": "Category:Maps of Haikou",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Haikou",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Haikou+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Haikou-location-MAP-in-Hainan-Province-China",
+        "file_title": "File:Haikou-location-MAP-in-Hainan-Province-China.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AHaikou-location-MAP-in-Hainan-Province-China.jpg"
+      },
+      {
+        "title": "G75 map.svg",
+        "file_title": "File:G75 map.svg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AG75%20map.svg"
+      },
+      {
+        "title": "Pelecanus philippensis map-big",
+        "file_title": "File:Pelecanus philippensis map-big.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3APelecanus%20philippensis%20map-big.jpg"
+      }
+    ]
+  },
+  "harbin": {
+    "id": "harbin",
+    "name_en": "Harbin",
+    "name_zh": "哈尔滨市",
+    "province_en": "Heilongjiang",
+    "wikipedia_en_title": "Harbin",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Harbin",
+    "wikipedia_zh_title": "哈尔滨市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E5%93%88%E5%B0%94%E6%BB%A8%E5%B8%82",
+    "wikidata_id": "Q42956",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q42956",
+    "commons_map_category": "Category:Maps of Harbin",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Harbin",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Harbin+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Fashistskiye Organizatsii Germanii Fascist Organizations of Germany (Nazi) Soviet Wall Map Poster Chart Diagrams Structures Locations Uniforms Moscow & Leningrad 1936 73 x 104 cm www.raremaps.com No known copyright low-resolution",
+        "file_title": "File:Fashistskiye Organizatsii Germanii Fascist Organizations of Germany (Nazi) Soviet Wall Map Poster Chart Diagrams Structures Locations Uniforms Moscow & Leningrad 1936 73 x 104 cm www.raremaps.com No known copyright low-resolution.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AFashistskiye%20Organizatsii%20Germanii%20Fascist%20Organizations%20of%20Germany%20%28Nazi%29%20Soviet%20Wall%20Map%20Poster%20Chart%20Diagrams%20Structures%20Locations%20Uniforms%20Moscow%20%26%20Leningrad%201936%2073%20x%20104%20cm%20www.raremaps.com%20No%20known%20copyright%20low-resolution.jpg"
+      },
+      {
+        "title": "Harbin-location-MAP-in-Heilongjiang-Province-in-China",
+        "file_title": "File:Harbin-location-MAP-in-Heilongjiang-Province-in-China.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AHarbin-location-MAP-in-Heilongjiang-Province-in-China.jpg"
+      },
+      {
+        "title": "Distribution map of Asian Golden Cat.svg",
+        "file_title": "File:Distribution map of Asian Golden Cat.svg",
+        "url": "https://commons.wikimedia.org/wiki/File%3ADistribution%20map%20of%20Asian%20Golden%20Cat.svg"
+      }
+    ]
+  },
+  "heyuan": {
+    "id": "heyuan",
+    "name_en": "Heyuan",
+    "name_zh": "河源市",
+    "province_en": "Guangdong",
+    "wikipedia_en_title": "Heyuan",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Heyuan",
+    "wikipedia_zh_title": "河源市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E6%B2%B3%E6%BA%90%E5%B8%82",
+    "wikidata_id": "Q59205",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q59205",
+    "commons_map_category": "Category:Maps of Heyuan",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Heyuan",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Heyuan+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Map of Heyuan, 2005",
+        "file_title": "File:Map of Heyuan, 2005.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3AMap%20of%20Heyuan%2C%202005.png"
+      },
+      {
+        "title": "HeYuan-Map-in-Hakka-Gan-Min-Yue.PNG",
+        "file_title": "File:HeYuan-Map-in-Hakka-Gan-Min-Yue.PNG",
+        "url": "https://commons.wikimedia.org/wiki/File%3AHeYuan-Map-in-Hakka-Gan-Min-Yue.PNG"
+      },
+      {
+        "title": "Heyuan-map",
+        "file_title": "File:Heyuan-map.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3AHeyuan-map.png"
+      }
+    ]
+  },
+  "hohhot": {
+    "id": "hohhot",
+    "name_en": "Hohhot",
+    "name_zh": "呼和浩特市",
+    "province_en": "Inner Mongolia",
+    "wikipedia_en_title": "Hohhot",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Hohhot",
+    "wikipedia_zh_title": "呼和浩特市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E5%91%BC%E5%92%8C%E6%B5%A9%E7%89%B9%E5%B8%82",
+    "wikidata_id": "Q535534",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q535534",
+    "commons_map_category": "Category:Maps of Hohhot",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Hohhot",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Hohhot+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Hohhot-location-MAP-in-Inner-Mongolia-in-China",
+        "file_title": "File:Hohhot-location-MAP-in-Inner-Mongolia-in-China.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AHohhot-location-MAP-in-Inner-Mongolia-in-China.jpg"
+      },
+      {
+        "title": "Map of the Second Turkic Khaganate",
+        "file_title": "File:Map of the Second Turkic Khaganate.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3AMap%20of%20the%20Second%20Turkic%20Khaganate.png"
+      },
+      {
+        "title": "Map to Illustrate a Journey through Western Mongolia",
+        "file_title": "File:Map to Illustrate a Journey through Western Mongolia.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3AMap%20to%20Illustrate%20a%20Journey%20through%20Western%20Mongolia.png"
+      }
+    ]
+  },
+  "hotan": {
+    "id": "hotan",
+    "name_en": "Hotan",
+    "name_zh": "和田市",
+    "province_en": "Xinjiang",
+    "wikipedia_en_title": "Hotan",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Hotan",
+    "wikipedia_zh_title": "和田市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E5%92%8C%E7%94%B0%E5%B8%82",
+    "wikidata_id": "Q235389",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q235389",
+    "commons_map_category": "Category:Maps of Hotan",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Hotan",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Hotan+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "1710 Japanese Buddhist map of the World - Nansenbushu Bankoku Shoka No Zu - Outline Map of All Countries of the Universe",
+        "file_title": "File:1710 Japanese Buddhist map of the World - Nansenbushu Bankoku Shoka No Zu - Outline Map of All Countries of the Universe.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3A1710%20Japanese%20Buddhist%20map%20of%20the%20World%20-%20Nansenbushu%20Bankoku%20Shoka%20No%20Zu%20-%20Outline%20Map%20of%20All%20Countries%20of%20the%20Universe.png"
+      },
+      {
+        "title": "1710 Japanese Buddhist map of the World - Nansenbushu Bankoku Shoka No Zu - Outline Map of All Countries of the Universe",
+        "file_title": "File:1710 Japanese Buddhist map of the World - Nansenbushu Bankoku Shoka No Zu - Outline Map of All Countries of the Universe.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3A1710%20Japanese%20Buddhist%20map%20of%20the%20World%20-%20Nansenbushu%20Bankoku%20Shoka%20No%20Zu%20-%20Outline%20Map%20of%20All%20Countries%20of%20the%20Universe.jpg"
+      },
+      {
+        "title": "1710 Japanese world map",
+        "file_title": "File:1710 Japanese world map.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3A1710%20Japanese%20world%20map.jpg"
+      }
+    ]
+  },
+  "huangshan": {
+    "id": "huangshan",
+    "name_en": "Huangshan",
+    "name_zh": "黄山市",
+    "province_en": "Anhui",
+    "wikipedia_en_title": "Huangshan City",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Huangshan_City",
+    "wikipedia_zh_title": "黄山市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E9%BB%84%E5%B1%B1%E5%B8%82",
+    "wikidata_id": "Q180470",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q180470",
+    "commons_map_category": "Category:Maps of Huangshan City",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Huangshan%20City",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Huangshan+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "International Network of Geoparks map",
+        "file_title": "File:International Network of Geoparks map.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AInternational%20Network%20of%20Geoparks%20map.jpg"
+      },
+      {
+        "title": "Huangshan-map",
+        "file_title": "File:Huangshan-map.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3AHuangshan-map.png"
+      },
+      {
+        "title": "LocMap of WH Huangshan",
+        "file_title": "File:LocMap of WH Huangshan.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3ALocMap%20of%20WH%20Huangshan.png"
+      }
+    ]
+  },
+  "hunchun": {
+    "id": "hunchun",
+    "name_en": "Hunchun",
+    "name_zh": "珲春市",
+    "province_en": "Jilin",
+    "wikipedia_en_title": "Hunchun",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Hunchun",
+    "wikipedia_zh_title": "珲春市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E7%8F%B2%E6%98%A5%E5%B8%82",
+    "wikidata_id": "Q128674",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q128674",
+    "commons_map_category": "Category:Maps of Hunchun",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Hunchun",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Hunchun+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Txu-oclc-6614383-nk52-6",
+        "file_title": "File:Txu-oclc-6614383-nk52-6.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3ATxu-oclc-6614383-nk52-6.jpg"
+      },
+      {
+        "title": "Yanbian-map ko",
+        "file_title": "File:Yanbian-map ko.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3AYanbian-map%20ko.png"
+      },
+      {
+        "title": "Jilin prfc map",
+        "file_title": "File:Jilin prfc map.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3AJilin%20prfc%20map.png"
+      }
+    ]
+  },
+  "jinan": {
+    "id": "jinan",
+    "name_en": "Jinan",
+    "name_zh": "济南市",
+    "province_en": "Shandong",
+    "wikipedia_en_title": "Jinan",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Jinan",
+    "wikipedia_zh_title": "济南市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E6%B5%8E%E5%8D%97%E5%B8%82",
+    "wikidata_id": "Q170247",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q170247",
+    "commons_map_category": "Category:Maps of Jinan",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Jinan",
+    "commons_old_map_category": "Category:Old maps of Jinan",
+    "commons_old_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AOld%20maps%20of%20Jinan",
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Jinan+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Map of Jinwi (1930)",
+        "file_title": "File:Map of Jinwi (1930).jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AMap%20of%20Jinwi%20%281930%29.jpg"
+      },
+      {
+        "title": "Jinan-location-MAP-in-Shandong-Province-China",
+        "file_title": "File:Jinan-location-MAP-in-Shandong-Province-China.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AJinan-location-MAP-in-Shandong-Province-China.jpg"
+      }
+    ]
+  },
+  "jining": {
+    "id": "jining",
+    "name_en": "Jining",
+    "name_zh": "济宁市",
+    "province_en": "Shandong",
+    "wikipedia_en_title": "Jining",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Jining",
+    "wikipedia_zh_title": "济宁市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E6%B5%8E%E5%AE%81%E5%B8%82",
+    "wikidata_id": "Q372791",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q372791",
+    "commons_map_category": "Category:Maps of Jining",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Jining",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Jining+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Jining-map",
+        "file_title": "File:Jining-map.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3AJining-map.png"
+      },
+      {
+        "title": "Huabeisaurus stratigraphy map",
+        "file_title": "File:Huabeisaurus stratigraphy map.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3AHuabeisaurus%20stratigraphy%20map.png"
+      }
+    ]
+  },
+  "kashgar": {
+    "id": "kashgar",
+    "name_en": "Kashgar",
+    "name_zh": "喀什市",
+    "province_en": "Xinjiang",
+    "wikipedia_en_title": "Kashgar",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Kashgar",
+    "wikipedia_zh_title": "喀什市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E5%96%80%E4%BB%80%E5%B8%82",
+    "wikidata_id": "Q170521",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q170521",
+    "commons_map_category": "Category:Maps of Kashgar",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Kashgar",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Kashgar+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Central Asia in 1873 (detail of a map)",
+        "file_title": "File:Central Asia in 1873 (detail of a map).jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3ACentral%20Asia%20in%201873%20%28detail%20of%20a%20map%29.jpg"
+      },
+      {
+        "title": "Mahmud al-Kashgari map",
+        "file_title": "File:Mahmud al-Kashgari map.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AMahmud%20al-Kashgari%20map.jpg"
+      },
+      {
+        "title": "Map of the Seljuk Empire (1092)",
+        "file_title": "File:Map of the Seljuk Empire (1092).png",
+        "url": "https://commons.wikimedia.org/wiki/File%3AMap%20of%20the%20Seljuk%20Empire%20%281092%29.png"
+      }
+    ]
+  },
+  "korla": {
+    "id": "korla",
+    "name_en": "Korla",
+    "name_zh": "库尔勒市",
+    "province_en": "Xinjiang",
+    "wikipedia_en_title": "Korla",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Korla",
+    "wikipedia_zh_title": "库尔勒市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E5%BA%93%E5%B0%94%E5%8B%92%E5%B8%82",
+    "wikidata_id": "Q837425",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q837425",
+    "commons_map_category": "Category:Maps of Korla",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Korla",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Korla+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Map by the US Army Map Service - Korla - asia - txu-pclmaps-oclc-10010915-korla-9-10",
+        "file_title": "File:Map by the US Army Map Service - Korla - asia - txu-pclmaps-oclc-10010915-korla-9-10.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AMap%20by%20the%20US%20Army%20Map%20Service%20-%20Korla%20-%20asia%20-%20txu-pclmaps-oclc-10010915-korla-9-10.jpg"
+      }
+    ]
+  },
+  "kunming": {
+    "id": "kunming",
+    "name_en": "Kunming",
+    "name_zh": "昆明市",
+    "province_en": "Yunnan",
+    "wikipedia_en_title": "Kunming",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Kunming",
+    "wikipedia_zh_title": "昆明市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E6%98%86%E6%98%8E%E5%B8%82",
+    "wikidata_id": "Q182852",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q182852",
+    "commons_map_category": "Category:Maps of Kunming",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Kunming",
+    "commons_old_map_category": "Category:Old maps of Kunming",
+    "commons_old_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AOld%20maps%20of%20Kunming",
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Kunming+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Kunming-location-MAP-in-Yunnan-Province-China",
+        "file_title": "File:Kunming-location-MAP-in-Yunnan-Province-China.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AKunming-location-MAP-in-Yunnan-Province-China.jpg"
+      },
+      {
+        "title": "Map by the US Army Map Service - Kunming - asia 1m - txu-pclmaps-oclc-6622985-kunming-ng-48",
+        "file_title": "File:Map by the US Army Map Service - Kunming - asia 1m - txu-pclmaps-oclc-6622985-kunming-ng-48.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AMap%20by%20the%20US%20Army%20Map%20Service%20-%20Kunming%20-%20asia%201m%20-%20txu-pclmaps-oclc-6622985-kunming-ng-48.jpg"
+      }
+    ]
+  },
+  "lanzhou": {
+    "id": "lanzhou",
+    "name_en": "Lanzhou",
+    "name_zh": "兰州市",
+    "province_en": "Gansu",
+    "wikipedia_en_title": "Lanzhou",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Lanzhou",
+    "wikipedia_zh_title": "兰州市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E5%85%B0%E5%B7%9E%E5%B8%82",
+    "wikidata_id": "Q183584",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q183584",
+    "commons_map_category": "Category:Maps of Lanzhou",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Lanzhou",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Lanzhou+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Lanzhou-location-MAP-in-Gansu-Province-China",
+        "file_title": "File:Lanzhou-location-MAP-in-Gansu-Province-China.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3ALanzhou-location-MAP-in-Gansu-Province-China.jpg"
+      },
+      {
+        "title": "Map of Tibet Ü-Tsang Amdo and Kham",
+        "file_title": "File:Map of Tibet Ü-Tsang Amdo and Kham.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AMap%20of%20Tibet%20%C3%9C-Tsang%20Amdo%20and%20Kham.jpg"
+      }
+    ]
+  },
+  "lianyungang": {
+    "id": "lianyungang",
+    "name_en": "Lianyungang",
+    "name_zh": "连云港市",
+    "province_en": "Jiangsu",
+    "wikipedia_en_title": "Lianyungang",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Lianyungang",
+    "wikipedia_zh_title": "连云港市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E8%BF%9E%E4%BA%91%E6%B8%AF%E5%B8%82",
+    "wikidata_id": "Q57756",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q57756",
+    "commons_map_category": "Category:Maps of Lianyungang",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Lianyungang",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Lianyungang+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Lianyungang locator map in Jiangsu.svg",
+        "file_title": "File:Lianyungang locator map in Jiangsu.svg",
+        "url": "https://commons.wikimedia.org/wiki/File%3ALianyungang%20locator%20map%20in%20Jiangsu.svg"
+      },
+      {
+        "title": "Map Qingdao–Yancheng railway",
+        "file_title": "File:Map Qingdao–Yancheng railway.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3AMap%20Qingdao%E2%80%93Yancheng%20railway.png"
+      },
+      {
+        "title": "G30 map.svg",
+        "file_title": "File:G30 map.svg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AG30%20map.svg"
+      }
+    ]
+  },
+  "liaocheng": {
+    "id": "liaocheng",
+    "name_en": "Liaocheng",
+    "name_zh": "聊城市",
+    "province_en": "Shandong",
+    "wikipedia_en_title": "Liaocheng",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Liaocheng",
+    "wikipedia_zh_title": "聊城市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E8%81%8A%E5%9F%8E%E5%B8%82",
+    "wikidata_id": "Q373564",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q373564",
+    "commons_map_category": "Category:Maps of Liaocheng",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Liaocheng",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Liaocheng+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Liaocheng-map",
+        "file_title": "File:Liaocheng-map.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3ALiaocheng-map.png"
+      }
+    ]
+  },
+  "liaoyuan": {
+    "id": "liaoyuan",
+    "name_en": "Liaoyuan",
+    "name_zh": "辽源市",
+    "province_en": "Jilin",
+    "wikipedia_en_title": "Liaoyuan",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Liaoyuan",
+    "wikipedia_zh_title": "辽源市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E8%BE%BD%E6%BA%90%E5%B8%82",
+    "wikidata_id": "Q92311",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q92311",
+    "commons_map_category": "Category:Maps of Liaoyuan",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Liaoyuan",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Liaoyuan+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Liaoyuan-map fa",
+        "file_title": "File:Liaoyuan-map fa.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3ALiaoyuan-map%20fa.png"
+      },
+      {
+        "title": "Liaoyuan locator map (blank).svg",
+        "file_title": "File:Liaoyuan locator map (blank).svg",
+        "url": "https://commons.wikimedia.org/wiki/File%3ALiaoyuan%20locator%20map%20%28blank%29.svg"
+      },
+      {
+        "title": "Liáoyuán-map",
+        "file_title": "File:Liáoyuán-map.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3ALi%C3%A1oyu%C3%A1n-map.png"
+      }
+    ]
+  },
+  "luzhou": {
+    "id": "luzhou",
+    "name_en": "Luzhou",
+    "name_zh": "泸州市",
+    "province_en": "Sichuan",
+    "wikipedia_en_title": "Luzhou",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Luzhou",
+    "wikipedia_zh_title": "泸州市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E6%B3%B8%E5%B7%9E%E5%B8%82",
+    "wikidata_id": "Q425492",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q425492",
+    "commons_map_category": "Category:Maps of Luzhou",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Luzhou",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Luzhou+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Hefei-location-MAP-in-Anhui-Province-China",
+        "file_title": "File:Hefei-location-MAP-in-Anhui-Province-China.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AHefei-location-MAP-in-Anhui-Province-China.jpg"
+      },
+      {
+        "title": "Map of Luzhou, 2005",
+        "file_title": "File:Map of Luzhou, 2005.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3AMap%20of%20Luzhou%2C%202005.png"
+      },
+      {
+        "title": "TRTS route map in early 2012 (Dongmen Sta.)",
+        "file_title": "File:TRTS route map in early 2012 (Dongmen Sta.).png",
+        "url": "https://commons.wikimedia.org/wiki/File%3ATRTS%20route%20map%20in%20early%202012%20%28Dongmen%20Sta.%29.png"
+      }
+    ]
+  },
+  "nanchang": {
+    "id": "nanchang",
+    "name_en": "Nanchang",
+    "name_zh": "南昌市",
+    "province_en": "Jiangxi",
+    "wikipedia_en_title": "Nanchang",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Nanchang",
+    "wikipedia_zh_title": "南昌市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E5%8D%97%E6%98%8C%E5%B8%82",
+    "wikidata_id": "Q171943",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q171943",
+    "commons_map_category": "Category:Maps of Nanchang",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Nanchang",
+    "commons_old_map_category": "Category:Old maps of Nanchang",
+    "commons_old_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AOld%20maps%20of%20Nanchang",
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Nanchang+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Nanchang-location-MAP-in-Jiangxi-Region-China",
+        "file_title": "File:Nanchang-location-MAP-in-Jiangxi-Region-China.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3ANanchang-location-MAP-in-Jiangxi-Region-China.jpg"
+      },
+      {
+        "title": "Du Halde, map of Nanchang",
+        "file_title": "File:Du Halde, map of Nanchang.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3ADu%20Halde%2C%20map%20of%20Nanchang.jpg"
+      }
+    ]
+  },
+  "panjin": {
+    "id": "panjin",
+    "name_en": "Panjin",
+    "name_zh": "盘锦市",
+    "province_en": "Liaoning",
+    "wikipedia_en_title": "Panjin",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Panjin",
+    "wikipedia_zh_title": "盘锦市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E7%9B%98%E9%94%A6%E5%B8%82",
+    "wikidata_id": "Q75230",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q75230",
+    "commons_map_category": "Category:Maps of Panjin",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Panjin",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Panjin+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": []
+  },
+  "shenzhen": {
+    "id": "shenzhen",
+    "name_en": "Shenzhen",
+    "name_zh": "深圳市",
+    "province_en": "Guangdong",
+    "wikipedia_en_title": "Shenzhen",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Shenzhen",
+    "wikipedia_zh_title": "深圳市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E6%B7%B1%E5%9C%B3%E5%B8%82",
+    "wikidata_id": "Q15174",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q15174",
+    "commons_map_category": "Category:Maps of Shenzhen",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Shenzhen",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Shenzhen+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "SZ 深圳 Shenzhen 寶安 BaoAn 寶源路 BaoYuan Road 寶安站 BaoAn Metro Station map sign July 2024 R12S 01",
+        "file_title": "File:SZ 深圳 Shenzhen 寶安 BaoAn 寶源路 BaoYuan Road 寶安站 BaoAn Metro Station map sign July 2024 R12S 01.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3ASZ%20%E6%B7%B1%E5%9C%B3%20Shenzhen%20%E5%AF%B6%E5%AE%89%20BaoAn%20%E5%AF%B6%E6%BA%90%E8%B7%AF%20BaoYuan%20Road%20%E5%AF%B6%E5%AE%89%E7%AB%99%20BaoAn%20Metro%20Station%20map%20sign%20July%202024%20R12S%2001.jpg"
+      },
+      {
+        "title": "Shenzhen-location-MAP-in-Guangdong-Province-China",
+        "file_title": "File:Shenzhen-location-MAP-in-Guangdong-Province-China.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AShenzhen-location-MAP-in-Guangdong-Province-China.jpg"
+      },
+      {
+        "title": "Shenzhen Metro Map Aug 2020",
+        "file_title": "File:Shenzhen Metro Map Aug 2020.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3AShenzhen%20Metro%20Map%20Aug%202020.png"
+      }
+    ]
+  },
+  "shijiazhuang": {
+    "id": "shijiazhuang",
+    "name_en": "Shijiazhuang",
+    "name_zh": "石家庄市",
+    "province_en": "Hebei",
+    "wikipedia_en_title": "Shijiazhuang",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Shijiazhuang",
+    "wikipedia_zh_title": "石家庄市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E7%9F%B3%E5%AE%B6%E5%BA%84%E5%B8%82",
+    "wikidata_id": "Q58401",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q58401",
+    "commons_map_category": "Category:Maps of Shijiazhuang",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Shijiazhuang",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Shijiazhuang+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Map of Beijing Water Canal & Site of Discovery of Following Artifacts (10081403496)",
+        "file_title": "File:Map of Beijing Water Canal & Site of Discovery of Following Artifacts (10081403496).jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AMap%20of%20Beijing%20Water%20Canal%20%26%20Site%20of%20Discovery%20of%20Following%20Artifacts%20%2810081403496%29.jpg"
+      },
+      {
+        "title": "Shijiazhuang-location-MAP-in-Hebei-Province-China",
+        "file_title": "File:Shijiazhuang-location-MAP-in-Hebei-Province-China.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AShijiazhuang-location-MAP-in-Hebei-Province-China.jpg"
+      },
+      {
+        "title": "Warring States Bronze Map of Palace",
+        "file_title": "File:Warring States Bronze Map of Palace.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AWarring%20States%20Bronze%20Map%20of%20Palace.jpg"
+      }
+    ]
+  },
+  "taishan": {
+    "id": "taishan",
+    "name_en": "Taishan",
+    "name_zh": "台山市",
+    "province_en": "Guangdong",
+    "wikipedia_en_title": "Taishan",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Taishan",
+    "wikipedia_zh_title": "台山市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E5%8F%B0%E5%B1%B1%E5%B8%82",
+    "wikidata_id": "Q2388808",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q2388808",
+    "commons_map_category": "Category:Maps of Taishan",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Taishan",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Taishan+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "SEA Chinese origin map",
+        "file_title": "File:SEA Chinese origin map.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3ASEA%20Chinese%20origin%20map.jpg"
+      },
+      {
+        "title": "Txu-oclc-10552568-nf49-12",
+        "file_title": "File:Txu-oclc-10552568-nf49-12.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3ATxu-oclc-10552568-nf49-12.jpg"
+      },
+      {
+        "title": "International Network of Geoparks map",
+        "file_title": "File:International Network of Geoparks map.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AInternational%20Network%20of%20Geoparks%20map.jpg"
+      }
+    ]
+  },
+  "taizhou": {
+    "id": "taizhou",
+    "name_en": "Taizhou",
+    "name_zh": "泰州市",
+    "province_en": "Jiangsu",
+    "wikipedia_en_title": "Taizhou, Jiangsu",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Taizhou,_Jiangsu",
+    "wikipedia_zh_title": "泰州市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E6%B3%B0%E5%B7%9E%E5%B8%82",
+    "wikidata_id": "Q57931",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q57931",
+    "commons_map_category": "Category:Maps of Taizhou, Jiangsu",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Taizhou%2C%20Jiangsu",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Taizhou+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Taizhou locator map in Jiangsu.svg",
+        "file_title": "File:Taizhou locator map in Jiangsu.svg",
+        "url": "https://commons.wikimedia.org/wiki/File%3ATaizhou%20locator%20map%20in%20Jiangsu.svg"
+      },
+      {
+        "title": "Map and bathymetry of the Yueqing Bay",
+        "file_title": "File:Map and bathymetry of the Yueqing Bay.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3AMap%20and%20bathymetry%20of%20the%20Yueqing%20Bay.png"
+      },
+      {
+        "title": "Location map of Taizhou, Zhejiang",
+        "file_title": "File:Location map of Taizhou, Zhejiang.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3ALocation%20map%20of%20Taizhou%2C%20Zhejiang.png"
+      }
+    ]
+  },
+  "tieling": {
+    "id": "tieling",
+    "name_en": "Tieling",
+    "name_zh": "铁岭市",
+    "province_en": "Liaoning",
+    "wikipedia_en_title": "Tieling",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Tieling",
+    "wikipedia_zh_title": "铁岭市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E9%93%81%E5%B2%AD%E5%B8%82",
+    "wikidata_id": "Q75268",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q75268",
+    "commons_map_category": "Category:Maps of Tieling",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Tieling",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Tieling+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Tieling locator map (blank).svg",
+        "file_title": "File:Tieling locator map (blank).svg",
+        "url": "https://commons.wikimedia.org/wiki/File%3ATieling%20locator%20map%20%28blank%29.svg"
+      },
+      {
+        "title": "Tieling-map",
+        "file_title": "File:Tieling-map.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3ATieling-map.png"
+      }
+    ]
+  },
+  "ulanqab": {
+    "id": "ulanqab",
+    "name_en": "Ulanqab",
+    "name_zh": "乌兰察布市",
+    "province_en": "Inner Mongolia",
+    "wikipedia_en_title": "Ulanqab",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Ulanqab",
+    "wikipedia_zh_title": "乌兰察布市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E4%B9%8C%E5%85%B0%E5%AF%9F%E5%B8%83%E5%B8%82",
+    "wikidata_id": "Q571219",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q571219",
+    "commons_map_category": "Category:Maps of Ulanqab",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Ulanqab",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Ulanqab+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Wulanchabu-map",
+        "file_title": "File:Wulanchabu-map.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3AWulanchabu-map.png"
+      }
+    ]
+  },
+  "urumqi": {
+    "id": "urumqi",
+    "name_en": "Urumqi",
+    "name_zh": "乌鲁木齐市",
+    "province_en": "Xinjiang",
+    "wikipedia_en_title": "Urumqi",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Urumqi",
+    "wikipedia_zh_title": "乌鲁木齐市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E4%B9%8C%E9%B2%81%E6%9C%A8%E9%BD%90%E5%B8%82",
+    "wikidata_id": null,
+    "wikidata_url": null,
+    "commons_map_category": "Category:Maps of Urumqi",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Urumqi",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Urumqi+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Urumqi-location-MAP-in-Xinjiang-autonomous-region-in-China",
+        "file_title": "File:Urumqi-location-MAP-in-Xinjiang-autonomous-region-in-China.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AUrumqi-location-MAP-in-Xinjiang-autonomous-region-in-China.jpg"
+      },
+      {
+        "title": "Urumqi-(different-spelling)-location-MAP-in-Xinjiang-autonomous-region-in-China",
+        "file_title": "File:Urumqi-(different-spelling)-location-MAP-in-Xinjiang-autonomous-region-in-China.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AUrumqi-%28different-spelling%29-location-MAP-in-Xinjiang-autonomous-region-in-China.jpg"
+      },
+      {
+        "title": "Ethnolinguistic map of Tibet in 1983",
+        "file_title": "File:Ethnolinguistic map of Tibet in 1983.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3AEthnolinguistic%20map%20of%20Tibet%20in%201983.png"
+      }
+    ]
+  },
+  "weihai": {
+    "id": "weihai",
+    "name_en": "Weihai",
+    "name_zh": "威海市",
+    "province_en": "Shandong",
+    "wikipedia_en_title": "Weihai",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Weihai",
+    "wikipedia_zh_title": "威海市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E5%A8%81%E6%B5%B7%E5%B8%82",
+    "wikidata_id": "Q373023",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q373023",
+    "commons_map_category": "Category:Maps of Weihai",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Weihai",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Weihai+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Shantung Province and Wei Hai Wei Map 1954",
+        "file_title": "File:Shantung Province and Wei Hai Wei Map 1954.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AShantung%20Province%20and%20Wei%20Hai%20Wei%20Map%201954.jpg"
+      },
+      {
+        "title": "Color Broadside \"Map of the Present Situation\" from Dispatch -54 - DPLA - 50f91233c49ccdfea208071ad7676e60",
+        "file_title": "File:Color Broadside \"Map of the Present Situation\" from Dispatch -54 - DPLA - 50f91233c49ccdfea208071ad7676e60.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AColor%20Broadside%20%22Map%20of%20the%20Present%20Situation%22%20from%20Dispatch%20-54%20-%20DPLA%20-%2050f91233c49ccdfea208071ad7676e60.jpg"
+      },
+      {
+        "title": "Weihai-map",
+        "file_title": "File:Weihai-map.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3AWeihai-map.png"
+      }
+    ]
+  },
+  "wuhan": {
+    "id": "wuhan",
+    "name_en": "Wuhan",
+    "name_zh": "武汉市",
+    "province_en": "Hubei",
+    "wikipedia_en_title": "Wuhan",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Wuhan",
+    "wikipedia_zh_title": "武汉市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E6%AD%A6%E6%B1%89%E5%B8%82",
+    "wikidata_id": "Q11746",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q11746",
+    "commons_map_category": "Category:Maps of Wuhan",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Wuhan",
+    "commons_old_map_category": "Category:Old maps of Wuhan",
+    "commons_old_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AOld%20maps%20of%20Wuhan",
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Wuhan+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Wuhan Metro System Map en.svg",
+        "file_title": "File:Wuhan Metro System Map en.svg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AWuhan%20Metro%20System%20Map%20en.svg"
+      },
+      {
+        "title": "India COVID-19 cases density map.svg",
+        "file_title": "File:India COVID-19 cases density map.svg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AIndia%20COVID-19%20cases%20density%20map.svg"
+      },
+      {
+        "title": "Kazakhstan COVID-19 cases map.svg",
+        "file_title": "File:Kazakhstan COVID-19 cases map.svg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AKazakhstan%20COVID-19%20cases%20map.svg"
+      }
+    ]
+  },
+  "wuhu": {
+    "id": "wuhu",
+    "name_en": "Wuhu",
+    "name_zh": "芜湖市",
+    "province_en": "Anhui",
+    "wikipedia_en_title": "Wuhu",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Wuhu",
+    "wikipedia_zh_title": "芜湖市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E8%8A%9C%E6%B9%96%E5%B8%82",
+    "wikidata_id": "Q359990",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q359990",
+    "commons_map_category": "Category:Maps of Wuhu",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Wuhu",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Wuhu+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Location map of Wuhu, Anhui",
+        "file_title": "File:Location map of Wuhu, Anhui.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3ALocation%20map%20of%20Wuhu%2C%20Anhui.png"
+      },
+      {
+        "title": "Pelecanus philippensis map-big",
+        "file_title": "File:Pelecanus philippensis map-big.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3APelecanus%20philippensis%20map-big.jpg"
+      },
+      {
+        "title": "Map of the Rail Transport Infrastructure in the Shanghai Region",
+        "file_title": "File:Map of the Rail Transport Infrastructure in the Shanghai Region.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3AMap%20of%20the%20Rail%20Transport%20Infrastructure%20in%20the%20Shanghai%20Region.png"
+      }
+    ]
+  },
+  "wuwei": {
+    "id": "wuwei",
+    "name_en": "Wuwei",
+    "name_zh": "武威市",
+    "province_en": "Gansu",
+    "wikipedia_en_title": "Wuwei, Gansu",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Wuwei,_Gansu",
+    "wikipedia_zh_title": "武威市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E6%AD%A6%E5%A8%81%E5%B8%82",
+    "wikidata_id": "Q249007",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q249007",
+    "commons_map_category": "Category:Maps of Wuwei",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Wuwei",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Wuwei+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Wuwei-map",
+        "file_title": "File:Wuwei-map.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3AWuwei-map.png"
+      }
+    ]
+  },
+  "xiamen": {
+    "id": "xiamen",
+    "name_en": "Xiamen",
+    "name_zh": "厦门市",
+    "province_en": "Fujian",
+    "wikipedia_en_title": "Xiamen",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Xiamen",
+    "wikipedia_zh_title": "厦门市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E5%8E%A6%E9%97%A8%E5%B8%82",
+    "wikidata_id": "Q68744",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q68744",
+    "commons_map_category": "Category:Maps of Xiamen",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Xiamen",
+    "commons_old_map_category": "Category:Old maps of Xiamen",
+    "commons_old_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AOld%20maps%20of%20Xiamen",
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Xiamen+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Xiamen-location-MAP-in-Fujian-Province-in-China",
+        "file_title": "File:Xiamen-location-MAP-in-Fujian-Province-in-China.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AXiamen-location-MAP-in-Fujian-Province-in-China.jpg"
+      }
+    ]
+  },
+  "xian": {
+    "id": "xian",
+    "name_en": "Xi'an",
+    "name_zh": "西安市",
+    "province_en": "Shaanxi",
+    "wikipedia_en_title": "Xi'an",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Xi%27an",
+    "wikipedia_zh_title": "西安市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E8%A5%BF%E5%AE%89%E5%B8%82",
+    "wikidata_id": "Q5826",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q5826",
+    "commons_map_category": "Category:Maps of Xi'an",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Xi%27an",
+    "commons_old_map_category": "Category:Old maps of Xi'an",
+    "commons_old_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AOld%20maps%20of%20Xi%27an",
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Xi%27an+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Dury Atlas Maps 1 and 2 The World",
+        "file_title": "File:Dury Atlas Maps 1 and 2 The World.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3ADury%20Atlas%20Maps%201%20and%202%20The%20World.jpg"
+      },
+      {
+        "title": "Xian-location-MAP-in-Shaanxi-Province-in-China",
+        "file_title": "File:Xian-location-MAP-in-Shaanxi-Province-in-China.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AXian-location-MAP-in-Shaanxi-Province-in-China.jpg"
+      },
+      {
+        "title": "Location map of Xi'an, Shaanxi",
+        "file_title": "File:Location map of Xi'an, Shaanxi.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3ALocation%20map%20of%20Xi%27an%2C%20Shaanxi.png"
+      }
+    ]
+  },
+  "yangzhou": {
+    "id": "yangzhou",
+    "name_en": "Yangzhou",
+    "name_zh": "扬州市",
+    "province_en": "Jiangsu",
+    "wikipedia_en_title": "Yangzhou",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Yangzhou",
+    "wikipedia_zh_title": "扬州市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E6%89%AC%E5%B7%9E%E5%B8%82",
+    "wikidata_id": "Q57906",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q57906",
+    "commons_map_category": "Category:Maps of Yangzhou",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Yangzhou",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Yangzhou+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Yangzhou locator map in Jiangsu.svg",
+        "file_title": "File:Yangzhou locator map in Jiangsu.svg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AYangzhou%20locator%20map%20in%20Jiangsu.svg"
+      },
+      {
+        "title": "Map of the Rail Transport Infrastructure in the Shanghai Region",
+        "file_title": "File:Map of the Rail Transport Infrastructure in the Shanghai Region.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3AMap%20of%20the%20Rail%20Transport%20Infrastructure%20in%20the%20Shanghai%20Region.png"
+      },
+      {
+        "title": "Complete Map of the Seven Coastal Provinces WDL4448",
+        "file_title": "File:Complete Map of the Seven Coastal Provinces WDL4448.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AComplete%20Map%20of%20the%20Seven%20Coastal%20Provinces%20WDL4448.jpg"
+      }
+    ]
+  },
+  "yichang": {
+    "id": "yichang",
+    "name_en": "Yichang",
+    "name_zh": "宜昌市",
+    "province_en": "Hubei",
+    "wikipedia_en_title": "Yichang",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Yichang",
+    "wikipedia_zh_title": "宜昌市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E5%AE%9C%E6%98%8C%E5%B8%82",
+    "wikidata_id": "Q71266",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q71266",
+    "commons_map_category": "Category:Maps of Yichang",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Yichang",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Yichang+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Yíchang-map",
+        "file_title": "File:Yíchang-map.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3AY%C3%ADchang-map.png"
+      }
+    ]
+  },
+  "zhangjiajie": {
+    "id": "zhangjiajie",
+    "name_en": "Zhangjiajie",
+    "name_zh": "张家界市",
+    "province_en": "Hunan",
+    "wikipedia_en_title": "Zhangjiajie",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Zhangjiajie",
+    "wikipedia_zh_title": "张家界市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E5%BC%A0%E5%AE%B6%E7%95%8C%E5%B8%82",
+    "wikidata_id": "Q197379",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q197379",
+    "commons_map_category": "Category:Maps of Zhangjiajie",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Zhangjiajie",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Zhangjiajie+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Hunan China map EN.svg",
+        "file_title": "File:Hunan China map EN.svg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AHunan%20China%20map%20EN.svg"
+      },
+      {
+        "title": "International Network of Geoparks map",
+        "file_title": "File:International Network of Geoparks map.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AInternational%20Network%20of%20Geoparks%20map.jpg"
+      },
+      {
+        "title": "Zhangjiajie-map",
+        "file_title": "File:Zhangjiajie-map.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3AZhangjiajie-map.png"
+      }
+    ]
+  },
+  "zhengzhou": {
+    "id": "zhengzhou",
+    "name_en": "Zhengzhou",
+    "name_zh": "郑州市",
+    "province_en": "Henan",
+    "wikipedia_en_title": "Zhengzhou",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Zhengzhou",
+    "wikipedia_zh_title": "郑州市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E9%83%91%E5%B7%9E%E5%B8%82",
+    "wikidata_id": "Q30340",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q30340",
+    "commons_map_category": "Category:Maps of Zhengzhou",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Zhengzhou",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Zhengzhou+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Zhengzhou-location-MAP-in-Henan-Province-China",
+        "file_title": "File:Zhengzhou-location-MAP-in-Henan-Province-China.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AZhengzhou-location-MAP-in-Henan-Province-China.jpg"
+      },
+      {
+        "title": "Location map of Zhengzhou, Henan",
+        "file_title": "File:Location map of Zhengzhou, Henan.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3ALocation%20map%20of%20Zhengzhou%2C%20Henan.png"
+      },
+      {
+        "title": "20250528 Map of Historic Monuments of Dengfeng in ‘The Centre of Heaven and Earth’ on the ground",
+        "file_title": "File:20250528 Map of Historic Monuments of Dengfeng in ‘The Centre of Heaven and Earth’ on the ground.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3A20250528%20Map%20of%20Historic%20Monuments%20of%20Dengfeng%20in%20%E2%80%98The%20Centre%20of%20Heaven%20and%20Earth%E2%80%99%20on%20the%20ground.jpg"
+      }
+    ]
+  },
+  "zhuhai": {
+    "id": "zhuhai",
+    "name_en": "Zhuhai",
+    "name_zh": "珠海市",
+    "province_en": "Guangdong",
+    "wikipedia_en_title": "Zhuhai",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Zhuhai",
+    "wikipedia_zh_title": "珠海市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E7%8F%A0%E6%B5%B7%E5%B8%82",
+    "wikidata_id": "Q59095",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q59095",
+    "commons_map_category": "Category:Maps of Zhuhai",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Zhuhai",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Zhuhai+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "Map of Xiangshan County 1673",
+        "file_title": "File:Map of Xiangshan County 1673.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AMap%20of%20Xiangshan%20County%201673.jpg"
+      },
+      {
+        "title": "Zhuhai stadium pedestrian walkway zhmap.svg",
+        "file_title": "File:Zhuhai stadium pedestrian walkway zhmap.svg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AZhuhai%20stadium%20pedestrian%20walkway%20zhmap.svg"
+      },
+      {
+        "title": "Zhuhai map 2009",
+        "file_title": "File:Zhuhai map 2009.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AZhuhai%20map%202009.jpg"
+      }
+    ]
+  },
+  "zibo": {
+    "id": "zibo",
+    "name_en": "Zibo",
+    "name_zh": "淄博市",
+    "province_en": "Shandong",
+    "wikipedia_en_title": "Zibo",
+    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Zibo",
+    "wikipedia_zh_title": "淄博市",
+    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E6%B7%84%E5%8D%9A%E5%B8%82",
+    "wikidata_id": "Q198370",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q198370",
+    "commons_map_category": "Category:Maps of Zibo",
+    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Zibo",
+    "commons_old_map_category": null,
+    "commons_old_map_category_url": null,
+    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Zibo+map&title=Special:MediaSearch&type=image",
+    "scanned_maps": [
+      {
+        "title": "2022年淄博实验中学OpenStreetMap地图.svg",
+        "file_title": "File:2022年淄博实验中学OpenStreetMap地图.svg",
+        "url": "https://commons.wikimedia.org/wiki/File%3A2022%E5%B9%B4%E6%B7%84%E5%8D%9A%E5%AE%9E%E9%AA%8C%E4%B8%AD%E5%AD%A6OpenStreetMap%E5%9C%B0%E5%9B%BE.svg"
+      },
+      {
+        "title": "Zibo-map",
+        "file_title": "File:Zibo-map.png",
+        "url": "https://commons.wikimedia.org/wiki/File%3AZibo-map.png"
+      }
+    ]
+  }
+}
