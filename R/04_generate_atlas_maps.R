@@ -271,235 +271,284 @@ render_city_visuals <- function(i) {
   conv_layer <- if (!is.null(rails_layer) && any(rails_layer$is_hsr == FALSE)) rails_layer[rails_layer$is_hsr == FALSE, ] else NULL
 
   # 1. Hero Map (Urban Growth Rings with National Rail & City Subway Overlay)
-  r_epoch <- classify(r, rcl_hero)
-  r_epoch <- as.factor(r_epoch)
-  levels(r_epoch) <- data.frame(ID = 1:4, epoch = c("Pre-1985", "1986–1995", "1996–2005", "2006–2015"))
-  
-  arc_rank_val <- if ("arcgis_rank" %in% names(c_info) && !is.null(c_info$arcgis_rank)) c_info$arcgis_rank else NA
-  arc_rank_str <- if (!is.na(arc_rank_val) && arc_rank_val != "") sprintf(" · ArcGIS Tier Rank: #%s", arc_rank_val) else ""
-  
-  p_hero <- ggplot() +
-    geom_spatraster(data = r_epoch, maxcell = 6e5) +
-    scale_fill_manual(values = epoch_cols, na.translate = FALSE, name = "Expansion Epoch")
+  if (!file.exists(hero_out)) {
+    r_epoch <- classify(r, rcl_hero)
+    r_epoch <- as.factor(r_epoch)
+    levels(r_epoch) <- data.frame(ID = 1:4, epoch = c("Pre-1985", "1986–1995", "1996–2005", "2006–2015"))
     
-  # Overlay conventional rail network (China Railway 12306)
-  if (!is.null(conv_layer) && nrow(conv_layer) > 0) {
+    arc_rank_val <- if ("arcgis_rank" %in% names(c_info) && !is.null(c_info$arcgis_rank)) c_info$arcgis_rank else NA
+    arc_rank_str <- if (!is.na(arc_rank_val) && arc_rank_val != "") sprintf(" · ArcGIS Tier Rank: #%s", arc_rank_val) else ""
+    
+    p_hero <- ggplot() +
+      geom_spatraster(data = r_epoch, maxcell = 6e5) +
+      scale_fill_manual(values = epoch_cols, na.translate = FALSE, name = "Expansion Epoch")
+      
+    # Overlay conventional rail network (China Railway 12306)
+    if (!is.null(conv_layer) && nrow(conv_layer) > 0) {
+      p_hero <- p_hero +
+        geom_sf(data = conv_layer, color = "#0369A1", linewidth = 0.65, alpha = 0.35) +
+        geom_sf(data = conv_layer, color = "#CBD5E1", linewidth = 0.3, alpha = 0.75)
+    }
+    # Overlay high-speed rail corridors (China Railway 12306)
+    if (!is.null(hsr_layer) && nrow(hsr_layer) > 0) {
+      p_hero <- p_hero +
+        geom_sf(data = hsr_layer, color = "#0284C7", linewidth = 1.1, alpha = 0.5) +
+        geom_sf(data = hsr_layer, color = "#38BDF8", linewidth = 0.55, alpha = 0.95)
+    }
+    # Overlay municipal subway network (AMap / 高德地图) - Emphasized multi-layer luminous neon transit corridors
+    if (!is.null(subway_lines) && nrow(subway_lines) > 0) {
+      p_hero <- p_hero +
+        # Dark contrast casing: isolates rapid transit lines from saturated raster growth rings
+        geom_sf(data = subway_lines, color = "#0B0F19", linewidth = 2.4, alpha = 0.9) +
+        # Luminous deep purple glow
+        geom_sf(data = subway_lines, color = "#9333EA", linewidth = 1.8, alpha = 0.8) +
+        # Electric neon fuchsia/magenta corridor body
+        geom_sf(data = subway_lines, color = "#E879F9", linewidth = 1.15, alpha = 0.98) +
+        # Crisp luminous core highlight for vibrant neon tube effect
+        geom_sf(data = subway_lines, color = "#FFFFFF", linewidth = 0.45, alpha = 0.9)
+    }
+    # Overlay municipal subway passenger stations
+    if (!is.null(subway_stations) && nrow(subway_stations) > 0) {
+      p_hero <- p_hero +
+        geom_sf(data = subway_stations, color = "#2E1065", size = 1.0, alpha = 0.85) +
+        geom_sf(data = subway_stations, color = "#FDF4FF", size = 0.5, alpha = 0.95)
+    }
+    # Overlay 12306 national rail passenger stations
+    if (!is.null(stations_layer) && nrow(stations_layer) > 0) {
+      p_hero <- p_hero +
+        geom_sf(data = stations_layer, color = "#F59E0B", size = 1.6, alpha = 0.95)
+    }
+    
+    transit_caption <- if (has_subway) {
+      "Sources: DLR WSF Evolution 30m (Marconcini et al., 2020) · China Railway 12306 (NRA) · AMap (高德) Metro · GADM 4.1"
+    } else {
+      "Sources: DLR WSF Evolution 30m (Marconcini et al., 2020) · China Railway 12306 Network (NRA) · GADM 4.1 · 7th Census"
+    }
+    
     p_hero <- p_hero +
-      geom_sf(data = conv_layer, color = "#0369A1", linewidth = 0.65, alpha = 0.35) +
-      geom_sf(data = conv_layer, color = "#CBD5E1", linewidth = 0.3, alpha = 0.75)
+      coord_sf(xlim = c(xmin(r), xmax(r)), ylim = c(ymin(r), ymax(r)), expand = FALSE) +
+      labs(
+        title = sprintf("%s  %s", toupper(c_info$name_en), c_info$name_zh),
+        subtitle = sprintf("%s Province · Population: %0.1fM (Rank #%d)%s · 30-Year Growth: %0.1f×",
+                           c_info$province_en, c_info$pop_million, c_info$rank_population, arc_rank_str, c_info$growth_multiple),
+        caption = transit_caption
+      ) +
+      theme_void(base_family = "Droid Sans Fallback") +
+      theme(
+        plot.background = element_rect(fill = "#0B0F19", color = NA),
+        panel.background = element_rect(fill = "#0F172A", color = "#1E293B", linewidth = 1),
+        plot.margin = margin(16, 16, 16, 16),
+        plot.title = element_text(color = "white", size = 20, face = "bold", margin = margin(b = 4)),
+        plot.subtitle = element_text(color = "#94A3B8", size = 10.5, margin = margin(b = 10)),
+        plot.caption = element_text(color = "#64748B", size = 7.5, margin = margin(t = 8)),
+        legend.position = "bottom",
+        legend.background = element_rect(fill = "#0B0F19", color = NA),
+        legend.text = element_text(color = "#E2E8F0", size = 9),
+        legend.title = element_text(color = "white", size = 10, face = "bold")
+      )
+    
+    agg_png(hero_out, width = 1400, height = 1100, res = 150)
+    print(p_hero)
+    dev.off()
   }
-  # Overlay high-speed rail corridors (China Railway 12306)
-  if (!is.null(hsr_layer) && nrow(hsr_layer) > 0) {
-    p_hero <- p_hero +
-      geom_sf(data = hsr_layer, color = "#0284C7", linewidth = 1.1, alpha = 0.5) +
-      geom_sf(data = hsr_layer, color = "#38BDF8", linewidth = 0.55, alpha = 0.95)
-  }
-  # Overlay municipal subway network (AMap / 高德地图)
-  if (!is.null(subway_lines) && nrow(subway_lines) > 0) {
-    p_hero <- p_hero +
-      geom_sf(data = subway_lines, color = "#A855F7", linewidth = 0.85, alpha = 0.5) +
-      geom_sf(data = subway_lines, color = "#E879F9", linewidth = 0.45, alpha = 0.9)
-  }
-  # Overlay 12306 national rail passenger stations
-  if (!is.null(stations_layer) && nrow(stations_layer) > 0) {
-    p_hero <- p_hero +
-      geom_sf(data = stations_layer, color = "#F59E0B", size = 1.3, alpha = 0.9)
-  }
-  
-  transit_caption <- if (has_subway) {
-    "Sources: DLR WSF Evolution 30m (Marconcini et al., 2020) · China Railway 12306 (NRA) · AMap (高德) Metro · GADM 4.1"
-  } else {
-    "Sources: DLR WSF Evolution 30m (Marconcini et al., 2020) · China Railway 12306 Network (NRA) · GADM 4.1 · 7th Census"
-  }
-  
-  p_hero <- p_hero +
-    coord_sf(xlim = c(xmin(r), xmax(r)), ylim = c(ymin(r), ymax(r)), expand = FALSE) +
-    labs(
-      title = sprintf("%s  %s", toupper(c_info$name_en), c_info$name_zh),
-      subtitle = sprintf("%s Province · Population: %0.1fM (Rank #%d)%s · 30-Year Growth: %0.1f×",
-                         c_info$province_en, c_info$pop_million, c_info$rank_population, arc_rank_str, c_info$growth_multiple),
-      caption = transit_caption
-    ) +
-    theme_void(base_family = "Droid Sans Fallback") +
-    theme(
-      plot.background = element_rect(fill = "#0B0F19", color = NA),
-      panel.background = element_rect(fill = "#0F172A", color = "#1E293B", linewidth = 1),
-      plot.margin = margin(16, 16, 16, 16),
-      plot.title = element_text(color = "white", size = 20, face = "bold", margin = margin(b = 4)),
-      plot.subtitle = element_text(color = "#94A3B8", size = 10.5, margin = margin(b = 10)),
-      plot.caption = element_text(color = "#64748B", size = 7.5, margin = margin(t = 8)),
-      legend.position = "bottom",
-      legend.background = element_rect(fill = "#0B0F19", color = NA),
-      legend.text = element_text(color = "#E2E8F0", size = 9),
-      legend.title = element_text(color = "white", size = 10, face = "bold")
-    )
-  
-  agg_png(hero_out, width = 1400, height = 1100, res = 150)
-  print(p_hero)
-  dev.off()
   
   # 1B. Dedicated High-Resolution Transit & Railway Network Map
-  r_built <- classify(r, matrix(c(-Inf, 1984, NA, 1984.5, 2015.5, 1, 2015.5, Inf, NA), ncol = 3, byrow = TRUE))
-  
-  p_rail <- ggplot() +
-    geom_spatraster(data = r_built, maxcell = 3e5) +
-    scale_fill_gradient(low = "#1E293B", high = "#1E293B", na.value = "transparent", guide = "none")
+  if (!file.exists(rail_out)) {
+    r_built <- classify(r, matrix(c(-Inf, 1984, NA, 1984.5, 2015.5, 1, 2015.5, Inf, NA), ncol = 3, byrow = TRUE))
     
-  if (!is.null(conv_layer) && nrow(conv_layer) > 0) {
+    p_rail <- ggplot() +
+      geom_spatraster(data = r_built, maxcell = 3e5) +
+      scale_fill_gradient(low = "#1E293B", high = "#1E293B", na.value = "transparent", guide = "none")
+      
+    if (!is.null(conv_layer) && nrow(conv_layer) > 0) {
+      p_rail <- p_rail +
+        geom_sf(data = conv_layer, aes(color = "Conventional Rail"), linewidth = 0.45, alpha = 0.75)
+    }
+    if (!is.null(hsr_layer) && nrow(hsr_layer) > 0) {
+      p_rail <- p_rail +
+        geom_sf(data = hsr_layer, color = "#0284C7", linewidth = 1.1, alpha = 0.5) +
+        geom_sf(data = hsr_layer, aes(color = "High-Speed Rail (PDL)"), linewidth = 0.7, alpha = 0.95)
+    }
+    # Municipal subway overlay on dedicated transit map
+    if (!is.null(subway_lines) && nrow(subway_lines) > 0) {
+      p_rail <- p_rail +
+        geom_sf(data = subway_lines, color = "#0B0F19", linewidth = 2.2, alpha = 0.85) +
+        geom_sf(data = subway_lines, color = "#9333EA", linewidth = 1.6, alpha = 0.75) +
+        geom_sf(data = subway_lines, aes(color = "Municipal Metro / Subway"), linewidth = 1.05, alpha = 0.98) +
+        geom_sf(data = subway_lines, color = "#FFFFFF", linewidth = 0.35, alpha = 0.9)
+    }
+    if (!is.null(subway_stations) && nrow(subway_stations) > 0) {
+      p_rail <- p_rail +
+        geom_sf(data = subway_stations, aes(shape = "Metro Station"), color = "#E879F9", size = 0.9, alpha = 0.9)
+    }
+    if (!is.null(stations_layer) && nrow(stations_layer) > 0) {
+      p_rail <- p_rail +
+        geom_sf(data = stations_layer, aes(shape = "Railway Station / Hub"), color = "#F59E0B", size = 1.4, alpha = 0.9)
+    }
+    
+    corridor_colors <- c()
+    if (!is.null(hsr_layer) && nrow(hsr_layer) > 0) corridor_colors["High-Speed Rail (PDL)"] <- "#38BDF8"
+    if (!is.null(conv_layer) && nrow(conv_layer) > 0) corridor_colors["Conventional Rail"] <- "#94A3B8"
+    if (!is.null(subway_lines) && nrow(subway_lines) > 0) corridor_colors["Municipal Metro / Subway"] <- "#E879F9"
+    
+    shape_values <- c("Railway Station / Hub" = 16)
+    if (!is.null(subway_stations) && nrow(subway_stations) > 0) shape_values["Metro Station"] <- 18
+    
+    p_rail_caption <- if (has_subway) {
+      "Sources: HOTOSM China Railways (HDX / OSM) · AMap (高德) Metro · DLR WSF Evolution 30m"
+    } else {
+      "Sources: HOTOSM China Railways (HDX / OpenStreetMap contributors, ODbL 1.0) · DLR WSF Evolution 30m"
+    }
+    p_rail_subtitle <- if (has_subway) {
+      "National Rail Trunks & Municipal Metro Corridors overlaid on 2015 Urban Footprint"
+    } else {
+      "HOTOSM High-Precision Railway Corridors & Stations overlaid on 2015 Urban Built-Up Footprint"
+    }
+    
     p_rail <- p_rail +
-      geom_sf(data = conv_layer, aes(color = "Conventional Rail"), linewidth = 0.45, alpha = 0.75)
+      scale_color_manual(values = corridor_colors, name = "Corridor Network") +
+      scale_shape_manual(values = shape_values, name = "Transit Facilities") +
+      coord_sf(xlim = c(xmin(r), xmax(r)), ylim = c(ymin(r), ymax(r)), expand = FALSE) +
+      labs(
+        title = sprintf("%s  %s — TRANSIT & RAIL CORRIDORS", toupper(c_info$name_en), c_info$name_zh),
+        subtitle = p_rail_subtitle,
+        caption = p_rail_caption
+      ) +
+      theme_void(base_family = "Droid Sans Fallback") +
+      theme(
+        plot.background = element_rect(fill = "#0B0F19", color = NA),
+        panel.background = element_rect(fill = "#090D16", color = "#1E293B", linewidth = 1),
+        plot.margin = margin(16, 16, 16, 16),
+        plot.title = element_text(color = "white", size = 16, face = "bold", margin = margin(b = 4)),
+        plot.subtitle = element_text(color = "#94A3B8", size = 10, margin = margin(b = 10)),
+        plot.caption = element_text(color = "#64748B", size = 7.5, margin = margin(t = 8)),
+        legend.position = "bottom",
+        legend.box = "horizontal",
+        legend.background = element_rect(fill = "#0B0F19", color = NA),
+        legend.text = element_text(color = "#E2E8F0", size = 9),
+        legend.title = element_text(color = "white", size = 9.5, face = "bold")
+      )
+    
+    agg_png(rail_out, width = 1400, height = 1100, res = 150)
+    print(p_rail)
+    dev.off()
   }
-  if (!is.null(hsr_layer) && nrow(hsr_layer) > 0) {
-    p_rail <- p_rail +
-      geom_sf(data = hsr_layer, color = "#0284C7", linewidth = 1.1, alpha = 0.5) +
-      geom_sf(data = hsr_layer, aes(color = "High-Speed Rail (PDL)"), linewidth = 0.7, alpha = 0.95)
-  }
-  if (!is.null(stations_layer) && nrow(stations_layer) > 0) {
-    p_rail <- p_rail +
-      geom_sf(data = stations_layer, aes(shape = "Railway Station / Hub"), color = "#F59E0B", size = 1.4, alpha = 0.9)
-  }
-  
-  corridor_colors <- c()
-  if (!is.null(hsr_layer) && nrow(hsr_layer) > 0) corridor_colors["High-Speed Rail (PDL)"] <- "#38BDF8"
-  if (!is.null(conv_layer) && nrow(conv_layer) > 0) corridor_colors["Conventional Rail"] <- "#94A3B8"
-  
-  p_rail <- p_rail +
-    scale_color_manual(values = corridor_colors, name = "Corridor Network") +
-    scale_shape_manual(values = c("Railway Station / Hub" = 16), name = "Transit Facilities") +
-    coord_sf(xlim = c(xmin(r), xmax(r)), ylim = c(ymin(r), ymax(r)), expand = FALSE) +
-    labs(
-      title = sprintf("%s  %s — TRANSIT & RAIL CORRIDORS", toupper(c_info$name_en), c_info$name_zh),
-      subtitle = "HOTOSM High-Precision Railway Corridors & Stations overlaid on 2015 Urban Built-Up Footprint",
-      caption = "Sources: HOTOSM China Railways (HDX / OpenStreetMap contributors, ODbL 1.0) · DLR WSF Evolution 30m"
-    ) +
-    theme_void(base_family = "Droid Sans Fallback") +
-    theme(
-      plot.background = element_rect(fill = "#0B0F19", color = NA),
-      panel.background = element_rect(fill = "#090D16", color = "#1E293B", linewidth = 1),
-      plot.margin = margin(16, 16, 16, 16),
-      plot.title = element_text(color = "white", size = 16, face = "bold", margin = margin(b = 4)),
-      plot.subtitle = element_text(color = "#94A3B8", size = 10, margin = margin(b = 10)),
-      plot.caption = element_text(color = "#64748B", size = 7.5, margin = margin(t = 8)),
-      legend.position = "bottom",
-      legend.box = "horizontal",
-      legend.background = element_rect(fill = "#0B0F19", color = NA),
-      legend.text = element_text(color = "#E2E8F0", size = 9),
-      legend.title = element_text(color = "white", size = 9.5, face = "bold")
-    )
-  
-  agg_png(rail_out, width = 1400, height = 1100, res = 150)
-  print(p_rail)
-  dev.off()
   
   # 2. Small Multiples (4-Panel Progression)
-  make_panel <- function(r, yr, title_text, col) {
-    r_bin <- classify(r, matrix(c(
-      -Inf, 1984, NA,
-      1984.5, yr + 0.5, 1,
-      yr + 0.5, Inf, NA
-    ), ncol = 3, byrow = TRUE))
+  if (!file.exists(sm_out)) {
+    make_panel <- function(r, yr, title_text, col) {
+      r_bin <- classify(r, matrix(c(
+        -Inf, 1984, NA,
+        1984.5, yr + 0.5, 1,
+        yr + 0.5, Inf, NA
+      ), ncol = 3, byrow = TRUE))
+      
+      ggplot() +
+        geom_spatraster(data = r_bin, maxcell = 2e5) +
+        scale_fill_gradient(low = col, high = col, na.value = "transparent", guide = "none") +
+        coord_sf(expand = FALSE) +
+        labs(subtitle = title_text) +
+        theme_void(base_family = "Droid Sans Fallback") +
+        theme(
+          plot.background = element_rect(fill = "#0B0F19", color = NA),
+          panel.background = element_rect(fill = "#0F172A", color = "#1E293B", linewidth = 0.5),
+          plot.subtitle = element_text(color = "white", size = 11, face = "bold", hjust = 0.5, margin = margin(b = 4))
+        )
+    }
     
-    ggplot() +
-      geom_spatraster(data = r_bin, maxcell = 2e5) +
-      scale_fill_gradient(low = col, high = col, na.value = "transparent", guide = "none") +
-      coord_sf(expand = FALSE) +
-      labs(subtitle = title_text) +
+    p1 <- make_panel(r, 1985, sprintf("1985 Base · %0.1f km²", c_info$area_1985), "#F59E0B")
+    p2 <- make_panel(r, 1995, sprintf("1995 · %0.1f km²", c_info$area_1995), "#EF4444")
+    p3 <- make_panel(r, 2005, sprintf("2005 · %0.1f km²", c_info$area_2005), "#06B6D4")
+    p4 <- make_panel(r, 2015, sprintf("2015 · %0.1f km²", c_info$area_2015), "#10B981")
+    
+    p_sm <- (p1 | p2) / (p3 | p4) +
+      plot_annotation(
+        title = sprintf("%s (%s) — 30-Year Urban Footprint Evolution", c_info$name_en, c_info$name_zh),
+        subtitle = sprintf("Uniform spatial extents across four landmark development epochs (Total Growth: %0.1f×)", c_info$growth_multiple),
+        caption = "Source: DLR World Settlement Footprint Evolution (WSF-Evo 30m, 1985–2015)",
+        theme = theme(
+          plot.background = element_rect(fill = "#0B0F19", color = NA),
+          plot.title = element_text(color = "white", size = 16, face = "bold", family = "Droid Sans Fallback"),
+          plot.subtitle = element_text(color = "#94A3B8", size = 10, family = "Droid Sans Fallback"),
+          plot.caption = element_text(color = "#64748B", size = 8, family = "Droid Sans Fallback")
+        )
+      )
+    
+    agg_png(sm_out, width = 1400, height = 1200, res = 150)
+    print(p_sm)
+    dev.off()
+  }
+  
+  # 3. Regional Context Inset Map
+  if (!file.exists(ctx_out)) {
+    prov_match <- admin$provinces[grepl(c_info$province_en, admin$provinces$NAME_1, ignore.case = TRUE), ]
+    
+    p_ctx <- ggplot() +
+      geom_sf(data = admin$country, fill = "#1E293B", color = "#475569", linewidth = 0.3) +
+      geom_sf(data = admin$provinces, fill = "#1E293B", color = "#334155", linewidth = 0.2) +
+      geom_sf(data = prov_match, fill = "#0284C7", color = "#38BDF8", linewidth = 0.5, alpha = 0.4) +
+      geom_point(data = c_info, aes(x = lon, y = lat), color = "#F59E0B", size = 3.5) +
+      geom_point(data = c_info, aes(x = lon, y = lat), color = "#FEF08A", size = 1.5) +
+      coord_sf(xlim = c(73, 135), ylim = c(18, 54), expand = FALSE) +
+      labs(
+        title = sprintf("%s (%s)", c_info$name_en, c_info$name_zh),
+        subtitle = sprintf("%s Province · %0.2f°N, %0.2f°E · Pop: %0.1fM", c_info$province_en, c_info$lat, c_info$lon, c_info$pop_million),
+        caption = "Sources: GADM 4.1 · 7th National Population Census (2020)"
+      ) +
       theme_void(base_family = "Droid Sans Fallback") +
       theme(
         plot.background = element_rect(fill = "#0B0F19", color = NA),
         panel.background = element_rect(fill = "#0F172A", color = "#1E293B", linewidth = 0.5),
-        plot.subtitle = element_text(color = "white", size = 11, face = "bold", hjust = 0.5, margin = margin(b = 4))
+        plot.title = element_text(color = "white", size = 11, face = "bold", margin = margin(t = 6, b = 2)),
+        plot.subtitle = element_text(color = "#94A3B8", size = 9, margin = margin(b = 4)),
+        plot.caption = element_text(color = "#64748B", size = 7, margin = margin(b = 4))
       )
+    
+    agg_png(ctx_out, width = 600, height = 450, res = 150)
+    print(p_ctx)
+    dev.off()
   }
   
-  p1 <- make_panel(r, 1985, sprintf("1985 Base · %0.1f km²", c_info$area_1985), "#F59E0B")
-  p2 <- make_panel(r, 1995, sprintf("1995 · %0.1f km²", c_info$area_1995), "#EF4444")
-  p3 <- make_panel(r, 2005, sprintf("2005 · %0.1f km²", c_info$area_2005), "#06B6D4")
-  p4 <- make_panel(r, 2015, sprintf("2015 · %0.1f km²", c_info$area_2015), "#10B981")
-  
-  p_sm <- (p1 | p2) / (p3 | p4) +
-    plot_annotation(
-      title = sprintf("%s (%s) — 30-Year Urban Footprint Evolution", c_info$name_en, c_info$name_zh),
-      subtitle = sprintf("Uniform spatial extents across four landmark development epochs (Total Growth: %0.1f×)", c_info$growth_multiple),
-      caption = "Source: DLR World Settlement Footprint Evolution (WSF-Evo 30m, 1985–2015)",
-      theme = theme(
-        plot.background = element_rect(fill = "#0B0F19", color = NA),
-        plot.title = element_text(color = "white", size = 16, face = "bold", family = "Droid Sans Fallback"),
-        plot.subtitle = element_text(color = "#94A3B8", size = 10, family = "Droid Sans Fallback"),
-        plot.caption = element_text(color = "#64748B", size = 8, family = "Droid Sans Fallback")
-      )
-    )
-  
-  agg_png(sm_out, width = 1400, height = 1200, res = 150)
-  print(p_sm)
-  dev.off()
-  
-  # 3. Regional Context Inset Map
-  prov_match <- admin$provinces[grepl(c_info$province_en, admin$provinces$NAME_1, ignore.case = TRUE), ]
-  
-  p_ctx <- ggplot() +
-    geom_sf(data = admin$country, fill = "#1E293B", color = "#475569", linewidth = 0.3) +
-    geom_sf(data = admin$provinces, fill = "#1E293B", color = "#334155", linewidth = 0.2) +
-    geom_sf(data = prov_match, fill = "#0284C7", color = "#38BDF8", linewidth = 0.5, alpha = 0.4) +
-    geom_point(data = c_info, aes(x = lon, y = lat), color = "#F59E0B", size = 3.5) +
-    geom_point(data = c_info, aes(x = lon, y = lat), color = "#FEF08A", size = 1.5) +
-    coord_sf(xlim = c(73, 135), ylim = c(18, 54), expand = FALSE) +
-    labs(
-      title = sprintf("%s (%s)", c_info$name_en, c_info$name_zh),
-      subtitle = sprintf("%s Province · %0.2f°N, %0.2f°E · Pop: %0.1fM", c_info$province_en, c_info$lat, c_info$lon, c_info$pop_million),
-      caption = "Sources: GADM 4.1 · 7th National Population Census (2020)"
-    ) +
-    theme_void(base_family = "Droid Sans Fallback") +
-    theme(
-      plot.background = element_rect(fill = "#0B0F19", color = NA),
-      panel.background = element_rect(fill = "#0F172A", color = "#1E293B", linewidth = 0.5),
-      plot.title = element_text(color = "white", size = 11, face = "bold", margin = margin(t = 6, b = 2)),
-      plot.subtitle = element_text(color = "#94A3B8", size = 9, margin = margin(b = 4)),
-      plot.caption = element_text(color = "#64748B", size = 7, margin = margin(b = 4))
-    )
-  
-  agg_png(ctx_out, width = 600, height = 450, res = 150)
-  print(p_ctx)
-  dev.off()
-  
   # 4. Expansion Trajectory Chart
-  ts_data <- tibble(
-    year = c(1985, 1990, 1995, 2000, 2005, 2010, 2015),
-    area = c(c_info$area_1985, c_info$area_1990, c_info$area_1995, 
-             c_info$area_2000, c_info$area_2005, c_info$area_2010, c_info$area_2015)
-  )
-  
-  p_traj <- ggplot(ts_data, aes(x = year, y = area)) +
-    geom_area(fill = "#0284C7", alpha = 0.25) +
-    geom_line(color = "#38BDF8", linewidth = 1.2) +
-    geom_point(color = "#F59E0B", size = 2.5) +
-    geom_text(aes(label = sprintf("%0.0f", area)), vjust = -0.9, color = "white", size = 3, family = "Droid Sans Fallback") +
-    scale_x_continuous(breaks = c(1985, 1990, 1995, 2000, 2005, 2010, 2015)) +
-    scale_y_continuous(expand = expansion(mult = c(0.05, 0.2))) +
-    labs(
-      title = "Physical Urban Expansion (1985–2015)",
-      subtitle = sprintf("Built footprint: %0.1f → %0.1f km² (CAGR: %0.1f%%/yr)", 
-                         c_info$area_1985, c_info$area_2015, c_info$cagr_pct),
-      caption = "Source: Computed from DLR WSF Evolution 30m Satellite Time Series (1985–2015)",
-      x = "Year",
-      y = "Footprint (km²)"
-    ) +
-    theme_minimal(base_family = "Droid Sans Fallback") +
-    theme(
-      plot.background = element_rect(fill = "#0B0F19", color = NA),
-      panel.background = element_rect(fill = "#0F172A", color = "#1E293B"),
-      panel.grid.major = element_line(color = "#1E293B", linewidth = 0.4),
-      panel.grid.minor = element_blank(),
-      plot.title = element_text(color = "white", size = 11, face = "bold"),
-      plot.subtitle = element_text(color = "#94A3B8", size = 9),
-      plot.caption = element_text(color = "#64748B", size = 7.5, margin = margin(t = 6)),
-      axis.title = element_text(color = "#94A3B8", size = 9),
-      axis.text = element_text(color = "#CBD5E1", size = 8)
+  if (!file.exists(traj_out)) {
+    ts_data <- tibble(
+      year = c(1985, 1990, 1995, 2000, 2005, 2010, 2015),
+      area = c(c_info$area_1985, c_info$area_1990, c_info$area_1995, 
+               c_info$area_2000, c_info$area_2005, c_info$area_2010, c_info$area_2015)
     )
-  
-  agg_png(traj_out, width = 700, height = 450, res = 150)
-  print(p_traj)
-  dev.off()
+    
+    p_traj <- ggplot(ts_data, aes(x = year, y = area)) +
+      geom_area(fill = "#0284C7", alpha = 0.25) +
+      geom_line(color = "#38BDF8", linewidth = 1.2) +
+      geom_point(color = "#F59E0B", size = 2.5) +
+      geom_text(aes(label = sprintf("%0.0f", area)), vjust = -0.9, color = "white", size = 3, family = "Droid Sans Fallback") +
+      scale_x_continuous(breaks = c(1985, 1990, 1995, 2000, 2005, 2010, 2015)) +
+      scale_y_continuous(expand = expansion(mult = c(0.05, 0.2))) +
+      labs(
+        title = "Physical Urban Expansion (1985–2015)",
+        subtitle = sprintf("Built footprint: %0.1f → %0.1f km² (CAGR: %0.1f%%/yr)", 
+                           c_info$area_1985, c_info$area_2015, c_info$cagr_pct),
+        caption = "Source: Computed from DLR WSF Evolution 30m Satellite Time Series (1985–2015)",
+        x = "Year",
+        y = "Footprint (km²)"
+      ) +
+      theme_minimal(base_family = "Droid Sans Fallback") +
+      theme(
+        plot.background = element_rect(fill = "#0B0F19", color = NA),
+        panel.background = element_rect(fill = "#0F172A", color = "#1E293B"),
+        panel.grid.major = element_line(color = "#1E293B", linewidth = 0.4),
+        panel.grid.minor = element_blank(),
+        plot.title = element_text(color = "white", size = 11, face = "bold"),
+        plot.subtitle = element_text(color = "#94A3B8", size = 9),
+        plot.caption = element_text(color = "#64748B", size = 7.5, margin = margin(t = 6)),
+        axis.title = element_text(color = "#94A3B8", size = 9),
+        axis.text = element_text(color = "#CBD5E1", size = 8)
+      )
+    
+    agg_png(traj_out, width = 700, height = 450, res = 150)
+    print(p_traj)
+    dev.off()
+  }
   
   return(TRUE)
 }

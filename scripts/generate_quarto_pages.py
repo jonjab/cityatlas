@@ -189,6 +189,7 @@ Explore scanned historical maps, AMS sheets, and municipal surveys for **{c['nam
 **{c['name_en']}** operates an extensive urban rapid transit network comprising **{rail_info['subway_lines_count']} operational metro lines** and **{rail_info['subway_station_count']} passenger stations** (source: AMap 高德地图 / Ministry of Transport of the PRC):
 
 - **Key Metro Corridors**: {lines_preview}
+- **Cartographic Overlay**: Prominently emphasized on the Hero poster above with a multi-layer luminous neon magenta/purple overlay and station nodes (`#A855F7` / `#E879F9`), illustrating how modern rapid transit corridors interconnect historical settlement cores with post-2000 peripheral development zones.
 - **Transit Alignment**: High-frequency metro lines provide multi-directional connectivity between the historical core (Pre-1985 settlement) and outer-ring state-level expansion zones (*Kaifaqu* and *Xinqu*).
 :::
 """

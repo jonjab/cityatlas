@@ -114,6 +114,7 @@ The cartographic poster below maps the physical settlement rings of **Harbin** a
 **Harbin** operates an extensive urban rapid transit network comprising **3 operational metro lines** and **73 passenger stations** (source: AMap 高德地图 / Ministry of Transport of the PRC):
 
 - **Key Metro Corridors**: `地铁1号线`, `地铁2号线`, `地铁3号线`
+- **Cartographic Overlay**: Prominently emphasized on the Hero poster above with a multi-layer luminous neon magenta/purple overlay and station nodes (`#A855F7` / `#E879F9`), illustrating how modern rapid transit corridors interconnect historical settlement cores with post-2000 peripheral development zones.
 - **Transit Alignment**: High-frequency metro lines provide multi-directional connectivity between the historical core (Pre-1985 settlement) and outer-ring state-level expansion zones (*Kaifaqu* and *Xinqu*).
 :::
 
