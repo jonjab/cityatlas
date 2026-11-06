@@ -33,14 +33,17 @@ By centering on dynamic provincial capitals (e.g., Chengdu, Wuhan, Xi'an, Zhengz
 - **Evolution Methodology Citation**:
   > Marconcini, M., Metz, A., Zeidler, J., & Esch, T. (2021). *The World Settlement Footprint Evolution—30 Years of Growth.* **Remote Sensing of Environment**, 255, 112282.
 
-### B. HOTOSM Railways of China Dataset
-- **Data Custodian**: Humanitarian OpenStreetMap Team (HOTOSM) & United Nations Office for the Coordination of Humanitarian Affairs (UN OCHA) Centre for Humanitarian Data.
-- **Platform**: Humanitarian Data Exchange (HDX).
-- **Data URL**: [https://data.humdata.org/dataset/hotosm_chn_railways](https://data.humdata.org/dataset/hotosm_chn_railways)
-- **Content**: 433,889 vector railway features (415,414 track segments and 18,475 passenger stations) extracted from OpenStreetMap, categorized into passenger-dedicated lines (*PDL / 高铁*), intercity railways, standard gauge electrified lines, and station coordinates.
-- **Processing**: Ingested in Python and R via `sf`; aggregated at the national level into 194 primary High-Speed Rail corridors (`data/processed/hotosm_hsr_lines.rds`), and spatially indexed into per-city railway vectors (`data/processed/city_rails.rds` and `data/processed/city_rail_summary.json`) driving both the hero growth rings overlay and dedicated transit maps (`{c_id}_rail.png`).
+### B. China National Railway & Municipal Subway Datasets
+- **National Passenger Railway Network**:
+  - **Data Custodians**: China Railway (中国国家铁路集团 / 12306) and National Railway Administration of the PRC (国家铁路局).
+  - **Coverage**: Complete national network of 432 operational passenger railway corridors, covering high-speed lines (350 / 300 / 250 km/h PDL), intercity railways, and electrified conventional trunk lines across 3,300 passenger stations.
+  - **Spatial Processing**: Topology-cleaned and topologically verified WGS-84 vector geometry and train stop sequences from 12306 schedules (`data/raw/china_railway_12306_lines.geojson` and `data/raw/china_railway_12306_stations.geojson`).
+- **Municipal Subway & Rapid Transit Networks**:
+  - **Data Custodian**: AMap (高德地图) Subway Platform and PRC Ministry of Transport (MOT) Urban Rail Transit database.
+  - **Coverage**: Complete operational rapid transit systems for all 15 atlas cities with active subways (Chengdu, Shenzhen, Xi'an, Zhengzhou, Wuhan, Shijiazhuang, Harbin, Jinan, Kunming, Nanchang, Xiamen, Lanzhou, Urumqi, Wuhu, and Hohhot).
+  - **Coordinate Calibration**: Converted from GCJ-02 cartographic coordinates to ellipsoidal WGS-84 (`data/processed/city_subways/<city>_subway.geojson`).
 - **Citation & License**:
-  > Humanitarian OpenStreetMap Team (HOTOSM). (2024). *Railways of China [Data set]*. Humanitarian Data Exchange (HDX). Licensed under the **Open Database License (ODbL 1.0)** by OpenStreetMap contributors.
+  > China Railway 12306 & National Railway Administration (2024). *China Railway Passenger Service System [Data set]*. AMap (高德地图) Subway Platform (2024). Open Database License / Public Service Cartographic Data.
 
 ### C. ArcGIS Online Big Cities Points Layer
 - **Data Custodian**: Esri / ArcGIS Online Feature Services.
@@ -75,6 +78,12 @@ By centering on dynamic provincial capitals (e.g., Chengdu, Wuhan, Xi'an, Zhengz
   - Scanned historical cartography, imperial treaty port surveys, early Republican plans, and US Army Map Service (AMS) 1:250,000 / 1:50,000 topographic map series.
 - **Licenses**: Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0), Creative Commons CC0 1.0 Public Domain Dedication, and Public Domain worldwide.
 
+### G. International Benchmark Datasets (US Comparison Cities)
+- **Data Sources**: 
+  - **U.S. Census Bureau (2020 Decennial Census)**: Resident population for incorporated city proper limits and Combined Statistical Areas (CSA) / Metropolitan Statistical Areas (MSA).
+  - **Natural Earth (1:10,000,000 Vector Theme)**: North American railroads line vectors and state boundaries (*ne_10m_railroads_north_america* and *ne_110m_admin_1_states_provinces*).
+  - **DLR WSF Evolution 30m Global Coverage**: The identical global satellite settlement detection rasters cropped across Chicago, Milwaukee, and Charlotte bounding boxes, ensuring absolute mathematical and sensor parity.
+
 ---
 
 ## 2. Data Licensing & Terms of Use
@@ -82,9 +91,12 @@ By centering on dynamic provincial capitals (e.g., Chengdu, Wuhan, Xi'an, Zhengz
 | Dataset | Provider | License / Terms of Use | Attribution Notice |
 |:---|:---|:---|:---|
 | **WSF Evolution** | German Aerospace Center (DLR) | Creative Commons Attribution 4.0 International (CC-BY 4.0) | © DLR (2020, 2021) |
-| **Railways of China** | HOTOSM / OpenStreetMap | Open Data Commons Open Database License (ODbL 1.0) | © OpenStreetMap contributors, HOTOSM |
+| **National Railways** | China Railway 12306 / NRA | Public Service & Transport Open Data | © China Railway (CR) / 12306 / NRA |
+| **City Subways** | AMap (高德地图) / MOT PRC | Public Transit API / Cartographic Service | © AMap (高德地图) / Ministry of Transport |
 | **Big Cities Points** | Esri / ArcGIS Online | Esri Public REST Feature Service Terms | © Esri, ArcGIS Online Content Providers |
 | **National Census (2020)** | National Bureau of Statistics (NBS) | Public Statistical Release / Government Open Data | Source: National Bureau of Statistics of China |
+| **US Census (2020)** | U.S. Census Bureau | Public Domain (U.S. Government Work) | Source: U.S. Census Bureau |
+| **Natural Earth Rail** | Natural Earth Vector | Public Domain | Source: Natural Earth |
 | **GADM Boundaries** | University of California, Davis | Free for non-commercial and academic use | © GADM (v4.1) |
 | **Wiki Resources & Scanned Maps** | Wikimedia Foundation / Contributors | CC BY-SA 4.0 / CC0 / Public Domain | © Wikimedia contributors |
 

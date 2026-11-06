@@ -136,3 +136,72 @@ write_json(df_growth, "data/processed/city_growth_stats.json", pretty = TRUE)
 cat("Successfully calculated metrics and re-ranked by 2020 Census Population!\n")
 cat("\nTop 10 Cities Ordered by Population (2020 Census):\n")
 print(df_growth %>% select(rank_population, name_en, name_zh, province_en, pop_million, area_1985, area_2015, growth_multiple) %>% head(10))
+
+# ------------------------------------------------------------------------------
+# Process US Comparison Cities (Points of Comparison: Chicago, Milwaukee, Charlotte)
+# ------------------------------------------------------------------------------
+if (file.exists("data/comparison_cities.json")) {
+  comp_cities <- fromJSON("data/comparison_cities.json")
+  cat(sprintf("\nComputing growth metrics for %d US comparison cities...\n", nrow(comp_cities)))
+  
+  comp_results <- list()
+  for (i in seq_len(nrow(comp_cities))) {
+    c_id <- comp_cities$id[i]
+    c_name <- comp_cities$name_en[i]
+    tif_path <- sprintf("data/processed/wsf/%s.tif", c_id)
+    if (!file.exists(tif_path)) next
+    
+    r <- rast(tif_path)
+    cs <- cellSize(r, unit = "km")
+    v <- values(r, mat = FALSE)
+    a <- values(cs, mat = FALSE)
+    
+    valid <- !is.na(v) & v >= 1985
+    a_1985 <- round(sum(a[valid & v <= 1985]), 2)
+    a_1990 <- round(sum(a[valid & v <= 1990]), 2)
+    a_1995 <- round(sum(a[valid & v <= 1995]), 2)
+    a_2000 <- round(sum(a[valid & v <= 2000]), 2)
+    a_2005 <- round(sum(a[valid & v <= 2005]), 2)
+    a_2010 <- round(sum(a[valid & v <= 2010]), 2)
+    a_2015 <- round(sum(a[valid & v <= 2015]), 2)
+    
+    net_gain <- round(a_2015 - a_1985, 2)
+    mult <- round(a_2015 / max(a_1985, 0.1), 2)
+    cagr <- round(((a_2015 / max(a_1985, 0.1))^(1/30) - 1) * 100, 2)
+    
+    comp_results[[i]] <- tibble(
+      id = c_id,
+      name_en = c_name,
+      name_zh = comp_cities$name_zh[i],
+      pinyin = comp_cities$pinyin[i],
+      province_en = comp_cities$province_en[i],
+      province_zh = comp_cities$province_zh[i],
+      country = comp_cities$country[i],
+      region = comp_cities$region[i],
+      lat = comp_cities$lat[i],
+      lon = comp_cities$lon[i],
+      archetype = comp_cities$archetype[i],
+      pop_million = comp_cities$pop_million[i],
+      pop_metro_million = comp_cities$pop_metro_million[i],
+      pop_exact = comp_cities$pop_exact[i],
+      pop_note = comp_cities$pop_note[i],
+      comparative_peer = comp_cities$comparative_peer[i],
+      area_1985 = a_1985,
+      area_1990 = a_1990,
+      area_1995 = a_1995,
+      area_2000 = a_2000,
+      area_2005 = a_2005,
+      area_2010 = a_2010,
+      area_2015 = a_2015,
+      net_gain_km2 = net_gain,
+      growth_multiple = mult,
+      cagr_pct = cagr
+    )
+  }
+  
+  df_comp <- bind_rows(comp_results)
+  write_csv(df_comp, "data/processed/comparison_growth_stats.csv")
+  write_json(df_comp, "data/processed/comparison_growth_stats.json", pretty = TRUE)
+  cat("Saved comparison metrics to data/processed/comparison_growth_stats.json\n")
+  print(df_comp %>% select(name_en, province_en, pop_million, area_1985, area_2015, net_gain_km2, growth_multiple, cagr_pct))
+}

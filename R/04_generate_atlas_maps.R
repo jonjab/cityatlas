@@ -263,37 +263,53 @@ render_city_visuals <- function(i) {
   c_rail_data <- city_rails[[c_id]]
   rails_layer <- if (!is.null(c_rail_data)) c_rail_data$rails else NULL
   stations_layer <- if (!is.null(c_rail_data)) c_rail_data$stations else NULL
+  subway_lines <- if (!is.null(c_rail_data)) c_rail_data$subway_lines else NULL
+  subway_stations <- if (!is.null(c_rail_data)) c_rail_data$subway_stations else NULL
+  has_subway <- !is.null(c_rail_data) && isTRUE(c_rail_data$has_subway)
   
   hsr_layer <- if (!is.null(rails_layer) && any(rails_layer$is_hsr == TRUE)) rails_layer[rails_layer$is_hsr == TRUE, ] else NULL
   conv_layer <- if (!is.null(rails_layer) && any(rails_layer$is_hsr == FALSE)) rails_layer[rails_layer$is_hsr == FALSE, ] else NULL
 
-  # 1. Hero Map (Urban Growth Rings with Detailed Rail Layer Overlay)
+  # 1. Hero Map (Urban Growth Rings with National Rail & City Subway Overlay)
   r_epoch <- classify(r, rcl_hero)
   r_epoch <- as.factor(r_epoch)
   levels(r_epoch) <- data.frame(ID = 1:4, epoch = c("Pre-1985", "1986–1995", "1996–2005", "2006–2015"))
   
-  arc_rank_str <- if (!is.na(c_info$arcgis_rank)) sprintf(" · ArcGIS Tier Rank: #%s", c_info$arcgis_rank) else ""
+  arc_rank_val <- if ("arcgis_rank" %in% names(c_info) && !is.null(c_info$arcgis_rank)) c_info$arcgis_rank else NA
+  arc_rank_str <- if (!is.na(arc_rank_val) && arc_rank_val != "") sprintf(" · ArcGIS Tier Rank: #%s", arc_rank_val) else ""
   
   p_hero <- ggplot() +
     geom_spatraster(data = r_epoch, maxcell = 6e5) +
     scale_fill_manual(values = epoch_cols, na.translate = FALSE, name = "Expansion Epoch")
     
-  # Overlay conventional rail network
+  # Overlay conventional rail network (China Railway 12306)
   if (!is.null(conv_layer) && nrow(conv_layer) > 0) {
     p_hero <- p_hero +
       geom_sf(data = conv_layer, color = "#0369A1", linewidth = 0.65, alpha = 0.35) +
       geom_sf(data = conv_layer, color = "#CBD5E1", linewidth = 0.3, alpha = 0.75)
   }
-  # Overlay high-speed rail corridors
+  # Overlay high-speed rail corridors (China Railway 12306)
   if (!is.null(hsr_layer) && nrow(hsr_layer) > 0) {
     p_hero <- p_hero +
       geom_sf(data = hsr_layer, color = "#0284C7", linewidth = 1.1, alpha = 0.5) +
       geom_sf(data = hsr_layer, color = "#38BDF8", linewidth = 0.55, alpha = 0.95)
   }
-  # Overlay stations
+  # Overlay municipal subway network (AMap / 高德地图)
+  if (!is.null(subway_lines) && nrow(subway_lines) > 0) {
+    p_hero <- p_hero +
+      geom_sf(data = subway_lines, color = "#A855F7", linewidth = 0.85, alpha = 0.5) +
+      geom_sf(data = subway_lines, color = "#E879F9", linewidth = 0.45, alpha = 0.9)
+  }
+  # Overlay 12306 national rail passenger stations
   if (!is.null(stations_layer) && nrow(stations_layer) > 0) {
     p_hero <- p_hero +
-      geom_sf(data = stations_layer, color = "#F59E0B", size = 1.1, alpha = 0.85)
+      geom_sf(data = stations_layer, color = "#F59E0B", size = 1.3, alpha = 0.9)
+  }
+  
+  transit_caption <- if (has_subway) {
+    "Sources: DLR WSF Evolution 30m (Marconcini et al., 2020) · China Railway 12306 (NRA) · AMap (高德) Metro · GADM 4.1"
+  } else {
+    "Sources: DLR WSF Evolution 30m (Marconcini et al., 2020) · China Railway 12306 Network (NRA) · GADM 4.1 · 7th Census"
   }
   
   p_hero <- p_hero +
@@ -302,7 +318,7 @@ render_city_visuals <- function(i) {
       title = sprintf("%s  %s", toupper(c_info$name_en), c_info$name_zh),
       subtitle = sprintf("%s Province · Population: %0.1fM (Rank #%d)%s · 30-Year Growth: %0.1f×",
                          c_info$province_en, c_info$pop_million, c_info$rank_population, arc_rank_str, c_info$growth_multiple),
-      caption = "Sources: DLR World Settlement Footprint Evolution 30m (Marconcini et al., 2020) · HOTOSM China Railways (HDX/OSM, ODbL 1.0) · GADM 4.1 · 7th National Census"
+      caption = transit_caption
     ) +
     theme_void(base_family = "Droid Sans Fallback") +
     theme(

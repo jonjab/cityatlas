@@ -5,15 +5,18 @@ cat("=================================================================\n")
 cat("          CHINA URBAN GROWTH RATLAS PIPELINE (1985–2015)          \n")
 cat("=================================================================\n\n")
 
-# Step 1: Create City Geodatabase, HSR & Detailed Rail Network, and Wiki Resources
-cat("[1/5] Building city geodatabase, rail networks & Wiki resources...\n")
+# Step 1: Create City Geodatabase, China Railway, Subways, and Wiki Resources
+cat("[1/5] Building city geodatabase, rail & subway networks & Wiki resources...\n")
 system("python3 scripts/create_city_registry.py")
+system("python3 scripts/create_comparison_cities.py")
 system("python3 scripts/build_china_hsr.py")
-system("python3 scripts/extract_city_railways.py")
+system("python3 scripts/fetch_chinese_transit_datasets.py")
+system("Rscript scripts/process_chinese_rail_subway.R")
+system("Rscript scripts/extract_comparison_railways.R")
 system("python3 scripts/fetch_city_wiki_resources.py")
 
 # Step 2: Fetch and crop WSF Evolution raster tiles
-cat("\n[2/5] Fetching & caching DLR WSF Evolution 30m rasters (47 cities)...\n")
+cat("\n[2/5] Fetching & caching DLR WSF Evolution 30m rasters (47 cities & US benchmarks)...\n")
 source("R/02_fetch_and_crop_wsf.R")
 
 # Step 3: Compute quantitative growth metrics
@@ -23,6 +26,7 @@ source("R/03_compute_growth_metrics.R")
 # Step 4: Batch generate cartographic maps & analytical plots
 cat("\n[4/5] Generating publication-grade maps (hero rings, small multiples, insets, plots)...\n")
 source("R/04_generate_atlas_maps.R")
+source("scripts/generate_comparison_maps.R")
 
 # Step 5: Generate Quarto pages and render website
 cat("\n[5/5] Generating Quarto markdown pages and compiling static website...\n")

@@ -162,6 +162,10 @@ window.Quarto = {
 <span class="menu-text">All 47 Cities</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./comparison.html"> 
+<span class="menu-text">US Comparisons</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link active" href="./methodology.html" aria-current="page"> 
 <span class="menu-text">Methodology &amp; Data</span></a>
   </li>  
@@ -191,11 +195,12 @@ window.Quarto = {
   <li><a href="#primary-data-sources-scholarly-references" id="toc-primary-data-sources-scholarly-references" class="nav-link active" data-scroll-target="#primary-data-sources-scholarly-references">1. Primary Data Sources &amp; Scholarly References</a>
   <ul class="collapse">
   <li><a href="#a.-dlr-world-settlement-footprint-evolution-wsf-evolution" id="toc-a.-dlr-world-settlement-footprint-evolution-wsf-evolution" class="nav-link" data-scroll-target="#a.-dlr-world-settlement-footprint-evolution-wsf-evolution">A. DLR World Settlement Footprint Evolution (WSF Evolution)</a></li>
-  <li><a href="#b.-hotosm-railways-of-china-dataset" id="toc-b.-hotosm-railways-of-china-dataset" class="nav-link" data-scroll-target="#b.-hotosm-railways-of-china-dataset">B. HOTOSM Railways of China Dataset</a></li>
+  <li><a href="#b.-china-national-railway-municipal-subway-datasets" id="toc-b.-china-national-railway-municipal-subway-datasets" class="nav-link" data-scroll-target="#b.-china-national-railway-municipal-subway-datasets">B. China National Railway &amp; Municipal Subway Datasets</a></li>
   <li><a href="#c.-arcgis-online-big-cities-points-layer" id="toc-c.-arcgis-online-big-cities-points-layer" class="nav-link" data-scroll-target="#c.-arcgis-online-big-cities-points-layer">C. ArcGIS Online Big Cities Points Layer</a></li>
   <li><a href="#d.-seventh-national-population-census-of-china-七普-2020" id="toc-d.-seventh-national-population-census-of-china-七普-2020" class="nav-link" data-scroll-target="#d.-seventh-national-population-census-of-china-七普-2020">D. Seventh National Population Census of China (七普 2020)</a></li>
   <li><a href="#e.-gadm-database-of-global-administrative-areas" id="toc-e.-gadm-database-of-global-administrative-areas" class="nav-link" data-scroll-target="#e.-gadm-database-of-global-administrative-areas">E. GADM Database of Global Administrative Areas</a></li>
   <li><a href="#f.-wikimedia-foundation-open-knowledge-cartographic-archives" id="toc-f.-wikimedia-foundation-open-knowledge-cartographic-archives" class="nav-link" data-scroll-target="#f.-wikimedia-foundation-open-knowledge-cartographic-archives">F. Wikimedia Foundation Open Knowledge &amp; Cartographic Archives</a></li>
+  <li><a href="#g.-international-benchmark-datasets-us-comparison-cities" id="toc-g.-international-benchmark-datasets-us-comparison-cities" class="nav-link" data-scroll-target="#g.-international-benchmark-datasets-us-comparison-cities">G. International Benchmark Datasets (US Comparison Cities)</a></li>
   </ul></li>
   <li><a href="#data-licensing-terms-of-use" id="toc-data-licensing-terms-of-use" class="nav-link" data-scroll-target="#data-licensing-terms-of-use">2. Data Licensing &amp; Terms of Use</a></li>
   <li><a href="#four-landmark-urban-development-epochs" id="toc-four-landmark-urban-development-epochs" class="nav-link" data-scroll-target="#four-landmark-urban-development-epochs">3. Four Landmark Urban Development Epochs</a></li>
@@ -259,15 +264,22 @@ window.Quarto = {
 <li><strong>Evolution Methodology Citation</strong>: &gt; Marconcini, M., Metz, A., Zeidler, J., &amp; Esch, T. (2021). <em>The World Settlement Footprint Evolution—30 Years of Growth.</em> <strong>Remote Sensing of Environment</strong>, 255, 112282.</li>
 </ul>
 </section>
-<section id="b.-hotosm-railways-of-china-dataset" class="level3">
-<h3 class="anchored" data-anchor-id="b.-hotosm-railways-of-china-dataset">B. HOTOSM Railways of China Dataset</h3>
+<section id="b.-china-national-railway-municipal-subway-datasets" class="level3">
+<h3 class="anchored" data-anchor-id="b.-china-national-railway-municipal-subway-datasets">B. China National Railway &amp; Municipal Subway Datasets</h3>
 <ul>
-<li><strong>Data Custodian</strong>: Humanitarian OpenStreetMap Team (HOTOSM) &amp; United Nations Office for the Coordination of Humanitarian Affairs (UN OCHA) Centre for Humanitarian Data.</li>
-<li><strong>Platform</strong>: Humanitarian Data Exchange (HDX).</li>
-<li><strong>Data URL</strong>: <a href="https://data.humdata.org/dataset/hotosm_chn_railways">https://data.humdata.org/dataset/hotosm_chn_railways</a></li>
-<li><strong>Content</strong>: 433,889 vector railway features (415,414 track segments and 18,475 passenger stations) extracted from OpenStreetMap, categorized into passenger-dedicated lines (<em>PDL / 高铁</em>), intercity railways, standard gauge electrified lines, and station coordinates.</li>
-<li><strong>Processing</strong>: Ingested in Python and R via <code>sf</code>; aggregated at the national level into 194 primary High-Speed Rail corridors (<code>data/processed/hotosm_hsr_lines.rds</code>), and spatially indexed into per-city railway vectors (<code>data/processed/city_rails.rds</code> and <code>data/processed/city_rail_summary.json</code>) driving both the hero growth rings overlay and dedicated transit maps (<code>{c_id}_rail.png</code>).</li>
-<li><strong>Citation &amp; License</strong>: &gt; Humanitarian OpenStreetMap Team (HOTOSM). (2024). <em>Railways of China [Data set]</em>. Humanitarian Data Exchange (HDX). Licensed under the <strong>Open Database License (ODbL 1.0)</strong> by OpenStreetMap contributors.</li>
+<li><strong>National Passenger Railway Network</strong>:
+<ul>
+<li><strong>Data Custodians</strong>: China Railway (中国国家铁路集团 / 12306) and National Railway Administration of the PRC (国家铁路局).</li>
+<li><strong>Coverage</strong>: Complete national network of 432 operational passenger railway corridors, covering high-speed lines (350 / 300 / 250 km/h PDL), intercity railways, and electrified conventional trunk lines across 3,300 passenger stations.</li>
+<li><strong>Spatial Processing</strong>: Topology-cleaned and topologically verified WGS-84 vector geometry and train stop sequences from 12306 schedules (<code>data/raw/china_railway_12306_lines.geojson</code> and <code>data/raw/china_railway_12306_stations.geojson</code>).</li>
+</ul></li>
+<li><strong>Municipal Subway &amp; Rapid Transit Networks</strong>:
+<ul>
+<li><strong>Data Custodian</strong>: AMap (高德地图) Subway Platform and PRC Ministry of Transport (MOT) Urban Rail Transit database.</li>
+<li><strong>Coverage</strong>: Complete operational rapid transit systems for all 15 atlas cities with active subways (Chengdu, Shenzhen, Xi’an, Zhengzhou, Wuhan, Shijiazhuang, Harbin, Jinan, Kunming, Nanchang, Xiamen, Lanzhou, Urumqi, Wuhu, and Hohhot).</li>
+<li><strong>Coordinate Calibration</strong>: Converted from GCJ-02 cartographic coordinates to ellipsoidal WGS-84 (<code>data/processed/city_subways/&lt;city&gt;_subway.geojson</code>).</li>
+</ul></li>
+<li><strong>Citation &amp; License</strong>: &gt; China Railway 12306 &amp; National Railway Administration (2024). <em>China Railway Passenger Service System [Data set]</em>. AMap (高德地图) Subway Platform (2024). Open Database License / Public Service Cartographic Data.</li>
 </ul>
 </section>
 <section id="c.-arcgis-online-big-cities-points-layer" class="level3">
@@ -313,6 +325,17 @@ window.Quarto = {
 </ul></li>
 <li><strong>Licenses</strong>: Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0), Creative Commons CC0 1.0 Public Domain Dedication, and Public Domain worldwide.</li>
 </ul>
+</section>
+<section id="g.-international-benchmark-datasets-us-comparison-cities" class="level3">
+<h3 class="anchored" data-anchor-id="g.-international-benchmark-datasets-us-comparison-cities">G. International Benchmark Datasets (US Comparison Cities)</h3>
+<ul>
+<li><strong>Data Sources</strong>:
+<ul>
+<li><strong>U.S. Census Bureau (2020 Decennial Census)</strong>: Resident population for incorporated city proper limits and Combined Statistical Areas (CSA) / Metropolitan Statistical Areas (MSA).</li>
+<li><strong>Natural Earth (1:10,000,000 Vector Theme)</strong>: North American railroads line vectors and state boundaries (<em>ne_10m_railroads_north_america</em> and <em>ne_110m_admin_1_states_provinces</em>).</li>
+<li><strong>DLR WSF Evolution 30m Global Coverage</strong>: The identical global satellite settlement detection rasters cropped across Chicago, Milwaukee, and Charlotte bounding boxes, ensuring absolute mathematical and sensor parity.</li>
+</ul></li>
+</ul>
 <hr>
 </section>
 </section>
@@ -341,30 +364,48 @@ window.Quarto = {
 <td style="text-align: left;">© DLR (2020, 2021)</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><strong>Railways of China</strong></td>
-<td style="text-align: left;">HOTOSM / OpenStreetMap</td>
-<td style="text-align: left;">Open Data Commons Open Database License (ODbL 1.0)</td>
-<td style="text-align: left;">© OpenStreetMap contributors, HOTOSM</td>
+<td style="text-align: left;"><strong>National Railways</strong></td>
+<td style="text-align: left;">China Railway 12306 / NRA</td>
+<td style="text-align: left;">Public Service &amp; Transport Open Data</td>
+<td style="text-align: left;">© China Railway (CR) / 12306 / NRA</td>
 </tr>
 <tr class="odd">
+<td style="text-align: left;"><strong>City Subways</strong></td>
+<td style="text-align: left;">AMap (高德地图) / MOT PRC</td>
+<td style="text-align: left;">Public Transit API / Cartographic Service</td>
+<td style="text-align: left;">© AMap (高德地图) / Ministry of Transport</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;"><strong>Big Cities Points</strong></td>
 <td style="text-align: left;">Esri / ArcGIS Online</td>
 <td style="text-align: left;">Esri Public REST Feature Service Terms</td>
 <td style="text-align: left;">© Esri, ArcGIS Online Content Providers</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><strong>National Census (2020)</strong></td>
 <td style="text-align: left;">National Bureau of Statistics (NBS)</td>
 <td style="text-align: left;">Public Statistical Release / Government Open Data</td>
 <td style="text-align: left;">Source: National Bureau of Statistics of China</td>
 </tr>
+<tr class="even">
+<td style="text-align: left;"><strong>US Census (2020)</strong></td>
+<td style="text-align: left;">U.S. Census Bureau</td>
+<td style="text-align: left;">Public Domain (U.S. Government Work)</td>
+<td style="text-align: left;">Source: U.S. Census Bureau</td>
+</tr>
 <tr class="odd">
+<td style="text-align: left;"><strong>Natural Earth Rail</strong></td>
+<td style="text-align: left;">Natural Earth Vector</td>
+<td style="text-align: left;">Public Domain</td>
+<td style="text-align: left;">Source: Natural Earth</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;"><strong>GADM Boundaries</strong></td>
 <td style="text-align: left;">University of California, Davis</td>
 <td style="text-align: left;">Free for non-commercial and academic use</td>
 <td style="text-align: left;">© GADM (v4.1)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><strong>Wiki Resources &amp; Scanned Maps</strong></td>
 <td style="text-align: left;">Wikimedia Foundation / Contributors</td>
 <td style="text-align: left;">CC BY-SA 4.0 / CC0 / Public Domain</td>

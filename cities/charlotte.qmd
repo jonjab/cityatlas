@@ -1,0 +1,200 @@
+---
+title: "Charlotte (夏洛特)"
+subtitle: "US Point of Comparison · City Pop: 0.87M (Metro: 2.66M) · 30-Year Growth: 2.98× · North Carolina, USA"
+format:
+  html:
+    toc: true
+---
+
+```{=html}
+<div class="hero-banner">
+  <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+    <div>
+      <div style="display: inline-block; padding: 0.2rem 0.6rem; background: #0284c7; color: white; border-radius: 4px; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.5rem;">POINT OF COMPARISON (US BENCHMARK)</div>
+      <h1 style="color: #ffffff; margin-bottom: 0.25rem;">Charlotte <span style="color: #f59e0b; font-weight: normal;">夏洛特</span></h1>
+      <p style="color: #94a3b8; font-size: 1.1rem; margin: 0;">North Carolina, United States · US Sunbelt & Southeast · Archetype: Rapid Sunbelt Sprawl & Banking Center</p>
+      <p style="color: #cbd5e1; font-size: 0.95rem; margin-top: 0.35rem;">
+        Population: <strong>0.87M</strong> (City Proper) · <strong>2.66M</strong> (Metropolitan Area) · 
+        Comparative Peer: <strong>Chengdu</strong>
+      </p>
+      <div style="margin-top: 0.75rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+        <a href="https://en.wikipedia.org/wiki/Charlotte%2C%20North%20Carolina" target="_blank" rel="noopener" class="resource-btn">📖 Wikipedia (EN)</a>
+        <a href="https://zh.wikipedia.org/wiki/%E5%A4%8F%E6%B4%9B%E7%89%B9%20%28%E5%8C%97%E5%8D%A1%E7%BD%97%E6%9D%A5%E7%BA%B3%E5%B7%9E%29" target="_blank" rel="noopener" class="resource-btn">🌐 维基百科 (ZH)</a>
+        <a href="https://www.wikidata.org/wiki/Q16565" target="_blank" rel="noopener" class="resource-btn">🏷️ Wikidata (Q16565)</a>
+        <a href="https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Charlotte%2C%20North%20Carolina" target="_blank" rel="noopener" class="resource-btn">🗺️ Commons Maps</a>
+        <a href="https://commons.wikimedia.org/w/index.php?search=Charlotte%20map&title=Special:MediaSearch&type=image" target="_blank" rel="noopener" class="resource-btn">🔍 Scanned Maps</a>
+      </div>
+    </div>
+    <div style="text-align: right;">
+      <span class="metric-badge badge-gold" style="font-size: 1.1rem; padding: 0.5rem 1rem;">2.98× Growth Multiplier</span>
+    </div>
+  </div>
+</div>
+```
+
+## Key Urban Expansion & Hierarchy Indicators
+
+::: {.metric-grid}
+::: {.metric-card}
+::: {.metric-label}
+2020 Population
+:::
+::: {.metric-val}
+0.87 <span style="font-size: 1rem; color: #94a3b8;">M</span>
+:::
+<div style="font-size: 0.8rem; color: #38bdf8;">Metro CSA: 2.66M</div>
+:::
+
+::: {.metric-card}
+::: {.metric-label}
+Metropolitan Archetype
+:::
+::: {.metric-val}
+Rapid Sunbelt Sprawl
+:::
+<div style="font-size: 0.8rem; color: #94a3b8;">US Growth Profile</div>
+:::
+
+::: {.metric-card}
+::: {.metric-label}
+1985 Baseline Area
+:::
+::: {.metric-val}
+207.98 <span style="font-size: 1rem; color: #94a3b8;">km²</span>
+:::
+:::
+
+::: {.metric-card}
+::: {.metric-label}
+2015 Urban Footprint
+:::
+::: {.metric-val}
+619.79 <span style="font-size: 1rem; color: #94a3b8;">km²</span>
+:::
+<div style="font-size: 0.8rem; color: #10b981;">+411.81 km²</div>
+:::
+
+::: {.metric-card}
+::: {.metric-label}
+Growth Multiple
+:::
+::: {.metric-val}
+2.98×
+:::
+<div style="font-size: 0.8rem; color: #f59e0b;">30-Year Expansion Ratio</div>
+:::
+
+::: {.metric-card}
+::: {.metric-label}
+Annual Growth (CAGR)
+:::
+::: {.metric-val}
+3.71%
+:::
+<div style="font-size: 0.8rem; color: #94a3b8;">1985–2015</div>
+:::
+:::
+
+::: {.callout-note title="Point of Comparison: Benchmark Analysis"}
+In 1985, Charlotte's built footprint was **207.98 km²**—virtually identical to Chengdu's **208.06 km²** (a difference of just 0.08 km²!). Both cities entered the mid-1980s as regional centers poised for rapid economic and demographic transformation.
+
+Over the next 30 years, Charlotte became one of the fastest-growing metropolitan areas in the United States, tripling its built footprint to **619.79 km²** (+411.81 km², a 2.98× multiplier, 3.71% CAGR) as the nation's second-largest banking hub. Yet over that exact same period, Chengdu exploded to **1,564.15 km²** (+1,356.09 km², 7.52× multiplier, 6.96% CAGR)—expanding at more than 2.5 times Charlotte's velocity. This direct baseline parallel contrasts the land consumption of American low-density automobile suburbanization with China's high-density transit-oriented metropolitan mega-expansion.
+:::
+
+---
+
+## 1. The Urban Growth Rings (1985–2015)
+
+The cartographic poster below maps the physical settlement expansion of **Charlotte** across the four landmark development epochs:
+
+- <span style="color: #F59E0B; font-weight: bold;">● Pre-1985 Core</span>: Historic urban core and built-up metropolitan area established prior to 1985.
+- <span style="color: #EF4444; font-weight: bold;">● 1986–1995 Wave</span>: Late 20th-century suburbanization and commercial arterial growth.
+- <span style="color: #06B6D4; font-weight: bold;">● 1996–2005 Wave</span>: Turn-of-the-century suburban expansion, outer-ring residential developments, and exurban employment centers.
+- <span style="color: #10B981; font-weight: bold;">● 2006–2015 Wave</span>: Recent outer beltway growth and peri-urban consolidation.
+
+::: {.map-container}
+!['The Urban Growth Rings: Charlotte'](../output/maps/charlotte_hero.png)
+:::
+
+---
+
+## 2. Small Multiples: 4-Epoch Footprint Progression
+
+Uniform-scale physical footprint progression maps tracking built-up settlement expansion over time:
+
+::: {.map-container}
+!['Small Multiples Footprint Progression: Charlotte'](../output/maps/charlotte_small_multiples.png)
+:::
+
+---
+
+## 3. Geographical Location & Growth Trajectory
+
+:::: {.columns}
+
+::: {.column width="48%"}
+### Location in the United States
+::: {.map-container}
+!['Regional Inset: Charlotte'](../output/maps/charlotte_context.png)
+:::
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+### 30-Year Expansion Curve
+::: {.map-container}
+!['Expansion Trajectory: Charlotte'](../output/plots/charlotte_trajectory.png)
+:::
+:::
+
+::::
+
+---
+
+## 4. 5-Year Milestone Chronology
+
+| Milestone Year | Urban Footprint (km²) | Growth vs. 1985 Baseline | Share of 2015 Footprint |
+|:---:|:---:|:---:|:---:|
+| **1985** | 207.98 km² | 1.00× (Baseline) | 33.6% |
+| **1990** | 256.85 km² | 1.23× | 41.4% |
+| **1995** | 314.14 km² | 1.51× | 50.7% |
+| **2000** | 413.16 km² | 1.99× | 66.7% |
+| **2005** | 511.01 km² | 2.46× | 82.4% |
+| **2010** | 560.57 km² | 2.7× | 90.4% |
+| **2015** | 619.79 km² | **2.98×** | 100.0% |
+
+---
+
+## 5. Archival Cartography & Wiki Resources
+
+Direct links to open knowledge, semantic geodata, and scanned map collections for **Charlotte**:
+
+- 📖 **English Wikipedia**: [Charlotte, North Carolina](https://en.wikipedia.org/wiki/Charlotte%2C%20North%20Carolina) — In-depth overview of history, urban development, demographic shifts, and regional governance.
+- 🌐 **Chinese Wikipedia (中文维基百科)**: [夏洛特 (北卡罗来纳州)](https://zh.wikipedia.org/wiki/%E5%A4%8F%E6%B4%9B%E7%89%B9%20%28%E5%8C%97%E5%8D%A1%E7%BD%97%E6%9D%A5%E7%BA%B3%E5%B7%9E%29) — Authoritative municipal boundaries, administrative subdivisions, and local transport infrastructure.
+- 🏷️ **Wikidata Knowledge Base**: [Q16565 (Charlotte)](https://www.wikidata.org/wiki/Q16565) — Semantic knowledge graph entity with geocoordinates, OpenStreetMap tags, and linked administrative entities.
+- 🗺️ **Wikimedia Commons Map Repository**: [Category:Maps of Charlotte, North Carolina](https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Charlotte%2C%20North%20Carolina) — Community-curated media repository containing thematic, administrative, and transport maps.
+- 🔍 **Scanned Maps & Historical Sheets Search**: [Explore scanned bitmap and topographic maps of Charlotte on Wikimedia Commons](https://commons.wikimedia.org/w/index.php?search=Charlotte%20map&title=Special:MediaSearch&type=image)
+
+---
+
+## 6. Data Sources & Attributions
+
+The quantitative and spatial indicators for **Charlotte** are synthesized from the following primary sources:
+
+1. **Urban Footprint & Built-Up Surface**: German Aerospace Center (DLR) [World Settlement Footprint Evolution (1985–2015)](https://download.geoservice.dlr.de/WSF_EVO/). 30m resolution multi-decadal satellite detection (*Marconcini et al., 2020, Nature Scientific Data*).
+2. **Resident & Metropolitan Population**: U.S. Census Bureau, [2020 Decennial Census of Population and Housing](https://www.census.gov/). City population: **0.87M**; Metropolitan statistical area: **2.66M**.
+3. **Rail & Transit Corridors**: Natural Earth 1:10,000,000 North America Railroads and passenger transit agency records.
+4. **Administrative Boundaries**: Natural Earth Admin-1 State and Province Boundaries.
+5. **Archival Cartography & Encyclopedia Resources**: [Wikimedia Foundation](https://www.wikimedia.org/) ([Wikipedia](https://en.wikipedia.org/), [Wikidata](https://www.wikidata.org/), and [Wikimedia Commons](https://commons.wikimedia.org/)).
+
+---
+
+```{=html}
+<div style="display: flex; justify-content: space-between; margin-top: 2rem; padding: 1rem; background: #111827; border-radius: 8px;">
+  <a href="milwaukee.html" style="color: #38bdf8; text-decoration: none;">← Prev: Milwaukee (0.58M)</a>
+  <a href="../comparison.html" style="color: #f59e0b; text-decoration: none;">↑ All US Comparison Benchmarks</a>
+  <a href="chicago.html" style="color: #38bdf8; text-decoration: none;">Next: Chicago (2.75M) →</a>
+</div>
+```

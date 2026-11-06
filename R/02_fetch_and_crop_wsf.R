@@ -82,3 +82,41 @@ results <- mclapply(seq_len(nrow(cities)), process_single_city, mc.cores = 4)
 successes <- sum(unlist(results))
 cat(sprintf("\nCompleted: %d of %d cities successfully processed and cached in data/processed/wsf/\n",
             successes, nrow(cities)))
+
+# Also check and crop international comparison cities if data/comparison_cities.json exists
+if (file.exists("data/comparison_cities.json")) {
+  comp_cities <- fromJSON("data/comparison_cities.json")
+  cat(sprintf("\nChecking %d comparison cities (US Benchmarks)...\n", nrow(comp_cities)))
+  for (i in seq_len(nrow(comp_cities))) {
+    c_id <- comp_cities$id[i]
+    c_name <- comp_cities$name_en[i]
+    dest_file <- sprintf("data/processed/wsf/%s.tif", c_id)
+    if (file.exists(dest_file) && file.size(dest_file) > 1000) {
+      cat(sprintf("[Comparison %d/%d] %s - Already cached (%0.1f KB)\n",
+                  i, nrow(comp_cities), c_name, file.size(dest_file)/1024))
+      next
+    }
+    cat(sprintf("[Comparison %d/%d] %s - Downloading & cropping...\n", i, nrow(comp_cities), c_name))
+    bbox <- comp_cities$bbox[[i]]
+    tiles <- comp_cities$wsf_tiles[[i]]
+    city_ext <- ext(bbox[1], bbox[3], bbox[2], bbox[4])
+    rasters <- list()
+    for (t in tiles) {
+      url <- sprintf("/vsicurl/https://download.geoservice.dlr.de/WSF_EVO/files/%s/%s.tif", t, t)
+      rc <- tryCatch({
+        r <- rast(url)
+        inter <- intersect(ext(r), city_ext)
+        if (!is.null(inter)) crop(r, inter) else NULL
+      }, error = function(e) NULL)
+      if (!is.null(rc)) rasters[[t]] <- rc
+    }
+    if (length(rasters) > 0) {
+      merged_r <- if (length(rasters) == 1) rasters[[1]] else merge(sprc(rasters))
+      final_r <- tryCatch({ crop(merged_r, city_ext) }, error = function(e) merged_r)
+      writeRaster(final_r, dest_file, overwrite = TRUE,
+                  gdal = c("COMPRESS=DEFLATE", "PREDICTOR=2", "ZLEVEL=6"))
+      cat(sprintf("[Comparison %d/%d] %s - Done! Cached (%0.1f KB)\n",
+                  i, nrow(comp_cities), c_name, file.size(dest_file)/1024))
+    }
+  }
+}

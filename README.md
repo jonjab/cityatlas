@@ -12,12 +12,11 @@ Built with **R**, `terra`, `sf`, `ggplot2`, and published as a modern static web
 - **47 Diverse Cities**: Covering major provincial capitals, coastal Special Economic Zones (Shenzhen, Zhuhai, Xiamen), ancient Silk Road oases (Kashgar, Hotan, Wuwei, Lanzhou), northern industrial nodes, and northeast border outposts (Dandong, Hunchun).
 - **Open Satellite Data**: Powered by the **DLR World Settlement Footprint Evolution (WSF Evolution)** 30-meter resolution annual settlement detection dataset (1985–2015) streamed via `/vsicurl/`.
 - **Thematic Visual Suite per City**:
-  1. **The Urban Growth Rings (Hero Poster)**: 4-epoch color-coded expansion morphology (Pre-1985, 1986–1995, 1996–2005, 2006–2015) with overlaid vector railway networks and bilingual CJK typography.
+  1. **The Urban Growth Rings (Hero Poster)**: 4-epoch color-coded expansion morphology (Pre-1985, 1986–1995, 1996–2005, 2006–2015) with overlaid China Railway (12306) trunk lines, AMap municipal subway corridors, and bilingual CJK typography.
   2. **Small Multiples Progression**: 4 uniform-scale panels showing cumulative footprint expansion at 1985, 1995, 2005, and 2015.
-  3. **Detailed Rail Network & Transit Corridors**: High-precision HOTOSM / OpenStreetMap railway layer displaying high-speed corridors (PDL), conventional rail trunk lines, and passenger station hubs over the 2015 built-up footprint.
-  4. **Regional Location Inset**: Administrative context within China and its province.
-  5. **30-Year Trajectory Curve**: Milestone surface area chart tracking physical expansion in $\text{km}^2$.
-  6. **Archival Cartography & Wiki Resources**: One-click links to English Wikipedia, Chinese Wikipedia, Wikidata persistent QID entities, Wikimedia Commons map categories, and direct links to scanned historical maps.
+  3. **Regional Location Inset**: Administrative context within China and its province.
+  4. **30-Year Trajectory Curve**: Milestone surface area chart tracking physical expansion in $\text{km}^2$.
+  5. **Archival Cartography & Wiki Resources**: One-click links to English Wikipedia, Chinese Wikipedia, Wikidata persistent QID entities, Wikimedia Commons map categories, and direct links to scanned historical maps.
 - **Macro-Regional Analysis**: 6 regional chapters grouping cities by geographic and economic archetype.
 - **GitHub Pages Ready**: Static website rendered into `docs/` with `.nojekyll`.
 
@@ -128,12 +127,13 @@ This project integrates five primary geospatial and demographic datasets from au
   - Marconcini, M., Metz, A., Üreyen, S., Palacios-Lopez, D., Hanke, W., Bachofer, F., Zeidler, J., Esch, T., Gorelick, N., Kakarla, A., Paganini, M., & Strano, E. (2020). *Outlining where humans live, the World Settlement Footprint 2015.* **Scientific Data**, 7(1), 242. [https://doi.org/10.1038/s41597-020-00580-5](https://doi.org/10.1038/s41597-020-00580-5)
   - Marconcini, M., Metz, A., Zeidler, J., & Esch, T. (2021). *The World Settlement Footprint Evolution—30 Years of Growth.* **Remote Sensing of Environment**, 255, 112282.
 
-### 2. HOTOSM Railways of China Dataset
-- **Custodian**: Humanitarian OpenStreetMap Team (HOTOSM) & United Nations Office for the Coordination of Humanitarian Affairs (UN OCHA).
-- **Platform**: Humanitarian Data Exchange (HDX).
-- **Data Access**: [Railways of China Dataset on HDX](https://data.humdata.org/dataset/hotosm_chn_railways).
-- **Scope**: Complete OpenStreetMap railway extract for China (>430,000 vector segments) filtered and aggregated into 194 High-Speed Rail corridors.
-- **License**: Open Data Commons Open Database License (ODbL 1.0) by OpenStreetMap contributors.
+### 2. China National Railways & Municipal Subway Datasets
+- **National Passenger Rail Network**:
+  - **Custodian**: China Railway (中国国家铁路集团 / 12306) and National Railway Administration of China (NRA).
+  - **Scope**: 432 operational passenger railway corridors, high-speed lines (PDL 350 / 300 / 250 km/h), and conventional trunk lines connecting 3,300 passenger stations across China.
+- **Municipal Subway Networks**:
+  - **Custodian**: AMap (高德地图) Subway Platform & Ministry of Transport of the PRC.
+  - **Scope**: Complete operational rapid transit subway systems for all 15 atlas cities with active metros (Chengdu, Shenzhen, Xi'an, Zhengzhou, Wuhan, Shijiazhuang, Harbin, Jinan, Kunming, Nanchang, Xiamen, Lanzhou, Urumqi, Wuhu, Hohhot) converted from GCJ-02 to WGS-84.
 
 ### 3. ArcGIS Online Big Cities Points Layer
 - **Custodian**: Esri / ArcGIS Online Feature Services.

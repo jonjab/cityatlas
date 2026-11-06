@@ -1,0 +1,429 @@
+{
+  "chengdu": {
+    "has_subway": true,
+    "city_id": "chengdu",
+    "city_name": "成都市",
+    "lines_count": 17,
+    "total_stations": 365,
+    "line_names": [
+      "地铁1号线",
+      "地铁2号线",
+      "S3(资阳)线",
+      "地铁3号线",
+      "地铁4号线",
+      "地铁5号线",
+      "地铁6号线",
+      "地铁7号线",
+      "地铁8号线",
+      "地铁9号线",
+      "地铁10号线",
+      "地铁13号线"
+    ],
+    "key_stations": [
+      "五根松",
+      "广都",
+      "四河",
+      "华府大道",
+      "天府五街",
+      "天府三街",
+      "世纪城",
+      "锦城广场",
+      "孵化园",
+      "金融城"
+    ],
+    "source": "AMap (高德地图) Subway Platform"
+  },
+  "shenzhen": {
+    "has_subway": true,
+    "city_id": "shenzhen",
+    "city_name": "深圳市",
+    "lines_count": 17,
+    "total_stations": 362,
+    "line_names": [
+      "地铁1号线(罗宝线)",
+      "坪山云巴1号线",
+      "地铁2号线(8号线)",
+      "地铁3号线(龙岗线)",
+      "地铁4号线(龙华线)",
+      "地铁5号线(环中线)",
+      "地铁6号线(光明线)",
+      "地铁6号线支线",
+      "地铁7号线",
+      "地铁9号线",
+      "地铁10号线(坂田线)",
+      "地铁11号线"
+    ],
+    "key_stations": [
+      "罗湖",
+      "国贸",
+      "老街",
+      "大剧院",
+      "科学馆",
+      "华强路",
+      "岗厦",
+      "会展中心",
+      "购物公园",
+      "香蜜湖"
+    ],
+    "source": "AMap (高德地图) Subway Platform"
+  },
+  "xian": {
+    "has_subway": true,
+    "city_id": "xian",
+    "city_name": "西安市",
+    "lines_count": 12,
+    "total_stations": 247,
+    "line_names": [
+      "地铁1号线",
+      "地铁2号线",
+      "地铁3号线",
+      "地铁4号线",
+      "地铁5号线",
+      "地铁6号线",
+      "地铁8号(环)线",
+      "地铁9号线",
+      "地铁10号线",
+      "地铁14号线",
+      "地铁15号线",
+      "地铁16号线"
+    ],
+    "key_stations": [
+      "咸阳西站",
+      "宝泉路",
+      "中华西路",
+      "安谷",
+      "陈杨寨",
+      "白马河",
+      "陕西中医药大学",
+      "沣河森林公园",
+      "北槐",
+      "上林路"
+    ],
+    "source": "AMap (高德地图) Subway Platform"
+  },
+  "zhengzhou": {
+    "has_subway": true,
+    "city_id": "zhengzhou",
+    "city_name": "郑州市",
+    "lines_count": 13,
+    "total_stations": 235,
+    "line_names": [
+      "地铁1号线",
+      "地铁2号线",
+      "地铁3号线",
+      "地铁4号线",
+      "地铁5号线",
+      "地铁6号线",
+      "地铁7号线",
+      "地铁8号线",
+      "地铁10号线",
+      "地铁12号线",
+      "地铁14号线",
+      "城郊线"
+    ],
+    "key_stations": [
+      "河南工业大学",
+      "郑大科技园",
+      "郑州大学",
+      "梧桐街",
+      "兰寨",
+      "铁炉",
+      "市民中心",
+      "西流湖",
+      "西三环",
+      "秦岭路"
+    ],
+    "source": "AMap (高德地图) Subway Platform"
+  },
+  "wuhan": {
+    "has_subway": true,
+    "city_id": "wuhan",
+    "city_name": "武汉市",
+    "lines_count": 13,
+    "total_stations": 297,
+    "line_names": [
+      "轨道交通1号线",
+      "轨道交通2号线",
+      "轨道交通3号线",
+      "轨道交通4号线",
+      "轨道交通5号线",
+      "轨道交通6号线",
+      "轨道交通7号线",
+      "轨道交通8号线",
+      "轨道交通11号线",
+      "轨道交通12号线",
+      "轨道交通16号线",
+      "轨道交通19号线"
+    ],
+    "key_stations": [
+      "汉口北",
+      "滠口新城",
+      "滕子岗",
+      "堤角",
+      "新荣",
+      "丹水池",
+      "徐州新村",
+      "二七路",
+      "头道街",
+      "黄浦路"
+    ],
+    "source": "AMap (高德地图) Subway Platform"
+  },
+  "shijiazhuang": {
+    "has_subway": true,
+    "city_id": "shijiazhuang",
+    "city_name": "石家庄市",
+    "lines_count": 3,
+    "total_stations": 60,
+    "line_names": [
+      "轨道交通1号线",
+      "轨道交通2号线",
+      "轨道交通3号线"
+    ],
+    "key_stations": [
+      "西王",
+      "时光街",
+      "长城桥",
+      "和平医院",
+      "烈士陵园",
+      "新百广场",
+      "解放广场",
+      "平安大街",
+      "北国商城",
+      "博物院"
+    ],
+    "source": "AMap (高德地图) Subway Platform"
+  },
+  "harbin": {
+    "has_subway": true,
+    "city_id": "harbin",
+    "city_name": "哈尔滨市",
+    "lines_count": 3,
+    "total_stations": 73,
+    "line_names": [
+      "地铁1号线",
+      "地铁2号线",
+      "地铁3号线"
+    ],
+    "key_stations": [
+      "新疆大街",
+      "渤海路",
+      "镜泊路",
+      "瓦盆窑",
+      "同江路",
+      "哈尔滨南站",
+      "哈达",
+      "医大二院",
+      "黑龙江大学",
+      "理工大学"
+    ],
+    "source": "AMap (高德地图) Subway Platform"
+  },
+  "jinan": {
+    "has_subway": true,
+    "city_id": "jinan",
+    "city_name": "济南市",
+    "lines_count": 8,
+    "total_stations": 145,
+    "line_names": [
+      "轨道交通1号线",
+      "云巴1号线",
+      "轨道交通2号线",
+      "轨道交通3号线",
+      "轨道交通4号线",
+      "轨道交通6号线",
+      "轨道交通8号线",
+      "轨道交通济阳线"
+    ],
+    "key_stations": [
+      "方特",
+      "济南西站",
+      "大杨",
+      "王府庄",
+      "玉符河",
+      "赵营",
+      "紫薇路",
+      "大学城",
+      "园博园",
+      "创新谷"
+    ],
+    "source": "AMap (高德地图) Subway Platform"
+  },
+  "kunming": {
+    "has_subway": true,
+    "city_id": "kunming",
+    "city_name": "昆明市",
+    "lines_count": 6,
+    "total_stations": 104,
+    "line_names": [
+      "地铁1号线",
+      "地铁2号线",
+      "地铁3号线",
+      "地铁4号线",
+      "地铁5号线",
+      "地铁6号线"
+    ],
+    "key_stations": [
+      "环城南路(北部汽车站)",
+      "昆明火车站",
+      "福德",
+      "日新路",
+      "巫家坝",
+      "昌宏西路",
+      "晓东村",
+      "珥季路",
+      "星耀路",
+      "新亚洲体育城"
+    ],
+    "source": "AMap (高德地图) Subway Platform"
+  },
+  "nanchang": {
+    "has_subway": true,
+    "city_id": "nanchang",
+    "city_name": "南昌市",
+    "lines_count": 4,
+    "total_stations": 113,
+    "line_names": [
+      "地铁1号线",
+      "地铁2号线",
+      "地铁3号线",
+      "地铁4号线"
+    ],
+    "key_stations": [
+      "昌北机场",
+      "汇贤大道",
+      "建业大道",
+      "定子山",
+      "冠山",
+      "南齿",
+      "方志敏大道",
+      "蛟桥",
+      "双港",
+      "孔目湖"
+    ],
+    "source": "AMap (高德地图) Subway Platform"
+  },
+  "xiamen": {
+    "has_subway": true,
+    "city_id": "xiamen",
+    "city_name": "厦门市",
+    "lines_count": 5,
+    "total_stations": 92,
+    "line_names": [
+      "地铁1号线",
+      "地铁2号线",
+      "地铁3号线",
+      "地铁4号线",
+      "地铁6号线"
+    ],
+    "key_stations": [
+      "镇海路",
+      "中山公园",
+      "将军祠",
+      "文灶",
+      "湖滨东路",
+      "莲坂",
+      "莲花路口",
+      "吕厝",
+      "乌石浦",
+      "塘边"
+    ],
+    "source": "AMap (高德地图) Subway Platform"
+  },
+  "lanzhou": {
+    "has_subway": true,
+    "city_id": "lanzhou",
+    "city_name": "兰州市",
+    "lines_count": 2,
+    "total_stations": 27,
+    "line_names": [
+      "轨道交通1号线",
+      "轨道交通2号线"
+    ],
+    "key_stations": [
+      "陈官营",
+      "奥体中心",
+      "兰州城市学院(省科技馆)",
+      "兰州海关",
+      "马滩",
+      "土门墩",
+      "兰州西站北广场",
+      "西站什字",
+      "七里河",
+      "小西湖"
+    ],
+    "source": "AMap (高德地图) Subway Platform"
+  },
+  "urumqi": {
+    "has_subway": true,
+    "city_id": "urumqi",
+    "city_name": "乌鲁木齐市",
+    "lines_count": 2,
+    "total_stations": 22,
+    "line_names": [
+      "轨道交通1号线",
+      "机场捷运"
+    ],
+    "key_stations": [
+      "国际机场",
+      "大地窝堡",
+      "宣仁墩",
+      "三工",
+      "迎宾路口",
+      "植物园",
+      "体育中心",
+      "铁路局",
+      "小西沟",
+      "中营工"
+    ],
+    "source": "AMap (高德地图) Subway Platform"
+  },
+  "wuhu": {
+    "has_subway": true,
+    "city_id": "wuhu",
+    "city_name": "芜湖市",
+    "lines_count": 2,
+    "total_stations": 35,
+    "line_names": [
+      "轨道交通1号线",
+      "轨道交通2号线"
+    ],
+    "key_stations": [
+      "保顺路",
+      "华山路",
+      "泰山路",
+      "衡山路",
+      "龙山路",
+      "鞍山路",
+      "港湾路",
+      "裕安路",
+      "武夷山路",
+      "港一路"
+    ],
+    "source": "AMap (高德地图) Subway Platform"
+  },
+  "hohhot": {
+    "has_subway": true,
+    "city_id": "hohhot",
+    "city_name": "呼和浩特市",
+    "lines_count": 2,
+    "total_stations": 43,
+    "line_names": [
+      "地铁1号线",
+      "轨道交通2号线"
+    ],
+    "key_stations": [
+      "伊利健康谷",
+      "西二环路",
+      "孔家营",
+      "呼钢南路",
+      "西龙王庙",
+      "乌兰夫纪念馆",
+      "附属医院",
+      "新华广场",
+      "人民会堂",
+      "将军衙署"
+    ],
+    "source": "AMap (高德地图) Subway Platform"
+  }
+}

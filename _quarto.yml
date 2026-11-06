@@ -32,6 +32,8 @@ website:
             text: "Western Frontier & Steppe"
       - href: cities.qmd
         text: "All 47 Cities"
+      - href: comparison.qmd
+        text: "US Comparisons"
       - href: methodology.qmd
         text: "Methodology & Data"
     right:
