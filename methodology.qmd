@@ -45,13 +45,18 @@ By centering on dynamic provincial capitals (e.g., Chengdu, Wuhan, Xi'an, Zhengz
 - **Citation & License**:
   > China Railway 12306 & National Railway Administration (2024). *China Railway Passenger Service System [Data set]*. AMap (高德地图) Subway Platform (2024). Open Database License / Public Service Cartographic Data.
 
-### C. ArcGIS Online Big Cities Points Layer
-- **Data Custodian**: Esri / ArcGIS Online Feature Services.
-- **Service Endpoint**: [https://services1.arcgis.com/4TXrdeWh0RyCqPgB/arcgis/rest/services/big_cities_points/FeatureServer](https://services1.arcgis.com/4TXrdeWh0RyCqPgB/arcgis/rest/services/big_cities_points/FeatureServer)
-- **Content**: Authoritative geospatial point layer of 184 major Chinese metropolitan centers with national hierarchy ranks (`rank` 1 to 200).
-- **Role in Ratlas**: Validates sample selection, confirms exclusion of tier-1 megacities (#1 Shanghai, #2 Beijing, #3 Guangzhou, #5 Chongqing, #7 Tianjin), and provides an objective national urban hierarchy classification for every city in the atlas.
+### C. ArcGIS Online Layers & UCSB Interactive Web Map
+- **UCSB Urban Atlas Web Map**:
+  - **Item ID**: `636bb82ea14944a5b719fc46cf055a53`
+  - **Map Viewer URL**: [https://ucsb.maps.arcgis.com/home/item.html?id=636bb82ea14944a5b719fc46cf055a53#overview](https://ucsb.maps.arcgis.com/home/item.html?id=636bb82ea14944a5b719fc46cf055a53#overview)
+  - **Layers**: Includes the curated `study_cities` FeatureServer (`https://services1.arcgis.com/4TXrdeWh0RyCqPgB/arcgis/rest/services/study_cities/FeatureServer/0`) containing DianPing commercial vitality ranks (`DianPing_ish_rank`), Russian topographic survey coverage (`RU_topos`), Chinese city atlas indices (`ZH_CityAtlas`), and Planet satellite imagery.
+- **Esri Big Cities Points Layer**:
+  - **Service Endpoint**: [https://services1.arcgis.com/4TXrdeWh0RyCqPgB/arcgis/rest/services/big_cities_points/FeatureServer](https://services1.arcgis.com/4TXrdeWh0RyCqPgB/arcgis/rest/services/big_cities_points/FeatureServer)
+  - **Content**: Authoritative geospatial point layer of 184 major Chinese metropolitan centers with national hierarchy ranks (`rank` 1 to 200).
+- **Role in Ratlas**: Validates sample selection, confirms exclusion of tier-1 megacities (#1 Shanghai, #2 Beijing, #3 Guangzhou, #5 Chongqing, #7 Tianjin), provides DianPing commercial ranks, and correlates historical maps with modern satellite observations.
 - **Citation**:
-  > Esri ArcGIS Online. (2023). *Big Cities Points Layer [Feature Service]*. ArcGIS REST API.
+  > University of California, Santa Barbara (UCSB) & Esri ArcGIS Online. (2024). *Urban Atlas post-AGSL Web Map & Study Cities Layer*. ArcGIS REST API.
+
 
 ### D. Seventh National Population Census of China (七普 2020)
 - **Data Custodian**: National Bureau of Statistics of China (中华人民共和国国家统计局; NBS), Beijing, China.

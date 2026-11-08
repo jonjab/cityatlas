@@ -19,6 +19,7 @@ format:
       <a href="cities/milwaukee.html" class="resource-btn">Explore Milwaukee →</a>
       <a href="cities/charlotte.html" class="resource-btn">Explore Charlotte →</a>
       <a href="https://drive.google.com/drive/folders/1b-HupghVS7KQn4ZTvGjfOHFFMgPnH2KV?usp=sharing" target="_blank" rel="noopener" class="resource-btn" style="background: #e8ded1; border-color: #943324; font-weight: 600;">Browse AGSL map scans repository (Google Drive) ↗</a>
+      <a href="https://ucsb.maps.arcgis.com/home/item.html?id=636bb82ea14944a5b719fc46cf055a53#overview" target="_blank" rel="noopener" class="resource-btn" style="background: #e8ded1; border-color: #943324; font-weight: 600;">UCSB Esri Web Map ↗</a>
       <a href="index.html" class="resource-btn">Back to national atlas</a>
     </div>
   </div>
@@ -167,5 +168,5 @@ The table below contrasts the quantitative spatial indicators of Chicago, Milwau
 ---
 
 ::: {.caption-box}
-**Data Sources**: German Aerospace Center (DLR) World Settlement Footprint Evolution 30m (Marconcini et al., 2020) · U.S. Census Bureau (2020 Decennial Census) · 7th National Population Census of China (2020) · Natural Earth 10m Railroads · American Geographical Society Library (AGSL) · HOTOSM Railways of China.
+**Data Sources**: German Aerospace Center (DLR) World Settlement Footprint Evolution 30m (Marconcini et al., 2020) · U.S. Census Bureau (2020 Decennial Census) · 7th National Population Census of China (2020) · Natural Earth 10m Railroads · American Geographical Society Library (AGSL) · UCSB Urban Atlas Web Map · HOTOSM Railways of China.
 :::

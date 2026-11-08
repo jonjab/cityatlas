@@ -368,10 +368,21 @@ table tr:hover td {
   text-decoration: none;
 }
 
-.wiki-card {
-  background: var(--card-bg);
+/* Interactive ArcGIS Web Map Container */
+.arcgis-map-frame {
+  width: 100%;
+  height: 600px;
   border: 1px solid var(--border-color);
-  border-radius: 3px;
-  padding: 1.25rem;
-  margin-bottom: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 4px 14px rgba(34, 29, 26, 0.12);
+  margin: 1.25rem 0 1.5rem 0;
+  display: block;
+  background: var(--card-bg);
 }
+
+@media (max-width: 768px) {
+  .arcgis-map-frame {
+    height: 440px;
+  }
+}
+

@@ -13,11 +13,12 @@ format:
     <h2 style="color: #1e3f34; font-size: 1.4rem; margin-top: -0.25rem; margin-bottom: 1rem; font-weight: normal; font-style: normal;">中国城市空间扩展图集 · 1985–2015</h2>
     <p class="hero-subtitle">
       Between 1985 and 2015, the People's Republic of China underwent the largest physical urbanization process in human history. 
-      This ratlas maps the spatial morphology, expansion rings, China Railway (12306) and municipal subway networks, and quantitative growth trajectories across <strong>47 diverse Chinese cities</strong> ranked by population, with global benchmarks in <strong>Chicago, Milwaukee, and Charlotte</strong>, accompanied by historical map plates from the <strong>American Geographical Society Library (AGSL)</strong>.
+      This ratlas maps the spatial morphology, expansion rings, China Railway (12306) and municipal subway networks, and quantitative growth trajectories across <strong>47 diverse Chinese cities</strong> ranked by population, with global benchmarks in <strong>Chicago, Milwaukee, and Charlotte</strong>, accompanied by historical map plates from the <strong>American Geographical Society Library (AGSL)</strong> and an interactive <strong>UCSB Esri ArcGIS Web Map</strong>.
     </p>
     <div style="display: flex; gap: 0.75rem; margin-top: 1.5rem; flex-wrap: wrap;">
       <a href="cities.html" class="resource-btn" style="background: #943324; color: #fff; border-color: #943324; font-weight: 600;">Browse all 47 cities →</a>
       <a href="comparison.html" class="resource-btn" style="background: #1e3f34; color: #fff; border-color: #1e3f34; font-weight: 600;">US comparisons (Chicago, Milwaukee, Charlotte) →</a>
+      <a href="https://ucsb.maps.arcgis.com/home/item.html?id=636bb82ea14944a5b719fc46cf055a53#overview" target="_blank" rel="noopener" class="resource-btn" style="background: #e8ded1; border-color: #943324; font-weight: 600;">UCSB Esri Web Map (post-AGSL) ↗</a>
       <a href="https://drive.google.com/drive/folders/1b-HupghVS7KQn4ZTvGjfOHFFMgPnH2KV?usp=sharing" target="_blank" rel="noopener" class="resource-btn" style="background: #e8ded1; border-color: #943324; font-weight: 600;">AGSL historical map scans (Google Drive) ↗</a>
       <a href="methodology.html" class="resource-btn">Methodology & citations</a>
     </div>
@@ -42,7 +43,25 @@ The map below displays all 47 cities in the ratlas across China, sized by **2020
 
 ---
 
-## 2. Archival map plates & historical scans
+## 2. Interactive UCSB Esri Web Map
+
+```{=html}
+<div class="agsl-box">
+  <div class="agsl-title">Interactive GIS: UCSB Urban Atlas Web Map (post-AGSL)</div>
+  <div class="agsl-desc">
+    Explore the live <strong>UCSB Esri ArcGIS Web Map</strong> (Item ID <code>636bb82ea14944a5b719fc46cf055a53</code>), featuring the verified <strong>Study Cities Feature Layer</strong> with DianPing commercial ranking indices, Russian topographical sheet coverage (<code>RU_topos</code>), Chinese city atlas indices (<code>ZH_CityAtlas</code>), and Planet satellite imagery.
+  </div>
+  <iframe class="arcgis-map-frame" src="https://ucsb.maps.arcgis.com/apps/mapviewer/index.html?webmap=636bb82ea14944a5b719fc46cf055a53" title="UCSB Urban Atlas Web Map"></iframe>
+  <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+    <a href="https://ucsb.maps.arcgis.com/home/item.html?id=636bb82ea14944a5b719fc46cf055a53#overview" target="_blank" rel="noopener" class="resource-btn" style="background: #943324; color: #fff; font-weight: 600;">Open full UCSB ArcGIS Online Web Map ↗</a>
+    <a href="https://services1.arcgis.com/4TXrdeWh0RyCqPgB/arcgis/rest/services/study_cities/FeatureServer/0" target="_blank" rel="noopener" class="resource-btn">ArcGIS REST API Endpoint ↗</a>
+  </div>
+</div>
+```
+
+---
+
+## 3. Archival map plates & historical scans
 
 ```{=html}
 <div class="agsl-box">
@@ -61,7 +80,7 @@ The map below displays all 47 cities in the ratlas across China, sized by **2020
 
 ---
 
-## 3. High-speed rail network & urban hierarchy
+## 4. High-speed rail network & urban hierarchy
 
 China's High-Speed Rail grid physically stitched together regional capitals and secondary nodes, accelerating post-2005 outward expansion across the 184 major urban centers identified in the ArcGIS Online Big Cities layer:
 
@@ -71,7 +90,7 @@ China's High-Speed Rail grid physically stitched together regional capitals and 
 
 ---
 
-## 4. Key findings & national overview
+## 5. Key findings & national overview
 
 ::: {.metric-grid}
 ::: {.metric-card}
@@ -137,7 +156,7 @@ US Benchmarks
 
 ---
 
-## 5. Global points of comparison: US benchmark metropolises
+## 6. Global points of comparison: US benchmark metropolises
 
 How did China's 30-year urban expansion compare to Western metropolitan development? 
 To establish an objective international baseline, **Milwaukee**, **Chicago**, and **Charlotte** were incorporated into the ratlas using the exact same DLR WSF Evolution 30m satellite data:
@@ -193,7 +212,7 @@ To establish an objective international baseline, **Milwaukee**, **Chicago**, an
 
 ---
 
-## 6. Thirty-year growth multiplier rankings
+## 7. Thirty-year growth multiplier rankings
 
 Which cities experienced the highest relative spatial expansion between 1985 and 2015?
 
@@ -203,7 +222,7 @@ Which cities experienced the highest relative spatial expansion between 1985 and
 
 ---
 
-## 7. Interactive regional explorations
+## 8. Interactive regional explorations
 
 Select any region on the interactive map below to jump directly to its dedicated regional chapter, or explore via the region cards below:
 
@@ -334,7 +353,7 @@ Silk Road oasis towns, highland capitals, and desert gateways.
 
 ---
 
-## 8. Primary data sources & citations
+## 9. Primary data sources & citations
 
 This atlas synthesizes open geospatial and authoritative statistical datasets. Detailed academic citations, licensing terms, and analytical documentation are available in the [Methodology & Citations](methodology.html) chapter.
 
@@ -343,6 +362,7 @@ This atlas synthesizes open geospatial and authoritative statistical datasets. D
 | **World Settlement Footprint Evolution (WSF Evolution)** | German Aerospace Center (DLR) | 30m / 1985–2015 Annual | Primary spatial engine; identifies exact year of settlement detection | [DLR Geoservice](https://download.geoservice.dlr.de/WSF_EVO/) · Marconcini et al. (2020, *Sci. Data*) |
 | **National Railways (12306 / NRA)** | China Railway & National Railway Administration | Vector / 432 Lines, 3,300 Stations | National passenger rail backbone, high-speed lines & stations | China Railway 12306 Service System & NRA (2024) |
 | **City Subway Systems (AMap)** | AMap (高德地图) & MOT PRC | Vector / 15 Cities | Rapid transit network lines & stations for all metro-served cities | [AMap Subway Platform](http://map.amap.com/subway/index.html) · Ministry of Transport |
+| **UCSB Urban Atlas Web Map & Study Cities** | University of California, Santa Barbara (UCSB) | Interactive Web Map / Vector Points | DianPing commercial ranks, Russian topos, Chinese atlas indices & Planet imagery | [UCSB ArcGIS Web Map](https://ucsb.maps.arcgis.com/home/item.html?id=636bb82ea14944a5b719fc46cf055a53#overview) · [Study Cities Service](https://services1.arcgis.com/4TXrdeWh0RyCqPgB/arcgis/rest/services/study_cities/FeatureServer/0) |
 | **Big Cities Points Layer** | Esri / ArcGIS Online | Vector Points / 184 Cities | National city hierarchy ranking (1–200) and tier-1 anchor points | [ArcGIS FeatureServer](https://services1.arcgis.com/4TXrdeWh0RyCqPgB/arcgis/rest/services/big_cities_points/FeatureServer) |
 | **Seventh National Population Census (七普 2020)** | National Bureau of Statistics of China (NBS) | Prefectural / 2020 | Primary ranking order (#1–#47) by permanent resident population | [NBS China Census Bulletin (2021)](http://www.stats.gov.cn/) |
 | **AGSL Historical Map Archive** | American Geographical Society Library (AGSL) | Scanned Sheets / High-Res | Archival ground-truth topographic sheets and municipal town plans | [AGSL Collection (Google Drive)](https://drive.google.com/drive/folders/1b-HupghVS7KQn4ZTvGjfOHFFMgPnH2KV?usp=sharing) |
@@ -353,5 +373,5 @@ This atlas synthesizes open geospatial and authoritative statistical datasets. D
 ---
 
 ::: {.caption-box}
-**China Urban Growth Ratlas** · Built with R (`terra`, `sf`, `ggplot2`, `tidyterra`, `patchwork`) and Quarto. Data: German Aerospace Center (DLR) World Settlement Footprint Evolution (30m), 7th National Population Census (七普 2020), U.S. Census Bureau (2020), China Railway 12306 Network (NRA), AMap (高德地图) Subway Platform, Natural Earth, American Geographical Society Library (AGSL), ArcGIS Online Big Cities Points & GADM 4.1.
+**China Urban Growth Ratlas** · Built with R (`terra`, `sf`, `ggplot2`, `tidyterra`, `patchwork`) and Quarto. Data: German Aerospace Center (DLR) World Settlement Footprint Evolution (30m), 7th National Population Census (七普 2020), U.S. Census Bureau (2020), China Railway 12306 Network (NRA), AMap (高德地图) Subway Platform, Natural Earth, American Geographical Society Library (AGSL), UCSB ArcGIS Online Web Map (`636bb82ea14944a5b719fc46cf055a53`), ArcGIS Online Big Cities Points & GADM 4.1.
 :::

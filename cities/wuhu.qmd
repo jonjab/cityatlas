@@ -15,7 +15,8 @@ format:
       <p style="color: #221d1a; font-size: 0.95rem; margin-top: 0.35rem;">
         Permanent population: <strong>3.64 million</strong> (2020 census) · 
         Population rank: <strong>#25</strong> of 47 · 
-        ArcGIS urban hierarchy rank: <strong>N/A</strong>
+        ArcGIS urban hierarchy rank: <strong>N/A</strong> · 
+        DianPing/commercial index rank: <strong>#65</strong>
       </p>
       <div style="margin-top: 0.75rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
         <a href="https://en.wikipedia.org/wiki/Wuhu" target="_blank" rel="noopener" class="resource-btn">Wikipedia (EN)</a>
@@ -24,6 +25,7 @@ format:
         <a href="https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Wuhu" target="_blank" rel="noopener" class="resource-btn">Wikimedia Commons</a>
         <a href="https://commons.wikimedia.org/w/index.php?search=Wuhu+map&title=Special:MediaSearch&type=image" target="_blank" rel="noopener" class="resource-btn">Scanned maps search</a>
         <a href="https://drive.google.com/drive/folders/1b-HupghVS7KQn4ZTvGjfOHFFMgPnH2KV?usp=sharing" target="_blank" rel="noopener" class="resource-btn" style="background: #e8ded1; border-color: #943324; font-weight: 600;">AGSL map scans archive ↗</a>
+        <a href="https://ucsb.maps.arcgis.com/home/item.html?id=636bb82ea14944a5b719fc46cf055a53#overview" target="_blank" rel="noopener" class="resource-btn" style="background: #e8ded1; border-color: #943324; font-weight: 600;">UCSB Esri Web Map ↗</a>
       </div>
     </div>
     <div style="text-align: right;">
@@ -61,8 +63,9 @@ The cartographic monograph below documents the physical settlement rings of **Wu
   <div class="agsl-desc">
     High-resolution historical map sheets, military topographic surveys, and municipal town plans from the <strong>American Geographical Society Library (AGSL)</strong> archive collection provide crucial ground-truth spatial morphology predating modern satellite observation.
   </div>
-  <div style="margin-top: 0.5rem;">
+  <div style="margin-top: 0.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
     <a href="https://drive.google.com/drive/folders/1b-HupghVS7KQn4ZTvGjfOHFFMgPnH2KV?usp=sharing" target="_blank" rel="noopener" class="resource-btn" style="font-weight: 600;">Browse complete AGSL historical map scans folder on Google Drive (67 sheets) →</a>
+    <a href="https://ucsb.maps.arcgis.com/home/item.html?id=636bb82ea14944a5b719fc46cf055a53#overview" target="_blank" rel="noopener" class="resource-btn" style="background: #e8ded1; border-color: #943324; font-weight: 600;">Explore UCSB ArcGIS Web Map (post-AGSL) ↗</a>
   </div>
 </div>
 ```
@@ -125,6 +128,16 @@ ArcGIS City Rank
 N/A
 :::
 <div style="font-size: 0.8rem; color: #5e524a;">National Big Cities Tier</div>
+:::
+
+::: {.metric-card}
+::: {.metric-label}
+Commercial Index Rank
+:::
+::: {.metric-val}
+#65
+:::
+<div style="font-size: 0.8rem; color: #5e524a;">UCSB Study Cities Index</div>
 :::
 
 ::: {.metric-card}
@@ -193,6 +206,7 @@ Direct links to open knowledge, semantic geodata, and scanned map collections fo
 - 🗺️ **Wikimedia Commons Map Repository**: [Category:Maps of Wuhu](https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Wuhu) — Community-curated media repository containing thematic, administrative, and transport maps.
 - 🔍 **Scanned Maps & Historical Sheets Search**: [Explore scanned bitmap and topographic maps of Wuhu on Wikimedia Commons](https://commons.wikimedia.org/w/index.php?search=Wuhu+map&title=Special:MediaSearch&type=image)
 - 🗄️ **AGSL Historical Map Archive**: [Access Google Drive repository of AGSL scans](https://drive.google.com/drive/folders/1b-HupghVS7KQn4ZTvGjfOHFFMgPnH2KV?usp=sharing)
+- 🌐 **UCSB ArcGIS Online Web Map**: [View interactive Web Map (item 636bb82ea14944a5b719fc46cf055a53)](https://ucsb.maps.arcgis.com/home/item.html?id=636bb82ea14944a5b719fc46cf055a53#overview)
 
 ::: {.callout-note title="Selected Scanned Historical Maps on Wikimedia Commons"}
 The following scanned historical maps and cartographic surveys covering **Wuhu** are accessible on Wikimedia Commons:
@@ -213,11 +227,12 @@ The quantitative and spatial indicators for **Wuhu** are synthesized from the fo
 1. **Urban Footprint & Built-Up Surface**: German Aerospace Center (DLR) [World Settlement Footprint Evolution (1985–2015)](https://download.geoservice.dlr.de/WSF_EVO/). 30m resolution multi-decadal satellite detection (*Marconcini et al., 2020, Nature Scientific Data*).
 2. **Permanent Resident Population**: National Bureau of Statistics of China (NBS), [Seventh National Population Census (第七次全国人口普查 / 七普 2020)](http://www.stats.gov.cn/). Resident population: **3.64M** (National Rank: **#25** of 47).
 3. **National Urban Tier Classification**: Esri / [ArcGIS Online Big Cities Points FeatureServer](https://services1.arcgis.com/4TXrdeWh0RyCqPgB/arcgis/rest/services/big_cities_points/FeatureServer), National City Rank: **N/A** of 184 major Chinese cities.
+4. **UCSB Study Cities & Curated Layers**: University of California, Santa Barbara (UCSB) [Urban Atlas post-AGSL Web Map](https://ucsb.maps.arcgis.com/home/item.html?id=636bb82ea14944a5b719fc46cf055a53#overview) & [study_cities FeatureServer](https://services1.arcgis.com/4TXrdeWh0RyCqPgB/arcgis/rest/services/study_cities/FeatureServer/0) (DianPing rank: #65, RU topos: `x`, ZH city atlas: `x`, Planet: `p`).
 4. **National Railway & Municipal Transit**:
    - **National Passenger Rail Network**: China Railway (中国国家铁路集团 / 12306) and National Railway Administration of China (NRA), covering national high-speed corridors (PDL) and conventional trunk lines.
    - **Urban Subway Network**: AMap (高德地图) Subway Platform and PRC Ministry of Transport (MOT) Urban Rail Transit database (2 lines, 35 stations for Wuhu).
-5. **Administrative Boundaries**: [GADM Database of Global Administrative Areas (v4.1)](https://gadm.org/), University of California, Davis.
-6. **Archival Cartography & Historical Surveys**: American Geographical Society Library (AGSL) Map Collection & [Wikimedia Foundation](https://www.wikimedia.org/) ([Wikipedia](https://en.wikipedia.org/), [Wikidata](https://www.wikidata.org/), and [Wikimedia Commons](https://commons.wikimedia.org/)).
+6. **Administrative Boundaries**: [GADM Database of Global Administrative Areas (v4.1)](https://gadm.org/), University of California, Davis.
+7. **Archival Cartography & Historical Surveys**: American Geographical Society Library (AGSL) Map Collection & [Wikimedia Foundation](https://www.wikimedia.org/) ([Wikipedia](https://en.wikipedia.org/), [Wikidata](https://www.wikidata.org/), and [Wikimedia Commons](https://commons.wikimedia.org/)).
 
 ---
 

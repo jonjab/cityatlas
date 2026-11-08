@@ -1,0 +1,741 @@
+{
+  "objectIdFieldName": "ObjectId",
+  "uniqueIdField": {
+    "name": "ObjectId",
+    "isSystemMaintained": true
+  },
+  "globalIdFieldName": "",
+  "geometryType": "esriGeometryPoint",
+  "spatialReference": {
+    "wkid": 102100,
+    "latestWkid": 3857
+  },
+  "fields": [
+    {
+      "name": "DianPing_ish_rank",
+      "type": "esriFieldTypeInteger",
+      "alias": "DianPing_ish_rank",
+      "sqlType": "sqlTypeInteger",
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "name",
+      "type": "esriFieldTypeString",
+      "alias": "name",
+      "sqlType": "sqlTypeNVarchar",
+      "length": 4000,
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "ZH_CityAtlas",
+      "type": "esriFieldTypeString",
+      "alias": "ZH_CityAtlas",
+      "sqlType": "sqlTypeNVarchar",
+      "length": 4000,
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "RU_topos",
+      "type": "esriFieldTypeString",
+      "alias": "RU_topos",
+      "sqlType": "sqlTypeNVarchar",
+      "length": 4000,
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "planet",
+      "type": "esriFieldTypeString",
+      "alias": "planet",
+      "sqlType": "sqlTypeNVarchar",
+      "length": 4000,
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "ObjectId",
+      "type": "esriFieldTypeOID",
+      "alias": "ObjectId",
+      "sqlType": "sqlTypeInteger",
+      "domain": null,
+      "defaultValue": null
+    }
+  ],
+  "features": [
+    {
+      "attributes": {
+        "DianPing_ish_rank": 4,
+        "name": "Chengdu",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "x",
+        "planet": "x",
+        "ObjectId": 1
+      },
+      "geometry": {
+        "x": 11584648.713,
+        "y": 3589535.140299998
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 6,
+        "name": "Shenzhen",
+        "ZH_CityAtlas": "x",
+        "RU_topos": null,
+        "planet": "x",
+        "ObjectId": 2
+      },
+      "geometry": {
+        "x": 12698025.0717,
+        "y": 2577151.1272
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 8,
+        "name": "Wuhan",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "x",
+        "planet": "x",
+        "ObjectId": 3
+      },
+      "geometry": {
+        "x": 12720107.519000001,
+        "y": 3578754.0200999975
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 9,
+        "name": "Xi'an",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "x",
+        "planet": "x",
+        "ObjectId": 4
+      },
+      "geometry": {
+        "x": 12125877.397999998,
+        "y": 4063542.4037000015
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 14,
+        "name": "Jinan",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "x",
+        "planet": "x",
+        "ObjectId": 5
+      },
+      "geometry": {
+        "x": 13024070.954599999,
+        "y": 4392976.549099997
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 17,
+        "name": "Harbin",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "p",
+        "planet": "x",
+        "ObjectId": 6
+      },
+      "geometry": {
+        "x": 14098613.509000003,
+        "y": 5740376.655599996
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 18,
+        "name": "Shenyang",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "x",
+        "planet": null,
+        "ObjectId": 7
+      },
+      "geometry": {
+        "x": 13740474.216799997,
+        "y": 5129905.644199997
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 18,
+        "name": "Zhengzhou",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "x",
+        "planet": null,
+        "ObjectId": 8
+      },
+      "geometry": {
+        "x": 12651305.3946,
+        "y": 4131012.939199999
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 20,
+        "name": "Kunming",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "p",
+        "planet": "x",
+        "ObjectId": 9
+      },
+      "geometry": {
+        "x": 11434552.190699998,
+        "y": 2880522.1411000006
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 23,
+        "name": "Xiamen",
+        "ZH_CityAtlas": "not useful",
+        "RU_topos": "x",
+        "planet": "x",
+        "ObjectId": 10
+      },
+      "geometry": {
+        "x": 13144813.640299998,
+        "y": 2811982.5544000007
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 27,
+        "name": "Urumqi",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "x",
+        "planet": "x",
+        "ObjectId": 11
+      },
+      "geometry": {
+        "x": 9751638.600499999,
+        "y": 5434691.773699999
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 31,
+        "name": "Shijiazhuang",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "x",
+        "planet": "x",
+        "ObjectId": 12
+      },
+      "geometry": {
+        "x": 12743700.571899999,
+        "y": 4585274.482900001
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 36,
+        "name": "Nanchang",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "p",
+        "planet": "x",
+        "ObjectId": 13
+      },
+      "geometry": {
+        "x": 12896703.646000002,
+        "y": 3335482.3906999975
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 40,
+        "name": "Lanzhou",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "x",
+        "planet": "x",
+        "ObjectId": 14
+      },
+      "geometry": {
+        "x": 11559401.452399999,
+        "y": 4308468.698299997
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 42,
+        "name": "Hohhot",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "x",
+        "planet": "x",
+        "ObjectId": 15
+      },
+      "geometry": {
+        "x": 12429068.276299998,
+        "y": 4984439.335100003
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 45,
+        "name": "Zibo",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "x",
+        "planet": "p",
+        "ObjectId": 16
+      },
+      "geometry": {
+        "x": 13142749.776999999,
+        "y": 4409953.620899998
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 52,
+        "name": "Zhuhai",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "x",
+        "planet": null,
+        "ObjectId": 17
+      },
+      "geometry": {
+        "x": 12642307.4401,
+        "y": 2544807.8264999986
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 56,
+        "name": "Haikou",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "x",
+        "planet": "x",
+        "ObjectId": 18
+      },
+      "geometry": {
+        "x": 12283717.304000001,
+        "y": 2277084.0117999986
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 59,
+        "name": "Datong",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "p",
+        "planet": "p",
+        "ObjectId": 19
+      },
+      "geometry": {
+        "x": 12611539.846099999,
+        "y": 4879554.768600002
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 61,
+        "name": "Lianyungang",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "x",
+        "planet": "x",
+        "ObjectId": 20
+      },
+      "geometry": {
+        "x": 13271015.4338,
+        "y": 4109445.1163000017
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 62,
+        "name": "Baoding",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "p",
+        "planet": "x",
+        "ObjectId": 21
+      },
+      "geometry": {
+        "x": 12856319.161200002,
+        "y": 4700366.741899997
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 65,
+        "name": "Wuhu",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "x",
+        "planet": "p",
+        "ObjectId": 22
+      },
+      "geometry": {
+        "x": 13177278.856600001,
+        "y": 3676629.2744000033
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 69,
+        "name": "Yichang",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "p",
+        "planet": null,
+        "ObjectId": 23
+      },
+      "geometry": {
+        "x": 12388158.363499999,
+        "y": 3595719.0072000027
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 70,
+        "name": "Yangzhou",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "x",
+        "planet": "p",
+        "ObjectId": 24
+      },
+      "geometry": {
+        "x": 13295535.778099999,
+        "y": 3815565.612400003
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 76,
+        "name": "Taizhou",
+        "ZH_CityAtlas": "none",
+        "RU_topos": "x",
+        "planet": "x",
+        "ObjectId": 25
+      },
+      "geometry": {
+        "x": 13485766.316300001,
+        "y": 3357248.1818000004
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 80,
+        "name": "Guilin",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "x",
+        "planet": "x",
+        "ObjectId": 26
+      },
+      "geometry": {
+        "x": 12278137.971099999,
+        "y": 2910202.782499999
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 84,
+        "name": "Jining",
+        "ZH_CityAtlas": "x",
+        "RU_topos": null,
+        "planet": "x",
+        "ObjectId": 27
+      },
+      "geometry": {
+        "x": 12590883.4014,
+        "y": 5016398.754100002
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 96,
+        "name": "Liaocheng",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "p",
+        "planet": "x",
+        "ObjectId": 28
+      },
+      "geometry": {
+        "x": 12913335.891199999,
+        "y": 4362807.2293
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 106,
+        "name": "Dongying",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "x",
+        "planet": "x",
+        "ObjectId": 29
+      },
+      "geometry": {
+        "x": 13190430.1413,
+        "y": 4503800.347000003
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 107,
+        "name": "Luzhou",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "x",
+        "planet": "x",
+        "ObjectId": 30
+      },
+      "geometry": {
+        "x": 11735940.806499999,
+        "y": 3361691.0782999992
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 117,
+        "name": "Taishan",
+        "ZH_CityAtlas": "none",
+        "RU_topos": "x",
+        "planet": "x",
+        "ObjectId": 31
+      },
+      "geometry": {
+        "x": 12554601.039700001,
+        "y": 2541729.6752999984
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 124,
+        "name": "Panjin",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "p",
+        "planet": "x",
+        "ObjectId": 32
+      },
+      "geometry": {
+        "x": 9064156.142,
+        "y": 5466609.0898
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 125,
+        "name": "Weihai",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "x",
+        "planet": "x",
+        "ObjectId": 33
+      },
+      "geometry": {
+        "x": 13593619.3182,
+        "y": 4510313.952
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 129,
+        "name": "Fuxin",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "x",
+        "planet": "x",
+        "ObjectId": 34
+      },
+      "geometry": {
+        "x": 13543005.6853,
+        "y": 5163310.541599996
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 135,
+        "name": "Kashgar",
+        "ZH_CityAtlas": "x",
+        "RU_topos": null,
+        "planet": "x",
+        "ObjectId": 35
+      },
+      "geometry": {
+        "x": 8459113.5588,
+        "y": 4789315.576300003
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 137,
+        "name": "Heyuan",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "x",
+        "planet": "x",
+        "ObjectId": 36
+      },
+      "geometry": {
+        "x": 12766489.8981,
+        "y": 2720946.713799998
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 142,
+        "name": "Binzhou",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "x",
+        "planet": "x",
+        "ObjectId": 37
+      },
+      "geometry": {
+        "x": 13137555.609499998,
+        "y": 4490339.840499997
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 145,
+        "name": "Dandong",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "x",
+        "planet": "x",
+        "ObjectId": 38
+      },
+      "geometry": {
+        "x": 13847556.8878,
+        "y": 4884730.704499997
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 154,
+        "name": "Korla",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "x",
+        "planet": "x",
+        "ObjectId": 39
+      },
+      "geometry": {
+        "x": 9590431.2799,
+        "y": 5125178.208400004
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 160,
+        "name": "Liaoyuan",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "p",
+        "planet": "x",
+        "ObjectId": 40
+      },
+      "geometry": {
+        "x": 13930056.875600003,
+        "y": 5297311.795400001
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 164,
+        "name": "Tieling",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "x",
+        "planet": "x",
+        "ObjectId": 41
+      },
+      "geometry": {
+        "x": 13785960.473899998,
+        "y": 5204980.001800001
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 166,
+        "name": "Ulanqab",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "x",
+        "planet": "x",
+        "ObjectId": 42
+      },
+      "geometry": {
+        "x": 12593907.951900002,
+        "y": 5011309.220299996
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 168,
+        "name": "Huangshan",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "x",
+        "planet": "p",
+        "ObjectId": 43
+      },
+      "geometry": {
+        "x": 13170487.254500002,
+        "y": 3466505.4032000005
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 169,
+        "name": "Hotan",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "x",
+        "planet": "p",
+        "ObjectId": 44
+      },
+      "geometry": {
+        "x": 8898376.929900002,
+        "y": 4454101.5123
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 170,
+        "name": "Wuwei",
+        "ZH_CityAtlas": "x",
+        "RU_topos": null,
+        "planet": "x",
+        "ObjectId": 45
+      },
+      "geometry": {
+        "x": 11424944.2055,
+        "y": 4569078.972400002
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 177,
+        "name": "Baicheng",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "x",
+        "planet": "p",
+        "ObjectId": 46
+      },
+      "geometry": {
+        "x": 13673709.239,
+        "y": 5719265.367600001
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 178,
+        "name": "Hunchun",
+        "ZH_CityAtlas": "x",
+        "RU_topos": "x",
+        "planet": "p",
+        "ObjectId": 47
+      },
+      "geometry": {
+        "x": 14511392.86,
+        "y": 5291825.692699999
+      }
+    },
+    {
+      "attributes": {
+        "DianPing_ish_rank": 179,
+        "name": "Zhangjiajie",
+        "ZH_CityAtlas": "none",
+        "RU_topos": null,
+        "planet": "x",
+        "ObjectId": 48
+      },
+      "geometry": {
+        "x": 12298391.4393,
+        "y": 3392131.184600003
+      }
+    }
+  ]
+}

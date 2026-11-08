@@ -24,6 +24,7 @@ format:
         <a href="https://commons.wikimedia.org/wiki/Category:Maps_of_Chicago" target="_blank" rel="noopener" class="resource-btn">Wikimedia Commons</a>
         <a href="https://commons.wikimedia.org/w/index.php?search=Chicago+map" target="_blank" rel="noopener" class="resource-btn">Scanned maps search</a>
         <a href="https://drive.google.com/drive/folders/1b-HupghVS7KQn4ZTvGjfOHFFMgPnH2KV?usp=sharing" target="_blank" rel="noopener" class="resource-btn" style="background: #e8ded1; border-color: #943324; font-weight: 600;">AGSL map scans archive ↗</a>
+        <a href="https://ucsb.maps.arcgis.com/home/item.html?id=636bb82ea14944a5b719fc46cf055a53#overview" target="_blank" rel="noopener" class="resource-btn" style="background: #e8ded1; border-color: #943324; font-weight: 600;">UCSB Esri Web Map ↗</a>
       </div>
     </div>
     <div style="text-align: right;">
@@ -178,6 +179,7 @@ Direct links to open knowledge, semantic geodata, and scanned map collections fo
 - 🗺️ **Wikimedia Commons Map Repository**: [Maps of Chicago](https://commons.wikimedia.org/wiki/Category:Maps_of_Chicago) — Community-curated media repository containing thematic, administrative, and transport maps.
 - 🔍 **Scanned Maps & Historical Sheets Search**: [Explore scanned bitmap and topographic maps of Chicago on Wikimedia Commons](https://commons.wikimedia.org/w/index.php?search=Chicago+map)
 - 🗄️ **AGSL Historical Map Archive**: [Access Google Drive repository of AGSL scans](https://drive.google.com/drive/folders/1b-HupghVS7KQn4ZTvGjfOHFFMgPnH2KV?usp=sharing)
+- 🌐 **UCSB ArcGIS Online Web Map**: [View interactive Web Map (item 636bb82ea14944a5b719fc46cf055a53)](https://ucsb.maps.arcgis.com/home/item.html?id=636bb82ea14944a5b719fc46cf055a53#overview)
 
 ---
 

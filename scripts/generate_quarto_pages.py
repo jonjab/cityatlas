@@ -21,9 +21,24 @@ with open("data/processed/city_agsl_scans_mapping.json", "r", encoding="utf-8") 
 with open("data/processed/gdrive_agsl_scans.json", "r", encoding="utf-8") as f:
     all_agsl_scans = json.load(f)
 
+with open("data/processed/arcgis_study_cities.json", "r", encoding="utf-8") as f:
+    study_cities_data = json.load(f)
+
+# Build study cities attributes lookup
+study_cities_lookup = {}
+for feat in study_cities_data.get("features", []):
+    attr = feat.get("attributes", {})
+    name = attr.get("name", "").strip().lower()
+    study_cities_lookup[name] = attr
+    if name == "xi'an":
+        study_cities_lookup["xian"] = attr
+
 cities = sorted(cities, key=lambda x: x["rank_population"])
 
 GDRIVE_FOLDER_URL = "https://drive.google.com/drive/folders/1b-HupghVS7KQn4ZTvGjfOHFFMgPnH2KV?usp=sharing"
+ARCGIS_WEBMAP_ID = "636bb82ea14944a5b719fc46cf055a53"
+ARCGIS_WEBMAP_ITEM_URL = f"https://ucsb.maps.arcgis.com/home/item.html?id={ARCGIS_WEBMAP_ID}#overview"
+ARCGIS_WEBMAP_EMBED_URL = f"https://ucsb.maps.arcgis.com/apps/mapviewer/index.html?webmap={ARCGIS_WEBMAP_ID}"
 
 def build_agsl_block(city_id, city_name):
     scans = agsl_mapping.get(city_id, [])
@@ -33,8 +48,9 @@ def build_agsl_block(city_id, city_name):
   <div class="agsl-desc">
     High-resolution historical map sheets, military topographic surveys, and municipal town plans from the <strong>American Geographical Society Library (AGSL)</strong> archive collection provide crucial ground-truth spatial morphology predating modern satellite observation.
   </div>
-  <div style="margin-top: 0.5rem;">
+  <div style="margin-top: 0.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
     <a href="{GDRIVE_FOLDER_URL}" target="_blank" rel="noopener" class="resource-btn" style="font-weight: 600;">Browse complete AGSL historical map scans folder on Google Drive ({len(all_agsl_scans)} sheets) →</a>
+    <a href="{ARCGIS_WEBMAP_ITEM_URL}" target="_blank" rel="noopener" class="resource-btn" style="background: #e8ded1; border-color: #943324; font-weight: 600;">Explore UCSB ArcGIS Web Map (post-AGSL) ↗</a>
   </div>
 </div>"""
     
@@ -60,8 +76,9 @@ def build_agsl_block(city_id, city_name):
   <div class="agsl-grid">
 {cards_html}
   </div>
-  <div style="margin-top: 1rem;">
+  <div style="margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
     <a href="{GDRIVE_FOLDER_URL}" target="_blank" rel="noopener" class="resource-btn" style="font-weight: 600;">Browse complete AGSL archive on Google Drive ({len(all_agsl_scans)} total scans) →</a>
+    <a href="{ARCGIS_WEBMAP_ITEM_URL}" target="_blank" rel="noopener" class="resource-btn" style="background: #e8ded1; border-color: #943324; font-weight: 600;">Explore UCSB ArcGIS Web Map (post-AGSL) ↗</a>
   </div>
 </div>"""
 
@@ -123,7 +140,7 @@ os.makedirs("cities", exist_ok=True)
 os.makedirs("regions", exist_ok=True)
 
 # ------------------------------------------------------------------------------
-# 1. Generate Individual Chinese City Pages (Map-Forward + AGSL Scans)
+# 1. Generate Individual Chinese City Pages (Map-Forward + AGSL Scans + Web Map)
 # ------------------------------------------------------------------------------
 for idx, c in enumerate(cities):
     c_id = c["id"]
@@ -139,6 +156,14 @@ for idx, c in enumerate(cities):
     arc_rank_val = c.get("arcgis_rank")
     arc_rank_text = f"#{arc_rank_val}" if arc_rank_val else "N/A"
     
+    # Check UCSB Web Map Study Cities attributes
+    webmap_attr = study_cities_lookup.get(c_id) or study_cities_lookup.get(c["name_en"].lower()) or {}
+    dp_rank = webmap_attr.get("DianPing_ish_rank", "N/A")
+    dp_rank_str = f"#{dp_rank}" if dp_rank and dp_rank != "N/A" else "N/A"
+    ru_topos = webmap_attr.get("RU_topos") or "-"
+    zh_atlas = webmap_attr.get("ZH_CityAtlas") or "-"
+    planet_cov = webmap_attr.get("planet") or "-"
+
     rail_info = rail_summaries.get(c_id, {
         "total_rail_segments": 0,
         "hsr_segments": 0,
@@ -173,7 +198,8 @@ for idx, c in enumerate(cities):
       <p style="color: #221d1a; font-size: 0.95rem; margin-top: 0.35rem;">
         Permanent population: <strong>{c['pop_million']} million</strong> (2020 census) · 
         Population rank: <strong>#{c['rank_population']}</strong> of 47 · 
-        ArcGIS urban hierarchy rank: <strong>{arc_rank_text}</strong>
+        ArcGIS urban hierarchy rank: <strong>{arc_rank_text}</strong> · 
+        DianPing/commercial index rank: <strong>{dp_rank_str}</strong>
       </p>
       <div style="margin-top: 0.75rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
         <a href="{wiki_en_url}" target="_blank" rel="noopener" class="resource-btn">Wikipedia (EN)</a>
@@ -182,6 +208,7 @@ for idx, c in enumerate(cities):
         <a href="{commons_cat_url}" target="_blank" rel="noopener" class="resource-btn">Wikimedia Commons</a>
         <a href="{commons_search_url}" target="_blank" rel="noopener" class="resource-btn">Scanned maps search</a>
         <a href="{GDRIVE_FOLDER_URL}" target="_blank" rel="noopener" class="resource-btn" style="background: #e8ded1; border-color: #943324; font-weight: 600;">AGSL map scans archive ↗</a>
+        <a href="{ARCGIS_WEBMAP_ITEM_URL}" target="_blank" rel="noopener" class="resource-btn" style="background: #e8ded1; border-color: #943324; font-weight: 600;">UCSB Esri Web Map ↗</a>
       </div>
     </div>
     <div style="text-align: right;">
@@ -338,6 +365,16 @@ ArcGIS City Rank
 
 ::: {{.metric-card}}
 ::: {{.metric-label}}
+Commercial Index Rank
+:::
+::: {{.metric-val}}
+{dp_rank_str}
+:::
+<div style="font-size: 0.8rem; color: #5e524a;">UCSB Study Cities Index</div>
+:::
+
+::: {{.metric-card}}
+::: {{.metric-label}}
 1985 Baseline Area
 :::
 ::: {{.metric-val}}
@@ -402,6 +439,7 @@ Direct links to open knowledge, semantic geodata, and scanned map collections fo
 - 🗺️ **Wikimedia Commons Map Repository**: [{wiki_res.get('commons_map_category', 'Maps of ' + c['name_en'])}]({commons_cat_url}) — Community-curated media repository containing thematic, administrative, and transport maps.
 {old_map_line}- 🔍 **Scanned Maps & Historical Sheets Search**: [Explore scanned bitmap and topographic maps of {c['name_en']} on Wikimedia Commons]({commons_search_url})
 - 🗄️ **AGSL Historical Map Archive**: [Access Google Drive repository of AGSL scans]({GDRIVE_FOLDER_URL})
+- 🌐 **UCSB ArcGIS Online Web Map**: [View interactive Web Map (item {ARCGIS_WEBMAP_ID})]({ARCGIS_WEBMAP_ITEM_URL})
 
 {scanned_maps_box}
 
@@ -414,9 +452,10 @@ The quantitative and spatial indicators for **{c['name_en']}** are synthesized f
 1. **Urban Footprint & Built-Up Surface**: German Aerospace Center (DLR) [World Settlement Footprint Evolution (1985–2015)](https://download.geoservice.dlr.de/WSF_EVO/). 30m resolution multi-decadal satellite detection (*Marconcini et al., 2020, Nature Scientific Data*).
 2. **Permanent Resident Population**: National Bureau of Statistics of China (NBS), [Seventh National Population Census (第七次全国人口普查 / 七普 2020)](http://www.stats.gov.cn/). Resident population: **{c['pop_million']}M** (National Rank: **#{c['rank_population']}** of 47).
 3. **National Urban Tier Classification**: Esri / [ArcGIS Online Big Cities Points FeatureServer](https://services1.arcgis.com/4TXrdeWh0RyCqPgB/arcgis/rest/services/big_cities_points/FeatureServer), National City Rank: **{arc_rank_text}** of 184 major Chinese cities.
+4. **UCSB Study Cities & Curated Layers**: University of California, Santa Barbara (UCSB) [Urban Atlas post-AGSL Web Map](https://ucsb.maps.arcgis.com/home/item.html?id={ARCGIS_WEBMAP_ID}#overview) & [study_cities FeatureServer](https://services1.arcgis.com/4TXrdeWh0RyCqPgB/arcgis/rest/services/study_cities/FeatureServer/0) (DianPing rank: {dp_rank_str}, RU topos: `{ru_topos}`, ZH city atlas: `{zh_atlas}`, Planet: `{planet_cov}`).
 {transit_attribution}
-5. **Administrative Boundaries**: [GADM Database of Global Administrative Areas (v4.1)](https://gadm.org/), University of California, Davis.
-6. **Archival Cartography & Historical Surveys**: American Geographical Society Library (AGSL) Map Collection & [Wikimedia Foundation](https://www.wikimedia.org/) ([Wikipedia](https://en.wikipedia.org/), [Wikidata](https://www.wikidata.org/), and [Wikimedia Commons](https://commons.wikimedia.org/)).
+6. **Administrative Boundaries**: [GADM Database of Global Administrative Areas (v4.1)](https://gadm.org/), University of California, Davis.
+7. **Archival Cartography & Historical Surveys**: American Geographical Society Library (AGSL) Map Collection & [Wikimedia Foundation](https://www.wikimedia.org/) ([Wikipedia](https://en.wikipedia.org/), [Wikidata](https://www.wikidata.org/), and [Wikimedia Commons](https://commons.wikimedia.org/)).
 
 ---
 
@@ -494,6 +533,7 @@ for idx, c in enumerate(comp_cities):
         <a href="{commons_cat_url}" target="_blank" rel="noopener" class="resource-btn">Wikimedia Commons</a>
         <a href="{commons_search_url}" target="_blank" rel="noopener" class="resource-btn">Scanned maps search</a>
         <a href="{GDRIVE_FOLDER_URL}" target="_blank" rel="noopener" class="resource-btn" style="background: #e8ded1; border-color: #943324; font-weight: 600;">AGSL map scans archive ↗</a>
+        <a href="{ARCGIS_WEBMAP_ITEM_URL}" target="_blank" rel="noopener" class="resource-btn" style="background: #e8ded1; border-color: #943324; font-weight: 600;">UCSB Esri Web Map ↗</a>
       </div>
     </div>
     <div style="text-align: right;">
@@ -677,6 +717,7 @@ Direct links to open knowledge, semantic geodata, and scanned map collections fo
 - 🗺️ **Wikimedia Commons Map Repository**: [{wiki_res.get('commons_map_category', 'Maps of ' + c['name_en'])}]({commons_cat_url}) — Community-curated media repository containing thematic, administrative, and transport maps.
 - 🔍 **Scanned Maps & Historical Sheets Search**: [Explore scanned bitmap and topographic maps of {c['name_en']} on Wikimedia Commons]({commons_search_url})
 - 🗄️ **AGSL Historical Map Archive**: [Access Google Drive repository of AGSL scans]({GDRIVE_FOLDER_URL})
+- 🌐 **UCSB ArcGIS Online Web Map**: [View interactive Web Map (item {ARCGIS_WEBMAP_ID})]({ARCGIS_WEBMAP_ITEM_URL})
 
 ---
 
@@ -728,8 +769,9 @@ for rk, rv in regions_map.items():
 <div class="hero-banner">
   <h1 class="hero-title" style="margin-bottom: 0.5rem;">{rv['title']} <span style="color: #1e3f34; font-weight: normal; font-style: normal;">{rv['title_zh']}</span></h1>
   <p class="hero-subtitle">{rv['desc']}</p>
-  <div style="margin-top: 1rem;">
+  <div style="margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
     <a href="{GDRIVE_FOLDER_URL}" target="_blank" rel="noopener" class="resource-btn" style="background: #e8ded1; border-color: #943324; font-weight: 600;">Browse AGSL historical scans for this region ↗</a>
+    <a href="{ARCGIS_WEBMAP_ITEM_URL}" target="_blank" rel="noopener" class="resource-btn" style="background: #e8ded1; border-color: #943324; font-weight: 600;">UCSB Esri Web Map (post-AGSL) ↗</a>
   </div>
 </div>
 ```"""
@@ -759,7 +801,7 @@ format:
 ---
 
 ::: {{.caption-box}}
-**Data Sources**: DLR World Settlement Footprint Evolution 30m (Marconcini et al., 2020) · 7th National Population Census of China (2020) · ArcGIS Online Big Cities Points · HOTOSM Railways of China (HDX) · GADM 4.1 · American Geographical Society Library (AGSL).
+**Data Sources**: DLR World Settlement Footprint Evolution 30m (Marconcini et al., 2020) · 7th National Population Census of China (2020) · ArcGIS Online Big Cities Points · HOTOSM Railways of China (HDX) · GADM 4.1 · American Geographical Society Library (AGSL) · UCSB Urban Atlas Web Map.
 :::
 """
     with open(f"regions/{rk}.qmd", "w", encoding="utf-8") as f:
@@ -814,6 +856,11 @@ comp_table_rows = """| [Chicago](cities/chicago.html) | 芝加哥 | United State
 | [Heyuan](cities/heyuan.html) | 河源市 | China (Guangdong) | Pearl River Growth Vanguard | **2.84M** | 15.15 km² | 136.49 km² | +121.34 km² | **9.01×** | 7.60% | Rapid Developing SEZ Hinterland |
 """
 
+comparison_callout = """::: {.callout-note appearance="simple" icon=true}
+## Methodological rigor: Uniform global satellite detection
+Unlike census boundaries or municipal administrative definitions—which differ radically between nations—the **DLR World Settlement Footprint Evolution (WSF Evolution)** operates on a unified, objective 30-meter physical detection algorithm globally. Every pixel reflects actual imperviously paved and built physical structures detected through joint optical Landsat and radar satellite observations from 1985 to 2015.
+:::"""
+
 comparison_qmd = f"""---
 title: "Points of Comparison: US Benchmark Metropolises"
 subtitle: "Contrasting China's 30-Year Physical Urban Expansion (1985–2015) Against American Spatial Growth Trajectories"
@@ -835,6 +882,7 @@ format:
       <a href="cities/milwaukee.html" class="resource-btn">Explore Milwaukee →</a>
       <a href="cities/charlotte.html" class="resource-btn">Explore Charlotte →</a>
       <a href="{GDRIVE_FOLDER_URL}" target="_blank" rel="noopener" class="resource-btn" style="background: #e8ded1; border-color: #943324; font-weight: 600;">Browse AGSL map scans repository (Google Drive) ↗</a>
+      <a href="{ARCGIS_WEBMAP_ITEM_URL}" target="_blank" rel="noopener" class="resource-btn" style="background: #e8ded1; border-color: #943324; font-weight: 600;">UCSB Esri Web Map ↗</a>
       <a href="index.html" class="resource-btn">Back to national atlas</a>
     </div>
   </div>
@@ -843,10 +891,7 @@ format:
 
 {comp_cards_html}
 
-::: {{.callout-note appearance="simple" icon=true}}
-## Methodological rigor: Uniform global satellite detection
-Unlike census boundaries or municipal administrative definitions—which differ radically between nations—the **DLR World Settlement Footprint Evolution (WSF Evolution)** operates on a unified, objective 30-meter physical detection algorithm globally. Every pixel reflects actual imperviously paved and built physical structures detected through joint optical Landsat and radar satellite observations from 1985 to 2015.
-:::
+{comparison_callout}
 
 ## 1. Cross-national expansion trajectories
 
@@ -943,7 +988,7 @@ The table below contrasts the quantitative spatial indicators of Chicago, Milwau
 ---
 
 ::: {{.caption-box}}
-**Data Sources**: German Aerospace Center (DLR) World Settlement Footprint Evolution 30m (Marconcini et al., 2020) · U.S. Census Bureau (2020 Decennial Census) · 7th National Population Census of China (2020) · Natural Earth 10m Railroads · American Geographical Society Library (AGSL) · HOTOSM Railways of China.
+**Data Sources**: German Aerospace Center (DLR) World Settlement Footprint Evolution 30m (Marconcini et al., 2020) · U.S. Census Bureau (2020 Decennial Census) · 7th National Population Census of China (2020) · Natural Earth 10m Railroads · American Geographical Society Library (AGSL) · UCSB Urban Atlas Web Map · HOTOSM Railways of China.
 :::
 """
 
@@ -958,7 +1003,9 @@ print("Generated comparison.qmd!")
 all_city_rows = ""
 for c in cities:
     arc_rank_val = c.get("arcgis_rank", "-")
-    all_city_rows += f"""| #{c['rank_population']} | [{c['name_en']}]({c['id']}.html) | {c['name_zh']} | {c['province_en']} | {c['region']} | **{c['pop_million']}M** | {arc_rank_val} | {c['area_1985']} km² | {c['area_2015']} km² | +{c['net_gain_km2']} km² | **{c['growth_multiple']}×** | {c['cagr_pct']}% |\n"""
+    w_attr = study_cities_lookup.get(c['id']) or study_cities_lookup.get(c["name_en"].lower()) or {}
+    dp_val = w_attr.get("DianPing_ish_rank", "-")
+    all_city_rows += f"""| #{c['rank_population']} | [{c['name_en']}]({c['id']}.html) | {c['name_zh']} | {c['province_en']} | {c['region']} | **{c['pop_million']}M** | {arc_rank_val} | {dp_val} | {c['area_1985']} km² | {c['area_2015']} km² | +{c['net_gain_km2']} km² | **{c['growth_multiple']}×** | {c['cagr_pct']}% |\n"""
 
 cities_qmd = f"""---
 title: "The 47 Chinese Metropolises: Master Directory"
@@ -976,8 +1023,9 @@ format:
       <p class="hero-subtitle">
         Strictly ordered from #1 (Chengdu, 20.9M) to #47 (Hunchun, 0.24M). Every city is paired with uniform-scale DLR satellite footprint progression maps, China Railway 12306 passenger networks, and AGSL historical map scans.
       </p>
-      <div style="margin-top: 0.75rem;">
+      <div style="margin-top: 0.75rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
         <a href="{GDRIVE_FOLDER_URL}" target="_blank" rel="noopener" class="resource-btn" style="background: #e8ded1; border-color: #943324; font-weight: 600;">Browse AGSL historical scans repository on Google Drive ↗</a>
+        <a href="{ARCGIS_WEBMAP_ITEM_URL}" target="_blank" rel="noopener" class="resource-btn" style="background: #e8ded1; border-color: #943324; font-weight: 600;">Explore UCSB ArcGIS Web Map (post-AGSL) ↗</a>
       </div>
     </div>
     <div>
@@ -989,8 +1037,8 @@ format:
 
 ## Complete 47-city master index
 
-| Pop Rank | City | Chinese | Province | Geographic Region | 2020 Population | ArcGIS Rank | 1985 Area | 2015 Area | Net Gain | Growth Multiple | CAGR |
-|:---:|:---|:---|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| Pop Rank | City | Chinese | Province | Geographic Region | 2020 Population | ArcGIS Rank | DianPing Rank | 1985 Area | 2015 Area | Net Gain | Growth Multiple | CAGR |
+|:---:|:---|:---|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 {all_city_rows}
 
 ---
@@ -1000,7 +1048,7 @@ For an in-depth cross-national analysis, visit the **[US Points of Comparison](c
 :::
 
 ::: {{.caption-box}}
-**Data Sources**: DLR World Settlement Footprint Evolution 30m (Marconcini et al., 2020) · 7th National Population Census of China (2020) · ArcGIS Online Big Cities Points · HOTOSM Railways of China (HDX) · GADM 4.1 · American Geographical Society Library (AGSL).
+**Data Sources**: DLR World Settlement Footprint Evolution 30m (Marconcini et al., 2020) · 7th National Population Census of China (2020) · ArcGIS Online Big Cities Points · UCSB Study Cities Feature Layer · HOTOSM Railways of China (HDX) · GADM 4.1 · American Geographical Society Library (AGSL).
 :::
 """
 with open("cities.qmd", "w", encoding="utf-8") as f:
@@ -1009,7 +1057,7 @@ with open("cities.qmd", "w", encoding="utf-8") as f:
 print("Generated cities.qmd!")
 
 # ------------------------------------------------------------------------------
-# 5. Generate Home Page (index.qmd)
+# 5. Generate Home Page (index.qmd + Interactive ArcGIS Web Map Section)
 # ------------------------------------------------------------------------------
 index_hero = f"""```{{=html}}
 <div class="hero-banner">
@@ -1018,11 +1066,12 @@ index_hero = f"""```{{=html}}
     <h2 style="color: #1e3f34; font-size: 1.4rem; margin-top: -0.25rem; margin-bottom: 1rem; font-weight: normal; font-style: normal;">中国城市空间扩展图集 · 1985–2015</h2>
     <p class="hero-subtitle">
       Between 1985 and 2015, the People's Republic of China underwent the largest physical urbanization process in human history. 
-      This ratlas maps the spatial morphology, expansion rings, China Railway (12306) and municipal subway networks, and quantitative growth trajectories across <strong>47 diverse Chinese cities</strong> ranked by population, with global benchmarks in <strong>Chicago, Milwaukee, and Charlotte</strong>, accompanied by historical map plates from the <strong>American Geographical Society Library (AGSL)</strong>.
+      This ratlas maps the spatial morphology, expansion rings, China Railway (12306) and municipal subway networks, and quantitative growth trajectories across <strong>47 diverse Chinese cities</strong> ranked by population, with global benchmarks in <strong>Chicago, Milwaukee, and Charlotte</strong>, accompanied by historical map plates from the <strong>American Geographical Society Library (AGSL)</strong> and an interactive <strong>UCSB Esri ArcGIS Web Map</strong>.
     </p>
     <div style="display: flex; gap: 0.75rem; margin-top: 1.5rem; flex-wrap: wrap;">
       <a href="cities.html" class="resource-btn" style="background: #943324; color: #fff; border-color: #943324; font-weight: 600;">Browse all 47 cities →</a>
       <a href="comparison.html" class="resource-btn" style="background: #1e3f34; color: #fff; border-color: #1e3f34; font-weight: 600;">US comparisons (Chicago, Milwaukee, Charlotte) →</a>
+      <a href="{ARCGIS_WEBMAP_ITEM_URL}" target="_blank" rel="noopener" class="resource-btn" style="background: #e8ded1; border-color: #943324; font-weight: 600;">UCSB Esri Web Map (post-AGSL) ↗</a>
       <a href="{GDRIVE_FOLDER_URL}" target="_blank" rel="noopener" class="resource-btn" style="background: #e8ded1; border-color: #943324; font-weight: 600;">AGSL historical map scans (Google Drive) ↗</a>
       <a href="methodology.html" class="resource-btn">Methodology & citations</a>
     </div>
@@ -1115,6 +1164,20 @@ agsl_showcase_section = f"""```{{=html}}
 </div>
 ```"""
 
+arcgis_webmap_section = f"""```{{=html}}
+<div class="agsl-box">
+  <div class="agsl-title">Interactive GIS: UCSB Urban Atlas Web Map (post-AGSL)</div>
+  <div class="agsl-desc">
+    Explore the live <strong>UCSB Esri ArcGIS Web Map</strong> (Item ID <code>{ARCGIS_WEBMAP_ID}</code>), featuring the verified <strong>Study Cities Feature Layer</strong> with DianPing commercial ranking indices, Russian topographical sheet coverage (<code>RU_topos</code>), Chinese city atlas indices (<code>ZH_CityAtlas</code>), and Planet satellite imagery.
+  </div>
+  <iframe class="arcgis-map-frame" src="{ARCGIS_WEBMAP_EMBED_URL}" title="UCSB Urban Atlas Web Map"></iframe>
+  <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+    <a href="{ARCGIS_WEBMAP_ITEM_URL}" target="_blank" rel="noopener" class="resource-btn" style="background: #943324; color: #fff; font-weight: 600;">Open full UCSB ArcGIS Online Web Map ↗</a>
+    <a href="https://services1.arcgis.com/4TXrdeWh0RyCqPgB/arcgis/rest/services/study_cities/FeatureServer/0" target="_blank" rel="noopener" class="resource-btn">ArcGIS REST API Endpoint ↗</a>
+  </div>
+</div>
+```"""
+
 index_qmd = f"""---
 title: "China Urban Growth Ratlas (1985–2015)"
 subtitle: "A Geospatial Exploration of 30 Years of Physical Expansion Across 47 Chinese Metropolises"
@@ -1137,13 +1200,19 @@ The map below displays all 47 cities in the ratlas across China, sized by **2020
 
 ---
 
-## 2. Archival map plates & historical scans
+## 2. Interactive UCSB Esri Web Map
+
+{arcgis_webmap_section}
+
+---
+
+## 3. Archival map plates & historical scans
 
 {agsl_showcase_section}
 
 ---
 
-## 3. High-speed rail network & urban hierarchy
+## 4. High-speed rail network & urban hierarchy
 
 China's High-Speed Rail grid physically stitched together regional capitals and secondary nodes, accelerating post-2005 outward expansion across the 184 major urban centers identified in the ArcGIS Online Big Cities layer:
 
@@ -1153,7 +1222,7 @@ China's High-Speed Rail grid physically stitched together regional capitals and 
 
 ---
 
-## 4. Key findings & national overview
+## 5. Key findings & national overview
 
 ::: {{.metric-grid}}
 ::: {{.metric-card}}
@@ -1219,7 +1288,7 @@ US Benchmarks
 
 ---
 
-## 5. Global points of comparison: US benchmark metropolises
+## 6. Global points of comparison: US benchmark metropolises
 
 How did China's 30-year urban expansion compare to Western metropolitan development? 
 To establish an objective international baseline, **Milwaukee**, **Chicago**, and **Charlotte** were incorporated into the ratlas using the exact same DLR WSF Evolution 30m satellite data:
@@ -1275,7 +1344,7 @@ To establish an objective international baseline, **Milwaukee**, **Chicago**, an
 
 ---
 
-## 6. Thirty-year growth multiplier rankings
+## 7. Thirty-year growth multiplier rankings
 
 Which cities experienced the highest relative spatial expansion between 1985 and 2015?
 
@@ -1285,7 +1354,7 @@ Which cities experienced the highest relative spatial expansion between 1985 and
 
 ---
 
-## 7. Interactive regional explorations
+## 8. Interactive regional explorations
 
 Select any region on the interactive map below to jump directly to its dedicated regional chapter, or explore via the region cards below:
 
@@ -1355,7 +1424,7 @@ Silk Road oasis towns, highland capitals, and desert gateways.
 
 ---
 
-## 8. Primary data sources & citations
+## 9. Primary data sources & citations
 
 This atlas synthesizes open geospatial and authoritative statistical datasets. Detailed academic citations, licensing terms, and analytical documentation are available in the [Methodology & Citations](methodology.html) chapter.
 
@@ -1364,6 +1433,7 @@ This atlas synthesizes open geospatial and authoritative statistical datasets. D
 | **World Settlement Footprint Evolution (WSF Evolution)** | German Aerospace Center (DLR) | 30m / 1985–2015 Annual | Primary spatial engine; identifies exact year of settlement detection | [DLR Geoservice](https://download.geoservice.dlr.de/WSF_EVO/) · Marconcini et al. (2020, *Sci. Data*) |
 | **National Railways (12306 / NRA)** | China Railway & National Railway Administration | Vector / 432 Lines, 3,300 Stations | National passenger rail backbone, high-speed lines & stations | China Railway 12306 Service System & NRA (2024) |
 | **City Subway Systems (AMap)** | AMap (高德地图) & MOT PRC | Vector / 15 Cities | Rapid transit network lines & stations for all metro-served cities | [AMap Subway Platform](http://map.amap.com/subway/index.html) · Ministry of Transport |
+| **UCSB Urban Atlas Web Map & Study Cities** | University of California, Santa Barbara (UCSB) | Interactive Web Map / Vector Points | DianPing commercial ranks, Russian topos, Chinese atlas indices & Planet imagery | [UCSB ArcGIS Web Map](https://ucsb.maps.arcgis.com/home/item.html?id={ARCGIS_WEBMAP_ID}#overview) · [Study Cities Service](https://services1.arcgis.com/4TXrdeWh0RyCqPgB/arcgis/rest/services/study_cities/FeatureServer/0) |
 | **Big Cities Points Layer** | Esri / ArcGIS Online | Vector Points / 184 Cities | National city hierarchy ranking (1–200) and tier-1 anchor points | [ArcGIS FeatureServer](https://services1.arcgis.com/4TXrdeWh0RyCqPgB/arcgis/rest/services/big_cities_points/FeatureServer) |
 | **Seventh National Population Census (七普 2020)** | National Bureau of Statistics of China (NBS) | Prefectural / 2020 | Primary ranking order (#1–#47) by permanent resident population | [NBS China Census Bulletin (2021)](http://www.stats.gov.cn/) |
 | **AGSL Historical Map Archive** | American Geographical Society Library (AGSL) | Scanned Sheets / High-Res | Archival ground-truth topographic sheets and municipal town plans | [AGSL Collection (Google Drive)]({GDRIVE_FOLDER_URL}) |
@@ -1374,7 +1444,7 @@ This atlas synthesizes open geospatial and authoritative statistical datasets. D
 ---
 
 ::: {{.caption-box}}
-**China Urban Growth Ratlas** · Built with R (`terra`, `sf`, `ggplot2`, `tidyterra`, `patchwork`) and Quarto. Data: German Aerospace Center (DLR) World Settlement Footprint Evolution (30m), 7th National Population Census (七普 2020), U.S. Census Bureau (2020), China Railway 12306 Network (NRA), AMap (高德地图) Subway Platform, Natural Earth, American Geographical Society Library (AGSL), ArcGIS Online Big Cities Points & GADM 4.1.
+**China Urban Growth Ratlas** · Built with R (`terra`, `sf`, `ggplot2`, `tidyterra`, `patchwork`) and Quarto. Data: German Aerospace Center (DLR) World Settlement Footprint Evolution (30m), 7th National Population Census (七普 2020), U.S. Census Bureau (2020), China Railway 12306 Network (NRA), AMap (高德地图) Subway Platform, Natural Earth, American Geographical Society Library (AGSL), UCSB ArcGIS Online Web Map (`{ARCGIS_WEBMAP_ID}`), ArcGIS Online Big Cities Points & GADM 4.1.
 :::
 """
 
