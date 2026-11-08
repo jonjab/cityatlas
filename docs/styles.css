@@ -1,207 +1,248 @@
-/* styles.css: Custom typography and styling for China Urban Growth Ratlas */
+/*-- scss:rules --*/
+
+/* styles.css: Tufte-inspired analytical dark mode monograph for China Urban Growth Ratlas */
 
 :root {
-  --primary: #0284c7;
-  --primary-glow: rgba(2, 132, 199, 0.25);
+  --primary: #38bdf8;
   --accent: #f59e0b;
   --bg-dark: #0b0f19;
-  --card-bg: #111827;
-  --border-color: #1f2937;
+  --card-bg: #0f1420;
+  --border-color: #1e293b;
+  --text-main: #e2e8f0;
   --text-muted: #94a3b8;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Droid Sans Fallback", sans-serif;
+  font-family: Georgia, Cambria, "Times New Roman", Times, "Droid Sans Fallback", serif;
   background-color: var(--bg-dark);
-  color: #e2e8f0;
+  color: var(--text-main);
+  line-height: 1.7;
+  font-size: 1.05rem;
+  letter-spacing: -0.003em;
 }
+
+/* Tufte Monograph Typography */
+h1, h2, h3, h4, h5, h6, .navbar-title, .navbar-brand {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: #f8fafc;
+}
+
+h1 { font-size: 2.2rem; margin-top: 1.5rem; margin-bottom: 1rem; }
+h2 { font-size: 1.6rem; margin-top: 2rem; margin-bottom: 0.75rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.3rem; }
+h3 { font-size: 1.25rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }
 
 .navbar {
   border-bottom: 1px solid var(--border-color);
-  background: rgba(11, 15, 25, 0.95) !important;
+  background: rgba(11, 15, 25, 0.98) !important;
   backdrop-filter: blur(8px);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 0.9rem;
 }
 
+/* Tufte Monograph Hero Banner: clean, flat, thin borders */
 .hero-banner {
-  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+  background: var(--card-bg);
   border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 2.5rem 2rem;
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+  padding: 2rem 2rem;
   margin-bottom: 2rem;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+  box-shadow: none;
 }
 
 .hero-title {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: #ffffff;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #f8fafc;
   margin-bottom: 0.5rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
 }
 
 .hero-subtitle {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   color: var(--text-muted);
-  max-width: 800px;
+  max-width: 850px;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
+/* Data-dense metric grids */
 .metric-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.75rem;
   margin: 1.5rem 0;
 }
 
 .metric-card {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
-  border-radius: 8px;
-  padding: 1rem 1.25rem;
-  text-align: center;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  border-radius: 4px;
+  padding: 0.85rem 1rem;
+  text-align: left;
+  transition: border-color 0.15s ease;
 }
 
 .metric-card:hover {
-  transform: translateY(-2px);
   border-color: var(--primary);
 }
 
 .metric-label {
-  font-size: 0.75rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 0.7rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   color: var(--text-muted);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.2rem;
 }
 
 .metric-val {
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: #ffffff;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #f8fafc;
+  font-variant-numeric: tabular-nums;
 }
 
 .metric-badge {
   display: inline-block;
-  padding: 0.25rem 0.5rem;
-  font-size: 0.8rem;
-  font-weight: 600;
-  border-radius: 4px;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.75rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 500;
+  border-radius: 3px;
 }
 
 .badge-gold {
-  background: rgba(245, 158, 11, 0.15);
+  background: rgba(245, 158, 11, 0.1);
   color: #fbbf24;
-  border: 1px solid rgba(245, 158, 11, 0.3);
+  border: 1px solid rgba(245, 158, 11, 0.25);
 }
 
+/* Precise map & figure containers */
 .map-container {
   background: #000000;
   border: 1px solid var(--border-color);
-  border-radius: 10px;
+  border-radius: 4px;
   overflow: hidden;
   margin: 1.5rem 0;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  box-shadow: none;
+  width: 100%;
 }
 
 .map-container img {
-  width: 100%;
-  height: auto;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
   display: block;
+  object-fit: contain;
 }
 
 .caption-box {
-  background: #0f172a;
+  background: var(--card-bg);
   border-top: 1px solid var(--border-color);
-  padding: 0.75rem 1rem;
+  padding: 0.65rem 1rem;
   font-size: 0.85rem;
   color: var(--text-muted);
+  font-style: italic;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .region-card {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
-  border-radius: 8px;
+  border-radius: 4px;
   padding: 1.25rem;
   margin-bottom: 1rem;
-  transition: all 0.2s ease;
+  transition: border-color 0.15s ease;
 }
 
 .region-card:hover {
   border-color: var(--primary);
-  box-shadow: 0 4px 12px var(--primary-glow);
 }
 
+/* Tufte Scholarly Tables */
 table {
   width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
+  border-collapse: collapse;
   margin: 1.5rem 0;
+  font-size: 0.92rem;
 }
 
 table th {
-  background: #1e293b;
-  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: transparent;
+  color: #f8fafc;
   font-weight: 600;
-  padding: 0.75rem 1rem;
-  border-bottom: 2px solid var(--border-color);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.5rem 0.75rem;
+  border-top: 2px solid var(--text-main);
+  border-bottom: 1px solid var(--border-color);
   text-align: left;
 }
 
 table td {
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 0.75rem;
   border-bottom: 1px solid var(--border-color);
   color: #cbd5e1;
+  font-variant-numeric: tabular-nums;
 }
 
 table tr:hover td {
-  background: rgba(2, 132, 199, 0.08);
+  background: rgba(56, 189, 248, 0.04);
 }
 
 .badge-cyan {
-  background: rgba(6, 182, 212, 0.15);
+  background: rgba(6, 182, 212, 0.1);
   color: #38bdf8;
-  border: 1px solid rgba(6, 182, 212, 0.3);
+  border: 1px solid rgba(6, 182, 212, 0.2);
 }
 
 .badge-blue {
-  background: rgba(59, 130, 246, 0.15);
+  background: rgba(59, 130, 246, 0.1);
   color: #60a5fa;
-  border: 1px solid rgba(59, 130, 246, 0.3);
+  border: 1px solid rgba(59, 130, 246, 0.2);
 }
 
 .badge-green {
-  background: rgba(16, 185, 129, 0.15);
+  background: rgba(16, 185, 129, 0.1);
   color: #34d399;
-  border: 1px solid rgba(16, 185, 129, 0.3);
+  border: 1px solid rgba(16, 185, 129, 0.2);
 }
 
 .resource-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  padding: 0.4rem 0.8rem;
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: #e2e8f0;
-  background: #1e293b;
-  border: 1px solid #334155;
-  border-radius: 6px;
+  padding: 0.3rem 0.65rem;
+  font-size: 0.8rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 400;
+  color: var(--text-main);
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: all 0.15s ease;
 }
 
 .resource-btn:hover {
-  background: #0284c7;
+  background: #1e293b;
   color: #ffffff;
-  border-color: #38bdf8;
-  transform: translateY(-1px);
+  border-color: var(--primary);
 }
 
 .wiki-card {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
-  border-radius: 8px;
+  border-radius: 4px;
   padding: 1.25rem;
   margin-bottom: 1rem;
 }
-

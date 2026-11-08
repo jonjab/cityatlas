@@ -175,8 +175,8 @@ Direct links to open knowledge, semantic geodata, and scanned map collections fo
 The following scanned historical maps and cartographic surveys covering **Zhangjiajie** are accessible on Wikimedia Commons:
 
 - [Hunan China map EN.svg](https://commons.wikimedia.org/wiki/File%3AHunan%20China%20map%20EN.svg) (Wikimedia Commons scanned asset)
-- [International Network of Geoparks map](https://commons.wikimedia.org/wiki/File%3AInternational%20Network%20of%20Geoparks%20map.jpg) (Wikimedia Commons scanned asset)
 - [Zhangjiajie-map](https://commons.wikimedia.org/wiki/File%3AZhangjiajie-map.png) (Wikimedia Commons scanned asset)
+- [International Network of Geoparks map](https://commons.wikimedia.org/wiki/File%3AInternational%20Network%20of%20Geoparks%20map.jpg) (Wikimedia Commons scanned asset)
 
 Additional scanned historical maps and topographic sheets can be found via the [Wikimedia Commons Scanned Maps Search](https://commons.wikimedia.org/w/index.php?search=Zhangjiajie+map&title=Special:MediaSearch&type=image).
 :::

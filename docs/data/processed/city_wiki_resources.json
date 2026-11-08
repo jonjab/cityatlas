@@ -443,11 +443,6 @@
     "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Huangshan+map&title=Special:MediaSearch&type=image",
     "scanned_maps": [
       {
-        "title": "International Network of Geoparks map",
-        "file_title": "File:International Network of Geoparks map.jpg",
-        "url": "https://commons.wikimedia.org/wiki/File%3AInternational%20Network%20of%20Geoparks%20map.jpg"
-      },
-      {
         "title": "Huangshan-map",
         "file_title": "File:Huangshan-map.png",
         "url": "https://commons.wikimedia.org/wiki/File%3AHuangshan-map.png"
@@ -456,6 +451,11 @@
         "title": "LocMap of WH Huangshan",
         "file_title": "File:LocMap of WH Huangshan.png",
         "url": "https://commons.wikimedia.org/wiki/File%3ALocMap%20of%20WH%20Huangshan.png"
+      },
+      {
+        "title": "International Network of Geoparks map",
+        "file_title": "File:International Network of Geoparks map.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AInternational%20Network%20of%20Geoparks%20map.jpg"
       }
     ]
   },
@@ -1302,6 +1302,16 @@
         "title": "Yíchang-map",
         "file_title": "File:Yíchang-map.png",
         "url": "https://commons.wikimedia.org/wiki/File%3AY%C3%ADchang-map.png"
+      },
+      {
+        "title": "Yidu administrative map",
+        "file_title": "File:Yidu administrative map.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AYidu%20administrative%20map.jpg"
+      },
+      {
+        "title": "388 of 'The Earth and its Inhabitants. The European section of the Universal Geography by E. Reclus. Edited by E. G. Ravenstein. Illustrated by ... engravings and maps' (11123519475)",
+        "file_title": "File:388 of 'The Earth and its Inhabitants. The European section of the Universal Geography by E. Reclus. Edited by E. G. Ravenstein. Illustrated by ... engravings and maps' (11123519475).jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3A388%20of%20%27The%20Earth%20and%20its%20Inhabitants.%20The%20European%20section%20of%20the%20Universal%20Geography%20by%20E.%20Reclus.%20Edited%20by%20E.%20G.%20Ravenstein.%20Illustrated%20by%20...%20engravings%20and%20maps%27%20%2811123519475%29.jpg"
       }
     ]
   },
@@ -1328,14 +1338,14 @@
         "url": "https://commons.wikimedia.org/wiki/File%3AHunan%20China%20map%20EN.svg"
       },
       {
-        "title": "International Network of Geoparks map",
-        "file_title": "File:International Network of Geoparks map.jpg",
-        "url": "https://commons.wikimedia.org/wiki/File%3AInternational%20Network%20of%20Geoparks%20map.jpg"
-      },
-      {
         "title": "Zhangjiajie-map",
         "file_title": "File:Zhangjiajie-map.png",
         "url": "https://commons.wikimedia.org/wiki/File%3AZhangjiajie-map.png"
+      },
+      {
+        "title": "International Network of Geoparks map",
+        "file_title": "File:International Network of Geoparks map.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File%3AInternational%20Network%20of%20Geoparks%20map.jpg"
       }
     ]
   },
@@ -1433,123 +1443,6 @@
         "title": "Zibo-map",
         "file_title": "File:Zibo-map.png",
         "url": "https://commons.wikimedia.org/wiki/File%3AZibo-map.png"
-      }
-    ]
-  },
-  "chicago": {
-    "id": "chicago",
-    "name_en": "Chicago",
-    "name_zh": "芝加哥",
-    "province_en": "United States",
-    "wikipedia_en_title": "Chicago",
-    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Chicago",
-    "wikipedia_zh_title": "芝加哥",
-    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E8%8A%9D%E5%8A%A0%E5%93%A5",
-    "wikidata_id": "Q1297",
-    "wikidata_url": "https://www.wikidata.org/wiki/Q1297",
-    "commons_map_category": "Category:Maps of Chicago",
-    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Chicago",
-    "commons_old_map_category": "Category:Old maps of Chicago",
-    "commons_old_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AOld%20maps%20of%20Chicago",
-    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Chicago%20map&title=Special:MediaSearch&type=image",
-    "scanned_maps": [
-      {
-        "title": "Chicago top down view",
-        "file_title": "File:Chicago top down view.png",
-        "url": "https://commons.wikimedia.org/wiki/File%3AChicago%20top%20down%20view.png"
-      },
-      {
-        "title": "Chicago Theatre blend",
-        "file_title": "File:Chicago Theatre blend.jpg",
-        "url": "https://commons.wikimedia.org/wiki/File%3AChicago%20Theatre%20blend.jpg"
-      },
-      {
-        "title": "Chicago sunrise 1",
-        "file_title": "File:Chicago sunrise 1.jpg",
-        "url": "https://commons.wikimedia.org/wiki/File%3AChicago%20sunrise%201.jpg"
-      },
-      {
-        "title": "Chicago Downtown Panorama",
-        "file_title": "File:Chicago Downtown Panorama.jpg",
-        "url": "https://commons.wikimedia.org/wiki/File%3AChicago%20Downtown%20Panorama.jpg"
-      }
-    ]
-  },
-  "milwaukee": {
-    "id": "milwaukee",
-    "name_en": "Milwaukee",
-    "name_zh": "密尔沃基",
-    "province_en": "United States",
-    "wikipedia_en_title": "Milwaukee",
-    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Milwaukee",
-    "wikipedia_zh_title": "密尔沃基",
-    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E5%AF%86%E5%B0%94%E6%B2%83%E5%9F%BA",
-    "wikidata_id": "Q37836",
-    "wikidata_url": "https://www.wikidata.org/wiki/Q37836",
-    "commons_map_category": "Category:Maps of Milwaukee",
-    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Milwaukee",
-    "commons_old_map_category": "Category:Old maps of Milwaukee",
-    "commons_old_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AOld%20maps%20of%20Milwaukee",
-    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Milwaukee%20map&title=Special:MediaSearch&type=image",
-    "scanned_maps": [
-      {
-        "title": "Water fountain near the art museum in Milwaukee, Wisconsin 6178",
-        "file_title": "File:Water fountain near the art museum in Milwaukee, Wisconsin 6178.jpg",
-        "url": "https://commons.wikimedia.org/wiki/File%3AWater%20fountain%20near%20the%20art%20museum%20in%20Milwaukee%2C%20Wisconsin%206178.jpg"
-      },
-      {
-        "title": "Milwaukee 05741u",
-        "file_title": "File:Milwaukee 05741u.jpg",
-        "url": "https://commons.wikimedia.org/wiki/File%3AMilwaukee%2005741u.jpg"
-      },
-      {
-        "title": "Map of Milwaukee Wards 1880",
-        "file_title": "File:Map of Milwaukee Wards 1880.png",
-        "url": "https://commons.wikimedia.org/wiki/File%3AMap%20of%20Milwaukee%20Wards%201880.png"
-      },
-      {
-        "title": "Milwaukee February 2024 5 (Milwaukee River and Milwaukee Skywalk)",
-        "file_title": "File:Milwaukee February 2024 5 (Milwaukee River and Milwaukee Skywalk).jpg",
-        "url": "https://commons.wikimedia.org/wiki/File%3AMilwaukee%20February%202024%205%20%28Milwaukee%20River%20and%20Milwaukee%20Skywalk%29.jpg"
-      }
-    ]
-  },
-  "charlotte": {
-    "id": "charlotte",
-    "name_en": "Charlotte",
-    "name_zh": "夏洛特",
-    "province_en": "United States",
-    "wikipedia_en_title": "Charlotte, North Carolina",
-    "wikipedia_en_url": "https://en.wikipedia.org/wiki/Charlotte%2C%20North%20Carolina",
-    "wikipedia_zh_title": "夏洛特 (北卡罗来纳州)",
-    "wikipedia_zh_url": "https://zh.wikipedia.org/wiki/%E5%A4%8F%E6%B4%9B%E7%89%B9%20%28%E5%8C%97%E5%8D%A1%E7%BD%97%E6%9D%A5%E7%BA%B3%E5%B7%9E%29",
-    "wikidata_id": "Q16565",
-    "wikidata_url": "https://www.wikidata.org/wiki/Q16565",
-    "commons_map_category": "Category:Maps of Charlotte, North Carolina",
-    "commons_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Charlotte%2C%20North%20Carolina",
-    "commons_old_map_category": "Category:Old maps of Charlotte, North Carolina",
-    "commons_old_map_category_url": "https://commons.wikimedia.org/wiki/Category%3AOld%20maps%20of%20Charlotte%2C%20North%20Carolina",
-    "commons_search_maps_url": "https://commons.wikimedia.org/w/index.php?search=Charlotte%20map&title=Special:MediaSearch&type=image",
-    "scanned_maps": [
-      {
-        "title": "No Kings Charlotte North Carolina 18 May 2025 - 32",
-        "file_title": "File:No Kings Charlotte North Carolina 18 May 2025 - 32.jpg",
-        "url": "https://commons.wikimedia.org/wiki/File%3ANo%20Kings%20Charlotte%20North%20Carolina%2018%20May%202025%20-%2032.jpg"
-      },
-      {
-        "title": "No Kings Charlotte North Carolina 18 May 2025 - 26",
-        "file_title": "File:No Kings Charlotte North Carolina 18 May 2025 - 26.jpg",
-        "url": "https://commons.wikimedia.org/wiki/File%3ANo%20Kings%20Charlotte%20North%20Carolina%2018%20May%202025%20-%2026.jpg"
-      },
-      {
-        "title": "No Kings Charlotte North Carolina 18 May 2025 - 10",
-        "file_title": "File:No Kings Charlotte North Carolina 18 May 2025 - 10.jpg",
-        "url": "https://commons.wikimedia.org/wiki/File%3ANo%20Kings%20Charlotte%20North%20Carolina%2018%20May%202025%20-%2010.jpg"
-      },
-      {
-        "title": "No Kings Charlotte North Carolina 18 May 2025 - 07",
-        "file_title": "File:No Kings Charlotte North Carolina 18 May 2025 - 07.jpg",
-        "url": "https://commons.wikimedia.org/wiki/File%3ANo%20Kings%20Charlotte%20North%20Carolina%2018%20May%202025%20-%2007.jpg"
       }
     ]
   }

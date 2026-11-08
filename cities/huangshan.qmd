@@ -174,9 +174,9 @@ Direct links to open knowledge, semantic geodata, and scanned map collections fo
 ::: {.callout-note title="Selected Scanned Historical Maps on Wikimedia Commons"}
 The following scanned historical maps and cartographic surveys covering **Huangshan** are accessible on Wikimedia Commons:
 
-- [International Network of Geoparks map](https://commons.wikimedia.org/wiki/File%3AInternational%20Network%20of%20Geoparks%20map.jpg) (Wikimedia Commons scanned asset)
 - [Huangshan-map](https://commons.wikimedia.org/wiki/File%3AHuangshan-map.png) (Wikimedia Commons scanned asset)
 - [LocMap of WH Huangshan](https://commons.wikimedia.org/wiki/File%3ALocMap%20of%20WH%20Huangshan.png) (Wikimedia Commons scanned asset)
+- [International Network of Geoparks map](https://commons.wikimedia.org/wiki/File%3AInternational%20Network%20of%20Geoparks%20map.jpg) (Wikimedia Commons scanned asset)
 
 Additional scanned historical maps and topographic sheets can be found via the [Wikimedia Commons Scanned Maps Search](https://commons.wikimedia.org/w/index.php?search=Huangshan+map&title=Special:MediaSearch&type=image).
 :::

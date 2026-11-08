@@ -616,11 +616,8 @@
     "hsr_segments": 0,
     "conventional_segments": 23,
     "station_count": 6,
-    "major_corridors": [],
-    "key_stations": [],
-    "has_subway": false,
-    "subway_lines_count": 0,
-    "subway_station_count": 0
+    "major_corridors": ["Metra Commuter Rail System", "Amtrak Midwest Hub Corridors", "BNSF Railway Mainline", "Union Pacific West/North Lines", "Norfolk Southern Chicago Terminal"],
+    "key_stations": ["Chicago Union Station", "Ogilvie Transportation Center", "Millennium Station", "LaSalle Street Station", "O'Hare Transit Center", "Midway Airport Station"]
   },
   "milwaukee": {
     "city_id": "milwaukee",
@@ -628,11 +625,8 @@
     "hsr_segments": 0,
     "conventional_segments": 3,
     "station_count": 2,
-    "major_corridors": [],
-    "key_stations": [],
-    "has_subway": false,
-    "subway_lines_count": 0,
-    "subway_station_count": 0
+    "major_corridors": ["Amtrak Hiawatha Corridor", "CPKC Mainline Corridor", "Union Pacific Lakeshore Line"],
+    "key_stations": ["Milwaukee Intermodal Station", "Milwaukee Airport Rail Station"]
   },
   "charlotte": {
     "city_id": "charlotte",
@@ -640,10 +634,7 @@
     "hsr_segments": 0,
     "conventional_segments": 4,
     "station_count": 5,
-    "major_corridors": [],
-    "key_stations": [],
-    "has_subway": false,
-    "subway_lines_count": 0,
-    "subway_station_count": 0
+    "major_corridors": ["CATS Lynx Blue Line Light Rail", "Norfolk Southern Piedmont Mainline", "CSX Transportation Charlotte Corridor"],
+    "key_stations": ["Charlotte Amtrak Station", "Charlotte Gateway Station", "CTC / Arena Station", "I-485 / South Blvd", "UNC Charlotte Station"]
   }
 }

@@ -10,185 +10,23 @@ format:
 <div class="hero-banner">
   <div style="max-width: 900px;">
     <h1 class="hero-title">China Urban Growth Ratlas</h1>
-    <h2 style="color: #f59e0b; font-size: 1.5rem; margin-top: -0.25rem; margin-bottom: 1rem;">中国城市空间扩展图集 · 1985–2015</h2>
+    <h2 style="color: #f59e0b; font-size: 1.4rem; margin-top: -0.2rem; margin-bottom: 0.75rem;">中国城市空间扩展图集 · 1985–2015</h2>
     <p class="hero-subtitle">
-      Between 1985 and 2015, the People's Republic of China underwent the largest physical urbanization process in human history. 
-      This ratlas maps the spatial morphology, expansion rings, China Railway (12306) and municipal subway networks, and quantitative growth trajectories across <strong>47 diverse Chinese cities</strong> ranked by population, with global benchmarks in <strong>Chicago, Milwaukee, and Charlotte</strong>.
+      Mapping 30 years of physical urbanization (1985–2015) across 47 Chinese cities (excluding tier-1 megacities) with cross-national benchmarks in Chicago, Milwaukee, and Charlotte.
     </p>
-    <div style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
-      <a href="cities.html" class="btn btn-primary" style="background: #0284c7; border: none; padding: 0.6rem 1.25rem; font-weight: 600;">Browse All 47 Cities →</a>
-      <a href="comparison.html" class="btn btn-primary" style="background: #f59e0b; color: #0b0f19; border: none; padding: 0.6rem 1.25rem; font-weight: 600;">US Comparisons (Chicago, Milwaukee, Charlotte) →</a>
-      <a href="methodology.html" class="btn btn-secondary" style="background: #1e293b; color: #cbd5e1; border: 1px solid #334155; padding: 0.6rem 1.25rem;">Methodology & Citations</a>
+    <div style="display: flex; gap: 1rem; margin-top: 1.25rem; flex-wrap: wrap;">
+      <a href="cities.html" class="resource-btn">Browse All 47 Cities →</a>
+      <a href="comparison.html" class="resource-btn">US Comparisons →</a>
+      <a href="methodology.html" class="resource-btn">Methodology</a>
     </div>
   </div>
 </div>
 ```
 
-::: {.callout-note appearance="simple" icon=true}
-## Scope & Sample Selection: Excluding Tier-1 Superstar Megacities
-The 47 cities in this atlas were deliberately selected to **exclude China's absolute largest tier-1 megacities** (specifically Beijing, Shanghai, Guangzhou, Chongqing, and Tianjin).
-
-By centering on dynamic provincial capitals (e.g., Chengdu, Wuhan, Xi'an, Zhengzhou), specialized manufacturing nodes (e.g., Shenzhen, Zhuhai, Taizhou, Zibo), ancient Silk Road oases (e.g., Kashgar, Hotan, Wuwei), and strategic border gateways (e.g., Dandong, Hunchun), this ratlas examines how physical urbanization and infrastructure modernization transformed the full depth of China's urban hierarchy beyond the global superstar metropolises.
-:::
-
-## Key Findings & National Overview
-
-::: {.metric-grid}
-::: {.metric-card}
-::: {.metric-label}
-Total Chinese Cities
-:::
-::: {.metric-val}
-47
-:::
-<div style="font-size: 0.8rem; color: #38bdf8;">Ranked by Population</div>
-:::
-
-::: {.metric-card}
-::: {.metric-label}
-Largest City (2020)
-:::
-::: {.metric-val}
-20.9 <span style="font-size: 1rem;">M</span>
-:::
-<div style="font-size: 0.8rem; color: #f59e0b;">Chengdu (成都市)</div>
-:::
-
-::: {.metric-card}
-::: {.metric-label}
-Peak Growth Multiple
-:::
-::: {.metric-val}
-9.0×
-:::
-<div style="font-size: 0.8rem; color: #f59e0b;">Heyuan (河源市)</div>
-:::
-
-::: {.metric-card}
-::: {.metric-label}
-Peak Area Expansion
-:::
-::: {.metric-val}
-+1,356 <span style="font-size: 1rem;">km²</span>
-:::
-<div style="font-size: 0.8rem; color: #10b981;">Chengdu (成都市)</div>
-:::
-
-::: {.metric-card}
-::: {.metric-label}
-Rail & Transit
-:::
-::: {.metric-val}
-12306 / AMap
-:::
-<div style="font-size: 0.8rem; color: #38bdf8;">432 National Lines + 15 Metro Cities</div>
-:::
-
-::: {.metric-card}
-::: {.metric-label}
-US Benchmarks
-:::
-::: {.metric-val}
-3 Cities
-:::
-<div style="font-size: 0.8rem; color: #f59e0b;">Chicago, Milwaukee, Charlotte</div>
-:::
-:::
-
----
-
-## National Urban Expansion & HOTOSM Railways Map
-
-The map below displays all 47 cities in the ratlas across China, sized by **2020 Census Population**, colored by **30-year growth multiplier**, overlaid with the **HOTOSM China Railways dataset (HDX)** and contextualized with **ArcGIS Online Big Cities Points**:
-
-::: {.map-container}
-!['China Urban Growth Ratlas National Overview & HOTOSM Railways'](output/maps/china_overview_map.png)
-:::
-
----
-
-## Global Points of Comparison: US Benchmark Metropolises
-
-How did China's 30-year urban expansion compare to Western metropolitan development? 
-To establish an objective international baseline, **Milwaukee**, **Chicago**, and **Charlotte** were incorporated into the ratlas using the exact same DLR WSF Evolution 30m satellite data:
-
-::: {.columns}
-
-::: {.column width="32%"}
-::: {.region-card}
-### [Chicago (芝加哥)](cities/chicago.html)
-**Mature Great Lakes Core** · Pop: **2.75M** (Metro: 9.61M)
-- **1985 Footprint**: 1,145.2 km² (larger than all 47 Chinese cities in 1985)
-- **2015 Footprint**: 1,349.6 km² (+204.4 km²)
-- **30-Year Multiplier**: <strong style="color: #38bdf8;">1.18×</strong> (CAGR: 0.55%)
-- **Comparative Peer**: Xi'an / Wuhan
-
-[Explore Chicago Maps & Analytics →](cities/chicago.html)
-:::
-:::
-
-::: {.column width="32%"}
-::: {.region-card}
-### [Milwaukee (密尔沃基)](cities/milwaukee.html)
-**Great Lakes Rust Belt** · Pop: **0.58M** (Metro: 1.57M)
-- **1985 Footprint**: 344.9 km² (comparable to Xi'an / Zhengzhou)
-- **2015 Footprint**: 436.1 km² (+91.2 km²)
-- **30-Year Multiplier**: <strong style="color: #38bdf8;">1.26×</strong> (CAGR: 0.78%)
-- **Comparative Peer**: Northeast Rust Belt (Fuxin / Dandong)
-
-[Explore Milwaukee Maps & Analytics →](cities/milwaukee.html)
-:::
-:::
-
-::: {.column width="32%"}
-::: {.region-card}
-### [Charlotte (夏洛特)](cities/charlotte.html)
-**Sunbelt Boomtown** · Pop: **0.87M** (Metro: 2.66M)
-- **1985 Footprint**: 208.0 km² (virtually identical to Chengdu: 208.1 km²)
-- **2015 Footprint**: 619.8 km² (+411.8 km²)
-- **30-Year Multiplier**: <strong style="color: #f59e0b;">2.98×</strong> (CAGR: 3.71%)
-- **Comparative Peer**: Chengdu (7.52× vs. Charlotte 2.98×)
-
-[Explore Charlotte Maps & Analytics →](cities/charlotte.html)
-:::
-:::
-
-:::
-
-::: {.map-container}
-!['Cross-National Expansion Trajectories: China vs. US Benchmarks'](output/plots/china_vs_us_comparison.png)
-:::
-
-[Read the Complete Cross-National Analysis in the US Comparisons Chapter →](comparison.html)
-
----
-
-## HOTOSM High-Speed Rail Network & Urban Hierarchy
-
-China's High-Speed Rail grid physically stitched together regional capitals and secondary nodes, accelerating post-2005 outward expansion across the 184 major urban centers identified in the ArcGIS Online Big Cities layer:
-
-::: {.map-container}
-!['HOTOSM China High-Speed Rail Network and Urban Hierarchy'](output/maps/china_hsr_overview.png)
-:::
-
----
-
-## 30-Year Growth Multiplier Rankings
-
-Which cities experienced the highest relative spatial expansion between 1985 and 2015?
-
-::: {.map-container}
-!['Top 25 Cities by 30-Year Urban Growth Multiple'](output/plots/national_growth_ranking.png)
-:::
-
----
-
-## Interactive Regional Explorations
-
-Click any region on the interactive map below to jump directly to its dedicated regional chapter, or explore via the region cards below:
+## Regional Overview
 
 ```{=html}
-<div style="position: relative; width: 100%; max-width: 1100px; margin: 1.5rem auto; border-radius: 10px; overflow: hidden; border: 1px solid #1f2937; box-shadow: 0 10px 30px rgba(0,0,0,0.7);">
+<div style="position: relative; width: 100%; max-width: 1100px; margin: 1.5rem auto; border-radius: 4px; overflow: hidden; border: 1px solid var(--border-color); background: #000;">
   <!-- Base Regional Map Graphic -->
   <img src="output/maps/china_regions_map.png" usemap="#chinaregions" alt="China Geographic Regions Map" style="width: 100%; height: auto; display: block;">
 
@@ -204,13 +42,13 @@ Click any region on the interactive map below to jump directly to its dedicated 
     <!-- Northeast Rust Belt -->
     <a href="regions/northeast.html" class="reg-link" title="Northeast Rust Belt (8 Cities)">
       <polygon class="reg-poly" points="1160,80 1560,80 1560,420 1200,450 1160,350" />
-      <text x="1350" y="240">Northeast Rust Belt →</text>
+      <text x="1350" y="240">Northeast →</text>
     </a>
 
     <!-- Yellow River & North Plain -->
     <a href="regions/northern_plains.html" class="reg-link" title="Yellow River & North Plain (11 Cities)">
       <polygon class="reg-poly" points="960,380 1260,380 1260,600 960,600" />
-      <text x="1110" y="490">North Plain & Bohai →</text>
+      <text x="1110" y="490">North Plain →</text>
     </a>
 
     <!-- Yangtze Delta & East -->
@@ -222,19 +60,19 @@ Click any region on the interactive map below to jump directly to its dedicated 
     <!-- Yangtze Basin & Central -->
     <a href="regions/yangtze_basin.html" class="reg-link" title="Yangtze Basin & Central (6 Cities)">
       <polygon class="reg-poly" points="760,590 1100,590 1100,780 760,780" />
-      <text x="930" y="690">Yangtze Basin & Central →</text>
+      <text x="930" y="690">Yangtze Basin →</text>
     </a>
 
     <!-- Pearl River & South Coast -->
     <a href="regions/coastal_south.html" class="reg-link" title="Pearl River & South Coast (6 Cities)">
       <polygon class="reg-poly" points="890,780 1230,780 1230,1020 890,1020" />
-      <text x="1060" y="900">Pearl River & South Coast →</text>
+      <text x="1060" y="900">Pearl River / South →</text>
     </a>
 
     <!-- Western Frontier & Steppe -->
     <a href="regions/western_frontier.html" class="reg-link" title="Western Frontier & Steppe (11 Cities)">
       <polygon class="reg-poly" points="50,180 960,180 820,950 50,700" />
-      <text x="480" y="460">Western Frontier & Steppe →</text>
+      <text x="480" y="460">Western Frontier →</text>
     </a>
   </svg>
 
@@ -245,10 +83,137 @@ Click any region on the interactive map below to jump directly to its dedicated 
     <area shape="poly" coords="1090,560,1260,560,1260,730,1090,730" href="regions/yangtze_delta.html" alt="Yangtze Delta & East">
     <area shape="poly" coords="760,590,1100,590,1100,780,760,780" href="regions/yangtze_basin.html" alt="Yangtze Basin & Central">
     <area shape="poly" coords="890,780,1230,780,1230,1020,890,1020" href="regions/coastal_south.html" alt="Pearl River & South Coast">
-    <area shape="poly" coords="50,180,960,180,820,950,50,700" href="regions/western_frontier.html" alt="Western Frontier & Steppe">
+    <area shape="poly> coords="50,180,960,180,820,950,50,700" href="regions/western_frontier.html" alt="Western Frontier & Steppe">
   </map>
 </div>
 ```
+
+---
+
+## National Metrics
+
+::: {.metric-grid}
+::: {.metric-card}
+::: {.metric-label}
+Cities
+:::
+::: {.metric-val}
+47
+:::
+<div style="font-size: 0.75rem; color: #38bdf8;">Excl. Tier-1 Megacities</div>
+:::
+
+::: {.metric-card}
+::: {.metric-label}
+Largest (2020)
+:::
+::: {.metric-val}
+20.9M
+:::
+<div style="font-size: 0.75rem; color: #f59e0b;">Chengdu (成都市)</div>
+:::
+
+::: {.metric-card}
+::: {.metric-label}
+Max Growth
+:::
+::: {.metric-val}
+9.0×
+:::
+<div style="font-size: 0.75rem; color: #f59e0b;">Heyuan (河源市)</div>
+:::
+
+::: {.metric-card}
+::: {.metric-label}
+Max Area Expansion
+:::
+::: {.metric-val}
++1,356 km²
+:::
+<div style="font-size: 0.75rem; color: #10b981;">Chengdu</div>
+:::
+
+::: {.metric-card}
+::: {.metric-label}
+Data Sources
+:::
+::: {.metric-val}
+DLR / 12306
+:::
+<div style="font-size: 0.75rem; color: #38bdf8;">WSF 30m · HDX Rail · AMap</div>
+:::
+
+::: {.metric-card}
+::: {.metric-label}
+US Baselines
+:::
+::: {.metric-val}
+3
+:::
+<div style="font-size: 0.75rem; color: #f59e0b;">Chicago, Milwaukee, Charlotte</div>
+:::
+:::
+
+---
+
+## National Overview & Railways
+
+::: {.map-container}
+!['China Urban Growth Ratlas National Overview & HOTOSM Railways'](output/maps/china_overview_map.png)
+:::
+
+---
+
+## Cross-National Comparison: China vs. US
+
+::: {.columns}
+
+::: {.column width="32%"}
+::: {.region-card}
+### [Chicago](cities/chicago.html)
+- **1985**: 1,145 km²
+- **2015**: 1,350 km²
+- **Multiplier**: **1.18×**
+:::
+:::
+
+::: {.column width="32%"}
+::: {.region-card}
+### [Milwaukee](cities/milwaukee.html)
+- **1985**: 345 km²
+- **2015**: 436 km²
+- **Multiplier**: **1.26×**
+:::
+:::
+
+::: {.column width="32%"}
+::: {.region-card}
+### [Charlotte](cities/charlotte.html)
+- **1985**: 208 km²
+- **2015**: 620 km²
+- **Multiplier**: **2.98×**
+:::
+:::
+
+:::
+
+::: {.map-container}
+!['Cross-National Expansion Trajectories: China vs. US Benchmarks'](output/plots/china_vs_us_comparison.png)
+:::
+
+---
+
+## High-Speed Rail & Growth Rankings
+
+::: {.map-container}
+!['HOTOSM China High-Speed Rail Network and Urban Hierarchy'](output/maps/china_hsr_overview.png)
+:::
+
+::: {.map-container}
+!['Top 25 Cities by 30-Year Urban Growth Multiple'](output/plots/national_growth_ranking.png)
+:::
+
+
 
 ::: {.columns}
 

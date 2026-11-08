@@ -18,11 +18,11 @@ format:
         Comparative Peer: <strong>Chengdu</strong>
       </p>
       <div style="margin-top: 0.75rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
-        <a href="https://en.wikipedia.org/wiki/Charlotte%2C%20North%20Carolina" target="_blank" rel="noopener" class="resource-btn">📖 Wikipedia (EN)</a>
-        <a href="https://zh.wikipedia.org/wiki/%E5%A4%8F%E6%B4%9B%E7%89%B9%20%28%E5%8C%97%E5%8D%A1%E7%BD%97%E6%9D%A5%E7%BA%B3%E5%B7%9E%29" target="_blank" rel="noopener" class="resource-btn">🌐 维基百科 (ZH)</a>
-        <a href="https://www.wikidata.org/wiki/Q16565" target="_blank" rel="noopener" class="resource-btn">🏷️ Wikidata (Q16565)</a>
-        <a href="https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Charlotte%2C%20North%20Carolina" target="_blank" rel="noopener" class="resource-btn">🗺️ Commons Maps</a>
-        <a href="https://commons.wikimedia.org/w/index.php?search=Charlotte%20map&title=Special:MediaSearch&type=image" target="_blank" rel="noopener" class="resource-btn">🔍 Scanned Maps</a>
+        <a href="https://en.wikipedia.org/wiki/Charlotte" target="_blank" rel="noopener" class="resource-btn">📖 Wikipedia (EN)</a>
+        <a href="https://zh.wikipedia.org/wiki/夏洛特" target="_blank" rel="noopener" class="resource-btn">🌐 维基百科 (ZH)</a>
+        <a href="https://www.wikidata.org" target="_blank" rel="noopener" class="resource-btn">🏷️ Wikidata (Q)</a>
+        <a href="https://commons.wikimedia.org/wiki/Category:Maps_of_Charlotte" target="_blank" rel="noopener" class="resource-btn">🗺️ Commons Maps</a>
+        <a href="https://commons.wikimedia.org/w/index.php?search=Charlotte+map" target="_blank" rel="noopener" class="resource-btn">🔍 Scanned Maps</a>
       </div>
     </div>
     <div style="text-align: right;">
@@ -171,11 +171,11 @@ Uniform-scale physical footprint progression maps tracking built-up settlement e
 
 Direct links to open knowledge, semantic geodata, and scanned map collections for **Charlotte**:
 
-- 📖 **English Wikipedia**: [Charlotte, North Carolina](https://en.wikipedia.org/wiki/Charlotte%2C%20North%20Carolina) — In-depth overview of history, urban development, demographic shifts, and regional governance.
-- 🌐 **Chinese Wikipedia (中文维基百科)**: [夏洛特 (北卡罗来纳州)](https://zh.wikipedia.org/wiki/%E5%A4%8F%E6%B4%9B%E7%89%B9%20%28%E5%8C%97%E5%8D%A1%E7%BD%97%E6%9D%A5%E7%BA%B3%E5%B7%9E%29) — Authoritative municipal boundaries, administrative subdivisions, and local transport infrastructure.
-- 🏷️ **Wikidata Knowledge Base**: [Q16565 (Charlotte)](https://www.wikidata.org/wiki/Q16565) — Semantic knowledge graph entity with geocoordinates, OpenStreetMap tags, and linked administrative entities.
-- 🗺️ **Wikimedia Commons Map Repository**: [Category:Maps of Charlotte, North Carolina](https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Charlotte%2C%20North%20Carolina) — Community-curated media repository containing thematic, administrative, and transport maps.
-- 🔍 **Scanned Maps & Historical Sheets Search**: [Explore scanned bitmap and topographic maps of Charlotte on Wikimedia Commons](https://commons.wikimedia.org/w/index.php?search=Charlotte%20map&title=Special:MediaSearch&type=image)
+- 📖 **English Wikipedia**: [Charlotte](https://en.wikipedia.org/wiki/Charlotte) — In-depth overview of history, urban development, demographic shifts, and regional governance.
+- 🌐 **Chinese Wikipedia (中文维基百科)**: [夏洛特](https://zh.wikipedia.org/wiki/夏洛特) — Authoritative municipal boundaries, administrative subdivisions, and local transport infrastructure.
+- 🏷️ **Wikidata Knowledge Base**: [Q (Charlotte)](https://www.wikidata.org) — Semantic knowledge graph entity with geocoordinates, OpenStreetMap tags, and linked administrative entities.
+- 🗺️ **Wikimedia Commons Map Repository**: [Maps of Charlotte](https://commons.wikimedia.org/wiki/Category:Maps_of_Charlotte) — Community-curated media repository containing thematic, administrative, and transport maps.
+- 🔍 **Scanned Maps & Historical Sheets Search**: [Explore scanned bitmap and topographic maps of Charlotte on Wikimedia Commons](https://commons.wikimedia.org/w/index.php?search=Charlotte+map)
 
 ---
 
