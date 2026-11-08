@@ -40,10 +40,10 @@ rcl_hero <- matrix(c(
 ), ncol = 3, byrow = TRUE)
 
 epoch_cols <- c(
-  "Pre-1985"   = "#F59E0B", # Amber gold
-  "1986–1995" = "#EF4444", # Crimson coral
-  "1996–2005" = "#06B6D4", # Electric cyan
-  "2006–2015" = "#10B981"  # Emerald green
+  "Pre-1985"   = "#c75c3d", # Wes Brick Red
+  "1986–1995" = "#2e5a48", # Wes Bottle Green
+  "1996–2005" = "#457b9d", # Wes Blue
+  "2006–2015" = "#e9c46a"  # Wes Ochre Gold
 )
 
 # ------------------------------------------------------------------------------
@@ -195,12 +195,12 @@ render_national_visuals <- function() {
   }
   
   region_palette <- c(
-    "Northeast Rust Belt" = "#3B82F6",       # Blue
-    "Yellow River & North Plain" = "#EAB308", # Amber Yellow
-    "Yangtze Delta & East" = "#10B981",       # Emerald Green
-    "Yangtze Basin & Central" = "#8B5CF6",    # Purple
-    "Pearl River & South Coast" = "#EC4899",   # Pink / Coral
-    "Western Frontier & Steppe" = "#F97316"   # Orange
+    "Northeast Rust Belt" = "#457b9d",       # Blue
+    "Yellow River & North Plain" = "#e9c46a", # Ochre Gold
+    "Yangtze Delta & East" = "#2e5a48",       # Bottle Green
+    "Yangtze Basin & Central" = "#9b5de5",    # Purple
+    "Pearl River & South Coast" = "#f72585",   # Pink / Coral
+    "Western Frontier & Steppe" = "#c75c3d"   # Brick Red
   )
   
   p_reg <- ggplot() +

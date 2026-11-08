@@ -176,7 +176,7 @@ Direct links to open knowledge, semantic geodata, and scanned map collections fo
 The following scanned historical maps and cartographic surveys covering **Guilin** are accessible on Wikimedia Commons:
 
 - [Gui lin-map ko](https://commons.wikimedia.org/wiki/File%3AGui%20lin-map%20ko.png) (Wikimedia Commons scanned asset)
-- [Lingqu Canal map](https://commons.wikimedia.org/wiki/File%3ALingqu%20Canal%20map.jpg) (Wikimedia Commons scanned asset)
+- [Lingqu map](https://commons.wikimedia.org/wiki/File%3ALingqu%20map.png) (Wikimedia Commons scanned asset)
 
 Additional scanned historical maps and topographic sheets can be found via the [Wikimedia Commons Scanned Maps Search](https://commons.wikimedia.org/w/index.php?search=Guilin+map&title=Special:MediaSearch&type=image).
 :::
