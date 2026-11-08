@@ -10,15 +10,16 @@ format:
 <div class="hero-banner">
   <div style="max-width: 900px;">
     <h1 class="hero-title">Points of Comparison: US Benchmark Metropolises</h1>
-    <h2 style="color: #f59e0b; font-size: 1.5rem; margin-top: -0.25rem; margin-bottom: 1rem;">国际城市空间扩展对照研究 · 芝加哥 · 密尔沃基 · 夏洛特</h2>
+    <h2 style="color: #1e3f34; font-size: 1.4rem; margin-top: -0.25rem; margin-bottom: 1rem; font-weight: normal; font-style: normal;">国际城市空间扩展对照研究 · 芝加哥 · 密尔沃基 · 夏洛特</h2>
     <p class="hero-subtitle">
       To contextualize the unprecedented speed, scale, and morphology of China's 30-year urban expansion, this chapter integrates three distinct American metropolitan archetypes—<strong>Chicago</strong>, <strong>Milwaukee</strong>, and <strong>Charlotte</strong>—analyzed using the exact same satellite observation engine: the German Aerospace Center (DLR) World Settlement Footprint Evolution (30m).
     </p>
-    <div style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
-      <a href="cities/chicago.html" class="btn btn-primary" style="background: #0284c7; border: none; padding: 0.5rem 1rem; font-weight: 600;">Explore Chicago →</a>
-      <a href="cities/milwaukee.html" class="btn btn-primary" style="background: #0284c7; border: none; padding: 0.5rem 1rem; font-weight: 600;">Explore Milwaukee →</a>
-      <a href="cities/charlotte.html" class="btn btn-primary" style="background: #0284c7; border: none; padding: 0.5rem 1rem; font-weight: 600;">Explore Charlotte →</a>
-      <a href="index.html" class="btn btn-secondary" style="background: #1e293b; color: #cbd5e1; border: 1px solid #334155; padding: 0.5rem 1rem;">Back to National Atlas</a>
+    <div style="display: flex; gap: 0.75rem; margin-top: 1.5rem; flex-wrap: wrap;">
+      <a href="cities/chicago.html" class="resource-btn">Explore Chicago →</a>
+      <a href="cities/milwaukee.html" class="resource-btn">Explore Milwaukee →</a>
+      <a href="cities/charlotte.html" class="resource-btn">Explore Charlotte →</a>
+      <a href="https://drive.google.com/drive/folders/1b-HupghVS7KQn4ZTvGjfOHFFMgPnH2KV?usp=sharing" target="_blank" rel="noopener" class="resource-btn" style="background: #e8ded1; border-color: #943324; font-weight: 600;">Browse AGSL map scans repository (Google Drive) ↗</a>
+      <a href="index.html" class="resource-btn">Back to national atlas</a>
     </div>
   </div>
 </div>
@@ -26,88 +27,52 @@ format:
 
 ```{=html}
 <div class="columns" style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem;">
-  <div style="flex: 1; min-width: 280px; background: #111827; border: 1px solid #1f2937; border-radius: 8px; padding: 1.25rem;">
+  <div style="flex: 1; min-width: 280px; background: #f4efe4; border: 1px solid #d6ccbe; border-radius: 4px; padding: 1.25rem;">
     <div style="display: flex; justify-content: space-between; align-items: center;">
-      <h3 style="margin: 0; color: #ffffff;"><a href="cities/chicago.html" style="color: #ffffff; text-decoration: none;">Chicago (芝加哥)</a></h3>
-      <span class="badge-gold" style="font-size: 0.8rem; padding: 0.2rem 0.5rem; border-radius: 4px;">1.18× Multiplier</span>
+      <h3 style="margin: 0; color: #943324;"><a href="cities/chicago.html" style="color: #943324; text-decoration: none;">Chicago (芝加哥)</a></h3>
+      <span class="badge-gold" style="font-size: 0.8rem; padding: 0.2rem 0.5rem; border-radius: 3px;">1.18× Multiplier</span>
     </div>
-    <p style="color: #94a3b8; font-size: 0.9rem; margin: 0.5rem 0;">Illinois · Great Lakes Core & Rail Hub · Pop: <strong>2.75M</strong> (Metro: 9.61M)</p>
-    <p style="color: #cbd5e1; font-size: 0.85rem; margin-bottom: 0.75rem;">1985 Footprint: <strong>1,145.2 km²</strong> (vast initial baseline) → 2015: <strong>1,349.6 km²</strong> (+204.4 km², 0.55% CAGR). Contrasts with explosive Chinese mega-expansion.</p>
-    <a href="cities/chicago.html" class="btn btn-sm" style="color: #38bdf8; text-decoration: none; font-size: 0.85rem; font-weight: 600;">Explore Chicago Map Suite →</a>
+    <p style="color: #5e524a; font-size: 0.9rem; margin: 0.5rem 0;">Illinois · Great Lakes Core & Rail Hub · Pop: <strong>2.75M</strong> (Metro: 9.61M)</p>
+    <p style="color: #221d1a; font-size: 0.85rem; margin-bottom: 0.75rem;">1985 Footprint: <strong>1,145.2 km²</strong> (vast initial baseline) → 2015: <strong>1,349.6 km²</strong> (+204.4 km², 0.55% CAGR). Contrasts with explosive Chinese mega-expansion.</p>
+    <a href="cities/chicago.html" style="color: #943324; font-weight: 600; font-size: 0.85rem;">Explore Chicago Map Suite →</a>
   </div>
-  <div style="flex: 1; min-width: 280px; background: #111827; border: 1px solid #1f2937; border-radius: 8px; padding: 1.25rem;">
+  <div style="flex: 1; min-width: 280px; background: #f4efe4; border: 1px solid #d6ccbe; border-radius: 4px; padding: 1.25rem;">
     <div style="display: flex; justify-content: space-between; align-items: center;">
-      <h3 style="margin: 0; color: #ffffff;"><a href="cities/milwaukee.html" style="color: #ffffff; text-decoration: none;">Milwaukee (密尔沃基)</a></h3>
-      <span class="badge-gold" style="font-size: 0.8rem; padding: 0.2rem 0.5rem; border-radius: 4px;">1.26× Multiplier</span>
+      <h3 style="margin: 0; color: #943324;"><a href="cities/milwaukee.html" style="color: #943324; text-decoration: none;">Milwaukee (密尔沃基)</a></h3>
+      <span class="badge-gold" style="font-size: 0.8rem; padding: 0.2rem 0.5rem; border-radius: 3px;">1.26× Multiplier</span>
     </div>
-    <p style="color: #94a3b8; font-size: 0.9rem; margin: 0.5rem 0;">Wisconsin · Great Lakes Rust Belt · Pop: <strong>0.58M</strong> (Metro: 1.57M)</p>
-    <p style="color: #cbd5e1; font-size: 0.85rem; margin-bottom: 0.75rem;">1985 Footprint: <strong>344.9 km²</strong> → 2015: <strong>436.1 km²</strong> (+91.2 km², 0.78% CAGR). Post-industrial stability directly paralleling Northeast China's 43°N belt.</p>
-    <a href="cities/milwaukee.html" class="btn btn-sm" style="color: #38bdf8; text-decoration: none; font-size: 0.85rem; font-weight: 600;">Explore Milwaukee Map Suite →</a>
+    <p style="color: #5e524a; font-size: 0.9rem; margin: 0.5rem 0;">Wisconsin · Great Lakes Rust Belt · Pop: <strong>0.58M</strong> (Metro: 1.57M)</p>
+    <p style="color: #221d1a; font-size: 0.85rem; margin-bottom: 0.75rem;">1985 Footprint: <strong>344.9 km²</strong> → 2015: <strong>436.1 km²</strong> (+91.2 km², 0.78% CAGR). Post-industrial stability directly paralleling Northeast China's 43°N belt.</p>
+    <a href="cities/milwaukee.html" style="color: #943324; font-weight: 600; font-size: 0.85rem;">Explore Milwaukee Map Suite →</a>
   </div>
-  <div style="flex: 1; min-width: 280px; background: #111827; border: 1px solid #1f2937; border-radius: 8px; padding: 1.25rem;">
+  <div style="flex: 1; min-width: 280px; background: #f4efe4; border: 1px solid #d6ccbe; border-radius: 4px; padding: 1.25rem;">
     <div style="display: flex; justify-content: space-between; align-items: center;">
-      <h3 style="margin: 0; color: #ffffff;"><a href="cities/charlotte.html" style="color: #ffffff; text-decoration: none;">Charlotte (夏洛特)</a></h3>
-      <span class="badge-gold" style="font-size: 0.8rem; padding: 0.2rem 0.5rem; border-radius: 4px;">2.98× Multiplier</span>
+      <h3 style="margin: 0; color: #943324;"><a href="cities/charlotte.html" style="color: #943324; text-decoration: none;">Charlotte (夏洛特)</a></h3>
+      <span class="badge-gold" style="font-size: 0.8rem; padding: 0.2rem 0.5rem; border-radius: 3px;">2.98× Multiplier</span>
     </div>
-    <p style="color: #94a3b8; font-size: 0.9rem; margin: 0.5rem 0;">North Carolina · Sunbelt Financial Hub · Pop: <strong>0.87M</strong> (Metro: 2.66M)</p>
-    <p style="color: #cbd5e1; font-size: 0.85rem; margin-bottom: 0.75rem;">1985 Footprint: <strong>208.0 km²</strong> (identical to Chengdu: 208.1 km²) → 2015: <strong>619.8 km²</strong> (+411.8 km²). Charlotte tripled, but Chengdu surged 7.5× to 1,564 km²!</p>
-    <a href="cities/charlotte.html" class="btn btn-sm" style="color: #38bdf8; text-decoration: none; font-size: 0.85rem; font-weight: 600;">Explore Charlotte Map Suite →</a>
+    <p style="color: #5e524a; font-size: 0.9rem; margin: 0.5rem 0;">North Carolina · Sunbelt Financial Hub · Pop: <strong>0.87M</strong> (Metro: 2.66M)</p>
+    <p style="color: #221d1a; font-size: 0.85rem; margin-bottom: 0.75rem;">1985 Footprint: <strong>208.0 km²</strong> (identical to Chengdu: 208.1 km²) → 2015: <strong>619.8 km²</strong> (+411.8 km²). Charlotte tripled, but Chengdu surged 7.5× to 1,564 km²!</p>
+    <a href="cities/charlotte.html" style="color: #943324; font-weight: 600; font-size: 0.85rem;">Explore Charlotte Map Suite →</a>
   </div>
 </div>
 ```
 
 ::: {.callout-note appearance="simple" icon=true}
-## Methodological Rigor: Uniform Global Satellite Detection
+## Methodological rigor: Uniform global satellite detection
 Unlike census boundaries or municipal administrative definitions—which differ radically between nations—the **DLR World Settlement Footprint Evolution (WSF Evolution)** operates on a unified, objective 30-meter physical detection algorithm globally. Every pixel reflects actual imperviously paved and built physical structures detected through joint optical Landsat and radar satellite observations from 1985 to 2015.
 :::
 
-## Key Comparative Findings & Analytical Insights
+## 1. Cross-national expansion trajectories
 
-::: {.metric-grid}
-::: {.metric-card}
-::: {.metric-label}
-The Charlotte–Chengdu Baseline
-:::
-::: {.metric-val}
-~208 <span style="font-size: 1rem;">km²</span>
-:::
-<div style="font-size: 0.8rem; color: #f59e0b;">Identical 1985 Footprints</div>
-:::
+The plot below charts the 30-year cumulative built-up area trajectories for Charlotte, Chicago, and Milwaukee plotted directly against key Chinese metropolises (Chengdu, Xi'an, and Dandong):
 
-::: {.metric-card}
-::: {.metric-label}
-The 2015 Divergence
-:::
-::: {.metric-val}
-2.5× <span style="font-size: 1rem;">Pace</span>
-:::
-<div style="font-size: 0.8rem; color: #10b981;">Chengdu 7.52× vs. Charlotte 2.98×</div>
-:::
-
-::: {.metric-card}
-::: {.metric-label}
-Vast Initial Scale
-:::
-::: {.metric-val}
-1,145 <span style="font-size: 1rem;">km²</span>
-:::
-<div style="font-size: 0.8rem; color: #38bdf8;">Chicago 1985 Built Colossus</div>
-:::
-
-::: {.metric-card}
-::: {.metric-label}
-Rust Belt Multiplier
-:::
-::: {.metric-val}
-1.26× vs 2.62×
-:::
-<div style="font-size: 0.8rem; color: #a855f7;">Milwaukee vs. Harbin</div>
-:::
+::: {.map-container}
+!['Cross-national expansion trajectories: China vs. US benchmarks'](output/plots/china_vs_us_comparison.png)
 :::
 
 ---
 
-## 1. The Charlotte vs. Chengdu Paradox
+## 2. The Charlotte vs. Chengdu paradox
 
 Perhaps the single most illuminating comparison in this entire project is the trajectory of **Charlotte, North Carolina** versus **Chengdu, Sichuan**:
 
@@ -124,22 +89,12 @@ Chengdu added **over three times more new built land** than Charlotte over the i
 
 ---
 
-## 2. Cross-National Expansion Trajectories
-
-The plot below charts the 30-year cumulative built-up area trajectories for Charlotte, Chicago, and Milwaukee plotted directly against key Chinese metropolises (Chengdu, Xi'an, and Dandong):
-
-::: {.map-container}
-!['The Urban Growth Rings: Hotan'](../output/maps/charlotte_hero.png)
-:::
-
----
-
-## 3. Growth Multiplier Comparison: American Stability vs. Chinese Speed
+## 3. Growth multiplier comparison: American stability vs. Chinese speed
 
 How does the relative expansion multiple (2015 footprint ÷ 1985 footprint) compare across national contexts?
 
 ::: {.map-container}
-!['30-Year Growth Multiplier: China Ratlas vs. US Benchmarks'](output/plots/comparison_growth_multipliers.png)
+!['Thirty-year growth multipliers: China ratlas vs. US benchmarks'](output/plots/comparison_growth_multipliers.png)
 :::
 
 - **American Growth Multipliers**: Clustered narrowly between **1.18×** (Chicago) and **2.98×** (Charlotte). Even rapidly sprawling American cities rarely tripled their built footprint over 1985–2015.
@@ -147,7 +102,7 @@ How does the relative expansion multiple (2015 footprint ÷ 1985 footprint) comp
 
 ---
 
-## 4. Master Comparative Matrix (US Benchmarks & Chinese Peers)
+## 4. Master comparative matrix (US benchmarks & Chinese peers)
 
 The table below contrasts the quantitative spatial indicators of Chicago, Milwaukee, and Charlotte alongside selected Chinese cities spanning diverse regions and growth tiers:
 
@@ -167,7 +122,7 @@ The table below contrasts the quantitative spatial indicators of Chicago, Milwau
 
 ---
 
-## 5. Summary of the Three US Benchmark Archetypes
+## 5. Summary of the three US benchmark archetypes
 
 :::: {.columns}
 
@@ -212,5 +167,5 @@ The table below contrasts the quantitative spatial indicators of Chicago, Milwau
 ---
 
 ::: {.caption-box}
-**Data Sources**: German Aerospace Center (DLR) World Settlement Footprint Evolution 30m (Marconcini et al., 2020) · U.S. Census Bureau (2020 Decennial Census) · 7th National Population Census of China (2020) · Natural Earth 10m Railroads · HOTOSM Railways of China.
+**Data Sources**: German Aerospace Center (DLR) World Settlement Footprint Evolution 30m (Marconcini et al., 2020) · U.S. Census Bureau (2020 Decennial Census) · 7th National Population Census of China (2020) · Natural Earth 10m Railroads · American Geographical Society Library (AGSL) · HOTOSM Railways of China.
 :::

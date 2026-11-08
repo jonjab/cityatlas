@@ -8,12 +8,15 @@ format:
 
 ```{=html}
 <div class="hero-banner">
-  <h1 style="color: #ffffff; margin-bottom: 0.5rem;">Yangtze Basin & Central Metropolises <span style="color: #f59e0b;">长江流域与华中特大城市</span></h1>
-  <p style="color: #cbd5e1; font-size: 1.1rem; margin: 0;">Mega-hubs along the Yangtze River corridor and Sichuan Basin, experiencing massive inland infrastructure and concentric metropolitan sprawl.</p>
+  <h1 class="hero-title" style="margin-bottom: 0.5rem;">Yangtze Basin & Central Metropolises <span style="color: #1e3f34; font-weight: normal; font-style: normal;">长江流域与华中特大城市</span></h1>
+  <p class="hero-subtitle">Mega-hubs along the Yangtze River corridor and Sichuan Basin, experiencing massive inland infrastructure and concentric metropolitan sprawl.</p>
+  <div style="margin-top: 1rem;">
+    <a href="https://drive.google.com/drive/folders/1b-HupghVS7KQn4ZTvGjfOHFFMgPnH2KV?usp=sharing" target="_blank" rel="noopener" class="resource-btn" style="background: #e8ded1; border-color: #943324; font-weight: 600;">Browse AGSL historical scans for this region ↗</a>
+  </div>
 </div>
 ```
 
-## Regional Member Cities (Ranked by Population)
+## Regional member cities (ranked by population)
 
 | Pop Rank | City | Chinese | Province | Population | ArcGIS Rank | 1985 Area | 2015 Area | Net Gain | Multiplier | CAGR |
 |:---:|:---|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -27,12 +30,12 @@ format:
 
 ---
 
-## Member City Profiles
+## Member city profiles
 
 
 ::: {.region-card}
 ### [Chengdu (成都市)](../cities/chengdu.html)
-**Sichuan Province** · Population: <strong style="color: #38bdf8;">20.94 Million</strong> (Rank #1) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #f59e0b;">7.52×</strong>
+**Sichuan Province** · Population: <strong style="color: #943324;">20.94 Million</strong> (Rank #1) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #1e3f34;">7.52×</strong>
 
 - **1985 Footprint**: 208.06 km²
 - **2015 Footprint**: 1564.15 km² (Net expansion: +1356.09 km²)
@@ -43,7 +46,7 @@ format:
 
 ::: {.region-card}
 ### [Wuhan (武汉市)](../cities/wuhan.html)
-**Hubei Province** · Population: <strong style="color: #38bdf8;">12.33 Million</strong> (Rank #5) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #f59e0b;">3.85×</strong>
+**Hubei Province** · Population: <strong style="color: #943324;">12.33 Million</strong> (Rank #5) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #1e3f34;">3.85×</strong>
 
 - **1985 Footprint**: 279.63 km²
 - **2015 Footprint**: 1077.9 km² (Net expansion: +798.27 km²)
@@ -54,7 +57,7 @@ format:
 
 ::: {.region-card}
 ### [Nanchang (南昌市)](../cities/nanchang.html)
-**Jiangxi Province** · Population: <strong style="color: #38bdf8;">6.26 Million</strong> (Rank #12) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #f59e0b;">3.4×</strong>
+**Jiangxi Province** · Population: <strong style="color: #943324;">6.26 Million</strong> (Rank #12) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #1e3f34;">3.4×</strong>
 
 - **1985 Footprint**: 178.79 km²
 - **2015 Footprint**: 608.57 km² (Net expansion: +429.78 km²)
@@ -65,7 +68,7 @@ format:
 
 ::: {.region-card}
 ### [Luzhou (泸州市)](../cities/luzhou.html)
-**Sichuan Province** · Population: <strong style="color: #38bdf8;">4.25 Million</strong> (Rank #21) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #f59e0b;">6.17×</strong>
+**Sichuan Province** · Population: <strong style="color: #943324;">4.25 Million</strong> (Rank #21) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #1e3f34;">6.17×</strong>
 
 - **1985 Footprint**: 22.7 km²
 - **2015 Footprint**: 140.03 km² (Net expansion: +117.33 km²)
@@ -76,7 +79,7 @@ format:
 
 ::: {.region-card}
 ### [Yichang (宜昌市)](../cities/yichang.html)
-**Hubei Province** · Population: <strong style="color: #38bdf8;">3.92 Million</strong> (Rank #24) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #f59e0b;">3.91×</strong>
+**Hubei Province** · Population: <strong style="color: #943324;">3.92 Million</strong> (Rank #24) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #1e3f34;">3.91×</strong>
 
 - **1985 Footprint**: 45.63 km²
 - **2015 Footprint**: 178.59 km² (Net expansion: +132.96 km²)
@@ -87,7 +90,7 @@ format:
 
 ::: {.region-card}
 ### [Zhangjiajie (张家界市)](../cities/zhangjiajie.html)
-**Hunan Province** · Population: <strong style="color: #38bdf8;">1.52 Million</strong> (Rank #38) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #f59e0b;">3.46×</strong>
+**Hunan Province** · Population: <strong style="color: #943324;">1.52 Million</strong> (Rank #38) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #1e3f34;">3.46×</strong>
 
 - **1985 Footprint**: 18.13 km²
 - **2015 Footprint**: 62.73 km² (Net expansion: +44.6 km²)
@@ -100,5 +103,5 @@ format:
 ---
 
 ::: {.caption-box}
-**Data Sources**: DLR World Settlement Footprint Evolution 30m (Marconcini et al., 2020) · 7th National Population Census of China (2020) · ArcGIS Online Big Cities Points · HOTOSM Railways of China (HDX) · GADM 4.1.
+**Data Sources**: DLR World Settlement Footprint Evolution 30m (Marconcini et al., 2020) · 7th National Population Census of China (2020) · ArcGIS Online Big Cities Points · HOTOSM Railways of China (HDX) · GADM 4.1 · American Geographical Society Library (AGSL).
 :::

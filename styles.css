@@ -1,148 +1,144 @@
 /*-- scss:rules --*/
 
-/* styles.css: Wes Anderson-inspired whimsical cinematic monograph for China Urban Growth Ratlas */
+/* styles.css: McSweeney's literary journal & map-forward monograph style */
 
 :root {
-  --primary: #c75c3d;      /* Rusty Brick Red / Darjeeling Limited */
-  --accent: #d8a47f;       /* Grand Budapest Pastel Ochre / Gold */
-  --bg-dark: #fcfaf2;      /* Cream / Warm Parchment Paper Background */
-  --card-bg: #f4eee1;      /* Soft Warm Card Background */
-  --border-color: #d2c5b4; /* Muted Sepia Border */
-  --text-main: #2c2522;    /* Deep Espresso / Charcoal Text */
-  --text-muted: #6b5b52;   /* Muted Terracotta Brown */
+  --primary: #943324;       /* Deep brick / crimson bookcloth */
+  --accent: #1e3f34;        /* Deep forest green */
+  --bg-dark: #fbf9f4;       /* Rich warm ivory / newsprint paper */
+  --card-bg: #f4efe4;       /* Antique warm paper card */
+  --border-color: #d6ccbe;  /* Fine bookbinder sepia rule */
+  --text-main: #221d1a;     /* Deep printer ink black/espresso */
+  --text-muted: #5e524a;    /* Refined warm slate / lead type */
+  --link-color: #8c2d19;    /* Classical rubricated title ink */
 }
 
 body {
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Droid Sans Fallback", serif;
+  font-family: "Hoefler Text", "Baskerville", "Garamond", Georgia, Cambria, "Times New Roman", Times, "Droid Sans Fallback", serif;
   background-color: var(--bg-dark);
   color: var(--text-main);
   line-height: 1.7;
   font-size: 1.05rem;
-  letter-spacing: -0.003em;
+  letter-spacing: 0.005em;
 }
 
-/* Wes Anderson Cinematic Typography & Banners */
+/* McSweeney's Typography: Elegant serif titles, sentence case, subtle italicization, rule accents */
 h1, h2, h3, h4, h5, h6, .navbar-title, .navbar-brand {
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  color: #1a1512;
-  text-transform: uppercase;
+  font-family: "Hoefler Text", "Baskerville", "Garamond", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: normal;
+  color: var(--text-main);
+  text-transform: none; /* No forced allcaps */
+  letter-spacing: normal;
 }
 
-h1 { font-size: 2.2rem; margin-top: 1.5rem; margin-bottom: 1rem; color: #a63a2b; }
-h2 { font-size: 1.6rem; margin-top: 2rem; margin-bottom: 0.75rem; border-bottom: 2px solid var(--primary); padding-bottom: 0.3rem; color: #2e5a48; }
-h3 { font-size: 1.25rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: #c75c3d; }
+h1 {
+  font-size: 2.3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--primary);
+  font-style: italic;
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
 
+h2 {
+  font-size: 1.55rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.35rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+  font-style: italic;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: #55190b;
+}
+
+/* Navbar */
 .navbar {
-  border-bottom: 2px solid var(--primary);
-  background: rgba(244, 238, 225, 0.95) !important;
+  border-bottom: 2px solid var(--border-color);
+  background: rgba(251, 249, 244, 0.98) !important;
   backdrop-filter: blur(8px);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 0.9rem;
+  font-family: "Hoefler Text", Georgia, Cambria, serif;
+  font-size: 0.95rem;
+}
+
+.navbar .navbar-brand {
+  font-size: 1.15rem;
+  font-style: italic;
+  font-weight: bold;
+  color: var(--primary) !important;
 }
 
 .navbar .nav-link {
-  color: #2c2522 !important;
-  font-weight: 600;
+  color: var(--text-main) !important;
+  font-weight: 500;
 }
 
 .navbar .nav-link:hover {
-  color: #c75c3d !important;
+  color: var(--primary) !important;
 }
 
-/* Wes Anderson Cinematic Hero Banner: symmetry, thin borders, distinctive colored side bar */
+/* McSweeney's Monograph Hero: Literary header with rule ornament */
 .hero-banner {
   background: var(--card-bg);
-  border: 2px solid var(--primary);
-  border-left: 6px solid #2e5a48; /* Deep Wes Anderson Bottle Green */
-  border-radius: 6px;
-  padding: 2.5rem 2.5rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 12px rgba(199, 92, 61, 0.08);
+  border: 1px solid var(--border-color);
+  border-top: 3px double var(--primary);
+  border-bottom: 3px double var(--primary);
+  border-radius: 2px;
+  padding: 2rem 2.2rem;
+  margin-bottom: 1.75rem;
+  box-shadow: 0 1px 4px rgba(34, 29, 26, 0.05);
 }
 
 .hero-title {
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: "Hoefler Text", "Baskerville", Georgia, serif;
   font-size: 2.4rem;
-  font-weight: 700;
-  color: #a63a2b;
-  margin-bottom: 0.5rem;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+  font-style: italic;
+  font-weight: bold;
+  color: var(--primary);
+  margin-bottom: 0.4rem;
+  text-transform: none;
 }
 
 .hero-subtitle {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--text-muted);
-  max-width: 850px;
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  max-width: 900px;
+  font-style: italic;
+  font-family: Georgia, Cambria, serif;
 }
 
-/* Data-dense metric grids */
-.metric-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 0.85rem;
-  margin: 1.5rem 0;
+/* Map Forward Visual Priority */
+.map-forward-hero {
+  margin: 1.25rem 0 2rem 0;
 }
 
-.metric-card {
-  background: var(--card-bg);
-  border: 1.5px solid var(--border-color);
-  border-radius: 6px;
-  padding: 0.95rem 1.1rem;
-  text-align: left;
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 6px rgba(44, 37, 34, 0.04);
-}
-
-.metric-card:hover {
-  border-color: var(--primary);
-  transform: translateY(-2px);
-}
-
-.metric-label {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: #6b5b52;
-  margin-bottom: 0.3rem;
-  font-weight: 700;
-}
-
-.metric-val {
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #a63a2b;
-  font-variant-numeric: tabular-nums;
-}
-
-.metric-badge {
-  display: inline-block;
-  padding: 0.2rem 0.5rem;
-  font-size: 0.75rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-weight: 600;
-  border-radius: 3px;
-}
-
-.badge-gold {
-  background: #f4d06f;
-  color: #3e3229;
-  border: 1px solid #d8a47f;
-}
-
-/* Precise map & figure containers */
 .map-container {
-  background: #2c2522;
-  border: 2px solid var(--primary);
-  border-radius: 6px;
+  background: #1a1614;
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
   overflow: hidden;
-  margin: 1.5rem 0;
-  box-shadow: 0 6px 16px rgba(44, 37, 34, 0.12);
+  margin: 1.25rem 0 1.5rem 0;
+  box-shadow: 0 4px 14px rgba(34, 29, 26, 0.12);
   width: 100%;
 }
 
@@ -156,117 +152,226 @@ h3 { font-size: 1.25rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: #c75c
 
 .caption-box {
   background: var(--card-bg);
-  border-top: 1.5px solid var(--border-color);
-  padding: 0.75rem 1.1rem;
+  border-top: 1px solid var(--border-color);
+  padding: 0.6rem 1rem;
   font-size: 0.88rem;
   color: var(--text-muted);
   font-style: italic;
   width: 100%;
   box-sizing: border-box;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
 }
 
+/* AGSL Historical Map Scan Showcase Box */
+.agsl-box {
+  background: #fdfaf3;
+  border: 2px solid #b89c72;
+  border-left: 6px solid var(--primary);
+  border-radius: 4px;
+  padding: 1.5rem 1.6rem;
+  margin: 1.5rem 0 2rem 0;
+  box-shadow: 0 3px 10px rgba(78, 62, 45, 0.07);
+}
+
+.agsl-title {
+  font-family: "Hoefler Text", Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.agsl-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  line-height: 1.55;
+}
+
+.agsl-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.75rem;
+}
+
+.agsl-card {
+  background: #f6efe0;
+  border: 1px solid #c9bea9;
+  border-radius: 3px;
+  padding: 0.75rem 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  transition: all 0.15s ease;
+}
+
+.agsl-card:hover {
+  background: #ece3cf;
+  border-color: var(--primary);
+  transform: translateY(-1px);
+}
+
+.agsl-card a {
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 0.92rem;
+}
+
+.agsl-card a:hover {
+  text-decoration: underline;
+}
+
+.agsl-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  background: #e4d7bf;
+  color: #4a3e35;
+  padding: 0.15rem 0.45rem;
+  border-radius: 3px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Metric Grids */
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+  margin: 1.25rem 0 1.5rem 0;
+}
+
+.metric-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  padding: 0.85rem 1rem;
+  text-align: left;
+  transition: all 0.15s ease;
+}
+
+.metric-card:hover {
+  border-color: var(--primary);
+}
+
+.metric-label {
+  font-family: "Hoefler Text", Georgia, Cambria, serif;
+  font-size: 0.78rem;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-bottom: 0.2rem;
+}
+
+.metric-val {
+  font-family: "Hoefler Text", Georgia, Cambria, serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.metric-badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.8rem;
+  font-family: "Hoefler Text", Georgia, serif;
+  border-radius: 3px;
+}
+
+.badge-gold {
+  background: #eed8b0;
+  color: #3f2f18;
+  border: 1px solid #c9a871;
+}
+
+.badge-blue {
+  background: #cfdce6;
+  color: #1a324b;
+  border: 1px solid #97b5cb;
+}
+
+.badge-green {
+  background: #ccdcd3;
+  color: #1b3a2a;
+  border: 1px solid #9bbca8;
+}
+
+/* Regional and General Cards */
 .region-card {
   background: var(--card-bg);
-  border: 1.5px solid var(--border-color);
-  border-radius: 6px;
-  padding: 1.35rem;
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  padding: 1.25rem;
   margin-bottom: 1rem;
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 6px rgba(44, 37, 34, 0.04);
+  transition: all 0.15s ease;
 }
 
 .region-card:hover {
   border-color: var(--primary);
-  box-shadow: 0 4px 12px rgba(199, 92, 61, 0.1);
+  box-shadow: 0 2px 8px rgba(34, 29, 26, 0.08);
 }
 
-/* Scholarly Wes Anderson Tables */
+/* Scholarly Typographic Tables */
 table {
   width: 100%;
   border-collapse: collapse;
   margin: 1.5rem 0;
-  font-size: 0.92rem;
-  background: var(--card-bg);
-  border-radius: 6px;
-  overflow: hidden;
-  border: 1.5px solid var(--border-color);
+  font-size: 0.93rem;
+  border-top: 2px solid var(--text-main);
+  border-bottom: 2px solid var(--text-main);
 }
 
 table th {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background: #2e5a48; /* Wes Green */
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  padding: 0.65rem 0.85rem;
-  border-bottom: 2px solid var(--primary);
+  font-family: "Hoefler Text", Georgia, Cambria, serif;
+  background: transparent;
+  color: var(--text-main);
+  font-weight: bold;
+  font-style: italic;
+  font-size: 0.88rem;
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--border-color);
   text-align: left;
 }
 
 table td {
-  padding: 0.6rem 0.85rem;
-  border-bottom: 1px solid var(--border-color);
-  color: #2c2522;
+  padding: 0.55rem 0.75rem;
+  border-bottom: 1px solid rgba(214, 204, 190, 0.6);
+  color: var(--text-main);
   font-variant-numeric: tabular-nums;
 }
 
-table tr:nth-child(even) td {
-  background: rgba(216, 164, 127, 0.08);
-}
-
 table tr:hover td {
-  background: rgba(199, 92, 61, 0.12);
-}
-
-.badge-cyan {
-  background: #a2d2df;
-  color: #1d3557;
-  border: 1px solid #457b9d;
-}
-
-.badge-blue {
-  background: #457b9d;
-  color: #f1faee;
-  border: 1px solid #1d3557;
-}
-
-.badge-green {
-  background: #2e5a48;
-  color: #f1faee;
-  border: 1px solid #1e3d30;
+  background: rgba(148, 51, 36, 0.05);
 }
 
 .resource-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  padding: 0.35rem 0.75rem;
-  font-size: 0.8rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-weight: 600;
-  color: #2c2522;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.82rem;
+  font-family: Georgia, serif;
+  color: var(--text-main);
   background: var(--card-bg);
-  border: 1.5px solid var(--border-color);
-  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
   text-decoration: none;
   transition: all 0.15s ease;
 }
 
 .resource-btn:hover {
-  background: #c75c3d;
+  background: var(--primary);
   color: #ffffff;
-  border-color: #a63a2b;
+  border-color: var(--primary);
+  text-decoration: none;
 }
 
 .wiki-card {
   background: var(--card-bg);
-  border: 1.5px solid var(--border-color);
-  border-radius: 6px;
-  padding: 1.35rem;
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  padding: 1.25rem;
   margin-bottom: 1rem;
-  box-shadow: 0 2px 6px rgba(44, 37, 34, 0.04);
 }

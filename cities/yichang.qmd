@@ -10,29 +10,93 @@ format:
 <div class="hero-banner">
   <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
     <div>
-      <h1 style="color: #ffffff; margin-bottom: 0.25rem;">Yichang <span style="color: #f59e0b; font-weight: normal;">宜昌市</span> </h1>
-      <p style="color: #94a3b8; font-size: 1.1rem; margin: 0;">Yíchāng · Hubei (湖北省) · Yangtze Basin & Central</p>
-      <p style="color: #cbd5e1; font-size: 0.95rem; margin-top: 0.35rem;">
-        Population: <strong>3.92 Million</strong> (2020 Census) · 
-        Population Rank: <strong>#24</strong> of 47 · 
-        ArcGIS Urban Hierarchy Rank: <strong>N/A</strong>
+      <h1 class="hero-title" style="margin-bottom: 0.25rem;">Yichang <span style="color: #1e3f34; font-style: normal; font-weight: normal;">宜昌市</span> </h1>
+      <p style="color: #5e524a; font-size: 1.1rem; margin: 0; font-style: italic;">Yíchāng · Hubei (湖北省) · Yangtze Basin & Central</p>
+      <p style="color: #221d1a; font-size: 0.95rem; margin-top: 0.35rem;">
+        Permanent population: <strong>3.92 million</strong> (2020 census) · 
+        Population rank: <strong>#24</strong> of 47 · 
+        ArcGIS urban hierarchy rank: <strong>N/A</strong>
       </p>
       <div style="margin-top: 0.75rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
-        <a href="https://en.wikipedia.org/wiki/Yichang" target="_blank" rel="noopener" class="resource-btn">📖 Wikipedia (EN)</a>
-        <a href="https://zh.wikipedia.org/wiki/%E5%AE%9C%E6%98%8C%E5%B8%82" target="_blank" rel="noopener" class="resource-btn">🌐 维基百科 (ZH)</a>
-        <a href="https://www.wikidata.org/wiki/Q71266" target="_blank" rel="noopener" class="resource-btn">🏷️ Wikidata (Q71266)</a>
-        <a href="https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Yichang" target="_blank" rel="noopener" class="resource-btn">🗺️ Commons Maps</a>
-        <a href="https://commons.wikimedia.org/w/index.php?search=Yichang+map&title=Special:MediaSearch&type=image" target="_blank" rel="noopener" class="resource-btn">🔍 Scanned Maps</a>
+        <a href="https://en.wikipedia.org/wiki/Yichang" target="_blank" rel="noopener" class="resource-btn">Wikipedia (EN)</a>
+        <a href="https://zh.wikipedia.org/wiki/%E5%AE%9C%E6%98%8C%E5%B8%82" target="_blank" rel="noopener" class="resource-btn">维基百科 (ZH)</a>
+        <a href="https://www.wikidata.org/wiki/Q71266" target="_blank" rel="noopener" class="resource-btn">Wikidata (Q71266)</a>
+        <a href="https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Yichang" target="_blank" rel="noopener" class="resource-btn">Wikimedia Commons</a>
+        <a href="https://commons.wikimedia.org/w/index.php?search=Yichang+map&title=Special:MediaSearch&type=image" target="_blank" rel="noopener" class="resource-btn">Scanned maps search</a>
+        <a href="https://drive.google.com/drive/folders/1b-HupghVS7KQn4ZTvGjfOHFFMgPnH2KV?usp=sharing" target="_blank" rel="noopener" class="resource-btn" style="background: #e8ded1; border-color: #943324; font-weight: 600;">AGSL map scans archive ↗</a>
       </div>
     </div>
     <div style="text-align: right;">
-      <span class="metric-badge badge-gold" style="font-size: 1.1rem; padding: 0.5rem 1rem;">3.91× Growth Multiplier</span>
+      <span class="metric-badge badge-gold" style="font-size: 1.1rem; padding: 0.5rem 1rem;">3.91× growth multiple</span>
     </div>
   </div>
 </div>
 ```
 
-## Key Urban Expansion & Hierarchy Indicators
+## 1. The urban growth rings (1985–2015)
+
+The cartographic monograph below documents the physical settlement rings of **Yichang** across four historical development epochs:
+
+- <span style="color: #c75c3d; font-weight: bold;">● Pre-1985 Core</span>: Historic urban core and initial post-1949 industrial settlements.
+- <span style="color: #2e5a48; font-weight: bold;">● 1986–1995 Wave</span>: Early reform, opening up, and Deng Xiaoping's 1992 Southern Tour (*Nanxun*).
+- <span style="color: #457b9d; font-weight: bold;">● 1996–2005 Wave</span>: WTO entry, export industrialization, and new development zones (*Kaifaqu*).
+- <span style="color: #e9c46a; font-weight: bold;">● 2006–2015 Wave</span>: High-speed rail expansion, modern new cities (*Xinqu*), and peri-urban consolidation.
+
+::: {.map-container}
+!['The urban growth rings: Yichang'](../output/maps/yichang_hero.png)
+:::
+
+
+```{=html}
+<div class="agsl-box">
+  <div class="agsl-title">Archival cartography: AGSL historical map scans</div>
+  <div class="agsl-desc">
+    High-resolution historical map sheets, military topographic surveys, and municipal town plans from the <strong>American Geographical Society Library (AGSL)</strong> archive collection provide crucial ground-truth spatial morphology predating modern satellite observation.
+  </div>
+  <div style="margin-top: 0.5rem;">
+    <a href="https://drive.google.com/drive/folders/1b-HupghVS7KQn4ZTvGjfOHFFMgPnH2KV?usp=sharing" target="_blank" rel="noopener" class="resource-btn" style="font-weight: 600;">Browse complete AGSL historical map scans folder on Google Drive (67 sheets) →</a>
+  </div>
+</div>
+```
+
+---
+
+## 2. Four-epoch footprint progression
+
+Uniform-scale physical footprint progression maps tracking built-up settlement expansion over time:
+
+::: {.map-container}
+!['Small multiples footprint progression: Yichang'](../output/maps/yichang_small_multiples.png)
+:::
+
+---
+
+## 3. Geographical location & expansion trajectory
+
+:::: {.columns}
+
+::: {.column width="48%"}
+### Location in China
+::: {.map-container}
+!['Regional inset: Yichang'](../output/maps/yichang_context.png)
+:::
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+### Thirty-year expansion curve
+::: {.map-container}
+!['Expansion trajectory: Yichang'](../output/plots/yichang_trajectory.png)
+:::
+:::
+
+::::
+
+---
+
+## 4. Urban expansion & hierarchy indicators
 
 ::: {.metric-grid}
 ::: {.metric-card}
@@ -40,9 +104,9 @@ format:
 2020 Population
 :::
 ::: {.metric-val}
-3.92 <span style="font-size: 1rem; color: #94a3b8;">M</span>
+3.92 <span style="font-size: 1rem; color: #5e524a;">M</span>
 :::
-<div style="font-size: 0.8rem; color: #38bdf8;">Pop Rank #24 of 47</div>
+<div style="font-size: 0.8rem; color: #943324;">Pop Rank #24 of 47</div>
 :::
 
 ::: {.metric-card}
@@ -52,7 +116,7 @@ ArcGIS City Rank
 ::: {.metric-val}
 N/A
 :::
-<div style="font-size: 0.8rem; color: #94a3b8;">National Big Cities Tier</div>
+<div style="font-size: 0.8rem; color: #5e524a;">National Big Cities Tier</div>
 :::
 
 ::: {.metric-card}
@@ -60,7 +124,7 @@ N/A
 1985 Baseline Area
 :::
 ::: {.metric-val}
-45.63 <span style="font-size: 1rem; color: #94a3b8;">km²</span>
+45.63 <span style="font-size: 1rem; color: #5e524a;">km²</span>
 :::
 :::
 
@@ -69,9 +133,9 @@ N/A
 2015 Urban Footprint
 :::
 ::: {.metric-val}
-178.59 <span style="font-size: 1rem; color: #94a3b8;">km²</span>
+178.59 <span style="font-size: 1rem; color: #5e524a;">km²</span>
 :::
-<div style="font-size: 0.8rem; color: #10b981;">+132.96 km²</div>
+<div style="font-size: 0.8rem; color: #1e3f34;">+132.96 km²</div>
 :::
 
 ::: {.metric-card}
@@ -81,7 +145,7 @@ Growth Multiple
 ::: {.metric-val}
 3.91×
 :::
-<div style="font-size: 0.8rem; color: #f59e0b;">Multiplier Rank #17</div>
+<div style="font-size: 0.8rem; color: #943324;">Multiplier Rank #17</div>
 :::
 
 ::: {.metric-card}
@@ -91,63 +155,13 @@ Annual Growth (CAGR)
 ::: {.metric-val}
 4.65%
 :::
-<div style="font-size: 0.8rem; color: #94a3b8;">1985–2015</div>
+<div style="font-size: 0.8rem; color: #5e524a;">1985–2015</div>
 :::
 :::
 
 ---
 
-## 1. The Urban Growth Rings (1985–2015)
-
-The cartographic poster below maps the physical settlement rings of **Yichang** across four historical development epochs:
-
-- <span style="color: #F59E0B; font-weight: bold;">● Pre-1985 Core</span>: Historic urban core and initial post-1949 industrial settlements.
-- <span style="color: #EF4444; font-weight: bold;">● 1986–1995 Wave</span>: Early reform, opening up, and Deng Xiaoping's 1992 Southern Tour (*Nanxun*).
-- <span style="color: #06B6D4; font-weight: bold;">● 1996–2005 Wave</span>: WTO entry, export industrialization, and new development zones (*Kaifaqu*).
-- <span style="color: #10B981; font-weight: bold;">● 2006–2015 Wave</span>: High-speed rail expansion, modern new cities (*Xinqu*), and peri-urban consolidation.
-
-::: {.map-container}
-!['The Urban Growth Rings: Yichang'](../output/maps/yichang_hero.png)
-:::
-
----
-
-## 2. Small Multiples: 4-Epoch Footprint Progression
-
-Uniform-scale physical footprint progression maps tracking built-up settlement expansion over time:
-
-::: {.map-container}
-!['Small Multiples Footprint Progression: Yichang'](../output/maps/yichang_small_multiples.png)
-:::
-
----
-
-## 3. Geographical Location & Growth Trajectory
-
-:::: {.columns}
-
-::: {.column width="48%"}
-### Location in China
-::: {.map-container}
-!['Regional Inset: Yichang'](../output/maps/yichang_context.png)
-:::
-:::
-
-::: {.column width="4%"}
-:::
-
-::: {.column width="48%"}
-### 30-Year Expansion Curve
-::: {.map-container}
-!['Expansion Trajectory: Yichang'](../output/plots/yichang_trajectory.png)
-:::
-:::
-
-::::
-
----
-
-## 4. 5-Year Milestone Chronology
+## 5. Five-year milestone chronology
 
 | Milestone Year | Urban Footprint (km²) | Growth vs. 1985 Baseline | Share of 2015 Footprint |
 |:---:|:---:|:---:|:---:|
@@ -161,7 +175,7 @@ Uniform-scale physical footprint progression maps tracking built-up settlement e
 
 ---
 
-## 5. Archival Cartography & Wiki Resources
+## 6. Archival cartography & wiki resources
 
 Direct links to open knowledge, semantic geodata, and scanned map collections for **Yichang**:
 
@@ -170,6 +184,7 @@ Direct links to open knowledge, semantic geodata, and scanned map collections fo
 - 🏷️ **Wikidata Knowledge Base**: [Q71266 (Yichang)](https://www.wikidata.org/wiki/Q71266) — Semantic knowledge graph entity with geocoordinates, OpenStreetMap tags, and linked administrative entities.
 - 🗺️ **Wikimedia Commons Map Repository**: [Category:Maps of Yichang](https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Yichang) — Community-curated media repository containing thematic, administrative, and transport maps.
 - 🔍 **Scanned Maps & Historical Sheets Search**: [Explore scanned bitmap and topographic maps of Yichang on Wikimedia Commons](https://commons.wikimedia.org/w/index.php?search=Yichang+map&title=Special:MediaSearch&type=image)
+- 🗄️ **AGSL Historical Map Archive**: [Access Google Drive repository of AGSL scans](https://drive.google.com/drive/folders/1b-HupghVS7KQn4ZTvGjfOHFFMgPnH2KV?usp=sharing)
 
 ::: {.callout-note title="Selected Scanned Historical Maps on Wikimedia Commons"}
 The following scanned historical maps and cartographic surveys covering **Yichang** are accessible on Wikimedia Commons:
@@ -183,7 +198,7 @@ Additional scanned historical maps and topographic sheets can be found via the [
 
 ---
 
-## 6. Data Sources & Attributions
+## 7. Sources & methodology attributions
 
 The quantitative and spatial indicators for **Yichang** are synthesized from the following primary sources:
 
@@ -192,14 +207,14 @@ The quantitative and spatial indicators for **Yichang** are synthesized from the
 3. **National Urban Tier Classification**: Esri / [ArcGIS Online Big Cities Points FeatureServer](https://services1.arcgis.com/4TXrdeWh0RyCqPgB/arcgis/rest/services/big_cities_points/FeatureServer), National City Rank: **N/A** of 184 major Chinese cities.
 4. **National Railway Network**: China Railway (中国国家铁路集团 / 12306) & National Railway Administration (NRA) passenger trunk lines and high-speed passenger-dedicated lines (PDL).
 5. **Administrative Boundaries**: [GADM Database of Global Administrative Areas (v4.1)](https://gadm.org/), University of California, Davis.
-6. **Archival Cartography & Encyclopedia Resources**: [Wikimedia Foundation](https://www.wikimedia.org/) ([Wikipedia](https://en.wikipedia.org/), [Wikidata](https://www.wikidata.org/), and [Wikimedia Commons](https://commons.wikimedia.org/)).
+6. **Archival Cartography & Historical Surveys**: American Geographical Society Library (AGSL) Map Collection & [Wikimedia Foundation](https://www.wikimedia.org/) ([Wikipedia](https://en.wikipedia.org/), [Wikidata](https://www.wikidata.org/), and [Wikimedia Commons](https://commons.wikimedia.org/)).
 
 ---
 
 ```{=html}
-<div style="display: flex; justify-content: space-between; margin-top: 2rem; padding: 1rem; background: #111827; border-radius: 8px;">
-  <a href="binzhou.html" style="color: #38bdf8; text-decoration: none;">← Prev: Binzhou (3.93M)</a>
-  <a href="../regions/yangtze_basin.html" style="color: #f59e0b; text-decoration: none;">↑ Yangtze Basin & Central</a>
-  <a href="wuhu.html" style="color: #38bdf8; text-decoration: none;">Next: Wuhu (3.64M) →</a>
+<div style="display: flex; justify-content: space-between; margin-top: 2rem; padding: 1rem; background: #f4efe4; border: 1px solid #d6ccbe; border-radius: 4px;">
+  <a href="binzhou.html" style="color: #943324; text-decoration: none; font-weight: 600;">← Previous: Binzhou (3.93M)</a>
+  <a href="../regions/yangtze_basin.html" style="color: #1e3f34; text-decoration: none; font-weight: 600;">↑ Yangtze Basin & Central</a>
+  <a href="wuhu.html" style="color: #943324; text-decoration: none; font-weight: 600;">Next: Wuhu (3.64M) →</a>
 </div>
 ```

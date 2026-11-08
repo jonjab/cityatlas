@@ -8,12 +8,15 @@ format:
 
 ```{=html}
 <div class="hero-banner">
-  <h1 style="color: #ffffff; margin-bottom: 0.5rem;">Western Frontier & Steppe <span style="color: #f59e0b;">西部边疆、丝路绿洲与草原</span></h1>
-  <p style="color: #cbd5e1; font-size: 1.1rem; margin: 0;">Ancient Silk Road oases, western capitals, and northern grassland centers bounded by mountains and deserts.</p>
+  <h1 class="hero-title" style="margin-bottom: 0.5rem;">Western Frontier & Steppe <span style="color: #1e3f34; font-weight: normal; font-style: normal;">西部边疆、丝路绿洲与草原</span></h1>
+  <p class="hero-subtitle">Ancient Silk Road oases, western capitals, and northern grassland centers bounded by mountains and deserts.</p>
+  <div style="margin-top: 1rem;">
+    <a href="https://drive.google.com/drive/folders/1b-HupghVS7KQn4ZTvGjfOHFFMgPnH2KV?usp=sharing" target="_blank" rel="noopener" class="resource-btn" style="background: #e8ded1; border-color: #943324; font-weight: 600;">Browse AGSL historical scans for this region ↗</a>
+  </div>
 </div>
 ```
 
-## Regional Member Cities (Ranked by Population)
+## Regional member cities (ranked by population)
 
 | Pop Rank | City | Chinese | Province | Population | ArcGIS Rank | 1985 Area | 2015 Area | Net Gain | Multiplier | CAGR |
 |:---:|:---|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -32,12 +35,12 @@ format:
 
 ---
 
-## Member City Profiles
+## Member city profiles
 
 
 ::: {.region-card}
 ### [Xi'an (西安市)](../cities/xian.html)
-**Shaanxi Province** · Population: <strong style="color: #38bdf8;">12.95 Million</strong> (Rank #3) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #f59e0b;">3.45×</strong>
+**Shaanxi Province** · Population: <strong style="color: #943324;">12.95 Million</strong> (Rank #3) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #1e3f34;">3.45×</strong>
 
 - **1985 Footprint**: 392.14 km²
 - **2015 Footprint**: 1354.03 km² (Net expansion: +961.89 km²)
@@ -48,7 +51,7 @@ format:
 
 ::: {.region-card}
 ### [Kunming (昆明市)](../cities/kunming.html)
-**Yunnan Province** · Population: <strong style="color: #38bdf8;">8.46 Million</strong> (Rank #10) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #f59e0b;">4.08×</strong>
+**Yunnan Province** · Population: <strong style="color: #943324;">8.46 Million</strong> (Rank #10) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #1e3f34;">4.08×</strong>
 
 - **1985 Footprint**: 153.06 km²
 - **2015 Footprint**: 624.84 km² (Net expansion: +471.78 km²)
@@ -59,7 +62,7 @@ format:
 
 ::: {.region-card}
 ### [Guilin (桂林市)](../cities/guilin.html)
-**Guangxi Province** · Population: <strong style="color: #38bdf8;">4.93 Million</strong> (Rank #15) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #f59e0b;">3.34×</strong>
+**Guangxi Province** · Population: <strong style="color: #943324;">4.93 Million</strong> (Rank #15) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #1e3f34;">3.34×</strong>
 
 - **1985 Footprint**: 76.14 km²
 - **2015 Footprint**: 254.1 km² (Net expansion: +177.96 km²)
@@ -70,7 +73,7 @@ format:
 
 ::: {.region-card}
 ### [Lanzhou (兰州市)](../cities/lanzhou.html)
-**Gansu Province** · Population: <strong style="color: #38bdf8;">4.36 Million</strong> (Rank #20) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #f59e0b;">1.95×</strong>
+**Gansu Province** · Population: <strong style="color: #943324;">4.36 Million</strong> (Rank #20) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #1e3f34;">1.95×</strong>
 
 - **1985 Footprint**: 119.22 km²
 - **2015 Footprint**: 232.72 km² (Net expansion: +113.5 km²)
@@ -81,7 +84,7 @@ format:
 
 ::: {.region-card}
 ### [Urumqi (乌鲁木齐市)](../cities/urumqi.html)
-**Xinjiang Province** · Population: <strong style="color: #38bdf8;">4.05 Million</strong> (Rank #22) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #f59e0b;">1.71×</strong>
+**Xinjiang Province** · Population: <strong style="color: #943324;">4.05 Million</strong> (Rank #22) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #1e3f34;">1.71×</strong>
 
 - **1985 Footprint**: 251.96 km²
 - **2015 Footprint**: 431.36 km² (Net expansion: +179.4 km²)
@@ -92,7 +95,7 @@ format:
 
 ::: {.region-card}
 ### [Hohhot (呼和浩特市)](../cities/hohhot.html)
-**Inner Mongolia Province** · Population: <strong style="color: #38bdf8;">3.45 Million</strong> (Rank #26) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #f59e0b;">5.07×</strong>
+**Inner Mongolia Province** · Population: <strong style="color: #943324;">3.45 Million</strong> (Rank #26) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #1e3f34;">5.07×</strong>
 
 - **1985 Footprint**: 68.88 km²
 - **2015 Footprint**: 349.27 km² (Net expansion: +280.39 km²)
@@ -103,7 +106,7 @@ format:
 
 ::: {.region-card}
 ### [Ulanqab (乌兰察布市)](../cities/ulanqab.html)
-**Inner Mongolia Province** · Population: <strong style="color: #38bdf8;">1.71 Million</strong> (Rank #35) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #f59e0b;">5.05×</strong>
+**Inner Mongolia Province** · Population: <strong style="color: #943324;">1.71 Million</strong> (Rank #35) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #1e3f34;">5.05×</strong>
 
 - **1985 Footprint**: 20.59 km²
 - **2015 Footprint**: 103.9 km² (Net expansion: +83.31 km²)
@@ -114,7 +117,7 @@ format:
 
 ::: {.region-card}
 ### [Wuwei (武威市)](../cities/wuwei.html)
-**Gansu Province** · Population: <strong style="color: #38bdf8;">1.47 Million</strong> (Rank #39) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #f59e0b;">2.67×</strong>
+**Gansu Province** · Population: <strong style="color: #943324;">1.47 Million</strong> (Rank #39) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #1e3f34;">2.67×</strong>
 
 - **1985 Footprint**: 40.73 km²
 - **2015 Footprint**: 108.55 km² (Net expansion: +67.82 km²)
@@ -125,7 +128,7 @@ format:
 
 ::: {.region-card}
 ### [Kashgar (喀什市)](../cities/kashgar.html)
-**Xinjiang Province** · Population: <strong style="color: #38bdf8;">0.71 Million</strong> (Rank #44) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #f59e0b;">3.46×</strong>
+**Xinjiang Province** · Population: <strong style="color: #943324;">0.71 Million</strong> (Rank #44) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #1e3f34;">3.46×</strong>
 
 - **1985 Footprint**: 46.39 km²
 - **2015 Footprint**: 160.73 km² (Net expansion: +114.34 km²)
@@ -136,7 +139,7 @@ format:
 
 ::: {.region-card}
 ### [Korla (库尔勒市)](../cities/korla.html)
-**Xinjiang Province** · Population: <strong style="color: #38bdf8;">0.55 Million</strong> (Rank #45) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #f59e0b;">1.52×</strong>
+**Xinjiang Province** · Population: <strong style="color: #943324;">0.55 Million</strong> (Rank #45) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #1e3f34;">1.52×</strong>
 
 - **1985 Footprint**: 102.96 km²
 - **2015 Footprint**: 156.53 km² (Net expansion: +53.57 km²)
@@ -147,7 +150,7 @@ format:
 
 ::: {.region-card}
 ### [Hotan (和田市)](../cities/hotan.html)
-**Xinjiang Province** · Population: <strong style="color: #38bdf8;">0.5 Million</strong> (Rank #46) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #f59e0b;">2.39×</strong>
+**Xinjiang Province** · Population: <strong style="color: #943324;">0.5 Million</strong> (Rank #46) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #1e3f34;">2.39×</strong>
 
 - **1985 Footprint**: 19.4 km²
 - **2015 Footprint**: 46.43 km² (Net expansion: +27.03 km²)
@@ -160,5 +163,5 @@ format:
 ---
 
 ::: {.caption-box}
-**Data Sources**: DLR World Settlement Footprint Evolution 30m (Marconcini et al., 2020) · 7th National Population Census of China (2020) · ArcGIS Online Big Cities Points · HOTOSM Railways of China (HDX) · GADM 4.1.
+**Data Sources**: DLR World Settlement Footprint Evolution 30m (Marconcini et al., 2020) · 7th National Population Census of China (2020) · ArcGIS Online Big Cities Points · HOTOSM Railways of China (HDX) · GADM 4.1 · American Geographical Society Library (AGSL).
 :::

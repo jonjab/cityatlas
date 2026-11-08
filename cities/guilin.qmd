@@ -10,29 +10,93 @@ format:
 <div class="hero-banner">
   <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
     <div>
-      <h1 style="color: #ffffff; margin-bottom: 0.25rem;">Guilin <span style="color: #f59e0b; font-weight: normal;">桂林市</span> </h1>
-      <p style="color: #94a3b8; font-size: 1.1rem; margin: 0;">Guìlín · Guangxi (广西壮族自治区) · South & Southwest</p>
-      <p style="color: #cbd5e1; font-size: 0.95rem; margin-top: 0.35rem;">
-        Population: <strong>4.93 Million</strong> (2020 Census) · 
-        Population Rank: <strong>#15</strong> of 47 · 
-        ArcGIS Urban Hierarchy Rank: <strong>N/A</strong>
+      <h1 class="hero-title" style="margin-bottom: 0.25rem;">Guilin <span style="color: #1e3f34; font-style: normal; font-weight: normal;">桂林市</span> </h1>
+      <p style="color: #5e524a; font-size: 1.1rem; margin: 0; font-style: italic;">Guìlín · Guangxi (广西壮族自治区) · South & Southwest</p>
+      <p style="color: #221d1a; font-size: 0.95rem; margin-top: 0.35rem;">
+        Permanent population: <strong>4.93 million</strong> (2020 census) · 
+        Population rank: <strong>#15</strong> of 47 · 
+        ArcGIS urban hierarchy rank: <strong>N/A</strong>
       </p>
       <div style="margin-top: 0.75rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
-        <a href="https://en.wikipedia.org/wiki/Guilin" target="_blank" rel="noopener" class="resource-btn">📖 Wikipedia (EN)</a>
-        <a href="https://zh.wikipedia.org/wiki/%E6%A1%82%E6%9E%97%E5%B8%82" target="_blank" rel="noopener" class="resource-btn">🌐 维基百科 (ZH)</a>
-        <a href="https://www.wikidata.org/wiki/Q189633" target="_blank" rel="noopener" class="resource-btn">🏷️ Wikidata (Q189633)</a>
-        <a href="https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Guilin" target="_blank" rel="noopener" class="resource-btn">🗺️ Commons Maps</a>
-        <a href="https://commons.wikimedia.org/w/index.php?search=Guilin+map&title=Special:MediaSearch&type=image" target="_blank" rel="noopener" class="resource-btn">🔍 Scanned Maps</a>
+        <a href="https://en.wikipedia.org/wiki/Guilin" target="_blank" rel="noopener" class="resource-btn">Wikipedia (EN)</a>
+        <a href="https://zh.wikipedia.org/wiki/%E6%A1%82%E6%9E%97%E5%B8%82" target="_blank" rel="noopener" class="resource-btn">维基百科 (ZH)</a>
+        <a href="https://www.wikidata.org/wiki/Q189633" target="_blank" rel="noopener" class="resource-btn">Wikidata (Q189633)</a>
+        <a href="https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Guilin" target="_blank" rel="noopener" class="resource-btn">Wikimedia Commons</a>
+        <a href="https://commons.wikimedia.org/w/index.php?search=Guilin+map&title=Special:MediaSearch&type=image" target="_blank" rel="noopener" class="resource-btn">Scanned maps search</a>
+        <a href="https://drive.google.com/drive/folders/1b-HupghVS7KQn4ZTvGjfOHFFMgPnH2KV?usp=sharing" target="_blank" rel="noopener" class="resource-btn" style="background: #e8ded1; border-color: #943324; font-weight: 600;">AGSL map scans archive ↗</a>
       </div>
     </div>
     <div style="text-align: right;">
-      <span class="metric-badge badge-gold" style="font-size: 1.1rem; padding: 0.5rem 1rem;">3.34× Growth Multiplier</span>
+      <span class="metric-badge badge-gold" style="font-size: 1.1rem; padding: 0.5rem 1rem;">3.34× growth multiple</span>
     </div>
   </div>
 </div>
 ```
 
-## Key Urban Expansion & Hierarchy Indicators
+## 1. The urban growth rings (1985–2015)
+
+The cartographic monograph below documents the physical settlement rings of **Guilin** across four historical development epochs:
+
+- <span style="color: #c75c3d; font-weight: bold;">● Pre-1985 Core</span>: Historic urban core and initial post-1949 industrial settlements.
+- <span style="color: #2e5a48; font-weight: bold;">● 1986–1995 Wave</span>: Early reform, opening up, and Deng Xiaoping's 1992 Southern Tour (*Nanxun*).
+- <span style="color: #457b9d; font-weight: bold;">● 1996–2005 Wave</span>: WTO entry, export industrialization, and new development zones (*Kaifaqu*).
+- <span style="color: #e9c46a; font-weight: bold;">● 2006–2015 Wave</span>: High-speed rail expansion, modern new cities (*Xinqu*), and peri-urban consolidation.
+
+::: {.map-container}
+!['The urban growth rings: Guilin'](../output/maps/guilin_hero.png)
+:::
+
+
+```{=html}
+<div class="agsl-box">
+  <div class="agsl-title">Archival cartography: AGSL historical map scans</div>
+  <div class="agsl-desc">
+    High-resolution historical map sheets, military topographic surveys, and municipal town plans from the <strong>American Geographical Society Library (AGSL)</strong> archive collection provide crucial ground-truth spatial morphology predating modern satellite observation.
+  </div>
+  <div style="margin-top: 0.5rem;">
+    <a href="https://drive.google.com/drive/folders/1b-HupghVS7KQn4ZTvGjfOHFFMgPnH2KV?usp=sharing" target="_blank" rel="noopener" class="resource-btn" style="font-weight: 600;">Browse complete AGSL historical map scans folder on Google Drive (67 sheets) →</a>
+  </div>
+</div>
+```
+
+---
+
+## 2. Four-epoch footprint progression
+
+Uniform-scale physical footprint progression maps tracking built-up settlement expansion over time:
+
+::: {.map-container}
+!['Small multiples footprint progression: Guilin'](../output/maps/guilin_small_multiples.png)
+:::
+
+---
+
+## 3. Geographical location & expansion trajectory
+
+:::: {.columns}
+
+::: {.column width="48%"}
+### Location in China
+::: {.map-container}
+!['Regional inset: Guilin'](../output/maps/guilin_context.png)
+:::
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+### Thirty-year expansion curve
+::: {.map-container}
+!['Expansion trajectory: Guilin'](../output/plots/guilin_trajectory.png)
+:::
+:::
+
+::::
+
+---
+
+## 4. Urban expansion & hierarchy indicators
 
 ::: {.metric-grid}
 ::: {.metric-card}
@@ -40,9 +104,9 @@ format:
 2020 Population
 :::
 ::: {.metric-val}
-4.93 <span style="font-size: 1rem; color: #94a3b8;">M</span>
+4.93 <span style="font-size: 1rem; color: #5e524a;">M</span>
 :::
-<div style="font-size: 0.8rem; color: #38bdf8;">Pop Rank #15 of 47</div>
+<div style="font-size: 0.8rem; color: #943324;">Pop Rank #15 of 47</div>
 :::
 
 ::: {.metric-card}
@@ -52,7 +116,7 @@ ArcGIS City Rank
 ::: {.metric-val}
 N/A
 :::
-<div style="font-size: 0.8rem; color: #94a3b8;">National Big Cities Tier</div>
+<div style="font-size: 0.8rem; color: #5e524a;">National Big Cities Tier</div>
 :::
 
 ::: {.metric-card}
@@ -60,7 +124,7 @@ N/A
 1985 Baseline Area
 :::
 ::: {.metric-val}
-76.14 <span style="font-size: 1rem; color: #94a3b8;">km²</span>
+76.14 <span style="font-size: 1rem; color: #5e524a;">km²</span>
 :::
 :::
 
@@ -69,9 +133,9 @@ N/A
 2015 Urban Footprint
 :::
 ::: {.metric-val}
-254.1 <span style="font-size: 1rem; color: #94a3b8;">km²</span>
+254.1 <span style="font-size: 1rem; color: #5e524a;">km²</span>
 :::
-<div style="font-size: 0.8rem; color: #10b981;">+177.96 km²</div>
+<div style="font-size: 0.8rem; color: #1e3f34;">+177.96 km²</div>
 :::
 
 ::: {.metric-card}
@@ -81,7 +145,7 @@ Growth Multiple
 ::: {.metric-val}
 3.34×
 :::
-<div style="font-size: 0.8rem; color: #f59e0b;">Multiplier Rank #27</div>
+<div style="font-size: 0.8rem; color: #943324;">Multiplier Rank #27</div>
 :::
 
 ::: {.metric-card}
@@ -91,63 +155,13 @@ Annual Growth (CAGR)
 ::: {.metric-val}
 4.1%
 :::
-<div style="font-size: 0.8rem; color: #94a3b8;">1985–2015</div>
+<div style="font-size: 0.8rem; color: #5e524a;">1985–2015</div>
 :::
 :::
 
 ---
 
-## 1. The Urban Growth Rings (1985–2015)
-
-The cartographic poster below maps the physical settlement rings of **Guilin** across four historical development epochs:
-
-- <span style="color: #F59E0B; font-weight: bold;">● Pre-1985 Core</span>: Historic urban core and initial post-1949 industrial settlements.
-- <span style="color: #EF4444; font-weight: bold;">● 1986–1995 Wave</span>: Early reform, opening up, and Deng Xiaoping's 1992 Southern Tour (*Nanxun*).
-- <span style="color: #06B6D4; font-weight: bold;">● 1996–2005 Wave</span>: WTO entry, export industrialization, and new development zones (*Kaifaqu*).
-- <span style="color: #10B981; font-weight: bold;">● 2006–2015 Wave</span>: High-speed rail expansion, modern new cities (*Xinqu*), and peri-urban consolidation.
-
-::: {.map-container}
-!['The Urban Growth Rings: Guilin'](../output/maps/guilin_hero.png)
-:::
-
----
-
-## 2. Small Multiples: 4-Epoch Footprint Progression
-
-Uniform-scale physical footprint progression maps tracking built-up settlement expansion over time:
-
-::: {.map-container}
-!['Small Multiples Footprint Progression: Guilin'](../output/maps/guilin_small_multiples.png)
-:::
-
----
-
-## 3. Geographical Location & Growth Trajectory
-
-:::: {.columns}
-
-::: {.column width="48%"}
-### Location in China
-::: {.map-container}
-!['Regional Inset: Guilin'](../output/maps/guilin_context.png)
-:::
-:::
-
-::: {.column width="4%"}
-:::
-
-::: {.column width="48%"}
-### 30-Year Expansion Curve
-::: {.map-container}
-!['Expansion Trajectory: Guilin'](../output/plots/guilin_trajectory.png)
-:::
-:::
-
-::::
-
----
-
-## 4. 5-Year Milestone Chronology
+## 5. Five-year milestone chronology
 
 | Milestone Year | Urban Footprint (km²) | Growth vs. 1985 Baseline | Share of 2015 Footprint |
 |:---:|:---:|:---:|:---:|
@@ -161,7 +175,7 @@ Uniform-scale physical footprint progression maps tracking built-up settlement e
 
 ---
 
-## 5. Archival Cartography & Wiki Resources
+## 6. Archival cartography & wiki resources
 
 Direct links to open knowledge, semantic geodata, and scanned map collections for **Guilin**:
 
@@ -169,8 +183,9 @@ Direct links to open knowledge, semantic geodata, and scanned map collections fo
 - 🌐 **Chinese Wikipedia (中文维基百科)**: [桂林市](https://zh.wikipedia.org/wiki/%E6%A1%82%E6%9E%97%E5%B8%82) — Authoritative municipal boundaries, administrative subdivisions, and local transport infrastructure.
 - 🏷️ **Wikidata Knowledge Base**: [Q189633 (Guilin)](https://www.wikidata.org/wiki/Q189633) — Semantic knowledge graph entity with geocoordinates, OpenStreetMap tags, and linked administrative entities.
 - 🗺️ **Wikimedia Commons Map Repository**: [Category:Maps of Guilin](https://commons.wikimedia.org/wiki/Category%3AMaps%20of%20Guilin) — Community-curated media repository containing thematic, administrative, and transport maps.
-- 📜 **Historical Maps Collection**: [Category:Old maps of Guilin](https://commons.wikimedia.org/wiki/Category%3AOld%20maps%20of%20Guilin) — Scanned historical maps, municipal plans, and early surveys.
+- 📜 **Historical maps collection**: [Category:Old maps of Guilin](https://commons.wikimedia.org/wiki/Category%3AOld%20maps%20of%20Guilin) — Scanned historical maps, municipal plans, and early surveys.
 - 🔍 **Scanned Maps & Historical Sheets Search**: [Explore scanned bitmap and topographic maps of Guilin on Wikimedia Commons](https://commons.wikimedia.org/w/index.php?search=Guilin+map&title=Special:MediaSearch&type=image)
+- 🗄️ **AGSL Historical Map Archive**: [Access Google Drive repository of AGSL scans](https://drive.google.com/drive/folders/1b-HupghVS7KQn4ZTvGjfOHFFMgPnH2KV?usp=sharing)
 
 ::: {.callout-note title="Selected Scanned Historical Maps on Wikimedia Commons"}
 The following scanned historical maps and cartographic surveys covering **Guilin** are accessible on Wikimedia Commons:
@@ -183,7 +198,7 @@ Additional scanned historical maps and topographic sheets can be found via the [
 
 ---
 
-## 6. Data Sources & Attributions
+## 7. Sources & methodology attributions
 
 The quantitative and spatial indicators for **Guilin** are synthesized from the following primary sources:
 
@@ -192,14 +207,14 @@ The quantitative and spatial indicators for **Guilin** are synthesized from the 
 3. **National Urban Tier Classification**: Esri / [ArcGIS Online Big Cities Points FeatureServer](https://services1.arcgis.com/4TXrdeWh0RyCqPgB/arcgis/rest/services/big_cities_points/FeatureServer), National City Rank: **N/A** of 184 major Chinese cities.
 4. **National Railway Network**: China Railway (中国国家铁路集团 / 12306) & National Railway Administration (NRA) passenger trunk lines and high-speed passenger-dedicated lines (PDL).
 5. **Administrative Boundaries**: [GADM Database of Global Administrative Areas (v4.1)](https://gadm.org/), University of California, Davis.
-6. **Archival Cartography & Encyclopedia Resources**: [Wikimedia Foundation](https://www.wikimedia.org/) ([Wikipedia](https://en.wikipedia.org/), [Wikidata](https://www.wikidata.org/), and [Wikimedia Commons](https://commons.wikimedia.org/)).
+6. **Archival Cartography & Historical Surveys**: American Geographical Society Library (AGSL) Map Collection & [Wikimedia Foundation](https://www.wikimedia.org/) ([Wikipedia](https://en.wikipedia.org/), [Wikidata](https://www.wikidata.org/), and [Wikimedia Commons](https://commons.wikimedia.org/)).
 
 ---
 
 ```{=html}
-<div style="display: flex; justify-content: space-between; margin-top: 2rem; padding: 1rem; background: #111827; border-radius: 8px;">
-  <a href="xiamen.html" style="color: #38bdf8; text-decoration: none;">← Prev: Xiamen (5.16M)</a>
-  <a href="../regions/western_frontier.html" style="color: #f59e0b; text-decoration: none;">↑ South & Southwest</a>
-  <a href="zibo.html" style="color: #38bdf8; text-decoration: none;">Next: Zibo (4.7M) →</a>
+<div style="display: flex; justify-content: space-between; margin-top: 2rem; padding: 1rem; background: #f4efe4; border: 1px solid #d6ccbe; border-radius: 4px;">
+  <a href="xiamen.html" style="color: #943324; text-decoration: none; font-weight: 600;">← Previous: Xiamen (5.16M)</a>
+  <a href="../regions/western_frontier.html" style="color: #1e3f34; text-decoration: none; font-weight: 600;">↑ South & Southwest</a>
+  <a href="zibo.html" style="color: #943324; text-decoration: none; font-weight: 600;">Next: Zibo (4.7M) →</a>
 </div>
 ```

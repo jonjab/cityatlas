@@ -92,7 +92,7 @@ render_comparison_city <- function(i) {
   p_hero <- p_hero +
     coord_sf(xlim = c(xmin(r), xmax(r)), ylim = c(ymin(r), ymax(r)), expand = FALSE) +
     labs(
-      title = sprintf("%s  %s — POINT OF COMPARISON", toupper(c_info$name_en), c_info$name_zh),
+      title = sprintf("%s  %s — Point of comparison", c_info$name_en, c_info$name_zh),
       subtitle = sprintf("%s, USA · City Pop: %0.2fM (Metro: %0.2fM) · 30-Year Growth: %0.2f× · %s",
                          c_info$province_en, c_info$pop_million, c_info$pop_metro_million, c_info$growth_multiple, c_info$archetype),
       caption = "Sources: DLR World Settlement Footprint Evolution 30m (Marconcini et al., 2020) · Natural Earth 10m Railroads · 2020 US Census"
@@ -136,7 +136,7 @@ render_comparison_city <- function(i) {
     scale_shape_manual(values = c("Key Passenger Hub / Terminal" = 16), name = "Transit Facilities") +
     coord_sf(xlim = c(xmin(r), xmax(r)), ylim = c(ymin(r), ymax(r)), expand = FALSE) +
     labs(
-      title = sprintf("%s  %s — TRANSIT & RAIL CORRIDORS", toupper(c_info$name_en), c_info$name_zh),
+      title = sprintf("%s  %s — Transit & rail corridors", c_info$name_en, c_info$name_zh),
       subtitle = "Continental Railway Lines & Major Terminals overlaid on 2015 Urban Built Footprint",
       caption = "Sources: Natural Earth 10m North America Railroads · DLR WSF Evolution 30m"
     ) +
@@ -345,7 +345,7 @@ p_traj_comp <- ggplot(df_comp_traj, aes(x = year, y = area, color = label, group
   scale_x_continuous(breaks = years) +
   scale_y_continuous(labels = scales::comma_format(suffix = " km²")) +
   labs(
-    title = "CROSS-NATIONAL EXPANSION TRAJECTORIES: CHINA VS. US BENCHMARKS",
+    title = "Cross-national expansion trajectories: China vs. US benchmarks",
     subtitle = "Comparing 30-year built-up growth (1985–2015): Note the identical 1985 baseline for Charlotte and Chengdu",
     caption = "Source: DLR World Settlement Footprint Evolution 30m (WSF-Evo 1985–2015) · Consistent pixel metrics across all cities",
     x = "Year",
@@ -403,7 +403,7 @@ p_mult_comp <- ggplot(filtered_bar, aes(x = growth_multiple, y = name_en, fill =
   ) +
   scale_x_continuous(limits = c(0, 10.2), breaks = seq(0, 10, 2), expand = expansion(mult = c(0, 0.05))) +
   labs(
-    title = "30-YEAR GROWTH MULTIPLIER: CHINA RATLAS VS. US BENCHMARKS",
+    title = "Thirty-year growth multipliers: China ratlas vs. US benchmarks",
     subtitle = "Physical expansion ratio (2015 area ÷ 1985 area) illustrating American stability vs. Chinese explosive urbanization",
     caption = "Source: Computed from DLR World Settlement Footprint Evolution (WSF Evolution) 30m dataset",
     x = "Growth Multiple (2015 Footprint / 1985 Footprint)",

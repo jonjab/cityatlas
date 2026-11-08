@@ -8,12 +8,15 @@ format:
 
 ```{=html}
 <div class="hero-banner">
-  <h1 style="color: #ffffff; margin-bottom: 0.5rem;">Northeast Rust Belt <span style="color: #f59e0b;">东北老工业基地与边境口岸</span></h1>
-  <p style="color: #cbd5e1; font-size: 1.1rem; margin: 0;">Heavy industry cradles, mining cities, and strategic border gateway outposts in Heilongjiang, Jilin, and Liaoning.</p>
+  <h1 class="hero-title" style="margin-bottom: 0.5rem;">Northeast Rust Belt <span style="color: #1e3f34; font-weight: normal; font-style: normal;">东北老工业基地与边境口岸</span></h1>
+  <p class="hero-subtitle">Heavy industry cradles, mining cities, and strategic border gateway outposts in Heilongjiang, Jilin, and Liaoning.</p>
+  <div style="margin-top: 1rem;">
+    <a href="https://drive.google.com/drive/folders/1b-HupghVS7KQn4ZTvGjfOHFFMgPnH2KV?usp=sharing" target="_blank" rel="noopener" class="resource-btn" style="background: #e8ded1; border-color: #943324; font-weight: 600;">Browse AGSL historical scans for this region ↗</a>
+  </div>
 </div>
 ```
 
-## Regional Member Cities (Ranked by Population)
+## Regional member cities (ranked by population)
 
 | Pop Rank | City | Chinese | Province | Population | ArcGIS Rank | 1985 Area | 2015 Area | Net Gain | Multiplier | CAGR |
 |:---:|:---|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -29,12 +32,12 @@ format:
 
 ---
 
-## Member City Profiles
+## Member city profiles
 
 
 ::: {.region-card}
 ### [Harbin (哈尔滨市)](../cities/harbin.html)
-**Heilongjiang Province** · Population: <strong style="color: #38bdf8;">10.01 Million</strong> (Rank #7) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #f59e0b;">2.62×</strong>
+**Heilongjiang Province** · Population: <strong style="color: #943324;">10.01 Million</strong> (Rank #7) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #1e3f34;">2.62×</strong>
 
 - **1985 Footprint**: 267.74 km²
 - **2015 Footprint**: 701.48 km² (Net expansion: +433.74 km²)
@@ -45,7 +48,7 @@ format:
 
 ::: {.region-card}
 ### [Tieling (铁岭市)](../cities/tieling.html)
-**Liaoning Province** · Population: <strong style="color: #38bdf8;">2.39 Million</strong> (Rank #32) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #f59e0b;">3.09×</strong>
+**Liaoning Province** · Population: <strong style="color: #943324;">2.39 Million</strong> (Rank #32) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #1e3f34;">3.09×</strong>
 
 - **1985 Footprint**: 43.68 km²
 - **2015 Footprint**: 134.96 km² (Net expansion: +91.28 km²)
@@ -56,7 +59,7 @@ format:
 
 ::: {.region-card}
 ### [Dandong (丹东市)](../cities/dandong.html)
-**Liaoning Province** · Population: <strong style="color: #38bdf8;">2.19 Million</strong> (Rank #33) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #f59e0b;">3.12×</strong>
+**Liaoning Province** · Population: <strong style="color: #943324;">2.19 Million</strong> (Rank #33) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #1e3f34;">3.12×</strong>
 
 - **1985 Footprint**: 45.2 km²
 - **2015 Footprint**: 140.92 km² (Net expansion: +95.72 km²)
@@ -67,7 +70,7 @@ format:
 
 ::: {.region-card}
 ### [Fuxin (阜新市)](../cities/fuxin.html)
-**Liaoning Province** · Population: <strong style="color: #38bdf8;">1.65 Million</strong> (Rank #36) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #f59e0b;">2.94×</strong>
+**Liaoning Province** · Population: <strong style="color: #943324;">1.65 Million</strong> (Rank #36) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #1e3f34;">2.94×</strong>
 
 - **1985 Footprint**: 57.66 km²
 - **2015 Footprint**: 169.39 km² (Net expansion: +111.73 km²)
@@ -78,7 +81,7 @@ format:
 
 ::: {.region-card}
 ### [Baicheng (白城市)](../cities/baicheng.html)
-**Jilin Province** · Population: <strong style="color: #38bdf8;">1.55 Million</strong> (Rank #37) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #f59e0b;">2.27×</strong>
+**Jilin Province** · Population: <strong style="color: #943324;">1.55 Million</strong> (Rank #37) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #1e3f34;">2.27×</strong>
 
 - **1985 Footprint**: 43.41 km²
 - **2015 Footprint**: 98.62 km² (Net expansion: +55.21 km²)
@@ -89,7 +92,7 @@ format:
 
 ::: {.region-card}
 ### [Panjin (盘锦市)](../cities/panjin.html)
-**Liaoning Province** · Population: <strong style="color: #38bdf8;">1.39 Million</strong> (Rank #40) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #f59e0b;">2.59×</strong>
+**Liaoning Province** · Population: <strong style="color: #943324;">1.39 Million</strong> (Rank #40) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #1e3f34;">2.59×</strong>
 
 - **1985 Footprint**: 98.33 km²
 - **2015 Footprint**: 254.37 km² (Net expansion: +156.04 km²)
@@ -100,7 +103,7 @@ format:
 
 ::: {.region-card}
 ### [Liaoyuan (辽源市)](../cities/liaoyuan.html)
-**Jilin Province** · Population: <strong style="color: #38bdf8;">0.99 Million</strong> (Rank #42) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #f59e0b;">2.52×</strong>
+**Jilin Province** · Population: <strong style="color: #943324;">0.99 Million</strong> (Rank #42) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #1e3f34;">2.52×</strong>
 
 - **1985 Footprint**: 44.37 km²
 - **2015 Footprint**: 111.94 km² (Net expansion: +67.57 km²)
@@ -111,7 +114,7 @@ format:
 
 ::: {.region-card}
 ### [Hunchun (珲春市)](../cities/hunchun.html)
-**Jilin Province** · Population: <strong style="color: #38bdf8;">0.24 Million</strong> (Rank #47) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #f59e0b;">2.99×</strong>
+**Jilin Province** · Population: <strong style="color: #943324;">0.24 Million</strong> (Rank #47) · ArcGIS Hierarchy Rank: <strong>-</strong> · 30-Year Multiplier: <strong style="color: #1e3f34;">2.99×</strong>
 
 - **1985 Footprint**: 20.56 km²
 - **2015 Footprint**: 61.52 km² (Net expansion: +40.96 km²)
@@ -124,5 +127,5 @@ format:
 ---
 
 ::: {.caption-box}
-**Data Sources**: DLR World Settlement Footprint Evolution 30m (Marconcini et al., 2020) · 7th National Population Census of China (2020) · ArcGIS Online Big Cities Points · HOTOSM Railways of China (HDX) · GADM 4.1.
+**Data Sources**: DLR World Settlement Footprint Evolution 30m (Marconcini et al., 2020) · 7th National Population Census of China (2020) · ArcGIS Online Big Cities Points · HOTOSM Railways of China (HDX) · GADM 4.1 · American Geographical Society Library (AGSL).
 :::

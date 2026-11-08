@@ -69,8 +69,8 @@ render_national_visuals <- function() {
     scale_color_viridis_c(option = "inferno", direction = -1, name = "Growth Multiple") +
     coord_sf(xlim = c(73, 135), ylim = c(18, 54), expand = FALSE) +
     labs(
-      title = "CHINA URBAN GROWTH RATLAS: 47 CITIES & HOTOSM RAILWAYS",
-      subtitle = "30-Year Built Expansion (1985–2015) vs. Population, with HOTOSM Railway Network & ArcGIS Urban Hierarchy",
+      title = "China Urban Growth Ratlas: 47 Cities & Passenger Rail Network",
+      subtitle = "Thirty years of physical urban footprint expansion (1985–2015) vs. population, with railway trunks & urban hierarchy",
       caption = "Sources: DLR WSF Evolution 30m (Marconcini et al., 2020) · HOTOSM Railways (HDX/OSM) · ArcGIS Online Big Cities Points · 7th Census (NBS 2020) · GADM 4.1"
     ) +
     theme_void(base_family = "Droid Sans Fallback") +
@@ -110,8 +110,8 @@ render_national_visuals <- function() {
     scale_linetype_manual(values = c("HOTOSM HSR Line" = "solid"), name = "Transit Backbone") +
     coord_sf(xlim = c(73, 135), ylim = c(18, 54), expand = FALSE) +
     labs(
-      title = "HOTOSM CHINA HIGH-SPEED RAIL NETWORK & URBAN HIERARCHY",
-      subtitle = "Corridors linking China's urban system: HOTOSM OpenStreetMap Railways (HDX) & ArcGIS Big Cities Points",
+      title = "China High-Speed Rail Network & Urban Hierarchy",
+      subtitle = "Corridors linking China's urban system: OpenStreetMap passenger rail network & ArcGIS big cities anchors",
       caption = "Sources: HOTOSM Railways of China (HDX/UN OCHA) · ArcGIS Online Big Cities Points (184 Nodes) · DLR WSF Evolution (30m) · GADM 4.1"
     ) +
     theme_void(base_family = "Droid Sans Fallback") +
@@ -211,8 +211,8 @@ render_national_visuals <- function() {
     scale_fill_manual(values = region_palette, name = "Geographic Macro-Region") +
     coord_sf(xlim = c(73, 135), ylim = c(18, 54), expand = FALSE) +
     labs(
-      title = "THE SIX GEOGRAPHIC MACRO-REGIONS OF CHINA",
-      subtitle = "Click on any region on the map below or use the regional cards to explore cities",
+      title = "The Six Geographic Macro-Regions of China",
+      subtitle = "Select any regional sector on the map below or consult the regional monographs to survey cities",
       caption = "Sources: GADM 4.1 China · HOTOSM China Railways (HDX/UN OCHA) · DLR WSF Evolution"
     ) +
     theme_void(base_family = "Droid Sans Fallback") +
@@ -328,7 +328,7 @@ render_city_visuals <- function(i) {
     p_hero <- p_hero +
       coord_sf(xlim = c(xmin(r), xmax(r)), ylim = c(ymin(r), ymax(r)), expand = FALSE) +
       labs(
-        title = sprintf("%s  %s", toupper(c_info$name_en), c_info$name_zh),
+        title = sprintf("%s  %s", c_info$name_en, c_info$name_zh),
         subtitle = sprintf("%s Province · Population: %0.1fM (Rank #%d)%s · 30-Year Growth: %0.1f×",
                            c_info$province_en, c_info$pop_million, c_info$rank_population, arc_rank_str, c_info$growth_multiple),
         caption = transit_caption
@@ -410,7 +410,7 @@ render_city_visuals <- function(i) {
       scale_shape_manual(values = shape_values, name = "Transit Facilities") +
       coord_sf(xlim = c(xmin(r), xmax(r)), ylim = c(ymin(r), ymax(r)), expand = FALSE) +
       labs(
-        title = sprintf("%s  %s — TRANSIT & RAIL CORRIDORS", toupper(c_info$name_en), c_info$name_zh),
+        title = sprintf("%s  %s — Transit & Rail Corridors", c_info$name_en, c_info$name_zh),
         subtitle = p_rail_subtitle,
         caption = p_rail_caption
       ) +
